@@ -1,0 +1,84 @@
+<maps>
+	<map>
+		<name>OSM: Mapnik (German Style)</name>
+		<code><![CDATA[new OpenLayers.Layer.XYZ("OSM: Mapnik (German Style)", [
+                "http://a.tile.openstreetmap.de/tiles/osmde/${z}/${x}/${y}.png",
+                "http://b.tile.openstreetmap.de/tiles/osmde/${z}/${x}/${y}.png",
+                "http://c.tile.openstreetmap.de/tiles/osmde/${z}/${x}/${y}.png",
+                "http://d.tile.openstreetmap.de/tiles/osmde/${z}/${x}/${y}.png"
+            ], {
+            attribution: 'Tile server sponsored by STRATO / <b>Europe only</b> / <a href="http://www.openstreetmap.de/germanstyle.html">About style</a>',
+            keyname: 'mapnikde'
+        })]]></code>
+		<baseLayer>true</baseLayer>
+		<covered>Europe</covered>
+		<active>true</active>
+	</map>
+
+	<map>
+		<name>Reit und Wanderkarte (Base)</name>
+		<code><![CDATA[new OpenLayers.Layer.OSM("Base of Wanderkarte", "http://base2.wanderreitkarte.de/base/${z}/${x}/${y}.png",{'numZoomLevels': 19, 'buffer':0})]]></code>
+		<baseLayer>true</baseLayer>
+		<covered>Central Europe</covered>
+		<active>true</active>
+	</map>	
+	<map>
+		<name>Reit und Wanderkarte (Overlay)</name>
+		<code><![CDATA[new OpenLayers.Layer.XYZ('Reit und Wanderkarte', 'http://topo.wanderreitkarte.de/topo/${z}/${x}/${y}.png', {isBaseLayer:false, visibility: false})]]></code>
+		<baseLayer>false</baseLayer>
+		<covered>Central Europe</covered>
+		<active>true</active>
+	</map>	
+	<map>
+		<name>ÖPNV-Karte</name>
+		<code><![CDATA[new OpenLayers.Layer.OSM("&Ouml;pnv Deutschland", "http://tile.xn--pnvkarte-m4a.de/tilegen/${z}/${x}/${y}.png", {'numZoomLevels': 19, 'buffer':0})]]></code>
+		<baseLayer>true</baseLayer>
+		<covered>Europe</covered>
+		<active>true</active>
+	</map>	
+	<map>
+		<name>ADFC Radwegenetz</name>
+		<code><![CDATA[new OpenLayers.Layer.TMS( "ADFC Radwegenetz", "",{ type: 'png', getURL: get_mm_bikeTracks, displayOutsideMaxExtent: true, attribution: '<a href="http://www.adfc.de/">ADFC</a>', opacity: 1, isBaseLayer: false, visibility: false, numZoomLevels: 17, noOpaq: true } )]]></code>
+		<baseLayer>false</baseLayer>
+		<covered>Germany</covered>
+		<active>true</active>
+	</map>	
+	<map>
+		<name>Public Transport</name>
+		<code><![CDATA[new OpenLayers.Layer.OSM("Public Transport","http://openptmap.de/tiles/${z}/${x}/${y}.png",
+      					{ maxZoomLevel: 17, numZoomLevels: 18, isBaseLayer: false, visibility: false }) ]]></code>
+		<baseLayer>false</baseLayer>
+		<covered>German, Swiss, Austria</covered>
+		<active>true</active>
+	</map>
+	<map>
+		<name>Hillshading and Contourlines (dark)</name>
+		<code><![CDATA[new OpenLayers.Layer.XYZ("Hillshading and Contourlines (dark)", "http://www.wanderreitkarte.de/hills/${z}/${x}/${y}.png",{minZoomLevel: 9, maxZoomLevel: 19 , isBaseLayer:false, visibility: false })]]></code>
+		<baseLayer>false</baseLayer>
+		<covered>Central Europe</covered>
+		<active>true</active>
+	</map>	
+	<map>
+		<name>Contourlines</name>
+		<code><![CDATA[new OpenLayers.Layer.XYZ("Contourlines", "http://tiles.openpistemap.org/contours-only/${z}/${x}/${y}.png", {umZoomLevels: 18, isBaseLayer:false, visibility: false })]]></code>
+		<baseLayer>false</baseLayer>
+		<covered>Southern Germany</covered>
+		<active>true</active>
+	</map>	
+	<map>
+		<name>Hikingways</name>
+		<code><![CDATA[new OpenLayers.Layer.XYZ("Hikingways", "http://osm.lonvia.de/hiking/${z}/${x}/${y}.png", { type: 'png', isBaseLayer: false, visibility: false, numZoomLevels: 17} )]]></code>
+		<baseLayer>false</baseLayer>
+		<covered>World (Europe)</covered>
+		<active>true</active>
+	</map>	
+<!--
+	<map>
+		<name></name>
+		<code><![CDATA[  ]]></code>
+		<baseLayer></baseLayer>
+		<covered></covered>
+		<active></active>
+	</map>	
+-->
+</maps>

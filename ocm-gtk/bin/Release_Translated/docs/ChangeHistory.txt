@@ -1,0 +1,549 @@
+Vweaion 1.0.15
+--------------
+Various fixes (thanks van der Decken)
+- Fixed last found filters not working for caches that have no found logs
+- Fixed unable to process field notes with quotes
+- Fixed problem exporting special characters in garmin poi files
+- Fixed bug with open cycle map pointing to the wrong server
+
+
+Version 1.0.14
+--------------
+- Fix broken google maps key
+
+Version 1.0.13
+--------------
+- Update Openlayers and Google Maps key to be compatible with latest version
+NOTE: You must Restore Defaults on the Map section in Preferences to re-enable all google map features
+
+
+
+
+Version 1.0.12
+--------------
+- Images exported for Garmin units that support it (thanks to Cryil)
+- Fixed bug where some GPX files were missing cache IDs
+- Added french translations
+
+
+Version 1.0.11
+--------------
+- Fix bug where OCM wasn't correctly matching waypoints to parent caches in GPX files from GSAK and OpenCaching.nl
+- Changed hint link to a button
+- Updated translations
+
+Version 1.0.10
+--------------
+-Highlight new caches on map (configurable in preferences)
+-Highlight recent dnf/needs maintenance on map
+-Add recently published quick filter
+-Add stale-unsolved quick filter
+-Can now edit/delete individual logs from the log pane
+-Special christmas splash screen
+
+
+Version 1.0.9
+--------------
+- Fix bug where manually creating a cache was broken
+- Add stale caches quick filter
+- Add DNF quick filter
+- Add Cleanup Assistant
+- Add support for auto named GPX files for Garmin GPSrs
+
+
+Version 1.0.8
+--------------
+- Highlight stale caches on the map
+- Enable sorting on Cache Columns
+- New %gpxgc% option for external tools where full GC output can be exported
+- Performance improvements
+- Map Bubbles were not showing archived/disabled/etc
+- Log pane now shows an icon indicating the type of log
+- Add new grab images for all unfiltered caches under Edit Menu
+- Move grab images menu item from Cache menu to edit menu
+- Notes pane is now word-wrapped
+
+Version 1.0.7
+--------------
+- Fix issue with slow cache selection with large DB's on Ubuntu 11.04
+- Fix dbus issue with Mandriva Linux
+- Highlight caches that have stale information (configurable in preferences)
+- Add new "Reduce Logs" feature on a per-cache basis
+- Automatically log caches as DNF based on GPX import
+- Fix bug where map wouldn't load if opening OCM by double clicking on a GPX file
+- Reenable MyFinds GPX export
+
+Version 1.0.6
+-------------
+- Fix cache list performance issues
+- Fix bug where editing home location in preferences dialog did take effect until user clicked Go->Home
+- Updated translations
+- Fix bug where waypoint list wouldn't update after grabbing waypoints
+- Fix bug where "Log my find" in quick info pane didn't work
+
+
+Version 1.0.5
+-------------
+- Experimental build
+
+
+Version 1.0.4
+-------------
+- Fix bug where travelbugs were not appearing on the description pane
+- Fix bug where name/distance filter not clearing properly on applying a quick filter
+- Fix bug where creating a new database would popup "Database not found" error
+- Fix bug where setup wizard wouldn't start on new install
+- Fix bug where OCM crashed when importing GPX/ZIP when started from command line
+- Fix bug where OCM didn't refresh caches after importing and viewing field notes
+- Switch to PNGs from SVGs for splash screen
+- Fix missing translations
+- Fix issues where finds were not showing up 
+- Load map after main window appears
+
+
+Version 1.0.3
+-------------
+- Fix bug where OCM would crash on downloading images from opencaching.de
+- Change file download progress to report in bytes instead of kilobytes
+- Add Grab Images to main menu and cache context menu
+- Fix bug where distance filters were always using metric units
+- Fix bug where advanced distance filter ignored decimal values
+- Fix crash on missing DB
+- Some initial groundwork for plugins
+- Add new preference (and option under View menu) to disable map info bubble popups
+- Swedish translations were missing from 1.0
+- Fix some performance issues with the 
+
+
+Version 1.0.2
+------------
+- Add fullscreen option
+- Fix a number of bugs where field notes would cause a crash
+- Add improved error message dialog
+- Improve Field Notes import performance
+- Fix graphical glitches
+- Add Import Quick Filter to Combination Filter
+- Fix bug where combination filter gave wrong results
+- Improve Send to GPS performance
+- Fix bug autoname GPX file for Delorme PN-60
+- Fix bug where distance column was showing "km", even if using U.S. units.
+- Add preference for CacheStore trace log. If enabled, a log called "ocm.log" will appear in the data directory
+- Rework map min/max/resize buttons
+- Change name/distance entries to use "Enter" key to complete instead of a timer
+
+Version 1.0.1
+-------------
+- Major rework of existing OCM functionality to improve performance
+
+Version 0.23.13
+---------------
+- Add difficuly/terrain markers to the map, can turn off in preferences
+- Add support for up to four user accounts
+- Add progress dialog for field notes scan from device
+- Fix crash if images folder contained files other than images
+- View button on images tab only enabled when image selected
+- Add refresh button to images tab
+- Major improvements to View Field Notes dialog. You can now see the cache description, a map, and other cache logs without having to
+click "View Cache" to go back to the main window. 
+- Fix bug where log limits on POI export were being ignored.
+
+
+Version 0.23.12
+---------------
+- Fix crash on Export POI
+- Fix crash on Grab Images in certain cases
+
+Version 0.23.11
+---------------
+- Fix bug with gconf and Mandriva 
+- Fix bug where OCM crashed when opening a ZIP file that had spaces in it's name
+- Improve waymark parsing
+- Add new images pane for associating images with caches
+- Add grab images feature
+- Make sure attributes are exported in gc.com format when exporting a GPX file
+- OCM can now import GCTour GPX files
+- Fix bug where waymarks weren't showing up on Garmin Colorado/Oregon (requires reimport of GPX)
+- Fix bug where limit log entry wasn't being set properly for Delorme
+- Fix typo in source type filter, and make it an opt-in instead of an opt-out filter
+- Add Use Plain Text option for POI export for Oregon/Colorado/Dakota/Map62
+- Add log limit option for POI export
+- Fix units problem with Proximity alerts and POI
+- Fix proximity units issue with non english locales
+- Fix bug where DNF icon was still showing in the cachelist even if "show DNF icon" was disabled in preferences
+- Fix bug where temporary directories created during directory import weren't being deleted
+
+Version 0.23.10
+---------------
+- Add suport for waymarks as virtual caches
+- Add new filter by cache source
+- Add Garmin POI file export
+- Fix bug with earthcaches caused by change with gc.com
+- Fix bug where basic filters were disabled if no startup filter was set
+
+Version 0.23.9
+--------------
+- Fix crash on add location
+
+Version 0.23.8
+--------------
+- Add "Add child waypoint" and "Corrected Coordinates" to cache list context menu
+- Add external tools using the %selected% syntax to the cache list context menu
+- Fix import issue with new GC.com LOC file format
+- Fix import issue with opencaching.us style GPX files
+- Fix crash when sorting waypoints in certain conditions
+- Add "View Cache" button to Field Notes viewer
+
+Version 0.23.7
+--------------
+- Add Last Found by Anyone filter
+- Change last found to "unknown" if last found log in OCM database
+- Fixed a few performance bugs
+
+Version 0.23.6
+--------------
+- Add locations feature to OCM. You can now add new locations via the Locations menu
+  or by right clicking on the map
+- Map Features: You can now set corrected coordinates or add a new Waypoint by right clicking on the map.
+- Add autoclose feature for importing and exporting GPX/Zip.
+- You can now set how OCM displays the "solved" icon in preferences, the default is now just
+  puzzle caches with corrected coordinates/final locations
+- Fix minor graphical glitch if cache has no attributes
+- Can now choose "Selected cache" or "Entire database" when copying/moving caches between databases
+- Add direct entry mode for coordinates, similar to QLandkarte GT. Default can be set in preferences
+	N.B. In direct entry mode English must be used (i.e. N/S/E/W)
+	-- At the moment, only decimal degree and degree minute format is supported
+- Add GPS profiles support. Users upgrading from previous versions of OCM will have their settings moved
+to the "Default" profile. You can rename this profile from the GPS menu.
+- OCM can now process Corrected Coordinates, First To Find, DNF's, and custom user data fields from GSAK 
+(in GSAK, when exporting check the box that says "Include GSAK Extra Fields in Export")
+- On the Advanced filters dialog, bold tab names that have non-default values
+- GUI reorganization to align more with gnome usability guidelines
+- Add support for DNF, FTF, and up to four user supplied data fields
+- OCM now maintains cache logs beween imports
+- Add Field Notes support
+- Show disabled/archived caches on map as grayed out/reddish
+- Can now add corrected coordinates and child waypoints via the map
+- Add Combination Filters
+- Add Custom map support
+- Add new advanced filters for DNF, FTF, distance, status, userdata, found by, and updated within
+- Add new preference for DNF icon behaviour
+- Add new preference for automatically select on map when clicked
+- Can now assign caches to a bookmark list on import
+- Update Setup assistant to set default directory on initial OCM setup
+- Export full cache details to QLandkarte GT to take advantage of new Geocaching features in QLGT 1.1
+- Fix bug with ZIP file associations not opening properly in OCM
+
+
+Version 0.22.9
+--------------
+- Fix "Does not have corrected coordinates" filter bugs
+- Fix a number of map refresh issues that caused OCM to crash
+- Fix issue where trying to overwrite an existing DB caused OCM to crash
+- Fix bug where GPS waypoint symbols could not be changed
+- Fix bug where attributes were not being copied/moved to another database when copying/moving caches
+- Add "Add Child Waypoint" and Ctrl+W to add a child waypoint to the current cache without needing to be on
+the waypoints tab
+- Add Ctrl+R shortcut for Corrected Coordinates
+- Add Ctrl+P shortcut for Printing
+- Add Ctrl+Alt+I shortcut for Import Directory
+- Major performance improvements
+- Show solved puzzle icon if cache has final location waypoint or corrected coordinates
+- Remove "placed by me" from advanced filters as it's a duplicate
+- Add minimize/maximize buttons to the map pane
+- Complete attribute filters and icons
+- Kludge around opencaching.us invalid date format in attribute log
+- Map icons now show cache name as a tooltip
+- Fix GUI update issues
+- Move map scale to bottom
+
+Version 0.22.8
+--------------
+- Add option to show all child waypoints (not just selected cache). You can set it permanently in
+the preferences dialog, or change it just for the session from the Map menu
+- Fix bug where some preferences (such as changing user name) only takes effect after a restart of OCM.
+- Fix bug where marking cache as found/unfound made nearby caches on the map dissapear
+- Allow user to set number of caches on map in the preferences dialog
+- Allow user to set default directory for databases in the preferences dialog
+- Allow user to set default directory for import in the preferences dialog
+- Move database tools to main menu bar
+- Add import directory feature
+- Fix bug where opening/creating another database while having a bookmark list applied required a restart of OCM
+- Fix bug on Mandriva where OCM could not be started again after quitting
+- Fix bug where window title for "Delete QuickFilter" dialog was wrong
+- Add new %selected% keyword for external tools that allows you to send just the selected cache to another
+program as a GPX file.
+- Add link to new statistics page on geocaching.com under Web->Geocaching.com
+- Include xml processing directive in exported GPX files
+- For caches with corrected coordinates, export original coordinate as a waypoint
+- Show progress dialog when deleting multiple caches
+- Modify GPX export dialog to allow user to control export options
+- Fix bug where progress dialog would show if export was cancelled before choosing file
+- Associate ZIP files with OCM
+- Implement attribute filters for winter friendly, chirp, recommended at night, and maintenance required.
+Further improvements to include more attributes and better performance will be coming.
+- Add in first set of Spanish translations
+
+
+Version 0.22.7
+--------------
+- Fixed bug where original coordinates were being overwritten if cache renamed
+- Display caches on GPSr with a (*) to indicate coorected coordinates
+- Add option to include attributes in cache description on paperless GPSrs
+
+
+Version 0.22.6
+--------------
+- Fixed bugs where placed by and found caches were not being set correctly for opencaching.de
+- Fixed issue with cache notes being sent to the device and without whitespace between the notes and the description
+- Updated Dutch translations
+- Fixed issue where external tools and View in QLandkarte GT not working with Ubuntu 10.10
+- Fixed bug with "advanced filters applied" notification still showing when advanced filters were cleared
+
+Version 0.22
+------------
+- Delorme GPX support for PN-60/PN-40v2.8+
+- Can now choose date when marking caches as found
+- Add Corrected Coordinate support. You can now specify GSAK-like corrected coordinates for a cache
+that will not be replaced on a GPX import. These caches will appear in italicized text in the cache list.
+- Add filters for has corrected/does not have corrected coordinates
+- Improve delete performance when deleting multiple caches
+- Add support for opencaching.de format. For opencaching users from .us,.se,.pl sites, use GPX GC.
+- Fix bug where waypoint symbol overrides were being ignored. Also disable waypoint symbol overrides for Delorme units,
+as Delorme units have a specific symbol set for Geocaching child waypoints. 
+- Set description and cmt fields to be the same for Orgeon units.
+- Add indication that advanced filters are applied to main cache pane
+- Fix crash on selecting original coordinate waypoint when using corrected coords
+- Add ability to import ZIP files
+- Fix GPSBabel bug with Ubuntu 10.10
+
+Version 0.21
+------------
+- Add Support for Garmin Edge
+- Add Printing support
+- Display cache attributes for GPX 1.0.1
+- Fix text formatting of plaintext caches
+- Send caches to Garmin GPX devices like Colorado/Oregon as plaintext. This reduces a number
+of issues with GPX and Garmin such as non-english characters and problems with the GPX being too
+large
+- Keep track of log ids for future use
+- QuickInfo pane is now scrollable which allows the map to be resized without making information
+inaccessible
+- Fix cache count statistics were'nt being updated on mark found/unfound
+
+
+Version 0.20
+------------
+- Add Support for DeLorme USB (PN-20/PN-30,PN-40)
+- Add external tools support. You can now configure OCM to run external programs such as Viking, and
+have OCM pass a GPX file to that target program
+- Add Finds export, which exports the finds from the OCM database in a GC.com style "My Finds" format, which
+can be used with programs like  GCStatistic (http://www.macdefender.org/products/GCStatistic/index.html)
+- Fix compile error on Ubuntu Jaunty
+- Fix bug where cache list ended up being duplicated if another filter was set while the filter
+results were still being processed from a previous filter
+- Fix map centering bug on startup in non-english locales
+- Add found on/before/after filter
+- Add cache notes filter
+- Add child waypoint filters
+- Add "No Map" mode to cache map for offline use
+- Right-clicking on the map now provides a context menu
+- Fix timing issue with right-click menu on cache list where mark options were not 
+being populated correctly. 
+
+Version 0.19.1
+--------------
+- Fix null pointer error on send to GPS when a cache has child waypoints
+
+Version 0.19
+------------
+- Add Support for eTrex H/Legend. The Short Code name option removes the "GC" prefix on
+cache codes to fit better within the 6 character limit.
+- Performance improvements
+- Add Mark Found without logging
+- Show progress when loading large databases
+- Grab Waypoints: On the waypoint tab you can now click Grab Waypoints. OCM will
+scan the cache description and try to extract any waypoint pairs it finds. You can
+have OCM add the waypoints automatically, or review the matches and set the correct 
+waypoint time and a better description
+- Fix bug that prevented cancelling transfer waypoints to GPS
+- Fix bug that allowed a user to run OCM without a database, causing a crash
+- Improve centering of map on startup
+- Underline caches that have user notes in the cache lists
+- Associate .ocm DB files with OCM
+- New Database Tools section: You can now copy/move waypoints to another OCM database. You
+can also compact your existing database
+- Fix "You own this cache" message missing if you use username instead of account ID
+- Fix found caches being sent to GPS as unfound
+- Add Danish Tranlation thanks to Thor Dekov Buur
+- OCM Desktop catagory changes from "Network" to "GTK;Geography". This means in Gnome OCM appears
+under Applications->Other
+
+
+Version 0.18.1
+--------------
+- Fix crash on splash screen on Ubuntu 10.04
+- Merge latest dutch translation
+- Grey out "View Selected Cache in QLandkarte" if no cache selected
+
+Version 0.18
+------------
+- Implement quick filters. There are now four predefined quick filters:
+All, Todo, Done, Mine. You may also save any currently filtered view as
+a quickfilter from the Filter Menu
+- If you have QLandkarte GT installed (see http://www.qlandkarte.org/) you
+can now send your caches and waypoints directly via the Tools menu
+- Improved auto-naming of child waypoints, you can choose the style of
+generated names via the Preferences dialog
+- Help menu now has a link to the OCM wiki
+- Modified GPX export to prevent orphaned waypoints on reimport into OCM
+- Fixed hard-coded and missing paths in the ocm-gtk and OCM.desktop files
+- Map bubbles now show more information, and indicate archived/disabled/dnf'd
+caches
+- Include OCM icons for the GUI so that OCM looks correct in non-Gnome
+desktop environments like KDE
+- Revamped the setup assistant
+- Fix bookmarks menu bug that allowed you to add a cache to a bookmark
+list that it already belongs to
+- You can now use your geocaching username instead of your account id
+
+
+Version 0.17
+------------
+- Highlight caches with DNF or maintenance required in orange (on GPX import)
+- Caches with child waypoints displayed in bold
+- GPSD support. If you have a GPS device that gpsd supports, you can set OCM to continuously refresh
+cache distances and the map position from the GPS coordinates
+- Child Waypoint list is now sortable and displays the icon type
+- You can now delete all visible caches from the cache menu instead of deleting them one-by-one
+- OCM now remembers the last window size and pane layout
+- Show Nearby Caches is now a preference, and is on by default
+- Add OCM, GPSBabel, and GPSD home pages to the web menu
+- Add Deselect cache to the cache menu
+- OCM will now show the last log date by you in the quick start menu (any type of log)
+- OCM will now show your cache find date in the "You have already found this cache" status message
+- There is now a log export limit of 5 (configurable) for GPX based garmin devices
+- You can now override the waypoint symbols OCM uses when sending to the device from the GPS Configuration menu
+- For eTrex/Map60 units, you can now have waypoint names as either the cache code or the actual cache name
+- For eTrex/Map60 units, you can now have the waypoint description as the cache name, cache code/size/hint, 
+  or cache code/size/type.
+- Improved icon set for maps
+- Fixed bug where OCM crashes if a DBUS session bus is not running
+- Map now shows a scale line
+
+
+
+Version 0.16
+------------
+- Add Bookmark lists, a new feature to organize your caches. You can create 
+  any number of named bookmark lists and add any cache to it. Caches can be 
+  in multiple lists. To go back to the main list, choose Bookmarks->Bookmark List->None
+- Reorganized the various links to gc.com, navicache.com, and terracache.com under the 
+  Web menu
+- Cache Notes support. You can now add user notes to a cache on the notes tab. These
+  notes will appear on the cache description page on a GPS that supports paperless
+  caching
+- OCM now sets the icons on your GPS to match the icons on it's own map for child
+  waypoints
+- OCM now remembers where the map was centered on restart
+- OpenLayers which is used by OCM for the map display, is now directly included to 
+  improve map loading speed
+- Coordinates use the "." character always, regardless of language or locale to
+  make it easier to copy-paste from the web
+- Fixed bug where OCM would crash on startup if you moved or deleted your last database
+- You can now filter on country and state/province
+- You can now manually add or modify cache details from the Cache menu
+- You can now manually mark a cache as unavailable/archived/available
+- Terracaches that contain the word "Unavailable" in the title will be automatically marked as unavailable
+- OCM now has a Dutch translation by Harrie Klomp
+
+
+
+Version 0.15
+-------------
+IMPORTANT: READ UPGRADE NOTE FROM PREVIOUS VERSIONS, see
+http://sourceforge.net/projects/opencachemanage/forums/forum/1075295/topic/3760416
+
+- Support for Terracaching.com GPX files
+- Globalization support for non english locales
+- Support for LOC files
+- Support for Navicache LOC files (preferred for Navicache users)
+- Support for Navicache GPX files
+- Users can now filter on both placed by and updated dates,
+  Filter->Additional Filters->Dates
+- U.S. Units now supported, go to Edit->Preferences to change to miles
+- Improvements to progress dialogs
+- Default map provider can now be chosen in Edit->Preferences
+- New Terracaching.com and Navicache.com menus for quick access
+- Fix problem with exported GPXs not being openable in QLandKarte GT
+
+
+Version 0.14
+---------------
+- Add integration with GPS Babel for full GPS support. This requires
+GPS Babel to be installed
+- Implement GPS menu
+- Fixed bug where some coordinates has a small error
+- Recently opened GPX/Databases now show up in the recent file list
+- Preliminary support for registering GPX and OCM files. You will need to call
+  update-mime-database /usr/local/share/mime to complete the registration
+- Add "Available" option to the quick filter list
+- Fix issue where OCM would crash on opening a GPX on startup
+- Grey out the cache info area if no cache selected
+- Update icon set after discussion with GroundSpeak
+- Clicking on links in the description pane now opens them in a seperate window
+- Add Preferences dialogs to alter settings after initial setup
+- Fixup menu items names, add keyboard shortcuts
+- Fix right-click and delete in cache list
+- Move Reset Center to Home to the Map menu
+- Refresh single cache on log found/mark unfound to improve performance
+  
+
+Version 0.13
+---------------
+
+- Major changes to map:
+	- Replace Yahoo maps with Google maps
+	- Add popup bubbles to display geocache/waypoint info when clicked
+	- Introduce new "Map" menu
+	- Add new "show nearby caches" feature to map, which displays the 50 nearest caches
+	  (that match current filter criteria) on the map. Users can use the info bubble of the
+	  nearby cache to select it
+	- Add ability to pan to currently selected cache or predefined home point from map menu
+
+- Only enable hint area if it has content
+- Reduce font size of description and log areas
+- Fix description area so that background images don't make text unreadable
+- When filters change, keep currently selected cache visible in cache list pane
+- Replace seperate map area status bar with a progress bar on the main status bar
+- Adjust icon sizes
+- Add parking, trailhead, and final icons
+
+
+
+Version 0.12
+- Fix issue with Lost and Found Event caches
+- Fix slow performance on GPX import
+- Add support to delete caches from database
+- Add splash screen
+- Add ability to filter on cache type, container, difficulty, terrain,
+  and placed by via "Additonal Filters" in View menu
+- Fix database update issue causing missing updates
+- Fix lost actions while Map loading
+- Fix cancelling import
+- Fix cancelling export
+- Improve import/export dialogs
+- Fix wrong icon for event caches on map
+- Center map on home coordinates on startup
+- Fix display bug with cache names that start with a number and are archived
+- Rerrange hint and travelbug display, hints now wordwrap
+
+  
+
+Version 0.11
+
+- Delay on filtering when typing
+- Add Yahoo Maps (street, sattelite, and hybrid maps) support
+- Fix crash on opening read-only GPX
+- Fix status label in cache info pane so that it only takes up one line
+- Add licence file
+- Update icons to be easier to see

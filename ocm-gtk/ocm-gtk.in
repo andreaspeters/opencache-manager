@@ -1,0 +1,3 @@
+#!/bin/sh
+cd "@expanded_libdir@/opencachemanager"
+exec mono "@expanded_libdir@/opencachemanager/ocm-gtk.exe" "$@"

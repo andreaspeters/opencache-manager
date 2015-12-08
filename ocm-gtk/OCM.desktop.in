@@ -1,0 +1,13 @@
+
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=OCM Geocache Manager
+Exec=ocm-gtk
+Terminal=false
+Path=@expanded_libdir@/opencachemanager
+Icon=@expanded_libdir@/opencachemanager/icons/scalable/traditional.svg
+MimeType=application/x-gpx;application/x-ocm;application/zip;
+Categories=GTK;Geography;
+Comment=An easy to use Geocache Manager
+GenericName=OCM

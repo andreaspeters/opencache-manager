@@ -1,0 +1,3097 @@
+
+EXTRA_DIST =  
+
+# Warning: This is an automatically generated file, do not edit!
+
+if ENABLE_DEBUG
+ASSEMBLY_COMPILER_COMMAND = gmcs
+ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:3 -optimize- -debug "-define:DEBUG"
+ASSEMBLY = bind/ocm-gtk.exe
+ASSEMBLY_MDB = $(ASSEMBLY).mdb
+COMPILE_TARGET = exe
+PROJECT_REFERENCES =  \
+	../ocmengine/bin/Debug/ocmengine.dll
+BUILD_DIR = bind
+
+X_GPX_XML_SOURCE=x-gpx.xml
+X_OCM_XML_SOURCE=x-ocm.xml
+OCMLOGO_SVG_SOURCE=icons/scalable/OCMLogo.svg
+CITO_SVG_SOURCE=icons/scalable/cito.svg
+EARTH_SVG_SOURCE=icons/scalable/earth.svg
+FOUND_SVG_SOURCE=icons/scalable/found.svg
+HALFSTAR_SVG_SOURCE=icons/scalable/halfstar.svg
+LETTERBOX_SVG_SOURCE=icons/scalable/letterbox.svg
+MULTI_SVG_SOURCE=icons/scalable/multi.svg
+OTHER_SVG_SOURCE=icons/scalable/other.svg
+STAR_SVG_SOURCE=icons/scalable/star.svg
+STAR_EMPTY_SVG_SOURCE=icons/scalable/star_empty.svg
+UNKNOWN_SVG_SOURCE=icons/scalable/unknown.svg
+WAYPOINT_FLAG_RED_SVG_SOURCE=icons/scalable/waypoint-flag-red.svg
+WPT_VIEWER_HTML_SOURCE=web/wpt_viewer.html
+EVENT_SVG_SOURCE=icons/scalable/event.svg
+MEGA_SVG_SOURCE=icons/scalable/mega.svg
+VIRTUAL_SVG_SOURCE=icons/scalable/virtual.svg
+WEBCAM_SVG_SOURCE=icons/scalable/webcam.svg
+WHERIGO_SVG_SOURCE=icons/scalable/wherigo.svg
+CITO_PNG_SOURCE=icons/24x24/cito.png
+EARTH_PNG_SOURCE=icons/24x24/earth.png
+EVENT_PNG_SOURCE=icons/24x24/event.png
+LETTERBOX_PNG_SOURCE=icons/24x24/letterbox.png
+MEGA_PNG_SOURCE=icons/24x24/mega.png
+MULTI_PNG_SOURCE=icons/24x24/multi.png
+OTHER_PNG_SOURCE=icons/24x24/other.png
+OWNED_PNG_SOURCE=icons/24x24/owned.png
+TRADITIONAL_PNG_SOURCE=icons/24x24/traditional.png
+UNKNOWN_PNG_SOURCE=icons/24x24/unknown.png
+VIRTUAL_PNG_SOURCE=icons/24x24/virtual.png
+WEBCAM_PNG_SOURCE=icons/24x24/webcam.png
+WHERIGO_PNG_SOURCE=icons/24x24/wherigo.png
+CIRCLE_PNG_SOURCE=icons/48x48/circle.png
+PUSHPIN_PNG_SOURCE=icons/24x24/pushpin.png
+FOUND_PNG_SOURCE=icons/24x24/found.png
+TRADITIONAL_SVG_SOURCE=icons/scalable/traditional.svg
+BLUEPIN_PNG_SOURCE=icons/24x24/bluepin.png
+PARKING_PNG_SOURCE=icons/24x24/parking.png
+TRAILHEAD_PNG_SOURCE=icons/24x24/trailhead.png
+BLUEPIN_SVG_SOURCE=icons/scalable/bluepin.svg
+PARKING_SVG_SOURCE=icons/scalable/parking.svg
+TRAILHEAD_SVG_SOURCE=icons/scalable/trailhead.svg
+CHANGEHISTORY_TXT_SOURCE=docs/ChangeHistory.txt
+README_TXT_SOURCE=docs/README.txt
+LICENCE_TXT_SOURCE=licence/Licence.txt
+TREASURE_SVG_SOURCE=icons/scalable/treasure.svg
+TREASURE_PNG_SOURCE=icons/24x24/treasure.png
+OPENLAYERS_JS_SOURCE=web/OpenLayers.js
+BLANK_GIF_SOURCE=web/img/blank.gif
+CLOUD_POPUP_RELATIVE_PNG_SOURCE=web/img/cloud-popup-relative.png
+DRAG_RECTANGLE_OFF_PNG_SOURCE=web/img/drag-rectangle-off.png
+DRAG_RECTANGLE_ON_PNG_SOURCE=web/img/drag-rectangle-on.png
+EAST_MINI_PNG_SOURCE=web/img/east-mini.png
+LAYER_SWITCHER_MAXIMIZE_PNG_SOURCE=web/img/layer-switcher-maximize.png
+LAYER_SWITCHER_MINIMIZE_PNG_SOURCE=web/img/layer-switcher-minimize.png
+MARKER_PNG_SOURCE=web/img/marker.png
+MARKER_BLUE_PNG_SOURCE=web/img/marker-blue.png
+MARKER_GOLD_PNG_SOURCE=web/img/marker-gold.png
+MARKER_GREEN_PNG_SOURCE=web/img/marker-green.png
+MEASURING_STICK_OFF_PNG_SOURCE=web/img/measuring-stick-off.png
+MEASURING_STICK_ON_PNG_SOURCE=web/img/measuring-stick-on.png
+NORTH_MINI_PNG_SOURCE=web/img/north-mini.png
+PANNING_HAND_OFF_PNG_SOURCE=web/img/panning-hand-off.png
+PANNING_HAND_ON_PNG_SOURCE=web/img/panning-hand-on.png
+SLIDER_PNG_SOURCE=web/img/slider.png
+SOUTH_MINI_PNG_SOURCE=web/img/south-mini.png
+WEST_MINI_PNG_SOURCE=web/img/west-mini.png
+ZOOMBAR_PNG_SOURCE=web/img/zoombar.png
+ZOOM_MINUS_MINI_PNG_SOURCE=web/img/zoom-minus-mini.png
+ZOOM_PLUS_MINI_PNG_SOURCE=web/img/zoom-plus-mini.png
+ZOOM_WORLD_MINI_PNG_SOURCE=web/img/zoom-world-mini.png
+FRAMEDCLOUD_CSS_SOURCE=web/theme/default/framedCloud.css
+GOOGLE_CSS_SOURCE=web/theme/default/google.css
+IE6_STYLE_CSS_SOURCE=web/theme/default/ie6-style.css
+STYLE_CSS_SOURCE=web/theme/default/style.css
+ADD_POINT_OFF_PNG_SOURCE=web/theme/default/img/add_point_off.png
+ADD_POINT_ON_PNG_SOURCE=web/theme/default/img/add_point_on.png
+BLANK_GIF2_SOURCE=web/theme/default/img/blank.gif
+CLOSE_GIF_SOURCE=web/theme/default/img/close.gif
+DRAG_RECTANGLE_OFF_PNG2_SOURCE=web/theme/default/img/drag-rectangle-off.png
+DRAG_RECTANGLE_ON_PNG2_SOURCE=web/theme/default/img/drag-rectangle-on.png
+DRAW_LINE_OFF_PNG_SOURCE=web/theme/default/img/draw_line_off.png
+DRAW_LINE_ON_PNG_SOURCE=web/theme/default/img/draw_line_on.png
+DRAW_POINT_OFF_PNG_SOURCE=web/theme/default/img/draw_point_off.png
+DRAW_POINT_ON_PNG_SOURCE=web/theme/default/img/draw_point_on.png
+DRAW_POLYGON_OFF_PNG_SOURCE=web/theme/default/img/draw_polygon_off.png
+DRAW_POLYGON_ON_PNG_SOURCE=web/theme/default/img/draw_polygon_on.png
+EDITING_TOOL_BAR_PNG_SOURCE=web/theme/default/img/editing_tool_bar.png
+MOVE_FEATURE_OFF_PNG_SOURCE=web/theme/default/img/move_feature_off.png
+MOVE_FEATURE_ON_PNG_SOURCE=web/theme/default/img/move_feature_on.png
+NAVIGATION_HISTORY_PNG_SOURCE=web/theme/default/img/navigation_history.png
+OVERVIEW_REPLACEMENT_GIF_SOURCE=web/theme/default/img/overview_replacement.gif
+PANNING_HAND_OFF_PNG2_SOURCE=web/theme/default/img/panning-hand-off.png
+PANNING_HAND_ON_PNG2_SOURCE=web/theme/default/img/panning-hand-on.png
+PAN_OFF_PNG_SOURCE=web/theme/default/img/pan_off.png
+PAN_ON_PNG_SOURCE=web/theme/default/img/pan_on.png
+PAN_PANEL_PNG_SOURCE=web/theme/default/img/pan-panel.png
+PAN_PANEL_NOALPHA_PNG_SOURCE=web/theme/default/img/pan-panel-NOALPHA.png
+REMOVE_POINT_OFF_PNG_SOURCE=web/theme/default/img/remove_point_off.png
+REMOVE_POINT_ON_PNG_SOURCE=web/theme/default/img/remove_point_on.png
+RULER_PNG_SOURCE=web/theme/default/img/ruler.png
+SAVE_FEATURES_OFF_PNG_SOURCE=web/theme/default/img/save_features_off.png
+SAVE_FEATURES_ON_PNG_SOURCE=web/theme/default/img/save_features_on.png
+VIEW_NEXT_OFF_PNG_SOURCE=web/theme/default/img/view_next_off.png
+VIEW_NEXT_ON_PNG_SOURCE=web/theme/default/img/view_next_on.png
+VIEW_PREVIOUS_OFF_PNG_SOURCE=web/theme/default/img/view_previous_off.png
+VIEW_PREVIOUS_ON_PNG_SOURCE=web/theme/default/img/view_previous_on.png
+ZOOM_PANEL_PNG_SOURCE=web/theme/default/img/zoom-panel.png
+ZOOM_PANEL_NOALPHA_PNG_SOURCE=web/theme/default/img/zoom-panel-NOALPHA.png
+GREENPIN_PNG_SOURCE=icons/24x24/greenpin.png
+PUSHPIN_SVG_SOURCE=icons/scalable/pushpin.svg
+VERSION_TXT_SOURCE=version/Version.txt
+YES_RECOMMENDED_AT_NIGHT_SVG_SOURCE=icons/scalable/attributes/yes_Recommended_at_night.svg
+YES_NEEDS_MAINTENANCE_SVG_SOURCE=icons/scalable/attributes/yes_Needs_maintenance.svg
+NO_RECOMMENDED_AT_NIGHT_SVG_SOURCE=icons/scalable/attributes/no_Recommended_at_night.svg
+DIS_RECOMMENDED_AT_NIGHT_SVG_SOURCE=icons/scalable/attributes/dis_Recommended_at_night.svg
+DIS_NEEDS_MAINTENANCE_SVG_SOURCE=icons/scalable/attributes/dis_Needs_maintenance.svg
+YES_WIRELESS_BEACON_SVG_SOURCE=icons/scalable/attributes/yes_Wireless_Beacon.svg
+DIS_WIRELESS_BEACON_SVG_SOURCE=icons/scalable/attributes/dis_Wireless_Beacon.svg
+YES_AVAILABLE_DURING_WINTER_SVG_SOURCE=icons/scalable/attributes/yes_Available_during_winter.svg
+NO_AVAILABLE_DURING_WINTER_SVG_SOURCE=icons/scalable/attributes/no_Available_during_winter.svg
+DIS_AVAILABLE_DURING_WINTER_SVG_SOURCE=icons/scalable/attributes/dis_Available_during_winter.svg
+DIS_BICYCLES_SVG_SOURCE=icons/scalable/attributes/dis_Bicycles.svg
+DIS_DOGS_SVG_SOURCE=icons/scalable/attributes/dis_Dogs.svg
+NO_BICYCLES_SVG_SOURCE=icons/scalable/attributes/no_Bicycles.svg
+NO_DOGS_SVG_SOURCE=icons/scalable/attributes/no_Dogs.svg
+YES_BICYCLES_SVG_SOURCE=icons/scalable/attributes/yes_Bicycles.svg
+YES_DOGS_SVG_SOURCE=icons/scalable/attributes/yes_Dogs.svg
+DIS_ACCESS_OR_PARKING_FEE_SVG_SOURCE=icons/scalable/attributes/dis_Access_or_parking_fee.svg
+YES_ACCESS_OR_PARKING_FEE_SVG_SOURCE=icons/scalable/attributes/yes_Access_or_parking_fee.svg
+DIS_RECOMMENDED_FOR_KIDS_SVG_SOURCE=icons/scalable/attributes/dis_Recommended_for_kids.svg
+NO_RECOMMENDED_FOR_KIDS_SVG_SOURCE=icons/scalable/attributes/no_Recommended_for_kids.svg
+YES_RECOMMENDED_FOR_KIDS_SVG_SOURCE=icons/scalable/attributes/yes_Recommended_for_kids.svg
+DIS_CAMPFIRES_SVG_SOURCE=icons/scalable/attributes/dis_Campfires.svg
+NO_CAMPFIRES_SVG_SOURCE=icons/scalable/attributes/no_Campfires.svg
+YES_CAMPFIRES_SVG_SOURCE=icons/scalable/attributes/yes_Campfires.svg
+DIS_TAKES_LESS_THAN_AN_HOUR_SVG_SOURCE=icons/scalable/attributes/dis_Takes_less_than_an_hour.svg
+NO_TAKES_LESS_THAN_AN_HOUR_SVG_SOURCE=icons/scalable/attributes/no_Takes_less_than_an_hour.svg
+YES_TAKES_LESS_THAN_AN_HOUR_SVG_SOURCE=icons/scalable/attributes/yes_Takes_less_than_an_hour.svg
+DIS_MAY_REQUIRE_SWIMMING_SVG_SOURCE=icons/scalable/attributes/dis_May_require_swimming.svg
+YES_MAY_REQUIRE_SWIMMING_SVG_SOURCE=icons/scalable/attributes/yes_May_require_swimming.svg
+DIS_PARKING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/dis_Parking_available.svg
+DIS_STROLLER_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/dis_Stroller_accessible.svg
+DIS_WHEELCHAIR_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/dis_Wheelchair_accessible.svg
+NO_PARKING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/no_Parking_available.svg
+NO_STROLLER_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/no_Stroller_accessible.svg
+NO_WHEELCHAIR_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/no_Wheelchair_accessible.svg
+YES_PARKING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/yes_Parking_available.svg
+YES_STROLLER_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/yes_Stroller_accessible.svg
+YES_WHEELCHAIR_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/yes_Wheelchair_accessible.svg
+DIS_FIELD_PUZZLE_SVG_SOURCE=icons/scalable/attributes/dis_Field_Puzzle.svg
+YES_FIELD_PUZZLE_SVG_SOURCE=icons/scalable/attributes/yes_Field_Puzzle.svg
+DIS_SIGNIFICANT_HIKE_SVG_SOURCE=icons/scalable/attributes/dis_Significant_Hike.svg
+NO_SIGNIFICANT_HIKE_SVG_SOURCE=icons/scalable/attributes/no_Significant_Hike.svg
+YES_SIGNIFICANT_HIKE_SVG_SOURCE=icons/scalable/attributes/yes_Significant_Hike.svg
+DIS_ABANDONED_MINES_SVG_SOURCE=icons/scalable/attributes/dis_Abandoned_mines.svg
+YES_ABANDONED_MINES_SVG_SOURCE=icons/scalable/attributes/yes_Abandoned_mines.svg
+DIS_CLIFF___FALLING_ROCKS_SVG_SOURCE=icons/scalable/attributes/dis_Cliff___falling_rocks.svg
+YES_CLIFF___FALLING_ROCKS_SVG_SOURCE=icons/scalable/attributes/yes_Cliff___falling_rocks.svg
+DIS_CLIMBING_GEAR_SVG_SOURCE=icons/scalable/attributes/dis_Climbing_gear.svg
+YES_CLIMBING_GEAR_SVG_SOURCE=icons/scalable/attributes/yes_Climbing_gear.svg
+DIS_CROSS_COUNTRY_SKIS_SVG_SOURCE=icons/scalable/attributes/dis_Cross_Country_Skis.svg
+YES_CROSS_COUNTRY_SKIS_SVG_SOURCE=icons/scalable/attributes/yes_Cross_Country_Skis.svg
+DIS_DANGEROUS_AREA_SVG_SOURCE=icons/scalable/attributes/dis_Dangerous_area.svg
+YES_DANGEROUS_AREA_SVG_SOURCE=icons/scalable/attributes/yes_Dangerous_area.svg
+DIS_PUBLIC_TRANSPORTATION_SVG_SOURCE=icons/scalable/attributes/dis_Public_transportation.svg
+YES_PUBLIC_TRANSPORTATION_SVG_SOURCE=icons/scalable/attributes/yes_Public_transportation.svg
+DIS_WATCH_FOR_LIVESTOCK_SVG_SOURCE=icons/scalable/attributes/dis_Watch_for_livestock.svg
+YES_WATCH_FOR_LIVESTOCK_SVG_SOURCE=icons/scalable/attributes/yes_Watch_for_livestock.svg
+DIS_AVAILABLE_AT_ALL_TIMES_SVG_SOURCE=icons/scalable/attributes/dis_Available_at_all_times.svg
+NO_AVAILABLE_AT_ALL_TIMES_SVG_SOURCE=icons/scalable/attributes/no_Available_at_all_times.svg
+YES_AVAILABLE_AT_ALL_TIMES_SVG_SOURCE=icons/scalable/attributes/yes_Available_at_all_times.svg
+DIS_STEALTH_REQUIRED_SVG_SOURCE=icons/scalable/attributes/dis_Stealth_required.svg
+NO_STEALTH_REQUIRED_SVG_SOURCE=icons/scalable/attributes/no_Stealth_required.svg
+YES_STEALTH_REQUIRED_SVG_SOURCE=icons/scalable/attributes/yes_Stealth_required.svg
+DIS_SNOWSHOES_SVG_SOURCE=icons/scalable/attributes/dis_Snowshoes.svg
+YES_SNOWSHOES_SVG_SOURCE=icons/scalable/attributes/yes_Snowshoes.svg
+DIS_SPECIAL_TOOL_REQUIRED_SVG_SOURCE=icons/scalable/attributes/dis_Special_Tool_Required.svg
+YES_SPECIAL_TOOL_REQUIRED_SVG_SOURCE=icons/scalable/attributes/yes_Special_Tool_Required.svg
+DIS_THORNS_SVG_SOURCE=icons/scalable/attributes/dis_Thorns.svg
+YES_THORNS_SVG_SOURCE=icons/scalable/attributes/yes_Thorns.svg
+DIS_UV_LIGHT_REQUIRED_SVG_SOURCE=icons/scalable/attributes/dis_UV_Light_Required.svg
+YES_UV_LIGHT_REQUIRED_SVG_SOURCE=icons/scalable/attributes/yes_UV_Light_Required.svg
+DIS_BOAT_SVG_SOURCE=icons/scalable/attributes/dis_Boat.svg
+YES_BOAT_SVG_SOURCE=icons/scalable/attributes/yes_Boat.svg
+DIS_ABANDONED_STRUCTURE_SVG_SOURCE=icons/scalable/attributes/dis_Abandoned_Structure.svg
+NO_ABANDONED_STRUCTURE_SVG_SOURCE=icons/scalable/attributes/no_Abandoned_Structure.svg
+YES_ABANDONED_STRUCTURE_SVG_SOURCE=icons/scalable/attributes/yes_Abandoned_Structure.svg
+DIS_CAMPING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/dis_Camping_available.svg
+NO_CAMPING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/no_Camping_available.svg
+YES_CAMPING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/yes_Camping_available.svg
+DIS_DANGEROUS_ANIMALS_SVG_SOURCE=icons/scalable/attributes/dis_Dangerous_Animals.svg
+YES_DANGEROUS_ANIMALS_SVG_SOURCE=icons/scalable/attributes/yes_Dangerous_Animals.svg
+DIS_DIFFICULT_CLIMBING_SVG_SOURCE=icons/scalable/attributes/dis_Difficult_climbing.svg
+NO_DIFFICULT_CLIMBING_SVG_SOURCE=icons/scalable/attributes/no_Difficult_climbing.svg
+YES_DIFFICULT_CLIMBING_SVG_SOURCE=icons/scalable/attributes/yes_Difficult_climbing.svg
+DIS_DRINKING_WATER_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Drinking_water_nearby.svg
+NO_DRINKING_WATER_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Drinking_water_nearby.svg
+YES_DRINKING_WATER_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Drinking_water_nearby.svg
+DIS_FLASHLIGHT_REQUIRED_SVG_SOURCE=icons/scalable/attributes/dis_Flashlight_required.svg
+YES_FLASHLIGHT_REQUIRED_SVG_SOURCE=icons/scalable/attributes/yes_Flashlight_required.svg
+DIS_FOOD_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Food_Nearby.svg
+NO_FOOD_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Food_Nearby.svg
+YES_FOOD_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Food_Nearby.svg
+DIS_FUEL_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Fuel_Nearby.svg
+NO_FUEL_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Fuel_Nearby.svg
+YES_FUEL_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Fuel_Nearby.svg
+DIS_HORSES_SVG_SOURCE=icons/scalable/attributes/dis_Horses.svg
+NO_HORSES_SVG_SOURCE=icons/scalable/attributes/no_Horses.svg
+YES_HORSES_SVG_SOURCE=icons/scalable/attributes/yes_Horses.svg
+DIS_HUNTING_SVG_SOURCE=icons/scalable/attributes/dis_Hunting.svg
+YES_HUNTING_SVG_SOURCE=icons/scalable/attributes/yes_Hunting.svg
+DIS_MAY_REQUIRE_WADING_SVG_SOURCE=icons/scalable/attributes/dis_May_require_wading.svg
+YES_MAY_REQUIRE_WADING_SVG_SOURCE=icons/scalable/attributes/yes_May_require_wading.svg
+DIS_MOTORCYCLES_SVG_SOURCE=icons/scalable/attributes/dis_Motorcycles.svg
+NO_MOTORCYCLES_SVG_SOURCE=icons/scalable/attributes/no_Motorcycles.svg
+YES_MOTORCYCLES_SVG_SOURCE=icons/scalable/attributes/yes_Motorcycles.svg
+DIS_NIGHT_CACHE_SVG_SOURCE=icons/scalable/attributes/dis_Night_Cache.svg
+YES_NIGHT_CACHE_SVG_SOURCE=icons/scalable/attributes/yes_Night_Cache.svg
+DIS_PARK_AND_GRAB_SVG_SOURCE=icons/scalable/attributes/dis_Park_and_Grab.svg
+YES_PARK_AND_GRAB_SVG_SOURCE=icons/scalable/attributes/yes_Park_and_Grab.svg
+CORRECTED_SVG_SOURCE=icons/scalable/corrected.svg
+CORRECTED_PNG_SOURCE=icons/24x24/corrected.png
+DIS_SCUBA_GEAR_SVG_SOURCE=icons/scalable/attributes/dis_Scuba_gear.svg
+YES_SCUBA_GEAR_SVG_SOURCE=icons/scalable/attributes/yes_Scuba_gear.svg
+DIS_SCENIC_VIEW_SVG_SOURCE=icons/scalable/attributes/dis_Scenic_view.svg
+YES_SCENIC_VIEW_SVG_SOURCE=icons/scalable/attributes/yes_Scenic_view.svg
+DIS_MEDIUM_HIKE_1KM_10KM_SVG_SOURCE=icons/scalable/attributes/dis_Medium_hike_(1km-10km).svg
+NO_MEDIUM_HIKE_1KM_10KM_SVG_SOURCE=icons/scalable/attributes/no_Medium_hike_(1km-10km).svg
+YES_MEDIUM_HIKE_1KM_10KM_SVG_SOURCE=icons/scalable/attributes/yes_Medium_hike_(1km-10km).svg
+NO_LONG_HIKE_10KM_SVG_SOURCE=icons/scalable/attributes/no_Long_Hike_(+10km).svg
+YES_LONG_HIKE_10KM_SVG_SOURCE=icons/scalable/attributes/yes_Long_Hike_(+10km).svg
+DIS_SHORT_HIKE_LESS_THAN_1KM_SVG_SOURCE=icons/scalable/attributes/dis_Short_hike_(less_than_1km).svg
+NO_SHORT_HIKE_LESS_THAN_1KM_SVG_SOURCE=icons/scalable/attributes/no_Short_hike_(less_than_1km).svg
+YES_SHORT_HIKE_LESS_THAN_1KM_SVG_SOURCE=icons/scalable/attributes/yes_Short_hike_(less_than_1km).svg
+DIS_POISON_PLANTS_SVG_SOURCE=icons/scalable/attributes/dis_Poison_plants.svg
+NO_POISON_PLANTS_SVG_SOURCE=icons/scalable/attributes/no_Poison_plants.svg
+YES_POISON_PLANTS_SVG_SOURCE=icons/scalable/attributes/yes_Poison_plants.svg
+DIS_TICKS_SVG_SOURCE=icons/scalable/attributes/dis_Ticks.svg
+YES_TICKS_SVG_SOURCE=icons/scalable/attributes/yes_Ticks.svg
+YES_PICNIC_TABLES_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Picnic_tables_nearby.svg
+DIS_PICNIC_TABLES_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Picnic_tables_nearby.svg
+NO_PICNIC_TABLES_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Picnic_tables_nearby.svg
+DIS_PUBLIC_RESTROOMS_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Public_restrooms_nearby.svg
+NO_PUBLIC_RESTROOMS_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Public_restrooms_nearby.svg
+YES_PUBLIC_RESTROOMS_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Public_restrooms_nearby.svg
+DIS_TELEPHONE_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Telephone_nearby.svg
+NO_TELEPHONE_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Telephone_nearby.svg
+YES_TELEPHONE_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Telephone_nearby.svg
+DIS_TRUCK_DRIVER_RV_SVG_SOURCE=icons/scalable/attributes/dis_Truck_Driver_RV.svg
+NO_TRUCK_DRIVER_RV_SVG_SOURCE=icons/scalable/attributes/no_Truck_Driver_RV.svg
+YES_TRUCK_DRIVER_RV_SVG_SOURCE=icons/scalable/attributes/yes_Truck_Driver_RV.svg
+DIS_QUADS_SVG_SOURCE=icons/scalable/attributes/dis_Quads.svg
+NO_QUADS_SVG_SOURCE=icons/scalable/attributes/no_Quads.svg
+YES_QUADS_SVG_SOURCE=icons/scalable/attributes/yes_Quads.svg
+DIS_OFF_ROAD_VEHICLES_SVG_SOURCE=icons/scalable/attributes/dis_Off-road_vehicles.svg
+NO_OFF_ROAD_VEHICLES_SVG_SOURCE=icons/scalable/attributes/no_Off-road_vehicles.svg
+YES_OFF_ROAD_VEHICLES_SVG_SOURCE=icons/scalable/attributes/yes_Off-road_vehicles.svg
+DIS_SNOWMOBILES_SVG_SOURCE=icons/scalable/attributes/dis_Snowmobiles.svg
+NO_SNOWMOBILES_SVG_SOURCE=icons/scalable/attributes/no_Snowmobiles.svg
+YES_SNOWMOBILES_SVG_SOURCE=icons/scalable/attributes/yes_Snowmobiles.svg
+NO_NIGHT_CACHE_SVG_SOURCE=icons/scalable/attributes/no_Night_Cache.svg
+NO_PARK_AND_GRAB_SVG_SOURCE=icons/scalable/attributes/no_Park_and_Grab.svg
+DNF_SVG_SOURCE=icons/scalable/dnf.svg
+FTF_SVG_SOURCE=icons/scalable/ftf.svg
+WRITE_NOTE_SVG_SOURCE=icons/scalable/write_note.svg
+NEEDS_MAINTENANCE_SVG_SOURCE=icons/scalable/needs_maintenance.svg
+ARCHIVED_BLUEPIN_PNG_SOURCE=icons/24x24/archived-bluepin.png
+ARCHIVED_CITO_PNG_SOURCE=icons/24x24/archived-cito.png
+ARCHIVED_CORRECTED_PNG_SOURCE=icons/24x24/archived-corrected.png
+ARCHIVED_EARTH_PNG_SOURCE=icons/24x24/archived-earth.png
+ARCHIVED_EVENT_PNG_SOURCE=icons/24x24/archived-event.png
+ARCHIVED_FOUND_PNG_SOURCE=icons/24x24/archived-found.png
+ARCHIVED_GREENPIN_PNG_SOURCE=icons/24x24/archived-greenpin.png
+ARCHIVED_LETTERBOX_PNG_SOURCE=icons/24x24/archived-letterbox.png
+ARCHIVED_LOCATIONLESS_PNG_SOURCE=icons/24x24/archived-locationless.png
+ARCHIVED_MEGA_PNG_SOURCE=icons/24x24/archived-mega.png
+ARCHIVED_MULTI_PNG_SOURCE=icons/24x24/archived-multi.png
+ARCHIVED_OTHER_PNG_SOURCE=icons/24x24/archived-other.png
+ARCHIVED_OWNED_PNG_SOURCE=icons/24x24/archived-owned.png
+ARCHIVED_PARKING_PNG_SOURCE=icons/24x24/archived-parking.png
+ARCHIVED_PUSHPIN_PNG_SOURCE=icons/24x24/archived-pushpin.png
+ARCHIVED_TRADITIONAL_PNG_SOURCE=icons/24x24/archived-traditional.png
+ARCHIVED_TRAILHEAD_PNG_SOURCE=icons/24x24/archived-trailhead.png
+ARCHIVED_TREASURE_PNG_SOURCE=icons/24x24/archived-treasure.png
+ARCHIVED_UNKNOWN_PNG_SOURCE=icons/24x24/archived-unknown.png
+ARCHIVED_VIRTUAL_PNG_SOURCE=icons/24x24/archived-virtual.png
+ARCHIVED_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/archived-waypoint-flag-red.png
+ARCHIVED_WEBCAM_PNG_SOURCE=icons/24x24/archived-webcam.png
+ARCHIVED_WHERIGO_PNG_SOURCE=icons/24x24/archived-wherigo.png
+DISABLED_BLUEPIN_PNG_SOURCE=icons/24x24/disabled-bluepin.png
+DISABLED_CITO_PNG_SOURCE=icons/24x24/disabled-cito.png
+DISABLED_CORRECTED_PNG_SOURCE=icons/24x24/disabled-corrected.png
+DISABLED_EARTH_PNG_SOURCE=icons/24x24/disabled-earth.png
+DISABLED_EVENT_PNG_SOURCE=icons/24x24/disabled-event.png
+DISABLED_FOUND_PNG_SOURCE=icons/24x24/disabled-found.png
+DISABLED_GREENPIN_PNG_SOURCE=icons/24x24/disabled-greenpin.png
+DISABLED_LETTERBOX_PNG_SOURCE=icons/24x24/disabled-letterbox.png
+DISABLED_LOCATIONLESS_PNG_SOURCE=icons/24x24/disabled-locationless.png
+DISABLED_MEGA_PNG_SOURCE=icons/24x24/disabled-mega.png
+DISABLED_MULTI_PNG_SOURCE=icons/24x24/disabled-multi.png
+DISABLED_OTHER_PNG_SOURCE=icons/24x24/disabled-other.png
+DISABLED_OWNED_PNG_SOURCE=icons/24x24/disabled-owned.png
+DISABLED_PARKING_PNG_SOURCE=icons/24x24/disabled-parking.png
+DISABLED_PUSHPIN_PNG_SOURCE=icons/24x24/disabled-pushpin.png
+DISABLED_TRADITIONAL_PNG_SOURCE=icons/24x24/disabled-traditional.png
+DISABLED_TRAILHEAD_PNG_SOURCE=icons/24x24/disabled-trailhead.png
+DISABLED_TREASURE_PNG_SOURCE=icons/24x24/disabled-treasure.png
+DISABLED_UNKNOWN_PNG_SOURCE=icons/24x24/disabled-unknown.png
+DISABLED_VIRTUAL_PNG_SOURCE=icons/24x24/disabled-virtual.png
+DISABLED_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/disabled-waypoint-flag-red.png
+DISABLED_WEBCAM_PNG_SOURCE=icons/24x24/disabled-webcam.png
+DISABLED_WHERIGO_PNG_SOURCE=icons/24x24/disabled-wherigo.png
+DNF_PNG_SOURCE=icons/24x24/dnf.png
+ARCHIVED_DNF_PNG_SOURCE=icons/24x24/archived-dnf.png
+DISABLED_DNF_PNG_SOURCE=icons/24x24/disabled-dnf.png
+ARCHIVED_FTF_PNG_SOURCE=icons/24x24/archived-ftf.png
+DISABLED_FTF_PNG_SOURCE=icons/24x24/disabled-ftf.png
+FTF_PNG_SOURCE=icons/24x24/ftf.png
+DEFAULTMAPS_XML_SOURCE=maps/defaultmaps.xml
+D10_PNG_SOURCE=icons/32x32/d10.png
+D15_PNG_SOURCE=icons/32x32/d15.png
+D20_PNG_SOURCE=icons/32x32/d20.png
+D25_PNG_SOURCE=icons/32x32/d25.png
+D30_PNG_SOURCE=icons/32x32/d30.png
+D35_PNG_SOURCE=icons/32x32/d35.png
+D40_PNG_SOURCE=icons/32x32/d40.png
+D45_PNG_SOURCE=icons/32x32/d45.png
+D50_PNG_SOURCE=icons/32x32/d50.png
+T10_PNG_SOURCE=icons/32x32/t10.png
+T15_PNG_SOURCE=icons/32x32/t15.png
+T20_PNG_SOURCE=icons/32x32/t20.png
+T25_PNG_SOURCE=icons/32x32/t25.png
+T30_PNG_SOURCE=icons/32x32/t30.png
+T35_PNG_SOURCE=icons/32x32/t35.png
+T40_PNG_SOURCE=icons/32x32/t40.png
+T45_PNG_SOURCE=icons/32x32/t45.png
+T50_PNG_SOURCE=icons/32x32/t50.png
+BEACH_PNG_SOURCE=icons/splash/beach.png
+FOREST_PNG_SOURCE=icons/splash/forest.png
+NIGHT_PNG_SOURCE=icons/splash/night.png
+PARK_PNG_SOURCE=icons/splash/park.png
+SPACE2_PNG_SOURCE=icons/splash/Space2.png
+STALE_CITO_PNG_SOURCE=icons/24x24/stale-cito.png
+STALE_CORRECTED_PNG_SOURCE=icons/24x24/stale-corrected.png
+STALE_DNF_PNG_SOURCE=icons/24x24/stale-dnf.png
+STALE_EARTH_PNG_SOURCE=icons/24x24/stale-earth.png
+STALE_EVENT_PNG_SOURCE=icons/24x24/stale-event.png
+STALE_FOUND_PNG_SOURCE=icons/24x24/stale-found.png
+STALE_FTF_PNG_SOURCE=icons/24x24/stale-ftf.png
+STALE_GREENPIN_PNG_SOURCE=icons/24x24/stale-greenpin.png
+STALE_LETTERBOX_PNG_SOURCE=icons/24x24/stale-letterbox.png
+STALE_LOCATIONLESS_PNG_SOURCE=icons/24x24/stale-locationless.png
+STALE_MEGA_PNG_SOURCE=icons/24x24/stale-mega.png
+STALE_MULTI_PNG_SOURCE=icons/24x24/stale-multi.png
+STALE_OTHER_PNG_SOURCE=icons/24x24/stale-other.png
+STALE_OWNED_PNG_SOURCE=icons/24x24/stale-owned.png
+STALE_PARKING_PNG_SOURCE=icons/24x24/stale-parking.png
+STALE_PUSHPIN_PNG_SOURCE=icons/24x24/stale-pushpin.png
+STALE_TRADITIONAL_PNG_SOURCE=icons/24x24/stale-traditional.png
+STALE_TRAILHEAD_PNG_SOURCE=icons/24x24/stale-trailhead.png
+STALE_TREASURE_PNG_SOURCE=icons/24x24/stale-treasure.png
+STALE_UNKNOWN_PNG_SOURCE=icons/24x24/stale-unknown.png
+STALE_VIRTUAL_PNG_SOURCE=icons/24x24/stale-virtual.png
+STALE_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/stale-waypoint-flag-red.png
+STALE_WEBCAM_PNG_SOURCE=icons/24x24/stale-webcam.png
+STALE_WHERIGO_PNG_SOURCE=icons/24x24/stale-wherigo.png
+NEEDS_MAINTENANCE_PNG_SOURCE=icons/24x24/needs_maintenance.png
+WRITE_NOTE_PNG_SOURCE=icons/24x24/write_note.png
+AXMAS_PNG_SOURCE=icons/splash/christmas/AXmas.png
+BXMAS_PNG_SOURCE=icons/splash/christmas/BXmas.png
+CXMAS_PNG_SOURCE=icons/splash/christmas/CXmas.png
+DXMAS_PNG_SOURCE=icons/splash/christmas/DXmas.png
+EXMAS_PNG_SOURCE=icons/splash/christmas/EXmas.png
+FXMAS_PNG_SOURCE=icons/splash/christmas/FXmas.png
+GXMAS_PNG_SOURCE=icons/splash/christmas/GXmas.png
+HXMAS_PNG_SOURCE=icons/splash/christmas/HXmas.png
+IXMAS_PNG_SOURCE=icons/splash/christmas/IXmas.png
+GREENPIN_SVG_SOURCE=icons/scalable/greenpin.svg
+NOMAP_PNG_SOURCE=web/nomap.png
+DIS_LONG_HIKE_10KM_SVG_SOURCE=icons/scalable/attributes/dis_Long_Hike_(+10km).svg
+LOCATIONLESS_PNG_SOURCE=icons/24x24/locationless.png
+WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/waypoint-flag-red.png
+NEW_BLUEPIN_PNG_SOURCE=icons/24x24/new-bluepin.png
+NEW_CITO_PNG_SOURCE=icons/24x24/new-cito.png
+NEW_CORRECTED_PNG_SOURCE=icons/24x24/new-corrected.png
+NEW_DELETE_PNG_SOURCE=icons/24x24/new-delete.png
+NEW_DNF_PNG_SOURCE=icons/24x24/new-dnf.png
+NEW_EARTH_PNG_SOURCE=icons/24x24/new-earth.png
+NEW_EVENT_PNG_SOURCE=icons/24x24/new-event.png
+NEW_FOUND_PNG_SOURCE=icons/24x24/new-found.png
+NEW_FTF_PNG_SOURCE=icons/24x24/new-ftf.png
+NEW_GREENPIN_PNG_SOURCE=icons/24x24/new-greenpin.png
+NEW_LETTERBOX_PNG_SOURCE=icons/24x24/new-letterbox.png
+NEW_LOCATIONLESS_PNG_SOURCE=icons/24x24/new-locationless.png
+NEW_MEGA_PNG_SOURCE=icons/24x24/new-mega.png
+NEW_MULTI_PNG_SOURCE=icons/24x24/new-multi.png
+NEW_NEEDS_MAINTENANCE_PNG_SOURCE=icons/24x24/new-needs_maintenance.png
+NEW_OTHER_PNG_SOURCE=icons/24x24/new-other.png
+NEW_OWNED_PNG_SOURCE=icons/24x24/new-owned.png
+NEW_PARKING_PNG_SOURCE=icons/24x24/new-parking.png
+NEW_PUSHPIN_PNG_SOURCE=icons/24x24/new-pushpin.png
+NEW_TRADITIONAL_PNG_SOURCE=icons/24x24/new-traditional.png
+NEW_TRAILHEAD_PNG_SOURCE=icons/24x24/new-trailhead.png
+NEW_TREASURE_PNG_SOURCE=icons/24x24/new-treasure.png
+NEW_UNKNOWN_PNG_SOURCE=icons/24x24/new-unknown.png
+NEW_VIRTUAL_PNG_SOURCE=icons/24x24/new-virtual.png
+NEW_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/new-waypoint-flag-red.png
+NEW_WEBCAM_PNG_SOURCE=icons/24x24/new-webcam.png
+NEW_WHERIGO_PNG_SOURCE=icons/24x24/new-wherigo.png
+NEW_WRITE_NOTE_PNG_SOURCE=icons/24x24/new-write_note.png
+CLOGS_BLUEPIN_PNG_SOURCE=icons/24x24/clogs-bluepin.png
+CLOGS_CITO_PNG_SOURCE=icons/24x24/clogs-cito.png
+CLOGS_CORRECTED_PNG_SOURCE=icons/24x24/clogs-corrected.png
+CLOGS_DELETE_PNG_SOURCE=icons/24x24/clogs-delete.png
+CLOGS_DNF_PNG_SOURCE=icons/24x24/clogs-dnf.png
+CLOGS_EARTH_PNG_SOURCE=icons/24x24/clogs-earth.png
+CLOGS_EVENT_PNG_SOURCE=icons/24x24/clogs-event.png
+CLOGS_FOUND_PNG_SOURCE=icons/24x24/clogs-found.png
+CLOGS_FTF_PNG_SOURCE=icons/24x24/clogs-ftf.png
+CLOGS_GREENPIN_PNG_SOURCE=icons/24x24/clogs-greenpin.png
+CLOGS_LETTERBOX_PNG_SOURCE=icons/24x24/clogs-letterbox.png
+CLOGS_LOCATIONLESS_PNG_SOURCE=icons/24x24/clogs-locationless.png
+CLOGS_MEGA_PNG_SOURCE=icons/24x24/clogs-mega.png
+CLOGS_MULTI_PNG_SOURCE=icons/24x24/clogs-multi.png
+CLOGS_NEEDS_MAINTENANCE_PNG_SOURCE=icons/24x24/clogs-needs_maintenance.png
+CLOGS_OTHER_PNG_SOURCE=icons/24x24/clogs-other.png
+CLOGS_OWNED_PNG_SOURCE=icons/24x24/clogs-owned.png
+CLOGS_PARKING_PNG_SOURCE=icons/24x24/clogs-parking.png
+CLOGS_PUSHPIN_PNG_SOURCE=icons/24x24/clogs-pushpin.png
+CLOGS_TRADITIONAL_PNG_SOURCE=icons/24x24/clogs-traditional.png
+CLOGS_TRAILHEAD_PNG_SOURCE=icons/24x24/clogs-trailhead.png
+CLOGS_TREASURE_PNG_SOURCE=icons/24x24/clogs-treasure.png
+CLOGS_UNKNOWN_PNG_SOURCE=icons/24x24/clogs-unknown.png
+CLOGS_VIRTUAL_PNG_SOURCE=icons/24x24/clogs-virtual.png
+CLOGS_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/clogs-waypoint-flag-red.png
+CLOGS_WEBCAM_PNG_SOURCE=icons/24x24/clogs-webcam.png
+CLOGS_WHERIGO_PNG_SOURCE=icons/24x24/clogs-wherigo.png
+CLOGS_WRITE_NOTE_PNG_SOURCE=icons/24x24/clogs-write_note.png
+OCMENGINE_DLL_SOURCE=../ocmengine/bin/Debug/ocmengine.dll
+OCM_GTK_EXE_MDB_SOURCE=bind/ocm-gtk.exe.mdb
+OCM_GTK_EXE_MDB=$(BUILD_DIR)/ocm-gtk.exe.mdb
+
+endif
+
+if ENABLE_RELEASE
+ASSEMBLY_COMPILER_COMMAND = gmcs
+ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:3 -optimize-
+ASSEMBLY = bin/ocm-gtk.exe
+ASSEMBLY_MDB = 
+COMPILE_TARGET = exe
+PROJECT_REFERENCES =  \
+	../ocmengine/bin/Debug/ocmengine.dll
+BUILD_DIR = bin
+
+X_GPX_XML_SOURCE=x-gpx.xml
+X_OCM_XML_SOURCE=x-ocm.xml
+OCMLOGO_SVG_SOURCE=icons/scalable/OCMLogo.svg
+CITO_SVG_SOURCE=icons/scalable/cito.svg
+EARTH_SVG_SOURCE=icons/scalable/earth.svg
+FOUND_SVG_SOURCE=icons/scalable/found.svg
+HALFSTAR_SVG_SOURCE=icons/scalable/halfstar.svg
+LETTERBOX_SVG_SOURCE=icons/scalable/letterbox.svg
+MULTI_SVG_SOURCE=icons/scalable/multi.svg
+OTHER_SVG_SOURCE=icons/scalable/other.svg
+STAR_SVG_SOURCE=icons/scalable/star.svg
+STAR_EMPTY_SVG_SOURCE=icons/scalable/star_empty.svg
+UNKNOWN_SVG_SOURCE=icons/scalable/unknown.svg
+WAYPOINT_FLAG_RED_SVG_SOURCE=icons/scalable/waypoint-flag-red.svg
+WPT_VIEWER_HTML_SOURCE=web/wpt_viewer.html
+EVENT_SVG_SOURCE=icons/scalable/event.svg
+MEGA_SVG_SOURCE=icons/scalable/mega.svg
+VIRTUAL_SVG_SOURCE=icons/scalable/virtual.svg
+WEBCAM_SVG_SOURCE=icons/scalable/webcam.svg
+WHERIGO_SVG_SOURCE=icons/scalable/wherigo.svg
+CITO_PNG_SOURCE=icons/24x24/cito.png
+EARTH_PNG_SOURCE=icons/24x24/earth.png
+EVENT_PNG_SOURCE=icons/24x24/event.png
+LETTERBOX_PNG_SOURCE=icons/24x24/letterbox.png
+MEGA_PNG_SOURCE=icons/24x24/mega.png
+MULTI_PNG_SOURCE=icons/24x24/multi.png
+OTHER_PNG_SOURCE=icons/24x24/other.png
+OWNED_PNG_SOURCE=icons/24x24/owned.png
+TRADITIONAL_PNG_SOURCE=icons/24x24/traditional.png
+UNKNOWN_PNG_SOURCE=icons/24x24/unknown.png
+VIRTUAL_PNG_SOURCE=icons/24x24/virtual.png
+WEBCAM_PNG_SOURCE=icons/24x24/webcam.png
+WHERIGO_PNG_SOURCE=icons/24x24/wherigo.png
+CIRCLE_PNG_SOURCE=icons/48x48/circle.png
+PUSHPIN_PNG_SOURCE=icons/24x24/pushpin.png
+FOUND_PNG_SOURCE=icons/24x24/found.png
+TRADITIONAL_SVG_SOURCE=icons/scalable/traditional.svg
+BLUEPIN_PNG_SOURCE=icons/24x24/bluepin.png
+PARKING_PNG_SOURCE=icons/24x24/parking.png
+TRAILHEAD_PNG_SOURCE=icons/24x24/trailhead.png
+BLUEPIN_SVG_SOURCE=icons/scalable/bluepin.svg
+PARKING_SVG_SOURCE=icons/scalable/parking.svg
+TRAILHEAD_SVG_SOURCE=icons/scalable/trailhead.svg
+CHANGEHISTORY_TXT_SOURCE=docs/ChangeHistory.txt
+README_TXT_SOURCE=docs/README.txt
+LICENCE_TXT_SOURCE=licence/Licence.txt
+TREASURE_SVG_SOURCE=icons/scalable/treasure.svg
+TREASURE_PNG_SOURCE=icons/24x24/treasure.png
+OPENLAYERS_JS_SOURCE=web/OpenLayers.js
+BLANK_GIF_SOURCE=web/img/blank.gif
+CLOUD_POPUP_RELATIVE_PNG_SOURCE=web/img/cloud-popup-relative.png
+DRAG_RECTANGLE_OFF_PNG_SOURCE=web/img/drag-rectangle-off.png
+DRAG_RECTANGLE_ON_PNG_SOURCE=web/img/drag-rectangle-on.png
+EAST_MINI_PNG_SOURCE=web/img/east-mini.png
+LAYER_SWITCHER_MAXIMIZE_PNG_SOURCE=web/img/layer-switcher-maximize.png
+LAYER_SWITCHER_MINIMIZE_PNG_SOURCE=web/img/layer-switcher-minimize.png
+MARKER_PNG_SOURCE=web/img/marker.png
+MARKER_BLUE_PNG_SOURCE=web/img/marker-blue.png
+MARKER_GOLD_PNG_SOURCE=web/img/marker-gold.png
+MARKER_GREEN_PNG_SOURCE=web/img/marker-green.png
+MEASURING_STICK_OFF_PNG_SOURCE=web/img/measuring-stick-off.png
+MEASURING_STICK_ON_PNG_SOURCE=web/img/measuring-stick-on.png
+NORTH_MINI_PNG_SOURCE=web/img/north-mini.png
+PANNING_HAND_OFF_PNG_SOURCE=web/img/panning-hand-off.png
+PANNING_HAND_ON_PNG_SOURCE=web/img/panning-hand-on.png
+SLIDER_PNG_SOURCE=web/img/slider.png
+SOUTH_MINI_PNG_SOURCE=web/img/south-mini.png
+WEST_MINI_PNG_SOURCE=web/img/west-mini.png
+ZOOMBAR_PNG_SOURCE=web/img/zoombar.png
+ZOOM_MINUS_MINI_PNG_SOURCE=web/img/zoom-minus-mini.png
+ZOOM_PLUS_MINI_PNG_SOURCE=web/img/zoom-plus-mini.png
+ZOOM_WORLD_MINI_PNG_SOURCE=web/img/zoom-world-mini.png
+FRAMEDCLOUD_CSS_SOURCE=web/theme/default/framedCloud.css
+GOOGLE_CSS_SOURCE=web/theme/default/google.css
+IE6_STYLE_CSS_SOURCE=web/theme/default/ie6-style.css
+STYLE_CSS_SOURCE=web/theme/default/style.css
+ADD_POINT_OFF_PNG_SOURCE=web/theme/default/img/add_point_off.png
+ADD_POINT_ON_PNG_SOURCE=web/theme/default/img/add_point_on.png
+BLANK_GIF2_SOURCE=web/theme/default/img/blank.gif
+CLOSE_GIF_SOURCE=web/theme/default/img/close.gif
+DRAG_RECTANGLE_OFF_PNG2_SOURCE=web/theme/default/img/drag-rectangle-off.png
+DRAG_RECTANGLE_ON_PNG2_SOURCE=web/theme/default/img/drag-rectangle-on.png
+DRAW_LINE_OFF_PNG_SOURCE=web/theme/default/img/draw_line_off.png
+DRAW_LINE_ON_PNG_SOURCE=web/theme/default/img/draw_line_on.png
+DRAW_POINT_OFF_PNG_SOURCE=web/theme/default/img/draw_point_off.png
+DRAW_POINT_ON_PNG_SOURCE=web/theme/default/img/draw_point_on.png
+DRAW_POLYGON_OFF_PNG_SOURCE=web/theme/default/img/draw_polygon_off.png
+DRAW_POLYGON_ON_PNG_SOURCE=web/theme/default/img/draw_polygon_on.png
+EDITING_TOOL_BAR_PNG_SOURCE=web/theme/default/img/editing_tool_bar.png
+MOVE_FEATURE_OFF_PNG_SOURCE=web/theme/default/img/move_feature_off.png
+MOVE_FEATURE_ON_PNG_SOURCE=web/theme/default/img/move_feature_on.png
+NAVIGATION_HISTORY_PNG_SOURCE=web/theme/default/img/navigation_history.png
+OVERVIEW_REPLACEMENT_GIF_SOURCE=web/theme/default/img/overview_replacement.gif
+PANNING_HAND_OFF_PNG2_SOURCE=web/theme/default/img/panning-hand-off.png
+PANNING_HAND_ON_PNG2_SOURCE=web/theme/default/img/panning-hand-on.png
+PAN_OFF_PNG_SOURCE=web/theme/default/img/pan_off.png
+PAN_ON_PNG_SOURCE=web/theme/default/img/pan_on.png
+PAN_PANEL_PNG_SOURCE=web/theme/default/img/pan-panel.png
+PAN_PANEL_NOALPHA_PNG_SOURCE=web/theme/default/img/pan-panel-NOALPHA.png
+REMOVE_POINT_OFF_PNG_SOURCE=web/theme/default/img/remove_point_off.png
+REMOVE_POINT_ON_PNG_SOURCE=web/theme/default/img/remove_point_on.png
+RULER_PNG_SOURCE=web/theme/default/img/ruler.png
+SAVE_FEATURES_OFF_PNG_SOURCE=web/theme/default/img/save_features_off.png
+SAVE_FEATURES_ON_PNG_SOURCE=web/theme/default/img/save_features_on.png
+VIEW_NEXT_OFF_PNG_SOURCE=web/theme/default/img/view_next_off.png
+VIEW_NEXT_ON_PNG_SOURCE=web/theme/default/img/view_next_on.png
+VIEW_PREVIOUS_OFF_PNG_SOURCE=web/theme/default/img/view_previous_off.png
+VIEW_PREVIOUS_ON_PNG_SOURCE=web/theme/default/img/view_previous_on.png
+ZOOM_PANEL_PNG_SOURCE=web/theme/default/img/zoom-panel.png
+ZOOM_PANEL_NOALPHA_PNG_SOURCE=web/theme/default/img/zoom-panel-NOALPHA.png
+GREENPIN_PNG_SOURCE=icons/24x24/greenpin.png
+PUSHPIN_SVG_SOURCE=icons/scalable/pushpin.svg
+VERSION_TXT_SOURCE=version/Version.txt
+YES_RECOMMENDED_AT_NIGHT_SVG_SOURCE=icons/scalable/attributes/yes_Recommended_at_night.svg
+YES_NEEDS_MAINTENANCE_SVG_SOURCE=icons/scalable/attributes/yes_Needs_maintenance.svg
+NO_RECOMMENDED_AT_NIGHT_SVG_SOURCE=icons/scalable/attributes/no_Recommended_at_night.svg
+DIS_RECOMMENDED_AT_NIGHT_SVG_SOURCE=icons/scalable/attributes/dis_Recommended_at_night.svg
+DIS_NEEDS_MAINTENANCE_SVG_SOURCE=icons/scalable/attributes/dis_Needs_maintenance.svg
+YES_WIRELESS_BEACON_SVG_SOURCE=icons/scalable/attributes/yes_Wireless_Beacon.svg
+DIS_WIRELESS_BEACON_SVG_SOURCE=icons/scalable/attributes/dis_Wireless_Beacon.svg
+YES_AVAILABLE_DURING_WINTER_SVG_SOURCE=icons/scalable/attributes/yes_Available_during_winter.svg
+NO_AVAILABLE_DURING_WINTER_SVG_SOURCE=icons/scalable/attributes/no_Available_during_winter.svg
+DIS_AVAILABLE_DURING_WINTER_SVG_SOURCE=icons/scalable/attributes/dis_Available_during_winter.svg
+DIS_BICYCLES_SVG_SOURCE=icons/scalable/attributes/dis_Bicycles.svg
+DIS_DOGS_SVG_SOURCE=icons/scalable/attributes/dis_Dogs.svg
+NO_BICYCLES_SVG_SOURCE=icons/scalable/attributes/no_Bicycles.svg
+NO_DOGS_SVG_SOURCE=icons/scalable/attributes/no_Dogs.svg
+YES_BICYCLES_SVG_SOURCE=icons/scalable/attributes/yes_Bicycles.svg
+YES_DOGS_SVG_SOURCE=icons/scalable/attributes/yes_Dogs.svg
+DIS_ACCESS_OR_PARKING_FEE_SVG_SOURCE=icons/scalable/attributes/dis_Access_or_parking_fee.svg
+YES_ACCESS_OR_PARKING_FEE_SVG_SOURCE=icons/scalable/attributes/yes_Access_or_parking_fee.svg
+DIS_RECOMMENDED_FOR_KIDS_SVG_SOURCE=icons/scalable/attributes/dis_Recommended_for_kids.svg
+NO_RECOMMENDED_FOR_KIDS_SVG_SOURCE=icons/scalable/attributes/no_Recommended_for_kids.svg
+YES_RECOMMENDED_FOR_KIDS_SVG_SOURCE=icons/scalable/attributes/yes_Recommended_for_kids.svg
+DIS_CAMPFIRES_SVG_SOURCE=icons/scalable/attributes/dis_Campfires.svg
+NO_CAMPFIRES_SVG_SOURCE=icons/scalable/attributes/no_Campfires.svg
+YES_CAMPFIRES_SVG_SOURCE=icons/scalable/attributes/yes_Campfires.svg
+DIS_TAKES_LESS_THAN_AN_HOUR_SVG_SOURCE=icons/scalable/attributes/dis_Takes_less_than_an_hour.svg
+NO_TAKES_LESS_THAN_AN_HOUR_SVG_SOURCE=icons/scalable/attributes/no_Takes_less_than_an_hour.svg
+YES_TAKES_LESS_THAN_AN_HOUR_SVG_SOURCE=icons/scalable/attributes/yes_Takes_less_than_an_hour.svg
+DIS_MAY_REQUIRE_SWIMMING_SVG_SOURCE=icons/scalable/attributes/dis_May_require_swimming.svg
+YES_MAY_REQUIRE_SWIMMING_SVG_SOURCE=icons/scalable/attributes/yes_May_require_swimming.svg
+DIS_PARKING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/dis_Parking_available.svg
+DIS_STROLLER_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/dis_Stroller_accessible.svg
+DIS_WHEELCHAIR_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/dis_Wheelchair_accessible.svg
+NO_PARKING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/no_Parking_available.svg
+NO_STROLLER_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/no_Stroller_accessible.svg
+NO_WHEELCHAIR_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/no_Wheelchair_accessible.svg
+YES_PARKING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/yes_Parking_available.svg
+YES_STROLLER_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/yes_Stroller_accessible.svg
+YES_WHEELCHAIR_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/yes_Wheelchair_accessible.svg
+DIS_FIELD_PUZZLE_SVG_SOURCE=icons/scalable/attributes/dis_Field_Puzzle.svg
+YES_FIELD_PUZZLE_SVG_SOURCE=icons/scalable/attributes/yes_Field_Puzzle.svg
+DIS_SIGNIFICANT_HIKE_SVG_SOURCE=icons/scalable/attributes/dis_Significant_Hike.svg
+NO_SIGNIFICANT_HIKE_SVG_SOURCE=icons/scalable/attributes/no_Significant_Hike.svg
+YES_SIGNIFICANT_HIKE_SVG_SOURCE=icons/scalable/attributes/yes_Significant_Hike.svg
+DIS_ABANDONED_MINES_SVG_SOURCE=icons/scalable/attributes/dis_Abandoned_mines.svg
+YES_ABANDONED_MINES_SVG_SOURCE=icons/scalable/attributes/yes_Abandoned_mines.svg
+DIS_CLIFF___FALLING_ROCKS_SVG_SOURCE=icons/scalable/attributes/dis_Cliff___falling_rocks.svg
+YES_CLIFF___FALLING_ROCKS_SVG_SOURCE=icons/scalable/attributes/yes_Cliff___falling_rocks.svg
+DIS_CLIMBING_GEAR_SVG_SOURCE=icons/scalable/attributes/dis_Climbing_gear.svg
+YES_CLIMBING_GEAR_SVG_SOURCE=icons/scalable/attributes/yes_Climbing_gear.svg
+DIS_CROSS_COUNTRY_SKIS_SVG_SOURCE=icons/scalable/attributes/dis_Cross_Country_Skis.svg
+YES_CROSS_COUNTRY_SKIS_SVG_SOURCE=icons/scalable/attributes/yes_Cross_Country_Skis.svg
+DIS_DANGEROUS_AREA_SVG_SOURCE=icons/scalable/attributes/dis_Dangerous_area.svg
+YES_DANGEROUS_AREA_SVG_SOURCE=icons/scalable/attributes/yes_Dangerous_area.svg
+DIS_PUBLIC_TRANSPORTATION_SVG_SOURCE=icons/scalable/attributes/dis_Public_transportation.svg
+YES_PUBLIC_TRANSPORTATION_SVG_SOURCE=icons/scalable/attributes/yes_Public_transportation.svg
+DIS_WATCH_FOR_LIVESTOCK_SVG_SOURCE=icons/scalable/attributes/dis_Watch_for_livestock.svg
+YES_WATCH_FOR_LIVESTOCK_SVG_SOURCE=icons/scalable/attributes/yes_Watch_for_livestock.svg
+DIS_AVAILABLE_AT_ALL_TIMES_SVG_SOURCE=icons/scalable/attributes/dis_Available_at_all_times.svg
+NO_AVAILABLE_AT_ALL_TIMES_SVG_SOURCE=icons/scalable/attributes/no_Available_at_all_times.svg
+YES_AVAILABLE_AT_ALL_TIMES_SVG_SOURCE=icons/scalable/attributes/yes_Available_at_all_times.svg
+DIS_STEALTH_REQUIRED_SVG_SOURCE=icons/scalable/attributes/dis_Stealth_required.svg
+NO_STEALTH_REQUIRED_SVG_SOURCE=icons/scalable/attributes/no_Stealth_required.svg
+YES_STEALTH_REQUIRED_SVG_SOURCE=icons/scalable/attributes/yes_Stealth_required.svg
+DIS_SNOWSHOES_SVG_SOURCE=icons/scalable/attributes/dis_Snowshoes.svg
+YES_SNOWSHOES_SVG_SOURCE=icons/scalable/attributes/yes_Snowshoes.svg
+DIS_SPECIAL_TOOL_REQUIRED_SVG_SOURCE=icons/scalable/attributes/dis_Special_Tool_Required.svg
+YES_SPECIAL_TOOL_REQUIRED_SVG_SOURCE=icons/scalable/attributes/yes_Special_Tool_Required.svg
+DIS_THORNS_SVG_SOURCE=icons/scalable/attributes/dis_Thorns.svg
+YES_THORNS_SVG_SOURCE=icons/scalable/attributes/yes_Thorns.svg
+DIS_UV_LIGHT_REQUIRED_SVG_SOURCE=icons/scalable/attributes/dis_UV_Light_Required.svg
+YES_UV_LIGHT_REQUIRED_SVG_SOURCE=icons/scalable/attributes/yes_UV_Light_Required.svg
+DIS_BOAT_SVG_SOURCE=icons/scalable/attributes/dis_Boat.svg
+YES_BOAT_SVG_SOURCE=icons/scalable/attributes/yes_Boat.svg
+DIS_ABANDONED_STRUCTURE_SVG_SOURCE=icons/scalable/attributes/dis_Abandoned_Structure.svg
+NO_ABANDONED_STRUCTURE_SVG_SOURCE=icons/scalable/attributes/no_Abandoned_Structure.svg
+YES_ABANDONED_STRUCTURE_SVG_SOURCE=icons/scalable/attributes/yes_Abandoned_Structure.svg
+DIS_CAMPING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/dis_Camping_available.svg
+NO_CAMPING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/no_Camping_available.svg
+YES_CAMPING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/yes_Camping_available.svg
+DIS_DANGEROUS_ANIMALS_SVG_SOURCE=icons/scalable/attributes/dis_Dangerous_Animals.svg
+YES_DANGEROUS_ANIMALS_SVG_SOURCE=icons/scalable/attributes/yes_Dangerous_Animals.svg
+DIS_DIFFICULT_CLIMBING_SVG_SOURCE=icons/scalable/attributes/dis_Difficult_climbing.svg
+NO_DIFFICULT_CLIMBING_SVG_SOURCE=icons/scalable/attributes/no_Difficult_climbing.svg
+YES_DIFFICULT_CLIMBING_SVG_SOURCE=icons/scalable/attributes/yes_Difficult_climbing.svg
+DIS_DRINKING_WATER_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Drinking_water_nearby.svg
+NO_DRINKING_WATER_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Drinking_water_nearby.svg
+YES_DRINKING_WATER_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Drinking_water_nearby.svg
+DIS_FLASHLIGHT_REQUIRED_SVG_SOURCE=icons/scalable/attributes/dis_Flashlight_required.svg
+YES_FLASHLIGHT_REQUIRED_SVG_SOURCE=icons/scalable/attributes/yes_Flashlight_required.svg
+DIS_FOOD_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Food_Nearby.svg
+NO_FOOD_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Food_Nearby.svg
+YES_FOOD_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Food_Nearby.svg
+DIS_FUEL_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Fuel_Nearby.svg
+NO_FUEL_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Fuel_Nearby.svg
+YES_FUEL_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Fuel_Nearby.svg
+DIS_HORSES_SVG_SOURCE=icons/scalable/attributes/dis_Horses.svg
+NO_HORSES_SVG_SOURCE=icons/scalable/attributes/no_Horses.svg
+YES_HORSES_SVG_SOURCE=icons/scalable/attributes/yes_Horses.svg
+DIS_HUNTING_SVG_SOURCE=icons/scalable/attributes/dis_Hunting.svg
+YES_HUNTING_SVG_SOURCE=icons/scalable/attributes/yes_Hunting.svg
+DIS_MAY_REQUIRE_WADING_SVG_SOURCE=icons/scalable/attributes/dis_May_require_wading.svg
+YES_MAY_REQUIRE_WADING_SVG_SOURCE=icons/scalable/attributes/yes_May_require_wading.svg
+DIS_MOTORCYCLES_SVG_SOURCE=icons/scalable/attributes/dis_Motorcycles.svg
+NO_MOTORCYCLES_SVG_SOURCE=icons/scalable/attributes/no_Motorcycles.svg
+YES_MOTORCYCLES_SVG_SOURCE=icons/scalable/attributes/yes_Motorcycles.svg
+DIS_NIGHT_CACHE_SVG_SOURCE=icons/scalable/attributes/dis_Night_Cache.svg
+YES_NIGHT_CACHE_SVG_SOURCE=icons/scalable/attributes/yes_Night_Cache.svg
+DIS_PARK_AND_GRAB_SVG_SOURCE=icons/scalable/attributes/dis_Park_and_Grab.svg
+YES_PARK_AND_GRAB_SVG_SOURCE=icons/scalable/attributes/yes_Park_and_Grab.svg
+CORRECTED_SVG_SOURCE=icons/scalable/corrected.svg
+CORRECTED_PNG_SOURCE=icons/24x24/corrected.png
+DIS_SCUBA_GEAR_SVG_SOURCE=icons/scalable/attributes/dis_Scuba_gear.svg
+YES_SCUBA_GEAR_SVG_SOURCE=icons/scalable/attributes/yes_Scuba_gear.svg
+DIS_SCENIC_VIEW_SVG_SOURCE=icons/scalable/attributes/dis_Scenic_view.svg
+YES_SCENIC_VIEW_SVG_SOURCE=icons/scalable/attributes/yes_Scenic_view.svg
+DIS_MEDIUM_HIKE_1KM_10KM_SVG_SOURCE=icons/scalable/attributes/dis_Medium_hike_(1km-10km).svg
+NO_MEDIUM_HIKE_1KM_10KM_SVG_SOURCE=icons/scalable/attributes/no_Medium_hike_(1km-10km).svg
+YES_MEDIUM_HIKE_1KM_10KM_SVG_SOURCE=icons/scalable/attributes/yes_Medium_hike_(1km-10km).svg
+NO_LONG_HIKE_10KM_SVG_SOURCE=icons/scalable/attributes/no_Long_Hike_(+10km).svg
+YES_LONG_HIKE_10KM_SVG_SOURCE=icons/scalable/attributes/yes_Long_Hike_(+10km).svg
+DIS_SHORT_HIKE_LESS_THAN_1KM_SVG_SOURCE=icons/scalable/attributes/dis_Short_hike_(less_than_1km).svg
+NO_SHORT_HIKE_LESS_THAN_1KM_SVG_SOURCE=icons/scalable/attributes/no_Short_hike_(less_than_1km).svg
+YES_SHORT_HIKE_LESS_THAN_1KM_SVG_SOURCE=icons/scalable/attributes/yes_Short_hike_(less_than_1km).svg
+DIS_POISON_PLANTS_SVG_SOURCE=icons/scalable/attributes/dis_Poison_plants.svg
+NO_POISON_PLANTS_SVG_SOURCE=icons/scalable/attributes/no_Poison_plants.svg
+YES_POISON_PLANTS_SVG_SOURCE=icons/scalable/attributes/yes_Poison_plants.svg
+DIS_TICKS_SVG_SOURCE=icons/scalable/attributes/dis_Ticks.svg
+YES_TICKS_SVG_SOURCE=icons/scalable/attributes/yes_Ticks.svg
+YES_PICNIC_TABLES_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Picnic_tables_nearby.svg
+DIS_PICNIC_TABLES_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Picnic_tables_nearby.svg
+NO_PICNIC_TABLES_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Picnic_tables_nearby.svg
+DIS_PUBLIC_RESTROOMS_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Public_restrooms_nearby.svg
+NO_PUBLIC_RESTROOMS_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Public_restrooms_nearby.svg
+YES_PUBLIC_RESTROOMS_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Public_restrooms_nearby.svg
+DIS_TELEPHONE_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Telephone_nearby.svg
+NO_TELEPHONE_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Telephone_nearby.svg
+YES_TELEPHONE_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Telephone_nearby.svg
+DIS_TRUCK_DRIVER_RV_SVG_SOURCE=icons/scalable/attributes/dis_Truck_Driver_RV.svg
+NO_TRUCK_DRIVER_RV_SVG_SOURCE=icons/scalable/attributes/no_Truck_Driver_RV.svg
+YES_TRUCK_DRIVER_RV_SVG_SOURCE=icons/scalable/attributes/yes_Truck_Driver_RV.svg
+DIS_QUADS_SVG_SOURCE=icons/scalable/attributes/dis_Quads.svg
+NO_QUADS_SVG_SOURCE=icons/scalable/attributes/no_Quads.svg
+YES_QUADS_SVG_SOURCE=icons/scalable/attributes/yes_Quads.svg
+DIS_OFF_ROAD_VEHICLES_SVG_SOURCE=icons/scalable/attributes/dis_Off-road_vehicles.svg
+NO_OFF_ROAD_VEHICLES_SVG_SOURCE=icons/scalable/attributes/no_Off-road_vehicles.svg
+YES_OFF_ROAD_VEHICLES_SVG_SOURCE=icons/scalable/attributes/yes_Off-road_vehicles.svg
+DIS_SNOWMOBILES_SVG_SOURCE=icons/scalable/attributes/dis_Snowmobiles.svg
+NO_SNOWMOBILES_SVG_SOURCE=icons/scalable/attributes/no_Snowmobiles.svg
+YES_SNOWMOBILES_SVG_SOURCE=icons/scalable/attributes/yes_Snowmobiles.svg
+NO_NIGHT_CACHE_SVG_SOURCE=icons/scalable/attributes/no_Night_Cache.svg
+NO_PARK_AND_GRAB_SVG_SOURCE=icons/scalable/attributes/no_Park_and_Grab.svg
+DNF_SVG_SOURCE=icons/scalable/dnf.svg
+FTF_SVG_SOURCE=icons/scalable/ftf.svg
+WRITE_NOTE_SVG_SOURCE=icons/scalable/write_note.svg
+NEEDS_MAINTENANCE_SVG_SOURCE=icons/scalable/needs_maintenance.svg
+ARCHIVED_BLUEPIN_PNG_SOURCE=icons/24x24/archived-bluepin.png
+ARCHIVED_CITO_PNG_SOURCE=icons/24x24/archived-cito.png
+ARCHIVED_CORRECTED_PNG_SOURCE=icons/24x24/archived-corrected.png
+ARCHIVED_EARTH_PNG_SOURCE=icons/24x24/archived-earth.png
+ARCHIVED_EVENT_PNG_SOURCE=icons/24x24/archived-event.png
+ARCHIVED_FOUND_PNG_SOURCE=icons/24x24/archived-found.png
+ARCHIVED_GREENPIN_PNG_SOURCE=icons/24x24/archived-greenpin.png
+ARCHIVED_LETTERBOX_PNG_SOURCE=icons/24x24/archived-letterbox.png
+ARCHIVED_LOCATIONLESS_PNG_SOURCE=icons/24x24/archived-locationless.png
+ARCHIVED_MEGA_PNG_SOURCE=icons/24x24/archived-mega.png
+ARCHIVED_MULTI_PNG_SOURCE=icons/24x24/archived-multi.png
+ARCHIVED_OTHER_PNG_SOURCE=icons/24x24/archived-other.png
+ARCHIVED_OWNED_PNG_SOURCE=icons/24x24/archived-owned.png
+ARCHIVED_PARKING_PNG_SOURCE=icons/24x24/archived-parking.png
+ARCHIVED_PUSHPIN_PNG_SOURCE=icons/24x24/archived-pushpin.png
+ARCHIVED_TRADITIONAL_PNG_SOURCE=icons/24x24/archived-traditional.png
+ARCHIVED_TRAILHEAD_PNG_SOURCE=icons/24x24/archived-trailhead.png
+ARCHIVED_TREASURE_PNG_SOURCE=icons/24x24/archived-treasure.png
+ARCHIVED_UNKNOWN_PNG_SOURCE=icons/24x24/archived-unknown.png
+ARCHIVED_VIRTUAL_PNG_SOURCE=icons/24x24/archived-virtual.png
+ARCHIVED_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/archived-waypoint-flag-red.png
+ARCHIVED_WEBCAM_PNG_SOURCE=icons/24x24/archived-webcam.png
+ARCHIVED_WHERIGO_PNG_SOURCE=icons/24x24/archived-wherigo.png
+DISABLED_BLUEPIN_PNG_SOURCE=icons/24x24/disabled-bluepin.png
+DISABLED_CITO_PNG_SOURCE=icons/24x24/disabled-cito.png
+DISABLED_CORRECTED_PNG_SOURCE=icons/24x24/disabled-corrected.png
+DISABLED_EARTH_PNG_SOURCE=icons/24x24/disabled-earth.png
+DISABLED_EVENT_PNG_SOURCE=icons/24x24/disabled-event.png
+DISABLED_FOUND_PNG_SOURCE=icons/24x24/disabled-found.png
+DISABLED_GREENPIN_PNG_SOURCE=icons/24x24/disabled-greenpin.png
+DISABLED_LETTERBOX_PNG_SOURCE=icons/24x24/disabled-letterbox.png
+DISABLED_LOCATIONLESS_PNG_SOURCE=icons/24x24/disabled-locationless.png
+DISABLED_MEGA_PNG_SOURCE=icons/24x24/disabled-mega.png
+DISABLED_MULTI_PNG_SOURCE=icons/24x24/disabled-multi.png
+DISABLED_OTHER_PNG_SOURCE=icons/24x24/disabled-other.png
+DISABLED_OWNED_PNG_SOURCE=icons/24x24/disabled-owned.png
+DISABLED_PARKING_PNG_SOURCE=icons/24x24/disabled-parking.png
+DISABLED_PUSHPIN_PNG_SOURCE=icons/24x24/disabled-pushpin.png
+DISABLED_TRADITIONAL_PNG_SOURCE=icons/24x24/disabled-traditional.png
+DISABLED_TRAILHEAD_PNG_SOURCE=icons/24x24/disabled-trailhead.png
+DISABLED_TREASURE_PNG_SOURCE=icons/24x24/disabled-treasure.png
+DISABLED_UNKNOWN_PNG_SOURCE=icons/24x24/disabled-unknown.png
+DISABLED_VIRTUAL_PNG_SOURCE=icons/24x24/disabled-virtual.png
+DISABLED_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/disabled-waypoint-flag-red.png
+DISABLED_WEBCAM_PNG_SOURCE=icons/24x24/disabled-webcam.png
+DISABLED_WHERIGO_PNG_SOURCE=icons/24x24/disabled-wherigo.png
+DNF_PNG_SOURCE=icons/24x24/dnf.png
+ARCHIVED_DNF_PNG_SOURCE=icons/24x24/archived-dnf.png
+DISABLED_DNF_PNG_SOURCE=icons/24x24/disabled-dnf.png
+ARCHIVED_FTF_PNG_SOURCE=icons/24x24/archived-ftf.png
+DISABLED_FTF_PNG_SOURCE=icons/24x24/disabled-ftf.png
+FTF_PNG_SOURCE=icons/24x24/ftf.png
+DEFAULTMAPS_XML_SOURCE=maps/defaultmaps.xml
+D10_PNG_SOURCE=icons/32x32/d10.png
+D15_PNG_SOURCE=icons/32x32/d15.png
+D20_PNG_SOURCE=icons/32x32/d20.png
+D25_PNG_SOURCE=icons/32x32/d25.png
+D30_PNG_SOURCE=icons/32x32/d30.png
+D35_PNG_SOURCE=icons/32x32/d35.png
+D40_PNG_SOURCE=icons/32x32/d40.png
+D45_PNG_SOURCE=icons/32x32/d45.png
+D50_PNG_SOURCE=icons/32x32/d50.png
+T10_PNG_SOURCE=icons/32x32/t10.png
+T15_PNG_SOURCE=icons/32x32/t15.png
+T20_PNG_SOURCE=icons/32x32/t20.png
+T25_PNG_SOURCE=icons/32x32/t25.png
+T30_PNG_SOURCE=icons/32x32/t30.png
+T35_PNG_SOURCE=icons/32x32/t35.png
+T40_PNG_SOURCE=icons/32x32/t40.png
+T45_PNG_SOURCE=icons/32x32/t45.png
+T50_PNG_SOURCE=icons/32x32/t50.png
+BEACH_PNG_SOURCE=icons/splash/beach.png
+FOREST_PNG_SOURCE=icons/splash/forest.png
+NIGHT_PNG_SOURCE=icons/splash/night.png
+PARK_PNG_SOURCE=icons/splash/park.png
+SPACE2_PNG_SOURCE=icons/splash/Space2.png
+STALE_CITO_PNG_SOURCE=icons/24x24/stale-cito.png
+STALE_CORRECTED_PNG_SOURCE=icons/24x24/stale-corrected.png
+STALE_DNF_PNG_SOURCE=icons/24x24/stale-dnf.png
+STALE_EARTH_PNG_SOURCE=icons/24x24/stale-earth.png
+STALE_EVENT_PNG_SOURCE=icons/24x24/stale-event.png
+STALE_FOUND_PNG_SOURCE=icons/24x24/stale-found.png
+STALE_FTF_PNG_SOURCE=icons/24x24/stale-ftf.png
+STALE_GREENPIN_PNG_SOURCE=icons/24x24/stale-greenpin.png
+STALE_LETTERBOX_PNG_SOURCE=icons/24x24/stale-letterbox.png
+STALE_LOCATIONLESS_PNG_SOURCE=icons/24x24/stale-locationless.png
+STALE_MEGA_PNG_SOURCE=icons/24x24/stale-mega.png
+STALE_MULTI_PNG_SOURCE=icons/24x24/stale-multi.png
+STALE_OTHER_PNG_SOURCE=icons/24x24/stale-other.png
+STALE_OWNED_PNG_SOURCE=icons/24x24/stale-owned.png
+STALE_PARKING_PNG_SOURCE=icons/24x24/stale-parking.png
+STALE_PUSHPIN_PNG_SOURCE=icons/24x24/stale-pushpin.png
+STALE_TRADITIONAL_PNG_SOURCE=icons/24x24/stale-traditional.png
+STALE_TRAILHEAD_PNG_SOURCE=icons/24x24/stale-trailhead.png
+STALE_TREASURE_PNG_SOURCE=icons/24x24/stale-treasure.png
+STALE_UNKNOWN_PNG_SOURCE=icons/24x24/stale-unknown.png
+STALE_VIRTUAL_PNG_SOURCE=icons/24x24/stale-virtual.png
+STALE_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/stale-waypoint-flag-red.png
+STALE_WEBCAM_PNG_SOURCE=icons/24x24/stale-webcam.png
+STALE_WHERIGO_PNG_SOURCE=icons/24x24/stale-wherigo.png
+NEEDS_MAINTENANCE_PNG_SOURCE=icons/24x24/needs_maintenance.png
+WRITE_NOTE_PNG_SOURCE=icons/24x24/write_note.png
+AXMAS_PNG_SOURCE=icons/splash/christmas/AXmas.png
+BXMAS_PNG_SOURCE=icons/splash/christmas/BXmas.png
+CXMAS_PNG_SOURCE=icons/splash/christmas/CXmas.png
+DXMAS_PNG_SOURCE=icons/splash/christmas/DXmas.png
+EXMAS_PNG_SOURCE=icons/splash/christmas/EXmas.png
+FXMAS_PNG_SOURCE=icons/splash/christmas/FXmas.png
+GXMAS_PNG_SOURCE=icons/splash/christmas/GXmas.png
+HXMAS_PNG_SOURCE=icons/splash/christmas/HXmas.png
+IXMAS_PNG_SOURCE=icons/splash/christmas/IXmas.png
+GREENPIN_SVG_SOURCE=icons/scalable/greenpin.svg
+NOMAP_PNG_SOURCE=web/nomap.png
+DIS_LONG_HIKE_10KM_SVG_SOURCE=icons/scalable/attributes/dis_Long_Hike_(+10km).svg
+LOCATIONLESS_PNG_SOURCE=icons/24x24/locationless.png
+WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/waypoint-flag-red.png
+NEW_BLUEPIN_PNG_SOURCE=icons/24x24/new-bluepin.png
+NEW_CITO_PNG_SOURCE=icons/24x24/new-cito.png
+NEW_CORRECTED_PNG_SOURCE=icons/24x24/new-corrected.png
+NEW_DELETE_PNG_SOURCE=icons/24x24/new-delete.png
+NEW_DNF_PNG_SOURCE=icons/24x24/new-dnf.png
+NEW_EARTH_PNG_SOURCE=icons/24x24/new-earth.png
+NEW_EVENT_PNG_SOURCE=icons/24x24/new-event.png
+NEW_FOUND_PNG_SOURCE=icons/24x24/new-found.png
+NEW_FTF_PNG_SOURCE=icons/24x24/new-ftf.png
+NEW_GREENPIN_PNG_SOURCE=icons/24x24/new-greenpin.png
+NEW_LETTERBOX_PNG_SOURCE=icons/24x24/new-letterbox.png
+NEW_LOCATIONLESS_PNG_SOURCE=icons/24x24/new-locationless.png
+NEW_MEGA_PNG_SOURCE=icons/24x24/new-mega.png
+NEW_MULTI_PNG_SOURCE=icons/24x24/new-multi.png
+NEW_NEEDS_MAINTENANCE_PNG_SOURCE=icons/24x24/new-needs_maintenance.png
+NEW_OTHER_PNG_SOURCE=icons/24x24/new-other.png
+NEW_OWNED_PNG_SOURCE=icons/24x24/new-owned.png
+NEW_PARKING_PNG_SOURCE=icons/24x24/new-parking.png
+NEW_PUSHPIN_PNG_SOURCE=icons/24x24/new-pushpin.png
+NEW_TRADITIONAL_PNG_SOURCE=icons/24x24/new-traditional.png
+NEW_TRAILHEAD_PNG_SOURCE=icons/24x24/new-trailhead.png
+NEW_TREASURE_PNG_SOURCE=icons/24x24/new-treasure.png
+NEW_UNKNOWN_PNG_SOURCE=icons/24x24/new-unknown.png
+NEW_VIRTUAL_PNG_SOURCE=icons/24x24/new-virtual.png
+NEW_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/new-waypoint-flag-red.png
+NEW_WEBCAM_PNG_SOURCE=icons/24x24/new-webcam.png
+NEW_WHERIGO_PNG_SOURCE=icons/24x24/new-wherigo.png
+NEW_WRITE_NOTE_PNG_SOURCE=icons/24x24/new-write_note.png
+CLOGS_BLUEPIN_PNG_SOURCE=icons/24x24/clogs-bluepin.png
+CLOGS_CITO_PNG_SOURCE=icons/24x24/clogs-cito.png
+CLOGS_CORRECTED_PNG_SOURCE=icons/24x24/clogs-corrected.png
+CLOGS_DELETE_PNG_SOURCE=icons/24x24/clogs-delete.png
+CLOGS_DNF_PNG_SOURCE=icons/24x24/clogs-dnf.png
+CLOGS_EARTH_PNG_SOURCE=icons/24x24/clogs-earth.png
+CLOGS_EVENT_PNG_SOURCE=icons/24x24/clogs-event.png
+CLOGS_FOUND_PNG_SOURCE=icons/24x24/clogs-found.png
+CLOGS_FTF_PNG_SOURCE=icons/24x24/clogs-ftf.png
+CLOGS_GREENPIN_PNG_SOURCE=icons/24x24/clogs-greenpin.png
+CLOGS_LETTERBOX_PNG_SOURCE=icons/24x24/clogs-letterbox.png
+CLOGS_LOCATIONLESS_PNG_SOURCE=icons/24x24/clogs-locationless.png
+CLOGS_MEGA_PNG_SOURCE=icons/24x24/clogs-mega.png
+CLOGS_MULTI_PNG_SOURCE=icons/24x24/clogs-multi.png
+CLOGS_NEEDS_MAINTENANCE_PNG_SOURCE=icons/24x24/clogs-needs_maintenance.png
+CLOGS_OTHER_PNG_SOURCE=icons/24x24/clogs-other.png
+CLOGS_OWNED_PNG_SOURCE=icons/24x24/clogs-owned.png
+CLOGS_PARKING_PNG_SOURCE=icons/24x24/clogs-parking.png
+CLOGS_PUSHPIN_PNG_SOURCE=icons/24x24/clogs-pushpin.png
+CLOGS_TRADITIONAL_PNG_SOURCE=icons/24x24/clogs-traditional.png
+CLOGS_TRAILHEAD_PNG_SOURCE=icons/24x24/clogs-trailhead.png
+CLOGS_TREASURE_PNG_SOURCE=icons/24x24/clogs-treasure.png
+CLOGS_UNKNOWN_PNG_SOURCE=icons/24x24/clogs-unknown.png
+CLOGS_VIRTUAL_PNG_SOURCE=icons/24x24/clogs-virtual.png
+CLOGS_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/clogs-waypoint-flag-red.png
+CLOGS_WEBCAM_PNG_SOURCE=icons/24x24/clogs-webcam.png
+CLOGS_WHERIGO_PNG_SOURCE=icons/24x24/clogs-wherigo.png
+CLOGS_WRITE_NOTE_PNG_SOURCE=icons/24x24/clogs-write_note.png
+OCMENGINE_DLL_SOURCE=../ocmengine/bin/Debug/ocmengine.dll
+OCM_GTK_EXE_MDB=
+
+endif
+
+if ENABLE_RELEASE_TRANSLATED
+ASSEMBLY_COMPILER_COMMAND = gmcs
+ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:4 -optimize-
+ASSEMBLY = bin/Release_Translated/ocm-gtk.exe
+ASSEMBLY_MDB = 
+COMPILE_TARGET = exe
+PROJECT_REFERENCES =  \
+	../ocmengine/bin/Release_Translated/ocmengine.dll
+BUILD_DIR = bin/Release_Translated
+
+X_GPX_XML_SOURCE=x-gpx.xml
+X_OCM_XML_SOURCE=x-ocm.xml
+OCMLOGO_SVG_SOURCE=icons/scalable/OCMLogo.svg
+CITO_SVG_SOURCE=icons/scalable/cito.svg
+EARTH_SVG_SOURCE=icons/scalable/earth.svg
+FOUND_SVG_SOURCE=icons/scalable/found.svg
+HALFSTAR_SVG_SOURCE=icons/scalable/halfstar.svg
+LETTERBOX_SVG_SOURCE=icons/scalable/letterbox.svg
+MULTI_SVG_SOURCE=icons/scalable/multi.svg
+OTHER_SVG_SOURCE=icons/scalable/other.svg
+STAR_SVG_SOURCE=icons/scalable/star.svg
+STAR_EMPTY_SVG_SOURCE=icons/scalable/star_empty.svg
+UNKNOWN_SVG_SOURCE=icons/scalable/unknown.svg
+WAYPOINT_FLAG_RED_SVG_SOURCE=icons/scalable/waypoint-flag-red.svg
+WPT_VIEWER_HTML_SOURCE=web/wpt_viewer.html
+EVENT_SVG_SOURCE=icons/scalable/event.svg
+MEGA_SVG_SOURCE=icons/scalable/mega.svg
+VIRTUAL_SVG_SOURCE=icons/scalable/virtual.svg
+WEBCAM_SVG_SOURCE=icons/scalable/webcam.svg
+WHERIGO_SVG_SOURCE=icons/scalable/wherigo.svg
+CITO_PNG_SOURCE=icons/24x24/cito.png
+EARTH_PNG_SOURCE=icons/24x24/earth.png
+EVENT_PNG_SOURCE=icons/24x24/event.png
+LETTERBOX_PNG_SOURCE=icons/24x24/letterbox.png
+MEGA_PNG_SOURCE=icons/24x24/mega.png
+MULTI_PNG_SOURCE=icons/24x24/multi.png
+OTHER_PNG_SOURCE=icons/24x24/other.png
+OWNED_PNG_SOURCE=icons/24x24/owned.png
+TRADITIONAL_PNG_SOURCE=icons/24x24/traditional.png
+UNKNOWN_PNG_SOURCE=icons/24x24/unknown.png
+VIRTUAL_PNG_SOURCE=icons/24x24/virtual.png
+WEBCAM_PNG_SOURCE=icons/24x24/webcam.png
+WHERIGO_PNG_SOURCE=icons/24x24/wherigo.png
+CIRCLE_PNG_SOURCE=icons/48x48/circle.png
+PUSHPIN_PNG_SOURCE=icons/24x24/pushpin.png
+FOUND_PNG_SOURCE=icons/24x24/found.png
+TRADITIONAL_SVG_SOURCE=icons/scalable/traditional.svg
+BLUEPIN_PNG_SOURCE=icons/24x24/bluepin.png
+PARKING_PNG_SOURCE=icons/24x24/parking.png
+TRAILHEAD_PNG_SOURCE=icons/24x24/trailhead.png
+BLUEPIN_SVG_SOURCE=icons/scalable/bluepin.svg
+PARKING_SVG_SOURCE=icons/scalable/parking.svg
+TRAILHEAD_SVG_SOURCE=icons/scalable/trailhead.svg
+CHANGEHISTORY_TXT_SOURCE=docs/ChangeHistory.txt
+README_TXT_SOURCE=docs/README.txt
+LICENCE_TXT_SOURCE=licence/Licence.txt
+TREASURE_SVG_SOURCE=icons/scalable/treasure.svg
+TREASURE_PNG_SOURCE=icons/24x24/treasure.png
+OPENLAYERS_JS_SOURCE=web/OpenLayers.js
+BLANK_GIF_SOURCE=web/img/blank.gif
+CLOUD_POPUP_RELATIVE_PNG_SOURCE=web/img/cloud-popup-relative.png
+DRAG_RECTANGLE_OFF_PNG_SOURCE=web/img/drag-rectangle-off.png
+DRAG_RECTANGLE_ON_PNG_SOURCE=web/img/drag-rectangle-on.png
+EAST_MINI_PNG_SOURCE=web/img/east-mini.png
+LAYER_SWITCHER_MAXIMIZE_PNG_SOURCE=web/img/layer-switcher-maximize.png
+LAYER_SWITCHER_MINIMIZE_PNG_SOURCE=web/img/layer-switcher-minimize.png
+MARKER_PNG_SOURCE=web/img/marker.png
+MARKER_BLUE_PNG_SOURCE=web/img/marker-blue.png
+MARKER_GOLD_PNG_SOURCE=web/img/marker-gold.png
+MARKER_GREEN_PNG_SOURCE=web/img/marker-green.png
+MEASURING_STICK_OFF_PNG_SOURCE=web/img/measuring-stick-off.png
+MEASURING_STICK_ON_PNG_SOURCE=web/img/measuring-stick-on.png
+NORTH_MINI_PNG_SOURCE=web/img/north-mini.png
+PANNING_HAND_OFF_PNG_SOURCE=web/img/panning-hand-off.png
+PANNING_HAND_ON_PNG_SOURCE=web/img/panning-hand-on.png
+SLIDER_PNG_SOURCE=web/img/slider.png
+SOUTH_MINI_PNG_SOURCE=web/img/south-mini.png
+WEST_MINI_PNG_SOURCE=web/img/west-mini.png
+ZOOMBAR_PNG_SOURCE=web/img/zoombar.png
+ZOOM_MINUS_MINI_PNG_SOURCE=web/img/zoom-minus-mini.png
+ZOOM_PLUS_MINI_PNG_SOURCE=web/img/zoom-plus-mini.png
+ZOOM_WORLD_MINI_PNG_SOURCE=web/img/zoom-world-mini.png
+FRAMEDCLOUD_CSS_SOURCE=web/theme/default/framedCloud.css
+GOOGLE_CSS_SOURCE=web/theme/default/google.css
+IE6_STYLE_CSS_SOURCE=web/theme/default/ie6-style.css
+STYLE_CSS_SOURCE=web/theme/default/style.css
+ADD_POINT_OFF_PNG_SOURCE=web/theme/default/img/add_point_off.png
+ADD_POINT_ON_PNG_SOURCE=web/theme/default/img/add_point_on.png
+BLANK_GIF2_SOURCE=web/theme/default/img/blank.gif
+CLOSE_GIF_SOURCE=web/theme/default/img/close.gif
+DRAG_RECTANGLE_OFF_PNG2_SOURCE=web/theme/default/img/drag-rectangle-off.png
+DRAG_RECTANGLE_ON_PNG2_SOURCE=web/theme/default/img/drag-rectangle-on.png
+DRAW_LINE_OFF_PNG_SOURCE=web/theme/default/img/draw_line_off.png
+DRAW_LINE_ON_PNG_SOURCE=web/theme/default/img/draw_line_on.png
+DRAW_POINT_OFF_PNG_SOURCE=web/theme/default/img/draw_point_off.png
+DRAW_POINT_ON_PNG_SOURCE=web/theme/default/img/draw_point_on.png
+DRAW_POLYGON_OFF_PNG_SOURCE=web/theme/default/img/draw_polygon_off.png
+DRAW_POLYGON_ON_PNG_SOURCE=web/theme/default/img/draw_polygon_on.png
+EDITING_TOOL_BAR_PNG_SOURCE=web/theme/default/img/editing_tool_bar.png
+MOVE_FEATURE_OFF_PNG_SOURCE=web/theme/default/img/move_feature_off.png
+MOVE_FEATURE_ON_PNG_SOURCE=web/theme/default/img/move_feature_on.png
+NAVIGATION_HISTORY_PNG_SOURCE=web/theme/default/img/navigation_history.png
+OVERVIEW_REPLACEMENT_GIF_SOURCE=web/theme/default/img/overview_replacement.gif
+PANNING_HAND_OFF_PNG2_SOURCE=web/theme/default/img/panning-hand-off.png
+PANNING_HAND_ON_PNG2_SOURCE=web/theme/default/img/panning-hand-on.png
+PAN_OFF_PNG_SOURCE=web/theme/default/img/pan_off.png
+PAN_ON_PNG_SOURCE=web/theme/default/img/pan_on.png
+PAN_PANEL_PNG_SOURCE=web/theme/default/img/pan-panel.png
+PAN_PANEL_NOALPHA_PNG_SOURCE=web/theme/default/img/pan-panel-NOALPHA.png
+REMOVE_POINT_OFF_PNG_SOURCE=web/theme/default/img/remove_point_off.png
+REMOVE_POINT_ON_PNG_SOURCE=web/theme/default/img/remove_point_on.png
+RULER_PNG_SOURCE=web/theme/default/img/ruler.png
+SAVE_FEATURES_OFF_PNG_SOURCE=web/theme/default/img/save_features_off.png
+SAVE_FEATURES_ON_PNG_SOURCE=web/theme/default/img/save_features_on.png
+VIEW_NEXT_OFF_PNG_SOURCE=web/theme/default/img/view_next_off.png
+VIEW_NEXT_ON_PNG_SOURCE=web/theme/default/img/view_next_on.png
+VIEW_PREVIOUS_OFF_PNG_SOURCE=web/theme/default/img/view_previous_off.png
+VIEW_PREVIOUS_ON_PNG_SOURCE=web/theme/default/img/view_previous_on.png
+ZOOM_PANEL_PNG_SOURCE=web/theme/default/img/zoom-panel.png
+ZOOM_PANEL_NOALPHA_PNG_SOURCE=web/theme/default/img/zoom-panel-NOALPHA.png
+GREENPIN_PNG_SOURCE=icons/24x24/greenpin.png
+PUSHPIN_SVG_SOURCE=icons/scalable/pushpin.svg
+VERSION_TXT_SOURCE=version/Version.txt
+YES_RECOMMENDED_AT_NIGHT_SVG_SOURCE=icons/scalable/attributes/yes_Recommended_at_night.svg
+YES_NEEDS_MAINTENANCE_SVG_SOURCE=icons/scalable/attributes/yes_Needs_maintenance.svg
+NO_RECOMMENDED_AT_NIGHT_SVG_SOURCE=icons/scalable/attributes/no_Recommended_at_night.svg
+DIS_RECOMMENDED_AT_NIGHT_SVG_SOURCE=icons/scalable/attributes/dis_Recommended_at_night.svg
+DIS_NEEDS_MAINTENANCE_SVG_SOURCE=icons/scalable/attributes/dis_Needs_maintenance.svg
+YES_WIRELESS_BEACON_SVG_SOURCE=icons/scalable/attributes/yes_Wireless_Beacon.svg
+DIS_WIRELESS_BEACON_SVG_SOURCE=icons/scalable/attributes/dis_Wireless_Beacon.svg
+YES_AVAILABLE_DURING_WINTER_SVG_SOURCE=icons/scalable/attributes/yes_Available_during_winter.svg
+NO_AVAILABLE_DURING_WINTER_SVG_SOURCE=icons/scalable/attributes/no_Available_during_winter.svg
+DIS_AVAILABLE_DURING_WINTER_SVG_SOURCE=icons/scalable/attributes/dis_Available_during_winter.svg
+DIS_BICYCLES_SVG_SOURCE=icons/scalable/attributes/dis_Bicycles.svg
+DIS_DOGS_SVG_SOURCE=icons/scalable/attributes/dis_Dogs.svg
+NO_BICYCLES_SVG_SOURCE=icons/scalable/attributes/no_Bicycles.svg
+NO_DOGS_SVG_SOURCE=icons/scalable/attributes/no_Dogs.svg
+YES_BICYCLES_SVG_SOURCE=icons/scalable/attributes/yes_Bicycles.svg
+YES_DOGS_SVG_SOURCE=icons/scalable/attributes/yes_Dogs.svg
+DIS_ACCESS_OR_PARKING_FEE_SVG_SOURCE=icons/scalable/attributes/dis_Access_or_parking_fee.svg
+YES_ACCESS_OR_PARKING_FEE_SVG_SOURCE=icons/scalable/attributes/yes_Access_or_parking_fee.svg
+DIS_RECOMMENDED_FOR_KIDS_SVG_SOURCE=icons/scalable/attributes/dis_Recommended_for_kids.svg
+NO_RECOMMENDED_FOR_KIDS_SVG_SOURCE=icons/scalable/attributes/no_Recommended_for_kids.svg
+YES_RECOMMENDED_FOR_KIDS_SVG_SOURCE=icons/scalable/attributes/yes_Recommended_for_kids.svg
+DIS_CAMPFIRES_SVG_SOURCE=icons/scalable/attributes/dis_Campfires.svg
+NO_CAMPFIRES_SVG_SOURCE=icons/scalable/attributes/no_Campfires.svg
+YES_CAMPFIRES_SVG_SOURCE=icons/scalable/attributes/yes_Campfires.svg
+DIS_TAKES_LESS_THAN_AN_HOUR_SVG_SOURCE=icons/scalable/attributes/dis_Takes_less_than_an_hour.svg
+NO_TAKES_LESS_THAN_AN_HOUR_SVG_SOURCE=icons/scalable/attributes/no_Takes_less_than_an_hour.svg
+YES_TAKES_LESS_THAN_AN_HOUR_SVG_SOURCE=icons/scalable/attributes/yes_Takes_less_than_an_hour.svg
+DIS_MAY_REQUIRE_SWIMMING_SVG_SOURCE=icons/scalable/attributes/dis_May_require_swimming.svg
+YES_MAY_REQUIRE_SWIMMING_SVG_SOURCE=icons/scalable/attributes/yes_May_require_swimming.svg
+DIS_PARKING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/dis_Parking_available.svg
+DIS_STROLLER_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/dis_Stroller_accessible.svg
+DIS_WHEELCHAIR_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/dis_Wheelchair_accessible.svg
+NO_PARKING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/no_Parking_available.svg
+NO_STROLLER_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/no_Stroller_accessible.svg
+NO_WHEELCHAIR_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/no_Wheelchair_accessible.svg
+YES_PARKING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/yes_Parking_available.svg
+YES_STROLLER_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/yes_Stroller_accessible.svg
+YES_WHEELCHAIR_ACCESSIBLE_SVG_SOURCE=icons/scalable/attributes/yes_Wheelchair_accessible.svg
+DIS_FIELD_PUZZLE_SVG_SOURCE=icons/scalable/attributes/dis_Field_Puzzle.svg
+YES_FIELD_PUZZLE_SVG_SOURCE=icons/scalable/attributes/yes_Field_Puzzle.svg
+DIS_SIGNIFICANT_HIKE_SVG_SOURCE=icons/scalable/attributes/dis_Significant_Hike.svg
+NO_SIGNIFICANT_HIKE_SVG_SOURCE=icons/scalable/attributes/no_Significant_Hike.svg
+YES_SIGNIFICANT_HIKE_SVG_SOURCE=icons/scalable/attributes/yes_Significant_Hike.svg
+DIS_ABANDONED_MINES_SVG_SOURCE=icons/scalable/attributes/dis_Abandoned_mines.svg
+YES_ABANDONED_MINES_SVG_SOURCE=icons/scalable/attributes/yes_Abandoned_mines.svg
+DIS_CLIFF___FALLING_ROCKS_SVG_SOURCE=icons/scalable/attributes/dis_Cliff___falling_rocks.svg
+YES_CLIFF___FALLING_ROCKS_SVG_SOURCE=icons/scalable/attributes/yes_Cliff___falling_rocks.svg
+DIS_CLIMBING_GEAR_SVG_SOURCE=icons/scalable/attributes/dis_Climbing_gear.svg
+YES_CLIMBING_GEAR_SVG_SOURCE=icons/scalable/attributes/yes_Climbing_gear.svg
+DIS_CROSS_COUNTRY_SKIS_SVG_SOURCE=icons/scalable/attributes/dis_Cross_Country_Skis.svg
+YES_CROSS_COUNTRY_SKIS_SVG_SOURCE=icons/scalable/attributes/yes_Cross_Country_Skis.svg
+DIS_DANGEROUS_AREA_SVG_SOURCE=icons/scalable/attributes/dis_Dangerous_area.svg
+YES_DANGEROUS_AREA_SVG_SOURCE=icons/scalable/attributes/yes_Dangerous_area.svg
+DIS_PUBLIC_TRANSPORTATION_SVG_SOURCE=icons/scalable/attributes/dis_Public_transportation.svg
+YES_PUBLIC_TRANSPORTATION_SVG_SOURCE=icons/scalable/attributes/yes_Public_transportation.svg
+DIS_WATCH_FOR_LIVESTOCK_SVG_SOURCE=icons/scalable/attributes/dis_Watch_for_livestock.svg
+YES_WATCH_FOR_LIVESTOCK_SVG_SOURCE=icons/scalable/attributes/yes_Watch_for_livestock.svg
+DIS_AVAILABLE_AT_ALL_TIMES_SVG_SOURCE=icons/scalable/attributes/dis_Available_at_all_times.svg
+NO_AVAILABLE_AT_ALL_TIMES_SVG_SOURCE=icons/scalable/attributes/no_Available_at_all_times.svg
+YES_AVAILABLE_AT_ALL_TIMES_SVG_SOURCE=icons/scalable/attributes/yes_Available_at_all_times.svg
+DIS_STEALTH_REQUIRED_SVG_SOURCE=icons/scalable/attributes/dis_Stealth_required.svg
+NO_STEALTH_REQUIRED_SVG_SOURCE=icons/scalable/attributes/no_Stealth_required.svg
+YES_STEALTH_REQUIRED_SVG_SOURCE=icons/scalable/attributes/yes_Stealth_required.svg
+DIS_SNOWSHOES_SVG_SOURCE=icons/scalable/attributes/dis_Snowshoes.svg
+YES_SNOWSHOES_SVG_SOURCE=icons/scalable/attributes/yes_Snowshoes.svg
+DIS_SPECIAL_TOOL_REQUIRED_SVG_SOURCE=icons/scalable/attributes/dis_Special_Tool_Required.svg
+YES_SPECIAL_TOOL_REQUIRED_SVG_SOURCE=icons/scalable/attributes/yes_Special_Tool_Required.svg
+DIS_THORNS_SVG_SOURCE=icons/scalable/attributes/dis_Thorns.svg
+YES_THORNS_SVG_SOURCE=icons/scalable/attributes/yes_Thorns.svg
+DIS_UV_LIGHT_REQUIRED_SVG_SOURCE=icons/scalable/attributes/dis_UV_Light_Required.svg
+YES_UV_LIGHT_REQUIRED_SVG_SOURCE=icons/scalable/attributes/yes_UV_Light_Required.svg
+DIS_BOAT_SVG_SOURCE=icons/scalable/attributes/dis_Boat.svg
+YES_BOAT_SVG_SOURCE=icons/scalable/attributes/yes_Boat.svg
+DIS_ABANDONED_STRUCTURE_SVG_SOURCE=icons/scalable/attributes/dis_Abandoned_Structure.svg
+NO_ABANDONED_STRUCTURE_SVG_SOURCE=icons/scalable/attributes/no_Abandoned_Structure.svg
+YES_ABANDONED_STRUCTURE_SVG_SOURCE=icons/scalable/attributes/yes_Abandoned_Structure.svg
+DIS_CAMPING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/dis_Camping_available.svg
+NO_CAMPING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/no_Camping_available.svg
+YES_CAMPING_AVAILABLE_SVG_SOURCE=icons/scalable/attributes/yes_Camping_available.svg
+DIS_DANGEROUS_ANIMALS_SVG_SOURCE=icons/scalable/attributes/dis_Dangerous_Animals.svg
+YES_DANGEROUS_ANIMALS_SVG_SOURCE=icons/scalable/attributes/yes_Dangerous_Animals.svg
+DIS_DIFFICULT_CLIMBING_SVG_SOURCE=icons/scalable/attributes/dis_Difficult_climbing.svg
+NO_DIFFICULT_CLIMBING_SVG_SOURCE=icons/scalable/attributes/no_Difficult_climbing.svg
+YES_DIFFICULT_CLIMBING_SVG_SOURCE=icons/scalable/attributes/yes_Difficult_climbing.svg
+DIS_DRINKING_WATER_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Drinking_water_nearby.svg
+NO_DRINKING_WATER_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Drinking_water_nearby.svg
+YES_DRINKING_WATER_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Drinking_water_nearby.svg
+DIS_FLASHLIGHT_REQUIRED_SVG_SOURCE=icons/scalable/attributes/dis_Flashlight_required.svg
+YES_FLASHLIGHT_REQUIRED_SVG_SOURCE=icons/scalable/attributes/yes_Flashlight_required.svg
+DIS_FOOD_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Food_Nearby.svg
+NO_FOOD_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Food_Nearby.svg
+YES_FOOD_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Food_Nearby.svg
+DIS_FUEL_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Fuel_Nearby.svg
+NO_FUEL_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Fuel_Nearby.svg
+YES_FUEL_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Fuel_Nearby.svg
+DIS_HORSES_SVG_SOURCE=icons/scalable/attributes/dis_Horses.svg
+NO_HORSES_SVG_SOURCE=icons/scalable/attributes/no_Horses.svg
+YES_HORSES_SVG_SOURCE=icons/scalable/attributes/yes_Horses.svg
+DIS_HUNTING_SVG_SOURCE=icons/scalable/attributes/dis_Hunting.svg
+YES_HUNTING_SVG_SOURCE=icons/scalable/attributes/yes_Hunting.svg
+DIS_MAY_REQUIRE_WADING_SVG_SOURCE=icons/scalable/attributes/dis_May_require_wading.svg
+YES_MAY_REQUIRE_WADING_SVG_SOURCE=icons/scalable/attributes/yes_May_require_wading.svg
+DIS_MOTORCYCLES_SVG_SOURCE=icons/scalable/attributes/dis_Motorcycles.svg
+NO_MOTORCYCLES_SVG_SOURCE=icons/scalable/attributes/no_Motorcycles.svg
+YES_MOTORCYCLES_SVG_SOURCE=icons/scalable/attributes/yes_Motorcycles.svg
+DIS_NIGHT_CACHE_SVG_SOURCE=icons/scalable/attributes/dis_Night_Cache.svg
+YES_NIGHT_CACHE_SVG_SOURCE=icons/scalable/attributes/yes_Night_Cache.svg
+DIS_PARK_AND_GRAB_SVG_SOURCE=icons/scalable/attributes/dis_Park_and_Grab.svg
+YES_PARK_AND_GRAB_SVG_SOURCE=icons/scalable/attributes/yes_Park_and_Grab.svg
+CORRECTED_SVG_SOURCE=icons/scalable/corrected.svg
+CORRECTED_PNG_SOURCE=icons/24x24/corrected.png
+DIS_SCUBA_GEAR_SVG_SOURCE=icons/scalable/attributes/dis_Scuba_gear.svg
+YES_SCUBA_GEAR_SVG_SOURCE=icons/scalable/attributes/yes_Scuba_gear.svg
+DIS_SCENIC_VIEW_SVG_SOURCE=icons/scalable/attributes/dis_Scenic_view.svg
+YES_SCENIC_VIEW_SVG_SOURCE=icons/scalable/attributes/yes_Scenic_view.svg
+DIS_MEDIUM_HIKE_1KM_10KM_SVG_SOURCE=icons/scalable/attributes/dis_Medium_hike_(1km-10km).svg
+NO_MEDIUM_HIKE_1KM_10KM_SVG_SOURCE=icons/scalable/attributes/no_Medium_hike_(1km-10km).svg
+YES_MEDIUM_HIKE_1KM_10KM_SVG_SOURCE=icons/scalable/attributes/yes_Medium_hike_(1km-10km).svg
+NO_LONG_HIKE_10KM_SVG_SOURCE=icons/scalable/attributes/no_Long_Hike_(+10km).svg
+YES_LONG_HIKE_10KM_SVG_SOURCE=icons/scalable/attributes/yes_Long_Hike_(+10km).svg
+DIS_SHORT_HIKE_LESS_THAN_1KM_SVG_SOURCE=icons/scalable/attributes/dis_Short_hike_(less_than_1km).svg
+NO_SHORT_HIKE_LESS_THAN_1KM_SVG_SOURCE=icons/scalable/attributes/no_Short_hike_(less_than_1km).svg
+YES_SHORT_HIKE_LESS_THAN_1KM_SVG_SOURCE=icons/scalable/attributes/yes_Short_hike_(less_than_1km).svg
+DIS_POISON_PLANTS_SVG_SOURCE=icons/scalable/attributes/dis_Poison_plants.svg
+NO_POISON_PLANTS_SVG_SOURCE=icons/scalable/attributes/no_Poison_plants.svg
+YES_POISON_PLANTS_SVG_SOURCE=icons/scalable/attributes/yes_Poison_plants.svg
+DIS_TICKS_SVG_SOURCE=icons/scalable/attributes/dis_Ticks.svg
+YES_TICKS_SVG_SOURCE=icons/scalable/attributes/yes_Ticks.svg
+YES_PICNIC_TABLES_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Picnic_tables_nearby.svg
+DIS_PICNIC_TABLES_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Picnic_tables_nearby.svg
+NO_PICNIC_TABLES_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Picnic_tables_nearby.svg
+DIS_PUBLIC_RESTROOMS_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Public_restrooms_nearby.svg
+NO_PUBLIC_RESTROOMS_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Public_restrooms_nearby.svg
+YES_PUBLIC_RESTROOMS_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Public_restrooms_nearby.svg
+DIS_TELEPHONE_NEARBY_SVG_SOURCE=icons/scalable/attributes/dis_Telephone_nearby.svg
+NO_TELEPHONE_NEARBY_SVG_SOURCE=icons/scalable/attributes/no_Telephone_nearby.svg
+YES_TELEPHONE_NEARBY_SVG_SOURCE=icons/scalable/attributes/yes_Telephone_nearby.svg
+DIS_TRUCK_DRIVER_RV_SVG_SOURCE=icons/scalable/attributes/dis_Truck_Driver_RV.svg
+NO_TRUCK_DRIVER_RV_SVG_SOURCE=icons/scalable/attributes/no_Truck_Driver_RV.svg
+YES_TRUCK_DRIVER_RV_SVG_SOURCE=icons/scalable/attributes/yes_Truck_Driver_RV.svg
+DIS_QUADS_SVG_SOURCE=icons/scalable/attributes/dis_Quads.svg
+NO_QUADS_SVG_SOURCE=icons/scalable/attributes/no_Quads.svg
+YES_QUADS_SVG_SOURCE=icons/scalable/attributes/yes_Quads.svg
+DIS_OFF_ROAD_VEHICLES_SVG_SOURCE=icons/scalable/attributes/dis_Off-road_vehicles.svg
+NO_OFF_ROAD_VEHICLES_SVG_SOURCE=icons/scalable/attributes/no_Off-road_vehicles.svg
+YES_OFF_ROAD_VEHICLES_SVG_SOURCE=icons/scalable/attributes/yes_Off-road_vehicles.svg
+DIS_SNOWMOBILES_SVG_SOURCE=icons/scalable/attributes/dis_Snowmobiles.svg
+NO_SNOWMOBILES_SVG_SOURCE=icons/scalable/attributes/no_Snowmobiles.svg
+YES_SNOWMOBILES_SVG_SOURCE=icons/scalable/attributes/yes_Snowmobiles.svg
+NO_NIGHT_CACHE_SVG_SOURCE=icons/scalable/attributes/no_Night_Cache.svg
+NO_PARK_AND_GRAB_SVG_SOURCE=icons/scalable/attributes/no_Park_and_Grab.svg
+DNF_SVG_SOURCE=icons/scalable/dnf.svg
+FTF_SVG_SOURCE=icons/scalable/ftf.svg
+WRITE_NOTE_SVG_SOURCE=icons/scalable/write_note.svg
+NEEDS_MAINTENANCE_SVG_SOURCE=icons/scalable/needs_maintenance.svg
+ARCHIVED_BLUEPIN_PNG_SOURCE=icons/24x24/archived-bluepin.png
+ARCHIVED_CITO_PNG_SOURCE=icons/24x24/archived-cito.png
+ARCHIVED_CORRECTED_PNG_SOURCE=icons/24x24/archived-corrected.png
+ARCHIVED_EARTH_PNG_SOURCE=icons/24x24/archived-earth.png
+ARCHIVED_EVENT_PNG_SOURCE=icons/24x24/archived-event.png
+ARCHIVED_FOUND_PNG_SOURCE=icons/24x24/archived-found.png
+ARCHIVED_GREENPIN_PNG_SOURCE=icons/24x24/archived-greenpin.png
+ARCHIVED_LETTERBOX_PNG_SOURCE=icons/24x24/archived-letterbox.png
+ARCHIVED_LOCATIONLESS_PNG_SOURCE=icons/24x24/archived-locationless.png
+ARCHIVED_MEGA_PNG_SOURCE=icons/24x24/archived-mega.png
+ARCHIVED_MULTI_PNG_SOURCE=icons/24x24/archived-multi.png
+ARCHIVED_OTHER_PNG_SOURCE=icons/24x24/archived-other.png
+ARCHIVED_OWNED_PNG_SOURCE=icons/24x24/archived-owned.png
+ARCHIVED_PARKING_PNG_SOURCE=icons/24x24/archived-parking.png
+ARCHIVED_PUSHPIN_PNG_SOURCE=icons/24x24/archived-pushpin.png
+ARCHIVED_TRADITIONAL_PNG_SOURCE=icons/24x24/archived-traditional.png
+ARCHIVED_TRAILHEAD_PNG_SOURCE=icons/24x24/archived-trailhead.png
+ARCHIVED_TREASURE_PNG_SOURCE=icons/24x24/archived-treasure.png
+ARCHIVED_UNKNOWN_PNG_SOURCE=icons/24x24/archived-unknown.png
+ARCHIVED_VIRTUAL_PNG_SOURCE=icons/24x24/archived-virtual.png
+ARCHIVED_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/archived-waypoint-flag-red.png
+ARCHIVED_WEBCAM_PNG_SOURCE=icons/24x24/archived-webcam.png
+ARCHIVED_WHERIGO_PNG_SOURCE=icons/24x24/archived-wherigo.png
+DISABLED_BLUEPIN_PNG_SOURCE=icons/24x24/disabled-bluepin.png
+DISABLED_CITO_PNG_SOURCE=icons/24x24/disabled-cito.png
+DISABLED_CORRECTED_PNG_SOURCE=icons/24x24/disabled-corrected.png
+DISABLED_EARTH_PNG_SOURCE=icons/24x24/disabled-earth.png
+DISABLED_EVENT_PNG_SOURCE=icons/24x24/disabled-event.png
+DISABLED_FOUND_PNG_SOURCE=icons/24x24/disabled-found.png
+DISABLED_GREENPIN_PNG_SOURCE=icons/24x24/disabled-greenpin.png
+DISABLED_LETTERBOX_PNG_SOURCE=icons/24x24/disabled-letterbox.png
+DISABLED_LOCATIONLESS_PNG_SOURCE=icons/24x24/disabled-locationless.png
+DISABLED_MEGA_PNG_SOURCE=icons/24x24/disabled-mega.png
+DISABLED_MULTI_PNG_SOURCE=icons/24x24/disabled-multi.png
+DISABLED_OTHER_PNG_SOURCE=icons/24x24/disabled-other.png
+DISABLED_OWNED_PNG_SOURCE=icons/24x24/disabled-owned.png
+DISABLED_PARKING_PNG_SOURCE=icons/24x24/disabled-parking.png
+DISABLED_PUSHPIN_PNG_SOURCE=icons/24x24/disabled-pushpin.png
+DISABLED_TRADITIONAL_PNG_SOURCE=icons/24x24/disabled-traditional.png
+DISABLED_TRAILHEAD_PNG_SOURCE=icons/24x24/disabled-trailhead.png
+DISABLED_TREASURE_PNG_SOURCE=icons/24x24/disabled-treasure.png
+DISABLED_UNKNOWN_PNG_SOURCE=icons/24x24/disabled-unknown.png
+DISABLED_VIRTUAL_PNG_SOURCE=icons/24x24/disabled-virtual.png
+DISABLED_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/disabled-waypoint-flag-red.png
+DISABLED_WEBCAM_PNG_SOURCE=icons/24x24/disabled-webcam.png
+DISABLED_WHERIGO_PNG_SOURCE=icons/24x24/disabled-wherigo.png
+DNF_PNG_SOURCE=icons/24x24/dnf.png
+ARCHIVED_DNF_PNG_SOURCE=icons/24x24/archived-dnf.png
+DISABLED_DNF_PNG_SOURCE=icons/24x24/disabled-dnf.png
+ARCHIVED_FTF_PNG_SOURCE=icons/24x24/archived-ftf.png
+DISABLED_FTF_PNG_SOURCE=icons/24x24/disabled-ftf.png
+FTF_PNG_SOURCE=icons/24x24/ftf.png
+DEFAULTMAPS_XML_SOURCE=maps/defaultmaps.xml
+D10_PNG_SOURCE=icons/32x32/d10.png
+D15_PNG_SOURCE=icons/32x32/d15.png
+D20_PNG_SOURCE=icons/32x32/d20.png
+D25_PNG_SOURCE=icons/32x32/d25.png
+D30_PNG_SOURCE=icons/32x32/d30.png
+D35_PNG_SOURCE=icons/32x32/d35.png
+D40_PNG_SOURCE=icons/32x32/d40.png
+D45_PNG_SOURCE=icons/32x32/d45.png
+D50_PNG_SOURCE=icons/32x32/d50.png
+T10_PNG_SOURCE=icons/32x32/t10.png
+T15_PNG_SOURCE=icons/32x32/t15.png
+T20_PNG_SOURCE=icons/32x32/t20.png
+T25_PNG_SOURCE=icons/32x32/t25.png
+T30_PNG_SOURCE=icons/32x32/t30.png
+T35_PNG_SOURCE=icons/32x32/t35.png
+T40_PNG_SOURCE=icons/32x32/t40.png
+T45_PNG_SOURCE=icons/32x32/t45.png
+T50_PNG_SOURCE=icons/32x32/t50.png
+BEACH_PNG_SOURCE=icons/splash/beach.png
+FOREST_PNG_SOURCE=icons/splash/forest.png
+NIGHT_PNG_SOURCE=icons/splash/night.png
+PARK_PNG_SOURCE=icons/splash/park.png
+SPACE2_PNG_SOURCE=icons/splash/Space2.png
+STALE_CITO_PNG_SOURCE=icons/24x24/stale-cito.png
+STALE_CORRECTED_PNG_SOURCE=icons/24x24/stale-corrected.png
+STALE_DNF_PNG_SOURCE=icons/24x24/stale-dnf.png
+STALE_EARTH_PNG_SOURCE=icons/24x24/stale-earth.png
+STALE_EVENT_PNG_SOURCE=icons/24x24/stale-event.png
+STALE_FOUND_PNG_SOURCE=icons/24x24/stale-found.png
+STALE_FTF_PNG_SOURCE=icons/24x24/stale-ftf.png
+STALE_GREENPIN_PNG_SOURCE=icons/24x24/stale-greenpin.png
+STALE_LETTERBOX_PNG_SOURCE=icons/24x24/stale-letterbox.png
+STALE_LOCATIONLESS_PNG_SOURCE=icons/24x24/stale-locationless.png
+STALE_MEGA_PNG_SOURCE=icons/24x24/stale-mega.png
+STALE_MULTI_PNG_SOURCE=icons/24x24/stale-multi.png
+STALE_OTHER_PNG_SOURCE=icons/24x24/stale-other.png
+STALE_OWNED_PNG_SOURCE=icons/24x24/stale-owned.png
+STALE_PARKING_PNG_SOURCE=icons/24x24/stale-parking.png
+STALE_PUSHPIN_PNG_SOURCE=icons/24x24/stale-pushpin.png
+STALE_TRADITIONAL_PNG_SOURCE=icons/24x24/stale-traditional.png
+STALE_TRAILHEAD_PNG_SOURCE=icons/24x24/stale-trailhead.png
+STALE_TREASURE_PNG_SOURCE=icons/24x24/stale-treasure.png
+STALE_UNKNOWN_PNG_SOURCE=icons/24x24/stale-unknown.png
+STALE_VIRTUAL_PNG_SOURCE=icons/24x24/stale-virtual.png
+STALE_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/stale-waypoint-flag-red.png
+STALE_WEBCAM_PNG_SOURCE=icons/24x24/stale-webcam.png
+STALE_WHERIGO_PNG_SOURCE=icons/24x24/stale-wherigo.png
+NEEDS_MAINTENANCE_PNG_SOURCE=icons/24x24/needs_maintenance.png
+WRITE_NOTE_PNG_SOURCE=icons/24x24/write_note.png
+AXMAS_PNG_SOURCE=icons/splash/christmas/AXmas.png
+BXMAS_PNG_SOURCE=icons/splash/christmas/BXmas.png
+CXMAS_PNG_SOURCE=icons/splash/christmas/CXmas.png
+DXMAS_PNG_SOURCE=icons/splash/christmas/DXmas.png
+EXMAS_PNG_SOURCE=icons/splash/christmas/EXmas.png
+FXMAS_PNG_SOURCE=icons/splash/christmas/FXmas.png
+GXMAS_PNG_SOURCE=icons/splash/christmas/GXmas.png
+HXMAS_PNG_SOURCE=icons/splash/christmas/HXmas.png
+IXMAS_PNG_SOURCE=icons/splash/christmas/IXmas.png
+GREENPIN_SVG_SOURCE=icons/scalable/greenpin.svg
+NOMAP_PNG_SOURCE=web/nomap.png
+DIS_LONG_HIKE_10KM_SVG_SOURCE=icons/scalable/attributes/dis_Long_Hike_(+10km).svg
+LOCATIONLESS_PNG_SOURCE=icons/24x24/locationless.png
+WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/waypoint-flag-red.png
+NEW_BLUEPIN_PNG_SOURCE=icons/24x24/new-bluepin.png
+NEW_CITO_PNG_SOURCE=icons/24x24/new-cito.png
+NEW_CORRECTED_PNG_SOURCE=icons/24x24/new-corrected.png
+NEW_DELETE_PNG_SOURCE=icons/24x24/new-delete.png
+NEW_DNF_PNG_SOURCE=icons/24x24/new-dnf.png
+NEW_EARTH_PNG_SOURCE=icons/24x24/new-earth.png
+NEW_EVENT_PNG_SOURCE=icons/24x24/new-event.png
+NEW_FOUND_PNG_SOURCE=icons/24x24/new-found.png
+NEW_FTF_PNG_SOURCE=icons/24x24/new-ftf.png
+NEW_GREENPIN_PNG_SOURCE=icons/24x24/new-greenpin.png
+NEW_LETTERBOX_PNG_SOURCE=icons/24x24/new-letterbox.png
+NEW_LOCATIONLESS_PNG_SOURCE=icons/24x24/new-locationless.png
+NEW_MEGA_PNG_SOURCE=icons/24x24/new-mega.png
+NEW_MULTI_PNG_SOURCE=icons/24x24/new-multi.png
+NEW_NEEDS_MAINTENANCE_PNG_SOURCE=icons/24x24/new-needs_maintenance.png
+NEW_OTHER_PNG_SOURCE=icons/24x24/new-other.png
+NEW_OWNED_PNG_SOURCE=icons/24x24/new-owned.png
+NEW_PARKING_PNG_SOURCE=icons/24x24/new-parking.png
+NEW_PUSHPIN_PNG_SOURCE=icons/24x24/new-pushpin.png
+NEW_TRADITIONAL_PNG_SOURCE=icons/24x24/new-traditional.png
+NEW_TRAILHEAD_PNG_SOURCE=icons/24x24/new-trailhead.png
+NEW_TREASURE_PNG_SOURCE=icons/24x24/new-treasure.png
+NEW_UNKNOWN_PNG_SOURCE=icons/24x24/new-unknown.png
+NEW_VIRTUAL_PNG_SOURCE=icons/24x24/new-virtual.png
+NEW_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/new-waypoint-flag-red.png
+NEW_WEBCAM_PNG_SOURCE=icons/24x24/new-webcam.png
+NEW_WHERIGO_PNG_SOURCE=icons/24x24/new-wherigo.png
+NEW_WRITE_NOTE_PNG_SOURCE=icons/24x24/new-write_note.png
+CLOGS_BLUEPIN_PNG_SOURCE=icons/24x24/clogs-bluepin.png
+CLOGS_CITO_PNG_SOURCE=icons/24x24/clogs-cito.png
+CLOGS_CORRECTED_PNG_SOURCE=icons/24x24/clogs-corrected.png
+CLOGS_DELETE_PNG_SOURCE=icons/24x24/clogs-delete.png
+CLOGS_DNF_PNG_SOURCE=icons/24x24/clogs-dnf.png
+CLOGS_EARTH_PNG_SOURCE=icons/24x24/clogs-earth.png
+CLOGS_EVENT_PNG_SOURCE=icons/24x24/clogs-event.png
+CLOGS_FOUND_PNG_SOURCE=icons/24x24/clogs-found.png
+CLOGS_FTF_PNG_SOURCE=icons/24x24/clogs-ftf.png
+CLOGS_GREENPIN_PNG_SOURCE=icons/24x24/clogs-greenpin.png
+CLOGS_LETTERBOX_PNG_SOURCE=icons/24x24/clogs-letterbox.png
+CLOGS_LOCATIONLESS_PNG_SOURCE=icons/24x24/clogs-locationless.png
+CLOGS_MEGA_PNG_SOURCE=icons/24x24/clogs-mega.png
+CLOGS_MULTI_PNG_SOURCE=icons/24x24/clogs-multi.png
+CLOGS_NEEDS_MAINTENANCE_PNG_SOURCE=icons/24x24/clogs-needs_maintenance.png
+CLOGS_OTHER_PNG_SOURCE=icons/24x24/clogs-other.png
+CLOGS_OWNED_PNG_SOURCE=icons/24x24/clogs-owned.png
+CLOGS_PARKING_PNG_SOURCE=icons/24x24/clogs-parking.png
+CLOGS_PUSHPIN_PNG_SOURCE=icons/24x24/clogs-pushpin.png
+CLOGS_TRADITIONAL_PNG_SOURCE=icons/24x24/clogs-traditional.png
+CLOGS_TRAILHEAD_PNG_SOURCE=icons/24x24/clogs-trailhead.png
+CLOGS_TREASURE_PNG_SOURCE=icons/24x24/clogs-treasure.png
+CLOGS_UNKNOWN_PNG_SOURCE=icons/24x24/clogs-unknown.png
+CLOGS_VIRTUAL_PNG_SOURCE=icons/24x24/clogs-virtual.png
+CLOGS_WAYPOINT_FLAG_RED_PNG_SOURCE=icons/24x24/clogs-waypoint-flag-red.png
+CLOGS_WEBCAM_PNG_SOURCE=icons/24x24/clogs-webcam.png
+CLOGS_WHERIGO_PNG_SOURCE=icons/24x24/clogs-wherigo.png
+CLOGS_WRITE_NOTE_PNG_SOURCE=icons/24x24/clogs-write_note.png
+OCMENGINE_DLL_SOURCE=../ocmengine/bin/Release_Translated/ocmengine.dll
+OCM_GTK_EXE_MDB=
+
+endif
+
+AL=al2
+SATELLITE_ASSEMBLY_NAME=$(notdir $(basename $(ASSEMBLY))).resources.dll
+
+PROGRAMFILES = \
+	$(OCMAPP_CS) \
+	$(PATHS_CS) \
+	$(OCMENGINE_DLL) \
+	$(OCM_GTK_EXE_MDB)  
+
+BINARIES = \
+	$(OCM_GTK)  
+
+COMMONAPPLICATIONDATAROOT_MIME_PACKAGES = \
+	$(X_GPX_XML) \
+	$(X_OCM_XML)  
+
+LINUX_DESKTOPAPPLICATIONS = \
+	$(OCM_DESKTOP)  
+
+PROGRAMFILES_ICONS_SCALABLE = \
+	$(OCMLOGO_SVG) \
+	$(CITO_SVG) \
+	$(EARTH_SVG) \
+	$(FOUND_SVG) \
+	$(HALFSTAR_SVG) \
+	$(LETTERBOX_SVG) \
+	$(MULTI_SVG) \
+	$(OTHER_SVG) \
+	$(STAR_SVG) \
+	$(STAR_EMPTY_SVG) \
+	$(UNKNOWN_SVG) \
+	$(WAYPOINT_FLAG_RED_SVG) \
+	$(EVENT_SVG) \
+	$(MEGA_SVG) \
+	$(VIRTUAL_SVG) \
+	$(WEBCAM_SVG) \
+	$(WHERIGO_SVG) \
+	$(TRADITIONAL_SVG) \
+	$(BLUEPIN_SVG) \
+	$(PARKING_SVG) \
+	$(TRAILHEAD_SVG) \
+	$(TREASURE_SVG) \
+	$(PUSHPIN_SVG) \
+	$(CORRECTED_SVG) \
+	$(DNF_SVG) \
+	$(FTF_SVG) \
+	$(WRITE_NOTE_SVG) \
+	$(NEEDS_MAINTENANCE_SVG) \
+	$(GREENPIN_SVG)  
+
+PROGRAMFILES_WEB = \
+	$(WPT_VIEWER_HTML) \
+	$(OPENLAYERS_JS) \
+	$(NOMAP_PNG)  
+
+PROGRAMFILES_ICONS_24X24 = \
+	$(CITO_PNG) \
+	$(EARTH_PNG) \
+	$(EVENT_PNG) \
+	$(LETTERBOX_PNG) \
+	$(MEGA_PNG) \
+	$(MULTI_PNG) \
+	$(OTHER_PNG) \
+	$(OWNED_PNG) \
+	$(TRADITIONAL_PNG) \
+	$(UNKNOWN_PNG) \
+	$(VIRTUAL_PNG) \
+	$(WEBCAM_PNG) \
+	$(WHERIGO_PNG) \
+	$(PUSHPIN_PNG) \
+	$(FOUND_PNG) \
+	$(BLUEPIN_PNG) \
+	$(PARKING_PNG) \
+	$(TRAILHEAD_PNG) \
+	$(TREASURE_PNG) \
+	$(GREENPIN_PNG) \
+	$(CORRECTED_PNG) \
+	$(ARCHIVED_BLUEPIN_PNG) \
+	$(ARCHIVED_CITO_PNG) \
+	$(ARCHIVED_CORRECTED_PNG) \
+	$(ARCHIVED_EARTH_PNG) \
+	$(ARCHIVED_EVENT_PNG) \
+	$(ARCHIVED_FOUND_PNG) \
+	$(ARCHIVED_GREENPIN_PNG) \
+	$(ARCHIVED_LETTERBOX_PNG) \
+	$(ARCHIVED_LOCATIONLESS_PNG) \
+	$(ARCHIVED_MEGA_PNG) \
+	$(ARCHIVED_MULTI_PNG) \
+	$(ARCHIVED_OTHER_PNG) \
+	$(ARCHIVED_OWNED_PNG) \
+	$(ARCHIVED_PARKING_PNG) \
+	$(ARCHIVED_PUSHPIN_PNG) \
+	$(ARCHIVED_TRADITIONAL_PNG) \
+	$(ARCHIVED_TRAILHEAD_PNG) \
+	$(ARCHIVED_TREASURE_PNG) \
+	$(ARCHIVED_UNKNOWN_PNG) \
+	$(ARCHIVED_VIRTUAL_PNG) \
+	$(ARCHIVED_WAYPOINT_FLAG_RED_PNG) \
+	$(ARCHIVED_WEBCAM_PNG) \
+	$(ARCHIVED_WHERIGO_PNG) \
+	$(DISABLED_BLUEPIN_PNG) \
+	$(DISABLED_CITO_PNG) \
+	$(DISABLED_CORRECTED_PNG) \
+	$(DISABLED_EARTH_PNG) \
+	$(DISABLED_EVENT_PNG) \
+	$(DISABLED_FOUND_PNG) \
+	$(DISABLED_GREENPIN_PNG) \
+	$(DISABLED_LETTERBOX_PNG) \
+	$(DISABLED_LOCATIONLESS_PNG) \
+	$(DISABLED_MEGA_PNG) \
+	$(DISABLED_MULTI_PNG) \
+	$(DISABLED_OTHER_PNG) \
+	$(DISABLED_OWNED_PNG) \
+	$(DISABLED_PARKING_PNG) \
+	$(DISABLED_PUSHPIN_PNG) \
+	$(DISABLED_TRADITIONAL_PNG) \
+	$(DISABLED_TRAILHEAD_PNG) \
+	$(DISABLED_TREASURE_PNG) \
+	$(DISABLED_UNKNOWN_PNG) \
+	$(DISABLED_VIRTUAL_PNG) \
+	$(DISABLED_WAYPOINT_FLAG_RED_PNG) \
+	$(DISABLED_WEBCAM_PNG) \
+	$(DISABLED_WHERIGO_PNG) \
+	$(DNF_PNG) \
+	$(ARCHIVED_DNF_PNG) \
+	$(DISABLED_DNF_PNG) \
+	$(ARCHIVED_FTF_PNG) \
+	$(DISABLED_FTF_PNG) \
+	$(FTF_PNG) \
+	$(STALE_CITO_PNG) \
+	$(STALE_CORRECTED_PNG) \
+	$(STALE_DNF_PNG) \
+	$(STALE_EARTH_PNG) \
+	$(STALE_EVENT_PNG) \
+	$(STALE_FOUND_PNG) \
+	$(STALE_FTF_PNG) \
+	$(STALE_GREENPIN_PNG) \
+	$(STALE_LETTERBOX_PNG) \
+	$(STALE_LOCATIONLESS_PNG) \
+	$(STALE_MEGA_PNG) \
+	$(STALE_MULTI_PNG) \
+	$(STALE_OTHER_PNG) \
+	$(STALE_OWNED_PNG) \
+	$(STALE_PARKING_PNG) \
+	$(STALE_PUSHPIN_PNG) \
+	$(STALE_TRADITIONAL_PNG) \
+	$(STALE_TRAILHEAD_PNG) \
+	$(STALE_TREASURE_PNG) \
+	$(STALE_UNKNOWN_PNG) \
+	$(STALE_VIRTUAL_PNG) \
+	$(STALE_WAYPOINT_FLAG_RED_PNG) \
+	$(STALE_WEBCAM_PNG) \
+	$(STALE_WHERIGO_PNG) \
+	$(NEEDS_MAINTENANCE_PNG) \
+	$(WRITE_NOTE_PNG) \
+	$(LOCATIONLESS_PNG) \
+	$(WAYPOINT_FLAG_RED_PNG) \
+	$(NEW_BLUEPIN_PNG) \
+	$(NEW_CITO_PNG) \
+	$(NEW_CORRECTED_PNG) \
+	$(NEW_DELETE_PNG) \
+	$(NEW_DNF_PNG) \
+	$(NEW_EARTH_PNG) \
+	$(NEW_EVENT_PNG) \
+	$(NEW_FOUND_PNG) \
+	$(NEW_FTF_PNG) \
+	$(NEW_GREENPIN_PNG) \
+	$(NEW_LETTERBOX_PNG) \
+	$(NEW_LOCATIONLESS_PNG) \
+	$(NEW_MEGA_PNG) \
+	$(NEW_MULTI_PNG) \
+	$(NEW_NEEDS_MAINTENANCE_PNG) \
+	$(NEW_OTHER_PNG) \
+	$(NEW_OWNED_PNG) \
+	$(NEW_PARKING_PNG) \
+	$(NEW_PUSHPIN_PNG) \
+	$(NEW_TRADITIONAL_PNG) \
+	$(NEW_TRAILHEAD_PNG) \
+	$(NEW_TREASURE_PNG) \
+	$(NEW_UNKNOWN_PNG) \
+	$(NEW_VIRTUAL_PNG) \
+	$(NEW_WAYPOINT_FLAG_RED_PNG) \
+	$(NEW_WEBCAM_PNG) \
+	$(NEW_WHERIGO_PNG) \
+	$(NEW_WRITE_NOTE_PNG) \
+	$(CLOGS_BLUEPIN_PNG) \
+	$(CLOGS_CITO_PNG) \
+	$(CLOGS_CORRECTED_PNG) \
+	$(CLOGS_DELETE_PNG) \
+	$(CLOGS_DNF_PNG) \
+	$(CLOGS_EARTH_PNG) \
+	$(CLOGS_EVENT_PNG) \
+	$(CLOGS_FOUND_PNG) \
+	$(CLOGS_FTF_PNG) \
+	$(CLOGS_GREENPIN_PNG) \
+	$(CLOGS_LETTERBOX_PNG) \
+	$(CLOGS_LOCATIONLESS_PNG) \
+	$(CLOGS_MEGA_PNG) \
+	$(CLOGS_MULTI_PNG) \
+	$(CLOGS_NEEDS_MAINTENANCE_PNG) \
+	$(CLOGS_OTHER_PNG) \
+	$(CLOGS_OWNED_PNG) \
+	$(CLOGS_PARKING_PNG) \
+	$(CLOGS_PUSHPIN_PNG) \
+	$(CLOGS_TRADITIONAL_PNG) \
+	$(CLOGS_TRAILHEAD_PNG) \
+	$(CLOGS_TREASURE_PNG) \
+	$(CLOGS_UNKNOWN_PNG) \
+	$(CLOGS_VIRTUAL_PNG) \
+	$(CLOGS_WAYPOINT_FLAG_RED_PNG) \
+	$(CLOGS_WEBCAM_PNG) \
+	$(CLOGS_WHERIGO_PNG) \
+	$(CLOGS_WRITE_NOTE_PNG)  
+
+PROGRAMFILES_ICONS_48X48 = \
+	$(CIRCLE_PNG)  
+
+PROGRAMFILES_DOCS = \
+	$(CHANGEHISTORY_TXT) \
+	$(README_TXT)  
+
+PROGRAMFILES_LICENCE = \
+	$(LICENCE_TXT)  
+
+PROGRAMFILES_WEB_IMG = \
+	$(BLANK_GIF) \
+	$(CLOUD_POPUP_RELATIVE_PNG) \
+	$(DRAG_RECTANGLE_OFF_PNG) \
+	$(DRAG_RECTANGLE_ON_PNG) \
+	$(EAST_MINI_PNG) \
+	$(LAYER_SWITCHER_MAXIMIZE_PNG) \
+	$(LAYER_SWITCHER_MINIMIZE_PNG) \
+	$(MARKER_PNG) \
+	$(MARKER_BLUE_PNG) \
+	$(MARKER_GOLD_PNG) \
+	$(MARKER_GREEN_PNG) \
+	$(MEASURING_STICK_OFF_PNG) \
+	$(MEASURING_STICK_ON_PNG) \
+	$(NORTH_MINI_PNG) \
+	$(PANNING_HAND_OFF_PNG) \
+	$(PANNING_HAND_ON_PNG) \
+	$(SLIDER_PNG) \
+	$(SOUTH_MINI_PNG) \
+	$(WEST_MINI_PNG) \
+	$(ZOOMBAR_PNG) \
+	$(ZOOM_MINUS_MINI_PNG) \
+	$(ZOOM_PLUS_MINI_PNG) \
+	$(ZOOM_WORLD_MINI_PNG)  
+
+PROGRAMFILES_WEB_THEME_DEFAULT = \
+	$(FRAMEDCLOUD_CSS) \
+	$(GOOGLE_CSS) \
+	$(IE6_STYLE_CSS) \
+	$(STYLE_CSS)  
+
+PROGRAMFILES_WEB_THEME_DEFAULT_IMG = \
+	$(ADD_POINT_OFF_PNG) \
+	$(ADD_POINT_ON_PNG) \
+	$(BLANK_GIF2) \
+	$(CLOSE_GIF) \
+	$(DRAG_RECTANGLE_OFF_PNG2) \
+	$(DRAG_RECTANGLE_ON_PNG2) \
+	$(DRAW_LINE_OFF_PNG) \
+	$(DRAW_LINE_ON_PNG) \
+	$(DRAW_POINT_OFF_PNG) \
+	$(DRAW_POINT_ON_PNG) \
+	$(DRAW_POLYGON_OFF_PNG) \
+	$(DRAW_POLYGON_ON_PNG) \
+	$(EDITING_TOOL_BAR_PNG) \
+	$(MOVE_FEATURE_OFF_PNG) \
+	$(MOVE_FEATURE_ON_PNG) \
+	$(NAVIGATION_HISTORY_PNG) \
+	$(OVERVIEW_REPLACEMENT_GIF) \
+	$(PANNING_HAND_OFF_PNG2) \
+	$(PANNING_HAND_ON_PNG2) \
+	$(PAN_OFF_PNG) \
+	$(PAN_ON_PNG) \
+	$(PAN_PANEL_PNG) \
+	$(PAN_PANEL_NOALPHA_PNG) \
+	$(REMOVE_POINT_OFF_PNG) \
+	$(REMOVE_POINT_ON_PNG) \
+	$(RULER_PNG) \
+	$(SAVE_FEATURES_OFF_PNG) \
+	$(SAVE_FEATURES_ON_PNG) \
+	$(VIEW_NEXT_OFF_PNG) \
+	$(VIEW_NEXT_ON_PNG) \
+	$(VIEW_PREVIOUS_OFF_PNG) \
+	$(VIEW_PREVIOUS_ON_PNG) \
+	$(ZOOM_PANEL_PNG) \
+	$(ZOOM_PANEL_NOALPHA_PNG)  
+
+PROGRAMFILES_VERSION = \
+	$(VERSION_TXT)  
+
+PROGRAMFILES_ICONS_SCALABLE_ATTRIBUTES = \
+	$(YES_RECOMMENDED_AT_NIGHT_SVG) \
+	$(YES_NEEDS_MAINTENANCE_SVG) \
+	$(NO_RECOMMENDED_AT_NIGHT_SVG) \
+	$(DIS_RECOMMENDED_AT_NIGHT_SVG) \
+	$(DIS_NEEDS_MAINTENANCE_SVG) \
+	$(YES_WIRELESS_BEACON_SVG) \
+	$(DIS_WIRELESS_BEACON_SVG) \
+	$(YES_AVAILABLE_DURING_WINTER_SVG) \
+	$(NO_AVAILABLE_DURING_WINTER_SVG) \
+	$(DIS_AVAILABLE_DURING_WINTER_SVG) \
+	$(DIS_BICYCLES_SVG) \
+	$(DIS_DOGS_SVG) \
+	$(NO_BICYCLES_SVG) \
+	$(NO_DOGS_SVG) \
+	$(YES_BICYCLES_SVG) \
+	$(YES_DOGS_SVG) \
+	$(DIS_ACCESS_OR_PARKING_FEE_SVG) \
+	$(YES_ACCESS_OR_PARKING_FEE_SVG) \
+	$(DIS_RECOMMENDED_FOR_KIDS_SVG) \
+	$(NO_RECOMMENDED_FOR_KIDS_SVG) \
+	$(YES_RECOMMENDED_FOR_KIDS_SVG) \
+	$(DIS_CAMPFIRES_SVG) \
+	$(NO_CAMPFIRES_SVG) \
+	$(YES_CAMPFIRES_SVG) \
+	$(DIS_TAKES_LESS_THAN_AN_HOUR_SVG) \
+	$(NO_TAKES_LESS_THAN_AN_HOUR_SVG) \
+	$(YES_TAKES_LESS_THAN_AN_HOUR_SVG) \
+	$(DIS_MAY_REQUIRE_SWIMMING_SVG) \
+	$(YES_MAY_REQUIRE_SWIMMING_SVG) \
+	$(DIS_PARKING_AVAILABLE_SVG) \
+	$(DIS_STROLLER_ACCESSIBLE_SVG) \
+	$(DIS_WHEELCHAIR_ACCESSIBLE_SVG) \
+	$(NO_PARKING_AVAILABLE_SVG) \
+	$(NO_STROLLER_ACCESSIBLE_SVG) \
+	$(NO_WHEELCHAIR_ACCESSIBLE_SVG) \
+	$(YES_PARKING_AVAILABLE_SVG) \
+	$(YES_STROLLER_ACCESSIBLE_SVG) \
+	$(YES_WHEELCHAIR_ACCESSIBLE_SVG) \
+	$(DIS_FIELD_PUZZLE_SVG) \
+	$(YES_FIELD_PUZZLE_SVG) \
+	$(DIS_SIGNIFICANT_HIKE_SVG) \
+	$(NO_SIGNIFICANT_HIKE_SVG) \
+	$(YES_SIGNIFICANT_HIKE_SVG) \
+	$(DIS_ABANDONED_MINES_SVG) \
+	$(YES_ABANDONED_MINES_SVG) \
+	$(DIS_CLIFF___FALLING_ROCKS_SVG) \
+	$(YES_CLIFF___FALLING_ROCKS_SVG) \
+	$(DIS_CLIMBING_GEAR_SVG) \
+	$(YES_CLIMBING_GEAR_SVG) \
+	$(DIS_CROSS_COUNTRY_SKIS_SVG) \
+	$(YES_CROSS_COUNTRY_SKIS_SVG) \
+	$(DIS_DANGEROUS_AREA_SVG) \
+	$(YES_DANGEROUS_AREA_SVG) \
+	$(DIS_PUBLIC_TRANSPORTATION_SVG) \
+	$(YES_PUBLIC_TRANSPORTATION_SVG) \
+	$(DIS_WATCH_FOR_LIVESTOCK_SVG) \
+	$(YES_WATCH_FOR_LIVESTOCK_SVG) \
+	$(DIS_AVAILABLE_AT_ALL_TIMES_SVG) \
+	$(NO_AVAILABLE_AT_ALL_TIMES_SVG) \
+	$(YES_AVAILABLE_AT_ALL_TIMES_SVG) \
+	$(DIS_STEALTH_REQUIRED_SVG) \
+	$(NO_STEALTH_REQUIRED_SVG) \
+	$(YES_STEALTH_REQUIRED_SVG) \
+	$(DIS_SNOWSHOES_SVG) \
+	$(YES_SNOWSHOES_SVG) \
+	$(DIS_SPECIAL_TOOL_REQUIRED_SVG) \
+	$(YES_SPECIAL_TOOL_REQUIRED_SVG) \
+	$(DIS_THORNS_SVG) \
+	$(YES_THORNS_SVG) \
+	$(DIS_UV_LIGHT_REQUIRED_SVG) \
+	$(YES_UV_LIGHT_REQUIRED_SVG) \
+	$(DIS_BOAT_SVG) \
+	$(YES_BOAT_SVG) \
+	$(DIS_ABANDONED_STRUCTURE_SVG) \
+	$(NO_ABANDONED_STRUCTURE_SVG) \
+	$(YES_ABANDONED_STRUCTURE_SVG) \
+	$(DIS_CAMPING_AVAILABLE_SVG) \
+	$(NO_CAMPING_AVAILABLE_SVG) \
+	$(YES_CAMPING_AVAILABLE_SVG) \
+	$(DIS_DANGEROUS_ANIMALS_SVG) \
+	$(YES_DANGEROUS_ANIMALS_SVG) \
+	$(DIS_DIFFICULT_CLIMBING_SVG) \
+	$(NO_DIFFICULT_CLIMBING_SVG) \
+	$(YES_DIFFICULT_CLIMBING_SVG) \
+	$(DIS_DRINKING_WATER_NEARBY_SVG) \
+	$(NO_DRINKING_WATER_NEARBY_SVG) \
+	$(YES_DRINKING_WATER_NEARBY_SVG) \
+	$(DIS_FLASHLIGHT_REQUIRED_SVG) \
+	$(YES_FLASHLIGHT_REQUIRED_SVG) \
+	$(DIS_FOOD_NEARBY_SVG) \
+	$(NO_FOOD_NEARBY_SVG) \
+	$(YES_FOOD_NEARBY_SVG) \
+	$(DIS_FUEL_NEARBY_SVG) \
+	$(NO_FUEL_NEARBY_SVG) \
+	$(YES_FUEL_NEARBY_SVG) \
+	$(DIS_HORSES_SVG) \
+	$(NO_HORSES_SVG) \
+	$(YES_HORSES_SVG) \
+	$(DIS_HUNTING_SVG) \
+	$(YES_HUNTING_SVG) \
+	$(DIS_MAY_REQUIRE_WADING_SVG) \
+	$(YES_MAY_REQUIRE_WADING_SVG) \
+	$(DIS_MOTORCYCLES_SVG) \
+	$(NO_MOTORCYCLES_SVG) \
+	$(YES_MOTORCYCLES_SVG) \
+	$(DIS_NIGHT_CACHE_SVG) \
+	$(YES_NIGHT_CACHE_SVG) \
+	$(DIS_PARK_AND_GRAB_SVG) \
+	$(YES_PARK_AND_GRAB_SVG) \
+	$(DIS_SCUBA_GEAR_SVG) \
+	$(YES_SCUBA_GEAR_SVG) \
+	$(DIS_SCENIC_VIEW_SVG) \
+	$(YES_SCENIC_VIEW_SVG) \
+	$(DIS_MEDIUM_HIKE_1KM_10KM_SVG) \
+	$(NO_MEDIUM_HIKE_1KM_10KM_SVG) \
+	$(YES_MEDIUM_HIKE_1KM_10KM_SVG) \
+	$(NO_LONG_HIKE_10KM_SVG) \
+	$(YES_LONG_HIKE_10KM_SVG) \
+	$(DIS_SHORT_HIKE_LESS_THAN_1KM_SVG) \
+	$(NO_SHORT_HIKE_LESS_THAN_1KM_SVG) \
+	$(YES_SHORT_HIKE_LESS_THAN_1KM_SVG) \
+	$(DIS_POISON_PLANTS_SVG) \
+	$(NO_POISON_PLANTS_SVG) \
+	$(YES_POISON_PLANTS_SVG) \
+	$(DIS_TICKS_SVG) \
+	$(YES_TICKS_SVG) \
+	$(YES_PICNIC_TABLES_NEARBY_SVG) \
+	$(DIS_PICNIC_TABLES_NEARBY_SVG) \
+	$(NO_PICNIC_TABLES_NEARBY_SVG) \
+	$(DIS_PUBLIC_RESTROOMS_NEARBY_SVG) \
+	$(NO_PUBLIC_RESTROOMS_NEARBY_SVG) \
+	$(YES_PUBLIC_RESTROOMS_NEARBY_SVG) \
+	$(DIS_TELEPHONE_NEARBY_SVG) \
+	$(NO_TELEPHONE_NEARBY_SVG) \
+	$(YES_TELEPHONE_NEARBY_SVG) \
+	$(DIS_TRUCK_DRIVER_RV_SVG) \
+	$(NO_TRUCK_DRIVER_RV_SVG) \
+	$(YES_TRUCK_DRIVER_RV_SVG) \
+	$(DIS_QUADS_SVG) \
+	$(NO_QUADS_SVG) \
+	$(YES_QUADS_SVG) \
+	$(DIS_OFF_ROAD_VEHICLES_SVG) \
+	$(NO_OFF_ROAD_VEHICLES_SVG) \
+	$(YES_OFF_ROAD_VEHICLES_SVG) \
+	$(DIS_SNOWMOBILES_SVG) \
+	$(NO_SNOWMOBILES_SVG) \
+	$(YES_SNOWMOBILES_SVG) \
+	$(NO_NIGHT_CACHE_SVG) \
+	$(NO_PARK_AND_GRAB_SVG) \
+	$(DIS_LONG_HIKE_10KM_SVG)  
+
+PROGRAMFILES_MAPS = \
+	$(DEFAULTMAPS_XML)  
+
+PROGRAMFILES_ICONS_32X32 = \
+	$(D10_PNG) \
+	$(D15_PNG) \
+	$(D20_PNG) \
+	$(D25_PNG) \
+	$(D30_PNG) \
+	$(D35_PNG) \
+	$(D40_PNG) \
+	$(D45_PNG) \
+	$(D50_PNG) \
+	$(T10_PNG) \
+	$(T15_PNG) \
+	$(T20_PNG) \
+	$(T25_PNG) \
+	$(T30_PNG) \
+	$(T35_PNG) \
+	$(T40_PNG) \
+	$(T45_PNG) \
+	$(T50_PNG)  
+
+PROGRAMFILES_ICONS_SPLASH = \
+	$(BEACH_PNG) \
+	$(FOREST_PNG) \
+	$(NIGHT_PNG) \
+	$(PARK_PNG) \
+	$(SPACE2_PNG)  
+
+PROGRAMFILES_ICONS_SPLASH_CHRISTMAS = \
+	$(AXMAS_PNG) \
+	$(BXMAS_PNG) \
+	$(CXMAS_PNG) \
+	$(DXMAS_PNG) \
+	$(EXMAS_PNG) \
+	$(FXMAS_PNG) \
+	$(GXMAS_PNG) \
+	$(HXMAS_PNG) \
+	$(IXMAS_PNG)  
+
+
+RESGEN=resgen2
+	
+all: $(ASSEMBLY) $(PROGRAMFILES) $(BINARIES) $(COMMONAPPLICATIONDATAROOT_MIME_PACKAGES) $(LINUX_DESKTOPAPPLICATIONS) $(PROGRAMFILES_ICONS_SCALABLE) $(PROGRAMFILES_WEB) $(PROGRAMFILES_ICONS_24X24) $(PROGRAMFILES_ICONS_48X48) $(PROGRAMFILES_DOCS) $(PROGRAMFILES_LICENCE) $(PROGRAMFILES_WEB_IMG) $(PROGRAMFILES_WEB_THEME_DEFAULT) $(PROGRAMFILES_WEB_THEME_DEFAULT_IMG) $(PROGRAMFILES_VERSION) $(PROGRAMFILES_ICONS_SCALABLE_ATTRIBUTES) $(PROGRAMFILES_MAPS) $(PROGRAMFILES_ICONS_32X32) $(PROGRAMFILES_ICONS_SPLASH) $(PROGRAMFILES_ICONS_SPLASH_CHRISTMAS) 
+
+FILES = \
+	AssemblyInfo.cs \
+	Widgets/GeoCachePane.cs \
+	Widgets/HTMLWidget.cs \
+	Widgets/CoordinateWidget.cs \
+	Widgets/SetupAssistantPage1.cs \
+	Dialogs/SetupAssistant.cs \
+	IDBusComm.cs \
+	DBusComm.cs \
+	Widgets/SetupAssistantPage2.cs \
+	Widgets/SetupAssistantPage3.cs \
+	Dialogs/ExportProgressDialog.cs \
+	Widgets/OCMWebView.cs \
+	Dialogs/GPSConfiguration.cs \
+	Widgets/GPXWidget.cs \
+	Widgets/GarminUSBWidget.cs \
+	Widgets/IGPSConfig.cs \
+	Widgets/MagellanExploristWidget.cs \
+	Widgets/GenericGPSWidget.cs \
+	Widgets/DateWidget.cs \
+	Dialogs/CalendarWindow.cs \
+	Widgets/HTMLEditorWidget.cs \
+	Dialogs/NoDBDialog.cs \
+	Dialogs/GPSDConfig.cs \
+	Widgets/WaypointOverrideWidget.cs \
+	Widgets/SymbolChooser.cs \
+	Dialogs/QTLandKarteDialog.cs \
+	IQLandkarteGT.cs \
+	Widgets/SetupAssistantPage4.cs \
+	Dialogs/CopyMoveDialog.cs \
+	Dialogs/CopyingProgress.cs \
+	gtk-gui/generated.cs \
+	gtk-gui/ocmgtk.GeocacheInfoPanel.cs \
+	gtk-gui/ocmgtk.WaypointWidget.cs \
+	gtk-gui/ocmgtk.LogViewerWidget.cs \
+	gtk-gui/ocmgtk.WaypointDialog.cs \
+	gtk-gui/ocmgtk.HTMLWidget.cs \
+	gtk-gui/ocmgtk.ProgressDialog.cs \
+	gtk-gui/ocmgtk.Preferences.cs \
+	gtk-gui/ocmgtk.CoordinateWidget.cs \
+	gtk-gui/ocmgtk.SetupAssistantPage1.cs \
+	gtk-gui/ocmgtk.SetupAssistant.cs \
+	gtk-gui/ocmgtk.SetupAssistantPage2.cs \
+	gtk-gui/ocmgtk.SetupAssistantPage3.cs \
+	gtk-gui/ocmgtk.ExportProgressDialog.cs \
+	gtk-gui/ocmgtk.DescriptionWidget.cs \
+	gtk-gui/ocmgtk.OCMQueryPage1.cs \
+	gtk-gui/ocmgtk.FilterDialog.cs \
+	gtk-gui/ocmgtk.OCMQueryPage2.cs \
+	gtk-gui/ocmgtk.GPSConfiguration.cs \
+	gtk-gui/ocmgtk.GPXWidget.cs \
+	gtk-gui/ocmgtk.GarminUSBWidget.cs \
+	gtk-gui/ocmgtk.SendWaypointsDialog.cs \
+	gtk-gui/ocmgtk.MagellanExploristWidget.cs \
+	gtk-gui/ocmgtk.GenericGPSWidget.cs \
+	gtk-gui/ocmgtk.OCMQueryPage3.cs \
+	gtk-gui/ocmgtk.ChangeHistory.cs \
+	gtk-gui/ocmgtk.DateWidget.cs \
+	gtk-gui/ocmgtk.CalendarWindow.cs \
+	gtk-gui/ocmgtk.HTMLEditorWidget.cs \
+	gtk-gui/ocmgtk.NotesWidget.cs \
+	gtk-gui/ocmgtk.AddBookMarkDialog.cs \
+	gtk-gui/ocmgtk.ModifyCacheDialog.cs \
+	gtk-gui/ocmgtk.NoDBDialog.cs \
+	gtk-gui/ocmgtk.GPSDConfig.cs \
+	gtk-gui/ocmgtk.WaypointOverrideWidget.cs \
+	gtk-gui/ocmgtk.SymbolChooser.cs \
+	gtk-gui/ocmgtk.QTLandKarteDialog.cs \
+	gtk-gui/ocmgtk.SetupAssistantPage4.cs \
+	gtk-gui/ocmgtk.CopyMoveDialog.cs \
+	gtk-gui/ocmgtk.CopyingProgress.cs \
+	Dialogs/ScanWaypointsDialog.cs \
+	gtk-gui/ocmgtk.ScanWaypointsDialog.cs \
+	Widgets/GarminSerialWidget.cs \
+	gtk-gui/ocmgtk.GarminSerialWidget.cs \
+	gtk-gui/ocmgtk.ReviewWaypointWidget.cs \
+	gtk-gui/ocmgtk.ReviewWaypointDialog.cs \
+	Widgets/OCMTreeView.cs \
+	Dialogs/ConfigureEToolsDlg.cs \
+	gtk-gui/ocmgtk.ConfigureEToolsDlg.cs \
+	gtk-gui/ocmgtk.OCMQueryPage4.cs \
+	Widgets/DeLormeWidget.cs \
+	gtk-gui/ocmgtk.DeLormeWidget.cs \
+	Dialogs/AddCommandDialog.cs \
+	gtk-gui/ocmgtk.AddCommandDialog.cs \
+	Widgets/GarminEdgeWidget.cs \
+	gtk-gui/ocmgtk.GarminEdgeWidget.cs \
+	Widgets/DelormeGPXWidget.cs \
+	gtk-gui/ocmgtk.DelormeGPXWidget.cs \
+	gtk-gui/ocmgtk.MarkFoundDialog.cs \
+	gtk-gui/ocmgtk.CorrectedCoordinatesDlg.cs \
+	gtk-gui/ocmgtk.OCMQueryPage5.cs \
+	gtk-gui/ocmgtk.ImportDirectoryDialog.cs \
+	gtk-gui/ocmgtk.ExportGPXDialog.cs \
+	Widgets/AttributeFilterWidget.cs \
+	gtk-gui/ocmgtk.AttributeFilterWidget.cs \
+	gtk-gui/ocmgtk.AddLocationDialog.cs \
+	gtk-gui/ocmgtk.LocationWidget.cs \
+	gtk-gui/ocmgtk.DeleteItem.cs \
+	configuration/Config.cs \
+	configuration/IConfig.cs \
+	configuration/EToolList.cs \
+	configuration/ExternalTool.cs \
+	configuration/UpdateChecker.cs \
+	Dialogs/LoggingDialog.cs \
+	Dialogs/OfflineLogDialog.cs \
+	gtk-gui/ocmgtk.OCMQueryPage6.cs \
+	gtk-gui/ocmgtk.LoggingDialog.cs \
+	gtk-gui/ocmgtk.OfflineLogDialog.cs \
+	gtk-gui/ocmgtk.OffLineLogViewer.cs \
+	gtk-gui/ocmgtk.LoadGPSFieldNotes.cs \
+	gtk-gui/ocmgtk.ImportDialog.cs \
+	gtk-gui/ocmgtk.AddComboFilter.cs \
+	Widgets/MapSelectionWidget.cs \
+	gtk-gui/ocmgtk.MapSelectionWidget.cs \
+	Dialogs/ExportPOIDialog.cs \
+	gtk-gui/ocmgtk.ExportPOIDialog.cs \
+	Dialogs/WebBrowser.cs \
+	gtk-gui/ocmgtk.WebBrowser.cs \
+	gtk-gui/ocmgtk.ImagesWidget.cs \
+	Dialogs/ImageDialog.cs \
+	gtk-gui/ocmgtk.ImageDialog.cs \
+	gtk-gui/ocmgtk.FileDownloadProgress.cs \
+	gtk-gui/ocmgtk.FieldNotesProgress.cs \
+	Application/OCMMainWindow.cs \
+	gtk-gui/ocmgtk.OCMMainWindow.cs \
+	Application/Widgets/CacheListWidget.cs \
+	gtk-gui/ocmgtk.CacheListWidget.cs \
+	Application/OCMApp.cs \
+	Application/Widgets/CacheInfoWidget.cs \
+	gtk-gui/ocmgtk.CacheInfoWidget.cs \
+	Application/Widgets/MapWidget.cs \
+	gtk-gui/ocmgtk.MapWidget.cs \
+	Application/Widgets/GeocacheInfoPanel.cs \
+	Application/Widgets/ImagesWidget.cs \
+	Application/Widgets/NotesWidget.cs \
+	Application/Widgets/WaypointWidget.cs \
+	gtk-gui/ocmgtk.GeoCachePane.cs \
+	Application/Widgets/DescriptionWidget.cs \
+	Application/IconManager.cs \
+	gtk-gui/ocmgtk.OCMSplash.cs \
+	Application/Splash/OCMSplash.cs \
+	Application/Dialogs/Preferences.cs \
+	Application/Printing/CachePrinter.cs \
+	Application/MapManager/MapDescription.cs \
+	Application/MapManager/MapManager.cs \
+	Application/Locations/Location.cs \
+	Application/Locations/LocationList.cs \
+	Application/Dialogs/ManageListDialog.cs \
+	gtk-gui/ocmgtk.ManageListDialog.cs \
+	Application/Models/CacheStoreModel.cs \
+	Application/Dialogs/FilterDialog.cs \
+	Application/Widgets/OCMQueryPage1.cs \
+	Application/Widgets/OCMQueryPage2.cs \
+	Application/Widgets/OCMQueryPage3.cs \
+	Application/Widgets/OCMQueryPage4.cs \
+	Application/Widgets/OCMQueryPage5.cs \
+	Application/Widgets/OCMQueryPage6.cs \
+	Application/QuickFilters/QuickFilter.cs \
+	Application/QuickFilters/QuickFilters.cs \
+	Application/Dialogs/ChangeHistory.cs \
+	Application/Dialogs/ModifyCacheDialog.cs \
+	Application/Dialogs/CorrectedCoordinatesDlg.cs \
+	Application/Dialogs/MarkFoundDialog.cs \
+	Application/Widgets/LogViewerWidget.cs \
+	Application/Dialogs/WaypointDialog.cs \
+	Application/Dialogs/ReviewWaypointDialog.cs \
+	Application/Widgets/ReviewWaypointWidget.cs \
+	Application/Bookmarks/BookmarkManager.cs \
+	Application/Dialogs/AddBookMarkDialog.cs \
+	Application/Dialogs/DeleteItem.cs \
+	Application/Dialogs/AddLocationDialog.cs \
+	Application/GPSD/GPS.cs \
+	Application/Dialogs/AddComboFilter.cs \
+	Application/Dialogs/ImportDialog.cs \
+	Application/Dialogs/ImportDirectoryDialog.cs \
+	Application/Dialogs/ProgressDialog.cs \
+	Application/Dialogs/OffLineLogViewer.cs \
+	Application/Dialogs/ExportGPXDialog.cs \
+	Application/GPS/GPSProfile.cs \
+	Application/GPS/GPSProfileList.cs \
+	Application/Dialogs/ErrorDialog.cs \
+	gtk-gui/ocmgtk.ErrorDialog.cs \
+	Application/Dialogs/FieldNotesProgress.cs \
+	Application/Dialogs/LoadGPSFieldNotes.cs \
+	Application/Widgets/LocationWidget.cs \
+	Application/Dialogs/SendWaypointsDialog.cs \
+	Addin/IOCMAddin.cs \
+	Application/Dialogs/FileDownloadProgress.cs \
+	Paths.cs \
+	Application/CleanupAssistant/CleanUpPage1.cs \
+	gtk-gui/ocmgtk.CleanUpPage1.cs \
+	Application/CleanupAssistant/CleanupPage2.cs \
+	gtk-gui/ocmgtk.CleanupPage2.cs \
+	Application/CleanupAssistant/CleanupAssistant.cs \
+	Application/CleanupAssistant/CleanupSummary.cs \
+	gtk-gui/ocmgtk.CleanupSummary.cs \
+	Application/Dialogs/ReduceLogsDialog.cs \
+	gtk-gui/ocmgtk.ReduceLogsDialog.cs \
+	Application/CleanupAssistant/CleanupConfirmPage.cs \
+	gtk-gui/ocmgtk.CleanupConfirmPage.cs \
+	Application/CleanupAssistant/CleanupManager.cs 
+
+DATA_FILES = 
+
+RESOURCES = \
+	icons/scalable/OCMLogo.svg,ocmgtk.icons.scalable.OCMLogo.svg \
+	icons/scalable/OCMLogoSmall.svg,ocmgtk.icons.scalable.OCMLogoSmall.svg \
+	icons/OpenLayers.png,ocmgtk.icons.OpenLayers.png \
+	icons/scalable/DistIcon.svg,ocmgtk.icons.scalable.DistIcon.svg \
+	icons/scalable/SearchIcon.svg,ocmgtk.icons.scalable.SearchIcon.svg \
+	icons/scalable/log.svg,ocmgtk.icons.scalable.log.svg \
+	gtk-gui/gui.stetic \
+	icons/scalable/up_icon.svg,ocmgtk.icons.scalable.up_icon.svg \
+	icons/scalable/down_icon.svg,ocmgtk.icons.scalable.down_icon.svg \
+	icons/scalable/maxicon.svg,ocmgtk.icons.scalable.maxicon.svg \
+	icons/scalable/minicon.svg,ocmgtk.icons.scalable.minicon.svg \
+	icons/scalable/restore.svg,ocmgtk.icons.scalable.restore.svg 
+
+EXTRAS = \
+	Dialogs \
+	Widgets \
+	web \
+	icons \
+	icons/scalable \
+	icons/24x24 \
+	docs \
+	licence \
+	version \
+	configuration \
+	maps \
+	Application \
+	Application/Dialogs \
+	Application/Widgets \
+	Application/Splash \
+	Application/Printing \
+	Application/MapManager \
+	Application/Models \
+	Application/QuickFilters \
+	Application/Bookmarks \
+	Application/GPS \
+	Addin \
+	Application/CleanupAssistant \
+	x-gpx.xml \
+	x-ocm.xml \
+	icons/scalable/greenpin.svg \
+	web/nomap.png \
+	icons/scalable/attributes/dis_Long_Hike_(+10km).svg \
+	icons/24x24/locationless.png \
+	icons/24x24/waypoint-flag-red.png \
+	maps/mappack-central-europe.xml \
+	icons/24x24/new-bluepin.png \
+	icons/24x24/new-cito.png \
+	icons/24x24/new-corrected.png \
+	icons/24x24/new-delete.png \
+	icons/24x24/new-dnf.png \
+	icons/24x24/new-earth.png \
+	icons/24x24/new-event.png \
+	icons/24x24/new-found.png \
+	icons/24x24/new-ftf.png \
+	icons/24x24/new-greenpin.png \
+	icons/24x24/new-letterbox.png \
+	icons/24x24/new-locationless.png \
+	icons/24x24/new-mega.png \
+	icons/24x24/new-multi.png \
+	icons/24x24/new-needs_maintenance.png \
+	icons/24x24/new-other.png \
+	icons/24x24/new-owned.png \
+	icons/24x24/new-parking.png \
+	icons/24x24/new-pushpin.png \
+	icons/24x24/new-traditional.png \
+	icons/24x24/new-trailhead.png \
+	icons/24x24/new-treasure.png \
+	icons/24x24/new-unknown.png \
+	icons/24x24/new-virtual.png \
+	icons/24x24/new-waypoint-flag-red.png \
+	icons/24x24/new-webcam.png \
+	icons/24x24/new-wherigo.png \
+	icons/24x24/new-write_note.png \
+	icons/24x24/clogs-bluepin.png \
+	icons/24x24/clogs-cito.png \
+	icons/24x24/clogs-corrected.png \
+	icons/24x24/clogs-delete.png \
+	icons/24x24/clogs-dnf.png \
+	icons/24x24/clogs-earth.png \
+	icons/24x24/clogs-event.png \
+	icons/24x24/clogs-found.png \
+	icons/24x24/clogs-ftf.png \
+	icons/24x24/clogs-greenpin.png \
+	icons/24x24/clogs-letterbox.png \
+	icons/24x24/clogs-locationless.png \
+	icons/24x24/clogs-mega.png \
+	icons/24x24/clogs-multi.png \
+	icons/24x24/clogs-needs_maintenance.png \
+	icons/24x24/clogs-other.png \
+	icons/24x24/clogs-owned.png \
+	icons/24x24/clogs-parking.png \
+	icons/24x24/clogs-pushpin.png \
+	icons/24x24/clogs-traditional.png \
+	icons/24x24/clogs-trailhead.png \
+	icons/24x24/clogs-treasure.png \
+	icons/24x24/clogs-unknown.png \
+	icons/24x24/clogs-virtual.png \
+	icons/24x24/clogs-waypoint-flag-red.png \
+	icons/24x24/clogs-webcam.png \
+	icons/24x24/clogs-wherigo.png \
+	icons/24x24/clogs-write_note.png \
+	OCMApp.cs.in \
+	Paths.cs.in \
+	ocm-gtk.in \
+	OCM.desktop.in 
+
+REFERENCES =  \
+	System \
+	Mono.Posix \
+	$(WEBKIT_SHARP_10_LIBS) \
+	System.Xml \
+	System.Data \
+	$(GTK_SHARP_20_LIBS) \
+	$(GLIB_SHARP_20_LIBS) \
+	$(GCONF_SHARP_20_LIBS) \
+	$(NDESK_DBUS_10_LIBS) \
+	$(NDESK_DBUS_GLIB_10_LIBS) \
+	System.Web \
+	Mono.Cairo
+
+DLL_REFERENCES = 
+
+CLEANFILES = $(PROGRAMFILES) $(BINARIES) $(COMMONAPPLICATIONDATAROOT_MIME_PACKAGES) $(LINUX_DESKTOPAPPLICATIONS) $(PROGRAMFILES_ICONS_SCALABLE) $(PROGRAMFILES_WEB) $(PROGRAMFILES_ICONS_24X24) $(PROGRAMFILES_ICONS_48X48) $(PROGRAMFILES_DOCS) $(PROGRAMFILES_LICENCE) $(PROGRAMFILES_WEB_IMG) $(PROGRAMFILES_WEB_THEME_DEFAULT) $(PROGRAMFILES_WEB_THEME_DEFAULT_IMG) $(PROGRAMFILES_VERSION) $(PROGRAMFILES_ICONS_SCALABLE_ATTRIBUTES) $(PROGRAMFILES_MAPS) $(PROGRAMFILES_ICONS_32X32) $(PROGRAMFILES_ICONS_SPLASH) $(PROGRAMFILES_ICONS_SPLASH_CHRISTMAS) 
+
+include $(top_srcdir)/Makefile.include
+
+OCMAPP_CS = $(BUILD_DIR)/OCMApp.cs
+PATHS_CS = $(BUILD_DIR)/Paths.cs
+OCM_GTK = $(BUILD_DIR)/ocm-gtk
+X_GPX_XML = $(BUILD_DIR)/mime/packages/x-gpx.xml
+X_OCM_XML = $(BUILD_DIR)/mime/packages/x-ocm.xml
+OCM_DESKTOP = $(BUILD_DIR)/OCM.desktop
+OCMLOGO_SVG = $(BUILD_DIR)/icons/scalable/OCMLogo.svg
+CITO_SVG = $(BUILD_DIR)/icons/scalable/cito.svg
+EARTH_SVG = $(BUILD_DIR)/icons/scalable/earth.svg
+FOUND_SVG = $(BUILD_DIR)/icons/scalable/found.svg
+HALFSTAR_SVG = $(BUILD_DIR)/icons/scalable/halfstar.svg
+LETTERBOX_SVG = $(BUILD_DIR)/icons/scalable/letterbox.svg
+MULTI_SVG = $(BUILD_DIR)/icons/scalable/multi.svg
+OTHER_SVG = $(BUILD_DIR)/icons/scalable/other.svg
+STAR_SVG = $(BUILD_DIR)/icons/scalable/star.svg
+STAR_EMPTY_SVG = $(BUILD_DIR)/icons/scalable/star_empty.svg
+UNKNOWN_SVG = $(BUILD_DIR)/icons/scalable/unknown.svg
+WAYPOINT_FLAG_RED_SVG = $(BUILD_DIR)/icons/scalable/waypoint-flag-red.svg
+WPT_VIEWER_HTML = $(BUILD_DIR)/web/wpt_viewer.html
+EVENT_SVG = $(BUILD_DIR)/icons/scalable/event.svg
+MEGA_SVG = $(BUILD_DIR)/icons/scalable/mega.svg
+VIRTUAL_SVG = $(BUILD_DIR)/icons/scalable/virtual.svg
+WEBCAM_SVG = $(BUILD_DIR)/icons/scalable/webcam.svg
+WHERIGO_SVG = $(BUILD_DIR)/icons/scalable/wherigo.svg
+CITO_PNG = $(BUILD_DIR)/icons/24x24/cito.png
+EARTH_PNG = $(BUILD_DIR)/icons/24x24/earth.png
+EVENT_PNG = $(BUILD_DIR)/icons/24x24/event.png
+LETTERBOX_PNG = $(BUILD_DIR)/icons/24x24/letterbox.png
+MEGA_PNG = $(BUILD_DIR)/icons/24x24/mega.png
+MULTI_PNG = $(BUILD_DIR)/icons/24x24/multi.png
+OTHER_PNG = $(BUILD_DIR)/icons/24x24/other.png
+OWNED_PNG = $(BUILD_DIR)/icons/24x24/owned.png
+TRADITIONAL_PNG = $(BUILD_DIR)/icons/24x24/traditional.png
+UNKNOWN_PNG = $(BUILD_DIR)/icons/24x24/unknown.png
+VIRTUAL_PNG = $(BUILD_DIR)/icons/24x24/virtual.png
+WEBCAM_PNG = $(BUILD_DIR)/icons/24x24/webcam.png
+WHERIGO_PNG = $(BUILD_DIR)/icons/24x24/wherigo.png
+CIRCLE_PNG = $(BUILD_DIR)/icons/48x48/circle.png
+PUSHPIN_PNG = $(BUILD_DIR)/icons/24x24/pushpin.png
+FOUND_PNG = $(BUILD_DIR)/icons/24x24/found.png
+TRADITIONAL_SVG = $(BUILD_DIR)/icons/scalable/traditional.svg
+BLUEPIN_PNG = $(BUILD_DIR)/icons/24x24/bluepin.png
+PARKING_PNG = $(BUILD_DIR)/icons/24x24/parking.png
+TRAILHEAD_PNG = $(BUILD_DIR)/icons/24x24/trailhead.png
+BLUEPIN_SVG = $(BUILD_DIR)/icons/scalable/bluepin.svg
+PARKING_SVG = $(BUILD_DIR)/icons/scalable/parking.svg
+TRAILHEAD_SVG = $(BUILD_DIR)/icons/scalable/trailhead.svg
+CHANGEHISTORY_TXT = $(BUILD_DIR)/docs/ChangeHistory.txt
+README_TXT = $(BUILD_DIR)/docs/README.txt
+LICENCE_TXT = $(BUILD_DIR)/licence/Licence.txt
+TREASURE_SVG = $(BUILD_DIR)/icons/scalable/treasure.svg
+TREASURE_PNG = $(BUILD_DIR)/icons/24x24/treasure.png
+OPENLAYERS_JS = $(BUILD_DIR)/web/OpenLayers.js
+BLANK_GIF = $(BUILD_DIR)/web/img/blank.gif
+CLOUD_POPUP_RELATIVE_PNG = $(BUILD_DIR)/web/img/cloud-popup-relative.png
+DRAG_RECTANGLE_OFF_PNG = $(BUILD_DIR)/web/img/drag-rectangle-off.png
+DRAG_RECTANGLE_ON_PNG = $(BUILD_DIR)/web/img/drag-rectangle-on.png
+EAST_MINI_PNG = $(BUILD_DIR)/web/img/east-mini.png
+LAYER_SWITCHER_MAXIMIZE_PNG = $(BUILD_DIR)/web/img/layer-switcher-maximize.png
+LAYER_SWITCHER_MINIMIZE_PNG = $(BUILD_DIR)/web/img/layer-switcher-minimize.png
+MARKER_PNG = $(BUILD_DIR)/web/img/marker.png
+MARKER_BLUE_PNG = $(BUILD_DIR)/web/img/marker-blue.png
+MARKER_GOLD_PNG = $(BUILD_DIR)/web/img/marker-gold.png
+MARKER_GREEN_PNG = $(BUILD_DIR)/web/img/marker-green.png
+MEASURING_STICK_OFF_PNG = $(BUILD_DIR)/web/img/measuring-stick-off.png
+MEASURING_STICK_ON_PNG = $(BUILD_DIR)/web/img/measuring-stick-on.png
+NORTH_MINI_PNG = $(BUILD_DIR)/web/img/north-mini.png
+PANNING_HAND_OFF_PNG = $(BUILD_DIR)/web/img/panning-hand-off.png
+PANNING_HAND_ON_PNG = $(BUILD_DIR)/web/img/panning-hand-on.png
+SLIDER_PNG = $(BUILD_DIR)/web/img/slider.png
+SOUTH_MINI_PNG = $(BUILD_DIR)/web/img/south-mini.png
+WEST_MINI_PNG = $(BUILD_DIR)/web/img/west-mini.png
+ZOOMBAR_PNG = $(BUILD_DIR)/web/img/zoombar.png
+ZOOM_MINUS_MINI_PNG = $(BUILD_DIR)/web/img/zoom-minus-mini.png
+ZOOM_PLUS_MINI_PNG = $(BUILD_DIR)/web/img/zoom-plus-mini.png
+ZOOM_WORLD_MINI_PNG = $(BUILD_DIR)/web/img/zoom-world-mini.png
+FRAMEDCLOUD_CSS = $(BUILD_DIR)/web/theme/default/framedCloud.css
+GOOGLE_CSS = $(BUILD_DIR)/web/theme/default/google.css
+IE6_STYLE_CSS = $(BUILD_DIR)/web/theme/default/ie6-style.css
+STYLE_CSS = $(BUILD_DIR)/web/theme/default/style.css
+ADD_POINT_OFF_PNG = $(BUILD_DIR)/web/theme/default/img/add_point_off.png
+ADD_POINT_ON_PNG = $(BUILD_DIR)/web/theme/default/img/add_point_on.png
+BLANK_GIF2 = $(BUILD_DIR)/web/theme/default/img/blank.gif
+CLOSE_GIF = $(BUILD_DIR)/web/theme/default/img/close.gif
+DRAG_RECTANGLE_OFF_PNG2 = $(BUILD_DIR)/web/theme/default/img/drag-rectangle-off.png
+DRAG_RECTANGLE_ON_PNG2 = $(BUILD_DIR)/web/theme/default/img/drag-rectangle-on.png
+DRAW_LINE_OFF_PNG = $(BUILD_DIR)/web/theme/default/img/draw_line_off.png
+DRAW_LINE_ON_PNG = $(BUILD_DIR)/web/theme/default/img/draw_line_on.png
+DRAW_POINT_OFF_PNG = $(BUILD_DIR)/web/theme/default/img/draw_point_off.png
+DRAW_POINT_ON_PNG = $(BUILD_DIR)/web/theme/default/img/draw_point_on.png
+DRAW_POLYGON_OFF_PNG = $(BUILD_DIR)/web/theme/default/img/draw_polygon_off.png
+DRAW_POLYGON_ON_PNG = $(BUILD_DIR)/web/theme/default/img/draw_polygon_on.png
+EDITING_TOOL_BAR_PNG = $(BUILD_DIR)/web/theme/default/img/editing_tool_bar.png
+MOVE_FEATURE_OFF_PNG = $(BUILD_DIR)/web/theme/default/img/move_feature_off.png
+MOVE_FEATURE_ON_PNG = $(BUILD_DIR)/web/theme/default/img/move_feature_on.png
+NAVIGATION_HISTORY_PNG = $(BUILD_DIR)/web/theme/default/img/navigation_history.png
+OVERVIEW_REPLACEMENT_GIF = $(BUILD_DIR)/web/theme/default/img/overview_replacement.gif
+PANNING_HAND_OFF_PNG2 = $(BUILD_DIR)/web/theme/default/img/panning-hand-off.png
+PANNING_HAND_ON_PNG2 = $(BUILD_DIR)/web/theme/default/img/panning-hand-on.png
+PAN_OFF_PNG = $(BUILD_DIR)/web/theme/default/img/pan_off.png
+PAN_ON_PNG = $(BUILD_DIR)/web/theme/default/img/pan_on.png
+PAN_PANEL_PNG = $(BUILD_DIR)/web/theme/default/img/pan-panel.png
+PAN_PANEL_NOALPHA_PNG = $(BUILD_DIR)/web/theme/default/img/pan-panel-NOALPHA.png
+REMOVE_POINT_OFF_PNG = $(BUILD_DIR)/web/theme/default/img/remove_point_off.png
+REMOVE_POINT_ON_PNG = $(BUILD_DIR)/web/theme/default/img/remove_point_on.png
+RULER_PNG = $(BUILD_DIR)/web/theme/default/img/ruler.png
+SAVE_FEATURES_OFF_PNG = $(BUILD_DIR)/web/theme/default/img/save_features_off.png
+SAVE_FEATURES_ON_PNG = $(BUILD_DIR)/web/theme/default/img/save_features_on.png
+VIEW_NEXT_OFF_PNG = $(BUILD_DIR)/web/theme/default/img/view_next_off.png
+VIEW_NEXT_ON_PNG = $(BUILD_DIR)/web/theme/default/img/view_next_on.png
+VIEW_PREVIOUS_OFF_PNG = $(BUILD_DIR)/web/theme/default/img/view_previous_off.png
+VIEW_PREVIOUS_ON_PNG = $(BUILD_DIR)/web/theme/default/img/view_previous_on.png
+ZOOM_PANEL_PNG = $(BUILD_DIR)/web/theme/default/img/zoom-panel.png
+ZOOM_PANEL_NOALPHA_PNG = $(BUILD_DIR)/web/theme/default/img/zoom-panel-NOALPHA.png
+GREENPIN_PNG = $(BUILD_DIR)/icons/24x24/greenpin.png
+PUSHPIN_SVG = $(BUILD_DIR)/icons/scalable/pushpin.svg
+VERSION_TXT = $(BUILD_DIR)/version/Version.txt
+YES_RECOMMENDED_AT_NIGHT_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Recommended_at_night.svg
+YES_NEEDS_MAINTENANCE_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Needs_maintenance.svg
+NO_RECOMMENDED_AT_NIGHT_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Recommended_at_night.svg
+DIS_RECOMMENDED_AT_NIGHT_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Recommended_at_night.svg
+DIS_NEEDS_MAINTENANCE_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Needs_maintenance.svg
+YES_WIRELESS_BEACON_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Wireless_Beacon.svg
+DIS_WIRELESS_BEACON_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Wireless_Beacon.svg
+YES_AVAILABLE_DURING_WINTER_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Available_during_winter.svg
+NO_AVAILABLE_DURING_WINTER_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Available_during_winter.svg
+DIS_AVAILABLE_DURING_WINTER_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Available_during_winter.svg
+DIS_BICYCLES_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Bicycles.svg
+DIS_DOGS_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Dogs.svg
+NO_BICYCLES_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Bicycles.svg
+NO_DOGS_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Dogs.svg
+YES_BICYCLES_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Bicycles.svg
+YES_DOGS_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Dogs.svg
+DIS_ACCESS_OR_PARKING_FEE_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Access_or_parking_fee.svg
+YES_ACCESS_OR_PARKING_FEE_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Access_or_parking_fee.svg
+DIS_RECOMMENDED_FOR_KIDS_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Recommended_for_kids.svg
+NO_RECOMMENDED_FOR_KIDS_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Recommended_for_kids.svg
+YES_RECOMMENDED_FOR_KIDS_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Recommended_for_kids.svg
+DIS_CAMPFIRES_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Campfires.svg
+NO_CAMPFIRES_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Campfires.svg
+YES_CAMPFIRES_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Campfires.svg
+DIS_TAKES_LESS_THAN_AN_HOUR_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Takes_less_than_an_hour.svg
+NO_TAKES_LESS_THAN_AN_HOUR_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Takes_less_than_an_hour.svg
+YES_TAKES_LESS_THAN_AN_HOUR_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Takes_less_than_an_hour.svg
+DIS_MAY_REQUIRE_SWIMMING_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_May_require_swimming.svg
+YES_MAY_REQUIRE_SWIMMING_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_May_require_swimming.svg
+DIS_PARKING_AVAILABLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Parking_available.svg
+DIS_STROLLER_ACCESSIBLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Stroller_accessible.svg
+DIS_WHEELCHAIR_ACCESSIBLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Wheelchair_accessible.svg
+NO_PARKING_AVAILABLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Parking_available.svg
+NO_STROLLER_ACCESSIBLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Stroller_accessible.svg
+NO_WHEELCHAIR_ACCESSIBLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Wheelchair_accessible.svg
+YES_PARKING_AVAILABLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Parking_available.svg
+YES_STROLLER_ACCESSIBLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Stroller_accessible.svg
+YES_WHEELCHAIR_ACCESSIBLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Wheelchair_accessible.svg
+DIS_FIELD_PUZZLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Field_Puzzle.svg
+YES_FIELD_PUZZLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Field_Puzzle.svg
+DIS_SIGNIFICANT_HIKE_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Significant_Hike.svg
+NO_SIGNIFICANT_HIKE_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Significant_Hike.svg
+YES_SIGNIFICANT_HIKE_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Significant_Hike.svg
+DIS_ABANDONED_MINES_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Abandoned_mines.svg
+YES_ABANDONED_MINES_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Abandoned_mines.svg
+DIS_CLIFF___FALLING_ROCKS_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Cliff___falling_rocks.svg
+YES_CLIFF___FALLING_ROCKS_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Cliff___falling_rocks.svg
+DIS_CLIMBING_GEAR_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Climbing_gear.svg
+YES_CLIMBING_GEAR_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Climbing_gear.svg
+DIS_CROSS_COUNTRY_SKIS_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Cross_Country_Skis.svg
+YES_CROSS_COUNTRY_SKIS_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Cross_Country_Skis.svg
+DIS_DANGEROUS_AREA_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Dangerous_area.svg
+YES_DANGEROUS_AREA_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Dangerous_area.svg
+DIS_PUBLIC_TRANSPORTATION_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Public_transportation.svg
+YES_PUBLIC_TRANSPORTATION_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Public_transportation.svg
+DIS_WATCH_FOR_LIVESTOCK_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Watch_for_livestock.svg
+YES_WATCH_FOR_LIVESTOCK_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Watch_for_livestock.svg
+DIS_AVAILABLE_AT_ALL_TIMES_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Available_at_all_times.svg
+NO_AVAILABLE_AT_ALL_TIMES_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Available_at_all_times.svg
+YES_AVAILABLE_AT_ALL_TIMES_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Available_at_all_times.svg
+DIS_STEALTH_REQUIRED_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Stealth_required.svg
+NO_STEALTH_REQUIRED_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Stealth_required.svg
+YES_STEALTH_REQUIRED_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Stealth_required.svg
+DIS_SNOWSHOES_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Snowshoes.svg
+YES_SNOWSHOES_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Snowshoes.svg
+DIS_SPECIAL_TOOL_REQUIRED_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Special_Tool_Required.svg
+YES_SPECIAL_TOOL_REQUIRED_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Special_Tool_Required.svg
+DIS_THORNS_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Thorns.svg
+YES_THORNS_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Thorns.svg
+DIS_UV_LIGHT_REQUIRED_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_UV_Light_Required.svg
+YES_UV_LIGHT_REQUIRED_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_UV_Light_Required.svg
+DIS_BOAT_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Boat.svg
+YES_BOAT_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Boat.svg
+DIS_ABANDONED_STRUCTURE_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Abandoned_Structure.svg
+NO_ABANDONED_STRUCTURE_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Abandoned_Structure.svg
+YES_ABANDONED_STRUCTURE_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Abandoned_Structure.svg
+DIS_CAMPING_AVAILABLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Camping_available.svg
+NO_CAMPING_AVAILABLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Camping_available.svg
+YES_CAMPING_AVAILABLE_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Camping_available.svg
+DIS_DANGEROUS_ANIMALS_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Dangerous_Animals.svg
+YES_DANGEROUS_ANIMALS_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Dangerous_Animals.svg
+DIS_DIFFICULT_CLIMBING_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Difficult_climbing.svg
+NO_DIFFICULT_CLIMBING_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Difficult_climbing.svg
+YES_DIFFICULT_CLIMBING_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Difficult_climbing.svg
+DIS_DRINKING_WATER_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Drinking_water_nearby.svg
+NO_DRINKING_WATER_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Drinking_water_nearby.svg
+YES_DRINKING_WATER_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Drinking_water_nearby.svg
+DIS_FLASHLIGHT_REQUIRED_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Flashlight_required.svg
+YES_FLASHLIGHT_REQUIRED_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Flashlight_required.svg
+DIS_FOOD_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Food_Nearby.svg
+NO_FOOD_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Food_Nearby.svg
+YES_FOOD_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Food_Nearby.svg
+DIS_FUEL_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Fuel_Nearby.svg
+NO_FUEL_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Fuel_Nearby.svg
+YES_FUEL_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Fuel_Nearby.svg
+DIS_HORSES_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Horses.svg
+NO_HORSES_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Horses.svg
+YES_HORSES_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Horses.svg
+DIS_HUNTING_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Hunting.svg
+YES_HUNTING_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Hunting.svg
+DIS_MAY_REQUIRE_WADING_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_May_require_wading.svg
+YES_MAY_REQUIRE_WADING_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_May_require_wading.svg
+DIS_MOTORCYCLES_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Motorcycles.svg
+NO_MOTORCYCLES_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Motorcycles.svg
+YES_MOTORCYCLES_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Motorcycles.svg
+DIS_NIGHT_CACHE_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Night_Cache.svg
+YES_NIGHT_CACHE_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Night_Cache.svg
+DIS_PARK_AND_GRAB_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Park_and_Grab.svg
+YES_PARK_AND_GRAB_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Park_and_Grab.svg
+CORRECTED_SVG = $(BUILD_DIR)/icons/scalable/corrected.svg
+CORRECTED_PNG = $(BUILD_DIR)/icons/24x24/corrected.png
+DIS_SCUBA_GEAR_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Scuba_gear.svg
+YES_SCUBA_GEAR_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Scuba_gear.svg
+DIS_SCENIC_VIEW_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Scenic_view.svg
+YES_SCENIC_VIEW_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Scenic_view.svg
+DIS_MEDIUM_HIKE_1KM_10KM_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Medium_hike_(1km-10km).svg
+NO_MEDIUM_HIKE_1KM_10KM_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Medium_hike_(1km-10km).svg
+YES_MEDIUM_HIKE_1KM_10KM_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Medium_hike_(1km-10km).svg
+NO_LONG_HIKE_10KM_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Long_Hike_(+10km).svg
+YES_LONG_HIKE_10KM_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Long_Hike_(+10km).svg
+DIS_SHORT_HIKE_LESS_THAN_1KM_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Short_hike_(less_than_1km).svg
+NO_SHORT_HIKE_LESS_THAN_1KM_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Short_hike_(less_than_1km).svg
+YES_SHORT_HIKE_LESS_THAN_1KM_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Short_hike_(less_than_1km).svg
+DIS_POISON_PLANTS_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Poison_plants.svg
+NO_POISON_PLANTS_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Poison_plants.svg
+YES_POISON_PLANTS_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Poison_plants.svg
+DIS_TICKS_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Ticks.svg
+YES_TICKS_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Ticks.svg
+YES_PICNIC_TABLES_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Picnic_tables_nearby.svg
+DIS_PICNIC_TABLES_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Picnic_tables_nearby.svg
+NO_PICNIC_TABLES_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Picnic_tables_nearby.svg
+DIS_PUBLIC_RESTROOMS_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Public_restrooms_nearby.svg
+NO_PUBLIC_RESTROOMS_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Public_restrooms_nearby.svg
+YES_PUBLIC_RESTROOMS_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Public_restrooms_nearby.svg
+DIS_TELEPHONE_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Telephone_nearby.svg
+NO_TELEPHONE_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Telephone_nearby.svg
+YES_TELEPHONE_NEARBY_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Telephone_nearby.svg
+DIS_TRUCK_DRIVER_RV_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Truck_Driver_RV.svg
+NO_TRUCK_DRIVER_RV_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Truck_Driver_RV.svg
+YES_TRUCK_DRIVER_RV_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Truck_Driver_RV.svg
+DIS_QUADS_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Quads.svg
+NO_QUADS_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Quads.svg
+YES_QUADS_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Quads.svg
+DIS_OFF_ROAD_VEHICLES_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Off-road_vehicles.svg
+NO_OFF_ROAD_VEHICLES_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Off-road_vehicles.svg
+YES_OFF_ROAD_VEHICLES_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Off-road_vehicles.svg
+DIS_SNOWMOBILES_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Snowmobiles.svg
+NO_SNOWMOBILES_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Snowmobiles.svg
+YES_SNOWMOBILES_SVG = $(BUILD_DIR)/icons/scalable/attributes/yes_Snowmobiles.svg
+NO_NIGHT_CACHE_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Night_Cache.svg
+NO_PARK_AND_GRAB_SVG = $(BUILD_DIR)/icons/scalable/attributes/no_Park_and_Grab.svg
+DNF_SVG = $(BUILD_DIR)/icons/scalable/dnf.svg
+FTF_SVG = $(BUILD_DIR)/icons/scalable/ftf.svg
+WRITE_NOTE_SVG = $(BUILD_DIR)/icons/scalable/write_note.svg
+NEEDS_MAINTENANCE_SVG = $(BUILD_DIR)/icons/scalable/needs_maintenance.svg
+ARCHIVED_BLUEPIN_PNG = $(BUILD_DIR)/icons/24x24/archived-bluepin.png
+ARCHIVED_CITO_PNG = $(BUILD_DIR)/icons/24x24/archived-cito.png
+ARCHIVED_CORRECTED_PNG = $(BUILD_DIR)/icons/24x24/archived-corrected.png
+ARCHIVED_EARTH_PNG = $(BUILD_DIR)/icons/24x24/archived-earth.png
+ARCHIVED_EVENT_PNG = $(BUILD_DIR)/icons/24x24/archived-event.png
+ARCHIVED_FOUND_PNG = $(BUILD_DIR)/icons/24x24/archived-found.png
+ARCHIVED_GREENPIN_PNG = $(BUILD_DIR)/icons/24x24/archived-greenpin.png
+ARCHIVED_LETTERBOX_PNG = $(BUILD_DIR)/icons/24x24/archived-letterbox.png
+ARCHIVED_LOCATIONLESS_PNG = $(BUILD_DIR)/icons/24x24/archived-locationless.png
+ARCHIVED_MEGA_PNG = $(BUILD_DIR)/icons/24x24/archived-mega.png
+ARCHIVED_MULTI_PNG = $(BUILD_DIR)/icons/24x24/archived-multi.png
+ARCHIVED_OTHER_PNG = $(BUILD_DIR)/icons/24x24/archived-other.png
+ARCHIVED_OWNED_PNG = $(BUILD_DIR)/icons/24x24/archived-owned.png
+ARCHIVED_PARKING_PNG = $(BUILD_DIR)/icons/24x24/archived-parking.png
+ARCHIVED_PUSHPIN_PNG = $(BUILD_DIR)/icons/24x24/archived-pushpin.png
+ARCHIVED_TRADITIONAL_PNG = $(BUILD_DIR)/icons/24x24/archived-traditional.png
+ARCHIVED_TRAILHEAD_PNG = $(BUILD_DIR)/icons/24x24/archived-trailhead.png
+ARCHIVED_TREASURE_PNG = $(BUILD_DIR)/icons/24x24/archived-treasure.png
+ARCHIVED_UNKNOWN_PNG = $(BUILD_DIR)/icons/24x24/archived-unknown.png
+ARCHIVED_VIRTUAL_PNG = $(BUILD_DIR)/icons/24x24/archived-virtual.png
+ARCHIVED_WAYPOINT_FLAG_RED_PNG = $(BUILD_DIR)/icons/24x24/archived-waypoint-flag-red.png
+ARCHIVED_WEBCAM_PNG = $(BUILD_DIR)/icons/24x24/archived-webcam.png
+ARCHIVED_WHERIGO_PNG = $(BUILD_DIR)/icons/24x24/archived-wherigo.png
+DISABLED_BLUEPIN_PNG = $(BUILD_DIR)/icons/24x24/disabled-bluepin.png
+DISABLED_CITO_PNG = $(BUILD_DIR)/icons/24x24/disabled-cito.png
+DISABLED_CORRECTED_PNG = $(BUILD_DIR)/icons/24x24/disabled-corrected.png
+DISABLED_EARTH_PNG = $(BUILD_DIR)/icons/24x24/disabled-earth.png
+DISABLED_EVENT_PNG = $(BUILD_DIR)/icons/24x24/disabled-event.png
+DISABLED_FOUND_PNG = $(BUILD_DIR)/icons/24x24/disabled-found.png
+DISABLED_GREENPIN_PNG = $(BUILD_DIR)/icons/24x24/disabled-greenpin.png
+DISABLED_LETTERBOX_PNG = $(BUILD_DIR)/icons/24x24/disabled-letterbox.png
+DISABLED_LOCATIONLESS_PNG = $(BUILD_DIR)/icons/24x24/disabled-locationless.png
+DISABLED_MEGA_PNG = $(BUILD_DIR)/icons/24x24/disabled-mega.png
+DISABLED_MULTI_PNG = $(BUILD_DIR)/icons/24x24/disabled-multi.png
+DISABLED_OTHER_PNG = $(BUILD_DIR)/icons/24x24/disabled-other.png
+DISABLED_OWNED_PNG = $(BUILD_DIR)/icons/24x24/disabled-owned.png
+DISABLED_PARKING_PNG = $(BUILD_DIR)/icons/24x24/disabled-parking.png
+DISABLED_PUSHPIN_PNG = $(BUILD_DIR)/icons/24x24/disabled-pushpin.png
+DISABLED_TRADITIONAL_PNG = $(BUILD_DIR)/icons/24x24/disabled-traditional.png
+DISABLED_TRAILHEAD_PNG = $(BUILD_DIR)/icons/24x24/disabled-trailhead.png
+DISABLED_TREASURE_PNG = $(BUILD_DIR)/icons/24x24/disabled-treasure.png
+DISABLED_UNKNOWN_PNG = $(BUILD_DIR)/icons/24x24/disabled-unknown.png
+DISABLED_VIRTUAL_PNG = $(BUILD_DIR)/icons/24x24/disabled-virtual.png
+DISABLED_WAYPOINT_FLAG_RED_PNG = $(BUILD_DIR)/icons/24x24/disabled-waypoint-flag-red.png
+DISABLED_WEBCAM_PNG = $(BUILD_DIR)/icons/24x24/disabled-webcam.png
+DISABLED_WHERIGO_PNG = $(BUILD_DIR)/icons/24x24/disabled-wherigo.png
+DNF_PNG = $(BUILD_DIR)/icons/24x24/dnf.png
+ARCHIVED_DNF_PNG = $(BUILD_DIR)/icons/24x24/archived-dnf.png
+DISABLED_DNF_PNG = $(BUILD_DIR)/icons/24x24/disabled-dnf.png
+ARCHIVED_FTF_PNG = $(BUILD_DIR)/icons/24x24/archived-ftf.png
+DISABLED_FTF_PNG = $(BUILD_DIR)/icons/24x24/disabled-ftf.png
+FTF_PNG = $(BUILD_DIR)/icons/24x24/ftf.png
+DEFAULTMAPS_XML = $(BUILD_DIR)/maps/defaultmaps.xml
+D10_PNG = $(BUILD_DIR)/icons/32x32/d10.png
+D15_PNG = $(BUILD_DIR)/icons/32x32/d15.png
+D20_PNG = $(BUILD_DIR)/icons/32x32/d20.png
+D25_PNG = $(BUILD_DIR)/icons/32x32/d25.png
+D30_PNG = $(BUILD_DIR)/icons/32x32/d30.png
+D35_PNG = $(BUILD_DIR)/icons/32x32/d35.png
+D40_PNG = $(BUILD_DIR)/icons/32x32/d40.png
+D45_PNG = $(BUILD_DIR)/icons/32x32/d45.png
+D50_PNG = $(BUILD_DIR)/icons/32x32/d50.png
+T10_PNG = $(BUILD_DIR)/icons/32x32/t10.png
+T15_PNG = $(BUILD_DIR)/icons/32x32/t15.png
+T20_PNG = $(BUILD_DIR)/icons/32x32/t20.png
+T25_PNG = $(BUILD_DIR)/icons/32x32/t25.png
+T30_PNG = $(BUILD_DIR)/icons/32x32/t30.png
+T35_PNG = $(BUILD_DIR)/icons/32x32/t35.png
+T40_PNG = $(BUILD_DIR)/icons/32x32/t40.png
+T45_PNG = $(BUILD_DIR)/icons/32x32/t45.png
+T50_PNG = $(BUILD_DIR)/icons/32x32/t50.png
+BEACH_PNG = $(BUILD_DIR)/icons/splash/beach.png
+FOREST_PNG = $(BUILD_DIR)/icons/splash/forest.png
+NIGHT_PNG = $(BUILD_DIR)/icons/splash/night.png
+PARK_PNG = $(BUILD_DIR)/icons/splash/park.png
+SPACE2_PNG = $(BUILD_DIR)/icons/splash/Space2.png
+STALE_CITO_PNG = $(BUILD_DIR)/icons/24x24/stale-cito.png
+STALE_CORRECTED_PNG = $(BUILD_DIR)/icons/24x24/stale-corrected.png
+STALE_DNF_PNG = $(BUILD_DIR)/icons/24x24/stale-dnf.png
+STALE_EARTH_PNG = $(BUILD_DIR)/icons/24x24/stale-earth.png
+STALE_EVENT_PNG = $(BUILD_DIR)/icons/24x24/stale-event.png
+STALE_FOUND_PNG = $(BUILD_DIR)/icons/24x24/stale-found.png
+STALE_FTF_PNG = $(BUILD_DIR)/icons/24x24/stale-ftf.png
+STALE_GREENPIN_PNG = $(BUILD_DIR)/icons/24x24/stale-greenpin.png
+STALE_LETTERBOX_PNG = $(BUILD_DIR)/icons/24x24/stale-letterbox.png
+STALE_LOCATIONLESS_PNG = $(BUILD_DIR)/icons/24x24/stale-locationless.png
+STALE_MEGA_PNG = $(BUILD_DIR)/icons/24x24/stale-mega.png
+STALE_MULTI_PNG = $(BUILD_DIR)/icons/24x24/stale-multi.png
+STALE_OTHER_PNG = $(BUILD_DIR)/icons/24x24/stale-other.png
+STALE_OWNED_PNG = $(BUILD_DIR)/icons/24x24/stale-owned.png
+STALE_PARKING_PNG = $(BUILD_DIR)/icons/24x24/stale-parking.png
+STALE_PUSHPIN_PNG = $(BUILD_DIR)/icons/24x24/stale-pushpin.png
+STALE_TRADITIONAL_PNG = $(BUILD_DIR)/icons/24x24/stale-traditional.png
+STALE_TRAILHEAD_PNG = $(BUILD_DIR)/icons/24x24/stale-trailhead.png
+STALE_TREASURE_PNG = $(BUILD_DIR)/icons/24x24/stale-treasure.png
+STALE_UNKNOWN_PNG = $(BUILD_DIR)/icons/24x24/stale-unknown.png
+STALE_VIRTUAL_PNG = $(BUILD_DIR)/icons/24x24/stale-virtual.png
+STALE_WAYPOINT_FLAG_RED_PNG = $(BUILD_DIR)/icons/24x24/stale-waypoint-flag-red.png
+STALE_WEBCAM_PNG = $(BUILD_DIR)/icons/24x24/stale-webcam.png
+STALE_WHERIGO_PNG = $(BUILD_DIR)/icons/24x24/stale-wherigo.png
+NEEDS_MAINTENANCE_PNG = $(BUILD_DIR)/icons/24x24/needs_maintenance.png
+WRITE_NOTE_PNG = $(BUILD_DIR)/icons/24x24/write_note.png
+AXMAS_PNG = $(BUILD_DIR)/icons/splash/christmas/AXmas.png
+BXMAS_PNG = $(BUILD_DIR)/icons/splash/christmas/BXmas.png
+CXMAS_PNG = $(BUILD_DIR)/icons/splash/christmas/CXmas.png
+DXMAS_PNG = $(BUILD_DIR)/icons/splash/christmas/DXmas.png
+EXMAS_PNG = $(BUILD_DIR)/icons/splash/christmas/EXmas.png
+FXMAS_PNG = $(BUILD_DIR)/icons/splash/christmas/FXmas.png
+GXMAS_PNG = $(BUILD_DIR)/icons/splash/christmas/GXmas.png
+HXMAS_PNG = $(BUILD_DIR)/icons/splash/christmas/HXmas.png
+IXMAS_PNG = $(BUILD_DIR)/icons/splash/christmas/IXmas.png
+GREENPIN_SVG = $(BUILD_DIR)/icons/scalable/greenpin.svg
+NOMAP_PNG = $(BUILD_DIR)/web/nomap.png
+DIS_LONG_HIKE_10KM_SVG = $(BUILD_DIR)/icons/scalable/attributes/dis_Long_Hike_(+10km).svg
+LOCATIONLESS_PNG = $(BUILD_DIR)/icons/24x24/locationless.png
+WAYPOINT_FLAG_RED_PNG = $(BUILD_DIR)/icons/24x24/waypoint-flag-red.png
+NEW_BLUEPIN_PNG = $(BUILD_DIR)/icons/24x24/new-bluepin.png
+NEW_CITO_PNG = $(BUILD_DIR)/icons/24x24/new-cito.png
+NEW_CORRECTED_PNG = $(BUILD_DIR)/icons/24x24/new-corrected.png
+NEW_DELETE_PNG = $(BUILD_DIR)/icons/24x24/new-delete.png
+NEW_DNF_PNG = $(BUILD_DIR)/icons/24x24/new-dnf.png
+NEW_EARTH_PNG = $(BUILD_DIR)/icons/24x24/new-earth.png
+NEW_EVENT_PNG = $(BUILD_DIR)/icons/24x24/new-event.png
+NEW_FOUND_PNG = $(BUILD_DIR)/icons/24x24/new-found.png
+NEW_FTF_PNG = $(BUILD_DIR)/icons/24x24/new-ftf.png
+NEW_GREENPIN_PNG = $(BUILD_DIR)/icons/24x24/new-greenpin.png
+NEW_LETTERBOX_PNG = $(BUILD_DIR)/icons/24x24/new-letterbox.png
+NEW_LOCATIONLESS_PNG = $(BUILD_DIR)/icons/24x24/new-locationless.png
+NEW_MEGA_PNG = $(BUILD_DIR)/icons/24x24/new-mega.png
+NEW_MULTI_PNG = $(BUILD_DIR)/icons/24x24/new-multi.png
+NEW_NEEDS_MAINTENANCE_PNG = $(BUILD_DIR)/icons/24x24/new-needs_maintenance.png
+NEW_OTHER_PNG = $(BUILD_DIR)/icons/24x24/new-other.png
+NEW_OWNED_PNG = $(BUILD_DIR)/icons/24x24/new-owned.png
+NEW_PARKING_PNG = $(BUILD_DIR)/icons/24x24/new-parking.png
+NEW_PUSHPIN_PNG = $(BUILD_DIR)/icons/24x24/new-pushpin.png
+NEW_TRADITIONAL_PNG = $(BUILD_DIR)/icons/24x24/new-traditional.png
+NEW_TRAILHEAD_PNG = $(BUILD_DIR)/icons/24x24/new-trailhead.png
+NEW_TREASURE_PNG = $(BUILD_DIR)/icons/24x24/new-treasure.png
+NEW_UNKNOWN_PNG = $(BUILD_DIR)/icons/24x24/new-unknown.png
+NEW_VIRTUAL_PNG = $(BUILD_DIR)/icons/24x24/new-virtual.png
+NEW_WAYPOINT_FLAG_RED_PNG = $(BUILD_DIR)/icons/24x24/new-waypoint-flag-red.png
+NEW_WEBCAM_PNG = $(BUILD_DIR)/icons/24x24/new-webcam.png
+NEW_WHERIGO_PNG = $(BUILD_DIR)/icons/24x24/new-wherigo.png
+NEW_WRITE_NOTE_PNG = $(BUILD_DIR)/icons/24x24/new-write_note.png
+CLOGS_BLUEPIN_PNG = $(BUILD_DIR)/icons/24x24/clogs-bluepin.png
+CLOGS_CITO_PNG = $(BUILD_DIR)/icons/24x24/clogs-cito.png
+CLOGS_CORRECTED_PNG = $(BUILD_DIR)/icons/24x24/clogs-corrected.png
+CLOGS_DELETE_PNG = $(BUILD_DIR)/icons/24x24/clogs-delete.png
+CLOGS_DNF_PNG = $(BUILD_DIR)/icons/24x24/clogs-dnf.png
+CLOGS_EARTH_PNG = $(BUILD_DIR)/icons/24x24/clogs-earth.png
+CLOGS_EVENT_PNG = $(BUILD_DIR)/icons/24x24/clogs-event.png
+CLOGS_FOUND_PNG = $(BUILD_DIR)/icons/24x24/clogs-found.png
+CLOGS_FTF_PNG = $(BUILD_DIR)/icons/24x24/clogs-ftf.png
+CLOGS_GREENPIN_PNG = $(BUILD_DIR)/icons/24x24/clogs-greenpin.png
+CLOGS_LETTERBOX_PNG = $(BUILD_DIR)/icons/24x24/clogs-letterbox.png
+CLOGS_LOCATIONLESS_PNG = $(BUILD_DIR)/icons/24x24/clogs-locationless.png
+CLOGS_MEGA_PNG = $(BUILD_DIR)/icons/24x24/clogs-mega.png
+CLOGS_MULTI_PNG = $(BUILD_DIR)/icons/24x24/clogs-multi.png
+CLOGS_NEEDS_MAINTENANCE_PNG = $(BUILD_DIR)/icons/24x24/clogs-needs_maintenance.png
+CLOGS_OTHER_PNG = $(BUILD_DIR)/icons/24x24/clogs-other.png
+CLOGS_OWNED_PNG = $(BUILD_DIR)/icons/24x24/clogs-owned.png
+CLOGS_PARKING_PNG = $(BUILD_DIR)/icons/24x24/clogs-parking.png
+CLOGS_PUSHPIN_PNG = $(BUILD_DIR)/icons/24x24/clogs-pushpin.png
+CLOGS_TRADITIONAL_PNG = $(BUILD_DIR)/icons/24x24/clogs-traditional.png
+CLOGS_TRAILHEAD_PNG = $(BUILD_DIR)/icons/24x24/clogs-trailhead.png
+CLOGS_TREASURE_PNG = $(BUILD_DIR)/icons/24x24/clogs-treasure.png
+CLOGS_UNKNOWN_PNG = $(BUILD_DIR)/icons/24x24/clogs-unknown.png
+CLOGS_VIRTUAL_PNG = $(BUILD_DIR)/icons/24x24/clogs-virtual.png
+CLOGS_WAYPOINT_FLAG_RED_PNG = $(BUILD_DIR)/icons/24x24/clogs-waypoint-flag-red.png
+CLOGS_WEBCAM_PNG = $(BUILD_DIR)/icons/24x24/clogs-webcam.png
+CLOGS_WHERIGO_PNG = $(BUILD_DIR)/icons/24x24/clogs-wherigo.png
+CLOGS_WRITE_NOTE_PNG = $(BUILD_DIR)/icons/24x24/clogs-write_note.png
+OCMENGINE_DLL = $(BUILD_DIR)/ocmengine.dll
+
+$(eval $(call emit-deploy-wrapper,OCMAPP_CS,OCMApp.cs))
+$(eval $(call emit-deploy-wrapper,PATHS_CS,Paths.cs))
+$(eval $(call emit-deploy-wrapper,OCM_GTK,ocm-gtk))
+$(eval $(call emit-deploy-target,X_GPX_XML))
+$(eval $(call emit-deploy-target,X_OCM_XML))
+$(eval $(call emit-deploy-wrapper,OCM_DESKTOP,OCM.desktop))
+$(eval $(call emit-deploy-target,OCMLOGO_SVG))
+$(eval $(call emit-deploy-target,CITO_SVG))
+$(eval $(call emit-deploy-target,EARTH_SVG))
+$(eval $(call emit-deploy-target,FOUND_SVG))
+$(eval $(call emit-deploy-target,HALFSTAR_SVG))
+$(eval $(call emit-deploy-target,LETTERBOX_SVG))
+$(eval $(call emit-deploy-target,MULTI_SVG))
+$(eval $(call emit-deploy-target,OTHER_SVG))
+$(eval $(call emit-deploy-target,STAR_SVG))
+$(eval $(call emit-deploy-target,STAR_EMPTY_SVG))
+$(eval $(call emit-deploy-target,UNKNOWN_SVG))
+$(eval $(call emit-deploy-target,WAYPOINT_FLAG_RED_SVG))
+$(eval $(call emit-deploy-target,WPT_VIEWER_HTML))
+$(eval $(call emit-deploy-target,EVENT_SVG))
+$(eval $(call emit-deploy-target,MEGA_SVG))
+$(eval $(call emit-deploy-target,VIRTUAL_SVG))
+$(eval $(call emit-deploy-target,WEBCAM_SVG))
+$(eval $(call emit-deploy-target,WHERIGO_SVG))
+$(eval $(call emit-deploy-target,CITO_PNG))
+$(eval $(call emit-deploy-target,EARTH_PNG))
+$(eval $(call emit-deploy-target,EVENT_PNG))
+$(eval $(call emit-deploy-target,LETTERBOX_PNG))
+$(eval $(call emit-deploy-target,MEGA_PNG))
+$(eval $(call emit-deploy-target,MULTI_PNG))
+$(eval $(call emit-deploy-target,OTHER_PNG))
+$(eval $(call emit-deploy-target,OWNED_PNG))
+$(eval $(call emit-deploy-target,TRADITIONAL_PNG))
+$(eval $(call emit-deploy-target,UNKNOWN_PNG))
+$(eval $(call emit-deploy-target,VIRTUAL_PNG))
+$(eval $(call emit-deploy-target,WEBCAM_PNG))
+$(eval $(call emit-deploy-target,WHERIGO_PNG))
+$(eval $(call emit-deploy-target,CIRCLE_PNG))
+$(eval $(call emit-deploy-target,PUSHPIN_PNG))
+$(eval $(call emit-deploy-target,FOUND_PNG))
+$(eval $(call emit-deploy-target,TRADITIONAL_SVG))
+$(eval $(call emit-deploy-target,BLUEPIN_PNG))
+$(eval $(call emit-deploy-target,PARKING_PNG))
+$(eval $(call emit-deploy-target,TRAILHEAD_PNG))
+$(eval $(call emit-deploy-target,BLUEPIN_SVG))
+$(eval $(call emit-deploy-target,PARKING_SVG))
+$(eval $(call emit-deploy-target,TRAILHEAD_SVG))
+$(eval $(call emit-deploy-target,CHANGEHISTORY_TXT))
+$(eval $(call emit-deploy-target,README_TXT))
+$(eval $(call emit-deploy-target,LICENCE_TXT))
+$(eval $(call emit-deploy-target,TREASURE_SVG))
+$(eval $(call emit-deploy-target,TREASURE_PNG))
+$(eval $(call emit-deploy-target,OPENLAYERS_JS))
+$(eval $(call emit-deploy-target,BLANK_GIF))
+$(eval $(call emit-deploy-target,CLOUD_POPUP_RELATIVE_PNG))
+$(eval $(call emit-deploy-target,DRAG_RECTANGLE_OFF_PNG))
+$(eval $(call emit-deploy-target,DRAG_RECTANGLE_ON_PNG))
+$(eval $(call emit-deploy-target,EAST_MINI_PNG))
+$(eval $(call emit-deploy-target,LAYER_SWITCHER_MAXIMIZE_PNG))
+$(eval $(call emit-deploy-target,LAYER_SWITCHER_MINIMIZE_PNG))
+$(eval $(call emit-deploy-target,MARKER_PNG))
+$(eval $(call emit-deploy-target,MARKER_BLUE_PNG))
+$(eval $(call emit-deploy-target,MARKER_GOLD_PNG))
+$(eval $(call emit-deploy-target,MARKER_GREEN_PNG))
+$(eval $(call emit-deploy-target,MEASURING_STICK_OFF_PNG))
+$(eval $(call emit-deploy-target,MEASURING_STICK_ON_PNG))
+$(eval $(call emit-deploy-target,NORTH_MINI_PNG))
+$(eval $(call emit-deploy-target,PANNING_HAND_OFF_PNG))
+$(eval $(call emit-deploy-target,PANNING_HAND_ON_PNG))
+$(eval $(call emit-deploy-target,SLIDER_PNG))
+$(eval $(call emit-deploy-target,SOUTH_MINI_PNG))
+$(eval $(call emit-deploy-target,WEST_MINI_PNG))
+$(eval $(call emit-deploy-target,ZOOMBAR_PNG))
+$(eval $(call emit-deploy-target,ZOOM_MINUS_MINI_PNG))
+$(eval $(call emit-deploy-target,ZOOM_PLUS_MINI_PNG))
+$(eval $(call emit-deploy-target,ZOOM_WORLD_MINI_PNG))
+$(eval $(call emit-deploy-target,FRAMEDCLOUD_CSS))
+$(eval $(call emit-deploy-target,GOOGLE_CSS))
+$(eval $(call emit-deploy-target,IE6_STYLE_CSS))
+$(eval $(call emit-deploy-target,STYLE_CSS))
+$(eval $(call emit-deploy-target,ADD_POINT_OFF_PNG))
+$(eval $(call emit-deploy-target,ADD_POINT_ON_PNG))
+$(eval $(call emit-deploy-target,BLANK_GIF2))
+$(eval $(call emit-deploy-target,CLOSE_GIF))
+$(eval $(call emit-deploy-target,DRAG_RECTANGLE_OFF_PNG2))
+$(eval $(call emit-deploy-target,DRAG_RECTANGLE_ON_PNG2))
+$(eval $(call emit-deploy-target,DRAW_LINE_OFF_PNG))
+$(eval $(call emit-deploy-target,DRAW_LINE_ON_PNG))
+$(eval $(call emit-deploy-target,DRAW_POINT_OFF_PNG))
+$(eval $(call emit-deploy-target,DRAW_POINT_ON_PNG))
+$(eval $(call emit-deploy-target,DRAW_POLYGON_OFF_PNG))
+$(eval $(call emit-deploy-target,DRAW_POLYGON_ON_PNG))
+$(eval $(call emit-deploy-target,EDITING_TOOL_BAR_PNG))
+$(eval $(call emit-deploy-target,MOVE_FEATURE_OFF_PNG))
+$(eval $(call emit-deploy-target,MOVE_FEATURE_ON_PNG))
+$(eval $(call emit-deploy-target,NAVIGATION_HISTORY_PNG))
+$(eval $(call emit-deploy-target,OVERVIEW_REPLACEMENT_GIF))
+$(eval $(call emit-deploy-target,PANNING_HAND_OFF_PNG2))
+$(eval $(call emit-deploy-target,PANNING_HAND_ON_PNG2))
+$(eval $(call emit-deploy-target,PAN_OFF_PNG))
+$(eval $(call emit-deploy-target,PAN_ON_PNG))
+$(eval $(call emit-deploy-target,PAN_PANEL_PNG))
+$(eval $(call emit-deploy-target,PAN_PANEL_NOALPHA_PNG))
+$(eval $(call emit-deploy-target,REMOVE_POINT_OFF_PNG))
+$(eval $(call emit-deploy-target,REMOVE_POINT_ON_PNG))
+$(eval $(call emit-deploy-target,RULER_PNG))
+$(eval $(call emit-deploy-target,SAVE_FEATURES_OFF_PNG))
+$(eval $(call emit-deploy-target,SAVE_FEATURES_ON_PNG))
+$(eval $(call emit-deploy-target,VIEW_NEXT_OFF_PNG))
+$(eval $(call emit-deploy-target,VIEW_NEXT_ON_PNG))
+$(eval $(call emit-deploy-target,VIEW_PREVIOUS_OFF_PNG))
+$(eval $(call emit-deploy-target,VIEW_PREVIOUS_ON_PNG))
+$(eval $(call emit-deploy-target,ZOOM_PANEL_PNG))
+$(eval $(call emit-deploy-target,ZOOM_PANEL_NOALPHA_PNG))
+$(eval $(call emit-deploy-target,GREENPIN_PNG))
+$(eval $(call emit-deploy-target,PUSHPIN_SVG))
+$(eval $(call emit-deploy-target,VERSION_TXT))
+$(eval $(call emit-deploy-target,YES_RECOMMENDED_AT_NIGHT_SVG))
+$(eval $(call emit-deploy-target,YES_NEEDS_MAINTENANCE_SVG))
+$(eval $(call emit-deploy-target,NO_RECOMMENDED_AT_NIGHT_SVG))
+$(eval $(call emit-deploy-target,DIS_RECOMMENDED_AT_NIGHT_SVG))
+$(eval $(call emit-deploy-target,DIS_NEEDS_MAINTENANCE_SVG))
+$(eval $(call emit-deploy-target,YES_WIRELESS_BEACON_SVG))
+$(eval $(call emit-deploy-target,DIS_WIRELESS_BEACON_SVG))
+$(eval $(call emit-deploy-target,YES_AVAILABLE_DURING_WINTER_SVG))
+$(eval $(call emit-deploy-target,NO_AVAILABLE_DURING_WINTER_SVG))
+$(eval $(call emit-deploy-target,DIS_AVAILABLE_DURING_WINTER_SVG))
+$(eval $(call emit-deploy-target,DIS_BICYCLES_SVG))
+$(eval $(call emit-deploy-target,DIS_DOGS_SVG))
+$(eval $(call emit-deploy-target,NO_BICYCLES_SVG))
+$(eval $(call emit-deploy-target,NO_DOGS_SVG))
+$(eval $(call emit-deploy-target,YES_BICYCLES_SVG))
+$(eval $(call emit-deploy-target,YES_DOGS_SVG))
+$(eval $(call emit-deploy-target,DIS_ACCESS_OR_PARKING_FEE_SVG))
+$(eval $(call emit-deploy-target,YES_ACCESS_OR_PARKING_FEE_SVG))
+$(eval $(call emit-deploy-target,DIS_RECOMMENDED_FOR_KIDS_SVG))
+$(eval $(call emit-deploy-target,NO_RECOMMENDED_FOR_KIDS_SVG))
+$(eval $(call emit-deploy-target,YES_RECOMMENDED_FOR_KIDS_SVG))
+$(eval $(call emit-deploy-target,DIS_CAMPFIRES_SVG))
+$(eval $(call emit-deploy-target,NO_CAMPFIRES_SVG))
+$(eval $(call emit-deploy-target,YES_CAMPFIRES_SVG))
+$(eval $(call emit-deploy-target,DIS_TAKES_LESS_THAN_AN_HOUR_SVG))
+$(eval $(call emit-deploy-target,NO_TAKES_LESS_THAN_AN_HOUR_SVG))
+$(eval $(call emit-deploy-target,YES_TAKES_LESS_THAN_AN_HOUR_SVG))
+$(eval $(call emit-deploy-target,DIS_MAY_REQUIRE_SWIMMING_SVG))
+$(eval $(call emit-deploy-target,YES_MAY_REQUIRE_SWIMMING_SVG))
+$(eval $(call emit-deploy-target,DIS_PARKING_AVAILABLE_SVG))
+$(eval $(call emit-deploy-target,DIS_STROLLER_ACCESSIBLE_SVG))
+$(eval $(call emit-deploy-target,DIS_WHEELCHAIR_ACCESSIBLE_SVG))
+$(eval $(call emit-deploy-target,NO_PARKING_AVAILABLE_SVG))
+$(eval $(call emit-deploy-target,NO_STROLLER_ACCESSIBLE_SVG))
+$(eval $(call emit-deploy-target,NO_WHEELCHAIR_ACCESSIBLE_SVG))
+$(eval $(call emit-deploy-target,YES_PARKING_AVAILABLE_SVG))
+$(eval $(call emit-deploy-target,YES_STROLLER_ACCESSIBLE_SVG))
+$(eval $(call emit-deploy-target,YES_WHEELCHAIR_ACCESSIBLE_SVG))
+$(eval $(call emit-deploy-target,DIS_FIELD_PUZZLE_SVG))
+$(eval $(call emit-deploy-target,YES_FIELD_PUZZLE_SVG))
+$(eval $(call emit-deploy-target,DIS_SIGNIFICANT_HIKE_SVG))
+$(eval $(call emit-deploy-target,NO_SIGNIFICANT_HIKE_SVG))
+$(eval $(call emit-deploy-target,YES_SIGNIFICANT_HIKE_SVG))
+$(eval $(call emit-deploy-target,DIS_ABANDONED_MINES_SVG))
+$(eval $(call emit-deploy-target,YES_ABANDONED_MINES_SVG))
+$(eval $(call emit-deploy-target,DIS_CLIFF___FALLING_ROCKS_SVG))
+$(eval $(call emit-deploy-target,YES_CLIFF___FALLING_ROCKS_SVG))
+$(eval $(call emit-deploy-target,DIS_CLIMBING_GEAR_SVG))
+$(eval $(call emit-deploy-target,YES_CLIMBING_GEAR_SVG))
+$(eval $(call emit-deploy-target,DIS_CROSS_COUNTRY_SKIS_SVG))
+$(eval $(call emit-deploy-target,YES_CROSS_COUNTRY_SKIS_SVG))
+$(eval $(call emit-deploy-target,DIS_DANGEROUS_AREA_SVG))
+$(eval $(call emit-deploy-target,YES_DANGEROUS_AREA_SVG))
+$(eval $(call emit-deploy-target,DIS_PUBLIC_TRANSPORTATION_SVG))
+$(eval $(call emit-deploy-target,YES_PUBLIC_TRANSPORTATION_SVG))
+$(eval $(call emit-deploy-target,DIS_WATCH_FOR_LIVESTOCK_SVG))
+$(eval $(call emit-deploy-target,YES_WATCH_FOR_LIVESTOCK_SVG))
+$(eval $(call emit-deploy-target,DIS_AVAILABLE_AT_ALL_TIMES_SVG))
+$(eval $(call emit-deploy-target,NO_AVAILABLE_AT_ALL_TIMES_SVG))
+$(eval $(call emit-deploy-target,YES_AVAILABLE_AT_ALL_TIMES_SVG))
+$(eval $(call emit-deploy-target,DIS_STEALTH_REQUIRED_SVG))
+$(eval $(call emit-deploy-target,NO_STEALTH_REQUIRED_SVG))
+$(eval $(call emit-deploy-target,YES_STEALTH_REQUIRED_SVG))
+$(eval $(call emit-deploy-target,DIS_SNOWSHOES_SVG))
+$(eval $(call emit-deploy-target,YES_SNOWSHOES_SVG))
+$(eval $(call emit-deploy-target,DIS_SPECIAL_TOOL_REQUIRED_SVG))
+$(eval $(call emit-deploy-target,YES_SPECIAL_TOOL_REQUIRED_SVG))
+$(eval $(call emit-deploy-target,DIS_THORNS_SVG))
+$(eval $(call emit-deploy-target,YES_THORNS_SVG))
+$(eval $(call emit-deploy-target,DIS_UV_LIGHT_REQUIRED_SVG))
+$(eval $(call emit-deploy-target,YES_UV_LIGHT_REQUIRED_SVG))
+$(eval $(call emit-deploy-target,DIS_BOAT_SVG))
+$(eval $(call emit-deploy-target,YES_BOAT_SVG))
+$(eval $(call emit-deploy-target,DIS_ABANDONED_STRUCTURE_SVG))
+$(eval $(call emit-deploy-target,NO_ABANDONED_STRUCTURE_SVG))
+$(eval $(call emit-deploy-target,YES_ABANDONED_STRUCTURE_SVG))
+$(eval $(call emit-deploy-target,DIS_CAMPING_AVAILABLE_SVG))
+$(eval $(call emit-deploy-target,NO_CAMPING_AVAILABLE_SVG))
+$(eval $(call emit-deploy-target,YES_CAMPING_AVAILABLE_SVG))
+$(eval $(call emit-deploy-target,DIS_DANGEROUS_ANIMALS_SVG))
+$(eval $(call emit-deploy-target,YES_DANGEROUS_ANIMALS_SVG))
+$(eval $(call emit-deploy-target,DIS_DIFFICULT_CLIMBING_SVG))
+$(eval $(call emit-deploy-target,NO_DIFFICULT_CLIMBING_SVG))
+$(eval $(call emit-deploy-target,YES_DIFFICULT_CLIMBING_SVG))
+$(eval $(call emit-deploy-target,DIS_DRINKING_WATER_NEARBY_SVG))
+$(eval $(call emit-deploy-target,NO_DRINKING_WATER_NEARBY_SVG))
+$(eval $(call emit-deploy-target,YES_DRINKING_WATER_NEARBY_SVG))
+$(eval $(call emit-deploy-target,DIS_FLASHLIGHT_REQUIRED_SVG))
+$(eval $(call emit-deploy-target,YES_FLASHLIGHT_REQUIRED_SVG))
+$(eval $(call emit-deploy-target,DIS_FOOD_NEARBY_SVG))
+$(eval $(call emit-deploy-target,NO_FOOD_NEARBY_SVG))
+$(eval $(call emit-deploy-target,YES_FOOD_NEARBY_SVG))
+$(eval $(call emit-deploy-target,DIS_FUEL_NEARBY_SVG))
+$(eval $(call emit-deploy-target,NO_FUEL_NEARBY_SVG))
+$(eval $(call emit-deploy-target,YES_FUEL_NEARBY_SVG))
+$(eval $(call emit-deploy-target,DIS_HORSES_SVG))
+$(eval $(call emit-deploy-target,NO_HORSES_SVG))
+$(eval $(call emit-deploy-target,YES_HORSES_SVG))
+$(eval $(call emit-deploy-target,DIS_HUNTING_SVG))
+$(eval $(call emit-deploy-target,YES_HUNTING_SVG))
+$(eval $(call emit-deploy-target,DIS_MAY_REQUIRE_WADING_SVG))
+$(eval $(call emit-deploy-target,YES_MAY_REQUIRE_WADING_SVG))
+$(eval $(call emit-deploy-target,DIS_MOTORCYCLES_SVG))
+$(eval $(call emit-deploy-target,NO_MOTORCYCLES_SVG))
+$(eval $(call emit-deploy-target,YES_MOTORCYCLES_SVG))
+$(eval $(call emit-deploy-target,DIS_NIGHT_CACHE_SVG))
+$(eval $(call emit-deploy-target,YES_NIGHT_CACHE_SVG))
+$(eval $(call emit-deploy-target,DIS_PARK_AND_GRAB_SVG))
+$(eval $(call emit-deploy-target,YES_PARK_AND_GRAB_SVG))
+$(eval $(call emit-deploy-target,CORRECTED_SVG))
+$(eval $(call emit-deploy-target,CORRECTED_PNG))
+$(eval $(call emit-deploy-target,DIS_SCUBA_GEAR_SVG))
+$(eval $(call emit-deploy-target,YES_SCUBA_GEAR_SVG))
+$(eval $(call emit-deploy-target,DIS_SCENIC_VIEW_SVG))
+$(eval $(call emit-deploy-target,YES_SCENIC_VIEW_SVG))
+$(eval $(call emit-deploy-target,DIS_MEDIUM_HIKE_1KM_10KM_SVG))
+$(eval $(call emit-deploy-target,NO_MEDIUM_HIKE_1KM_10KM_SVG))
+$(eval $(call emit-deploy-target,YES_MEDIUM_HIKE_1KM_10KM_SVG))
+$(eval $(call emit-deploy-target,NO_LONG_HIKE_10KM_SVG))
+$(eval $(call emit-deploy-target,YES_LONG_HIKE_10KM_SVG))
+$(eval $(call emit-deploy-target,DIS_SHORT_HIKE_LESS_THAN_1KM_SVG))
+$(eval $(call emit-deploy-target,NO_SHORT_HIKE_LESS_THAN_1KM_SVG))
+$(eval $(call emit-deploy-target,YES_SHORT_HIKE_LESS_THAN_1KM_SVG))
+$(eval $(call emit-deploy-target,DIS_POISON_PLANTS_SVG))
+$(eval $(call emit-deploy-target,NO_POISON_PLANTS_SVG))
+$(eval $(call emit-deploy-target,YES_POISON_PLANTS_SVG))
+$(eval $(call emit-deploy-target,DIS_TICKS_SVG))
+$(eval $(call emit-deploy-target,YES_TICKS_SVG))
+$(eval $(call emit-deploy-target,YES_PICNIC_TABLES_NEARBY_SVG))
+$(eval $(call emit-deploy-target,DIS_PICNIC_TABLES_NEARBY_SVG))
+$(eval $(call emit-deploy-target,NO_PICNIC_TABLES_NEARBY_SVG))
+$(eval $(call emit-deploy-target,DIS_PUBLIC_RESTROOMS_NEARBY_SVG))
+$(eval $(call emit-deploy-target,NO_PUBLIC_RESTROOMS_NEARBY_SVG))
+$(eval $(call emit-deploy-target,YES_PUBLIC_RESTROOMS_NEARBY_SVG))
+$(eval $(call emit-deploy-target,DIS_TELEPHONE_NEARBY_SVG))
+$(eval $(call emit-deploy-target,NO_TELEPHONE_NEARBY_SVG))
+$(eval $(call emit-deploy-target,YES_TELEPHONE_NEARBY_SVG))
+$(eval $(call emit-deploy-target,DIS_TRUCK_DRIVER_RV_SVG))
+$(eval $(call emit-deploy-target,NO_TRUCK_DRIVER_RV_SVG))
+$(eval $(call emit-deploy-target,YES_TRUCK_DRIVER_RV_SVG))
+$(eval $(call emit-deploy-target,DIS_QUADS_SVG))
+$(eval $(call emit-deploy-target,NO_QUADS_SVG))
+$(eval $(call emit-deploy-target,YES_QUADS_SVG))
+$(eval $(call emit-deploy-target,DIS_OFF_ROAD_VEHICLES_SVG))
+$(eval $(call emit-deploy-target,NO_OFF_ROAD_VEHICLES_SVG))
+$(eval $(call emit-deploy-target,YES_OFF_ROAD_VEHICLES_SVG))
+$(eval $(call emit-deploy-target,DIS_SNOWMOBILES_SVG))
+$(eval $(call emit-deploy-target,NO_SNOWMOBILES_SVG))
+$(eval $(call emit-deploy-target,YES_SNOWMOBILES_SVG))
+$(eval $(call emit-deploy-target,NO_NIGHT_CACHE_SVG))
+$(eval $(call emit-deploy-target,NO_PARK_AND_GRAB_SVG))
+$(eval $(call emit-deploy-target,DNF_SVG))
+$(eval $(call emit-deploy-target,FTF_SVG))
+$(eval $(call emit-deploy-target,WRITE_NOTE_SVG))
+$(eval $(call emit-deploy-target,NEEDS_MAINTENANCE_SVG))
+$(eval $(call emit-deploy-target,ARCHIVED_BLUEPIN_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_CITO_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_CORRECTED_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_EARTH_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_EVENT_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_FOUND_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_GREENPIN_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_LETTERBOX_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_LOCATIONLESS_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_MEGA_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_MULTI_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_OTHER_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_OWNED_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_PARKING_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_PUSHPIN_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_TRADITIONAL_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_TRAILHEAD_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_TREASURE_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_UNKNOWN_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_VIRTUAL_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_WAYPOINT_FLAG_RED_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_WEBCAM_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_WHERIGO_PNG))
+$(eval $(call emit-deploy-target,DISABLED_BLUEPIN_PNG))
+$(eval $(call emit-deploy-target,DISABLED_CITO_PNG))
+$(eval $(call emit-deploy-target,DISABLED_CORRECTED_PNG))
+$(eval $(call emit-deploy-target,DISABLED_EARTH_PNG))
+$(eval $(call emit-deploy-target,DISABLED_EVENT_PNG))
+$(eval $(call emit-deploy-target,DISABLED_FOUND_PNG))
+$(eval $(call emit-deploy-target,DISABLED_GREENPIN_PNG))
+$(eval $(call emit-deploy-target,DISABLED_LETTERBOX_PNG))
+$(eval $(call emit-deploy-target,DISABLED_LOCATIONLESS_PNG))
+$(eval $(call emit-deploy-target,DISABLED_MEGA_PNG))
+$(eval $(call emit-deploy-target,DISABLED_MULTI_PNG))
+$(eval $(call emit-deploy-target,DISABLED_OTHER_PNG))
+$(eval $(call emit-deploy-target,DISABLED_OWNED_PNG))
+$(eval $(call emit-deploy-target,DISABLED_PARKING_PNG))
+$(eval $(call emit-deploy-target,DISABLED_PUSHPIN_PNG))
+$(eval $(call emit-deploy-target,DISABLED_TRADITIONAL_PNG))
+$(eval $(call emit-deploy-target,DISABLED_TRAILHEAD_PNG))
+$(eval $(call emit-deploy-target,DISABLED_TREASURE_PNG))
+$(eval $(call emit-deploy-target,DISABLED_UNKNOWN_PNG))
+$(eval $(call emit-deploy-target,DISABLED_VIRTUAL_PNG))
+$(eval $(call emit-deploy-target,DISABLED_WAYPOINT_FLAG_RED_PNG))
+$(eval $(call emit-deploy-target,DISABLED_WEBCAM_PNG))
+$(eval $(call emit-deploy-target,DISABLED_WHERIGO_PNG))
+$(eval $(call emit-deploy-target,DNF_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_DNF_PNG))
+$(eval $(call emit-deploy-target,DISABLED_DNF_PNG))
+$(eval $(call emit-deploy-target,ARCHIVED_FTF_PNG))
+$(eval $(call emit-deploy-target,DISABLED_FTF_PNG))
+$(eval $(call emit-deploy-target,FTF_PNG))
+$(eval $(call emit-deploy-target,DEFAULTMAPS_XML))
+$(eval $(call emit-deploy-target,D10_PNG))
+$(eval $(call emit-deploy-target,D15_PNG))
+$(eval $(call emit-deploy-target,D20_PNG))
+$(eval $(call emit-deploy-target,D25_PNG))
+$(eval $(call emit-deploy-target,D30_PNG))
+$(eval $(call emit-deploy-target,D35_PNG))
+$(eval $(call emit-deploy-target,D40_PNG))
+$(eval $(call emit-deploy-target,D45_PNG))
+$(eval $(call emit-deploy-target,D50_PNG))
+$(eval $(call emit-deploy-target,T10_PNG))
+$(eval $(call emit-deploy-target,T15_PNG))
+$(eval $(call emit-deploy-target,T20_PNG))
+$(eval $(call emit-deploy-target,T25_PNG))
+$(eval $(call emit-deploy-target,T30_PNG))
+$(eval $(call emit-deploy-target,T35_PNG))
+$(eval $(call emit-deploy-target,T40_PNG))
+$(eval $(call emit-deploy-target,T45_PNG))
+$(eval $(call emit-deploy-target,T50_PNG))
+$(eval $(call emit-deploy-target,BEACH_PNG))
+$(eval $(call emit-deploy-target,FOREST_PNG))
+$(eval $(call emit-deploy-target,NIGHT_PNG))
+$(eval $(call emit-deploy-target,PARK_PNG))
+$(eval $(call emit-deploy-target,SPACE2_PNG))
+$(eval $(call emit-deploy-target,STALE_CITO_PNG))
+$(eval $(call emit-deploy-target,STALE_CORRECTED_PNG))
+$(eval $(call emit-deploy-target,STALE_DNF_PNG))
+$(eval $(call emit-deploy-target,STALE_EARTH_PNG))
+$(eval $(call emit-deploy-target,STALE_EVENT_PNG))
+$(eval $(call emit-deploy-target,STALE_FOUND_PNG))
+$(eval $(call emit-deploy-target,STALE_FTF_PNG))
+$(eval $(call emit-deploy-target,STALE_GREENPIN_PNG))
+$(eval $(call emit-deploy-target,STALE_LETTERBOX_PNG))
+$(eval $(call emit-deploy-target,STALE_LOCATIONLESS_PNG))
+$(eval $(call emit-deploy-target,STALE_MEGA_PNG))
+$(eval $(call emit-deploy-target,STALE_MULTI_PNG))
+$(eval $(call emit-deploy-target,STALE_OTHER_PNG))
+$(eval $(call emit-deploy-target,STALE_OWNED_PNG))
+$(eval $(call emit-deploy-target,STALE_PARKING_PNG))
+$(eval $(call emit-deploy-target,STALE_PUSHPIN_PNG))
+$(eval $(call emit-deploy-target,STALE_TRADITIONAL_PNG))
+$(eval $(call emit-deploy-target,STALE_TRAILHEAD_PNG))
+$(eval $(call emit-deploy-target,STALE_TREASURE_PNG))
+$(eval $(call emit-deploy-target,STALE_UNKNOWN_PNG))
+$(eval $(call emit-deploy-target,STALE_VIRTUAL_PNG))
+$(eval $(call emit-deploy-target,STALE_WAYPOINT_FLAG_RED_PNG))
+$(eval $(call emit-deploy-target,STALE_WEBCAM_PNG))
+$(eval $(call emit-deploy-target,STALE_WHERIGO_PNG))
+$(eval $(call emit-deploy-target,NEEDS_MAINTENANCE_PNG))
+$(eval $(call emit-deploy-target,WRITE_NOTE_PNG))
+$(eval $(call emit-deploy-target,AXMAS_PNG))
+$(eval $(call emit-deploy-target,BXMAS_PNG))
+$(eval $(call emit-deploy-target,CXMAS_PNG))
+$(eval $(call emit-deploy-target,DXMAS_PNG))
+$(eval $(call emit-deploy-target,EXMAS_PNG))
+$(eval $(call emit-deploy-target,FXMAS_PNG))
+$(eval $(call emit-deploy-target,GXMAS_PNG))
+$(eval $(call emit-deploy-target,HXMAS_PNG))
+$(eval $(call emit-deploy-target,IXMAS_PNG))
+$(eval $(call emit-deploy-target,GREENPIN_SVG))
+$(eval $(call emit-deploy-target,NOMAP_PNG))
+$(eval $(call emit-deploy-target,DIS_LONG_HIKE_10KM_SVG))
+$(eval $(call emit-deploy-target,LOCATIONLESS_PNG))
+$(eval $(call emit-deploy-target,WAYPOINT_FLAG_RED_PNG))
+$(eval $(call emit-deploy-target,NEW_BLUEPIN_PNG))
+$(eval $(call emit-deploy-target,NEW_CITO_PNG))
+$(eval $(call emit-deploy-target,NEW_CORRECTED_PNG))
+$(eval $(call emit-deploy-target,NEW_DELETE_PNG))
+$(eval $(call emit-deploy-target,NEW_DNF_PNG))
+$(eval $(call emit-deploy-target,NEW_EARTH_PNG))
+$(eval $(call emit-deploy-target,NEW_EVENT_PNG))
+$(eval $(call emit-deploy-target,NEW_FOUND_PNG))
+$(eval $(call emit-deploy-target,NEW_FTF_PNG))
+$(eval $(call emit-deploy-target,NEW_GREENPIN_PNG))
+$(eval $(call emit-deploy-target,NEW_LETTERBOX_PNG))
+$(eval $(call emit-deploy-target,NEW_LOCATIONLESS_PNG))
+$(eval $(call emit-deploy-target,NEW_MEGA_PNG))
+$(eval $(call emit-deploy-target,NEW_MULTI_PNG))
+$(eval $(call emit-deploy-target,NEW_NEEDS_MAINTENANCE_PNG))
+$(eval $(call emit-deploy-target,NEW_OTHER_PNG))
+$(eval $(call emit-deploy-target,NEW_OWNED_PNG))
+$(eval $(call emit-deploy-target,NEW_PARKING_PNG))
+$(eval $(call emit-deploy-target,NEW_PUSHPIN_PNG))
+$(eval $(call emit-deploy-target,NEW_TRADITIONAL_PNG))
+$(eval $(call emit-deploy-target,NEW_TRAILHEAD_PNG))
+$(eval $(call emit-deploy-target,NEW_TREASURE_PNG))
+$(eval $(call emit-deploy-target,NEW_UNKNOWN_PNG))
+$(eval $(call emit-deploy-target,NEW_VIRTUAL_PNG))
+$(eval $(call emit-deploy-target,NEW_WAYPOINT_FLAG_RED_PNG))
+$(eval $(call emit-deploy-target,NEW_WEBCAM_PNG))
+$(eval $(call emit-deploy-target,NEW_WHERIGO_PNG))
+$(eval $(call emit-deploy-target,NEW_WRITE_NOTE_PNG))
+$(eval $(call emit-deploy-target,CLOGS_BLUEPIN_PNG))
+$(eval $(call emit-deploy-target,CLOGS_CITO_PNG))
+$(eval $(call emit-deploy-target,CLOGS_CORRECTED_PNG))
+$(eval $(call emit-deploy-target,CLOGS_DELETE_PNG))
+$(eval $(call emit-deploy-target,CLOGS_DNF_PNG))
+$(eval $(call emit-deploy-target,CLOGS_EARTH_PNG))
+$(eval $(call emit-deploy-target,CLOGS_EVENT_PNG))
+$(eval $(call emit-deploy-target,CLOGS_FOUND_PNG))
+$(eval $(call emit-deploy-target,CLOGS_FTF_PNG))
+$(eval $(call emit-deploy-target,CLOGS_GREENPIN_PNG))
+$(eval $(call emit-deploy-target,CLOGS_LETTERBOX_PNG))
+$(eval $(call emit-deploy-target,CLOGS_LOCATIONLESS_PNG))
+$(eval $(call emit-deploy-target,CLOGS_MEGA_PNG))
+$(eval $(call emit-deploy-target,CLOGS_MULTI_PNG))
+$(eval $(call emit-deploy-target,CLOGS_NEEDS_MAINTENANCE_PNG))
+$(eval $(call emit-deploy-target,CLOGS_OTHER_PNG))
+$(eval $(call emit-deploy-target,CLOGS_OWNED_PNG))
+$(eval $(call emit-deploy-target,CLOGS_PARKING_PNG))
+$(eval $(call emit-deploy-target,CLOGS_PUSHPIN_PNG))
+$(eval $(call emit-deploy-target,CLOGS_TRADITIONAL_PNG))
+$(eval $(call emit-deploy-target,CLOGS_TRAILHEAD_PNG))
+$(eval $(call emit-deploy-target,CLOGS_TREASURE_PNG))
+$(eval $(call emit-deploy-target,CLOGS_UNKNOWN_PNG))
+$(eval $(call emit-deploy-target,CLOGS_VIRTUAL_PNG))
+$(eval $(call emit-deploy-target,CLOGS_WAYPOINT_FLAG_RED_PNG))
+$(eval $(call emit-deploy-target,CLOGS_WEBCAM_PNG))
+$(eval $(call emit-deploy-target,CLOGS_WHERIGO_PNG))
+$(eval $(call emit-deploy-target,CLOGS_WRITE_NOTE_PNG))
+$(eval $(call emit-deploy-target,OCMENGINE_DLL))
+
+
+$(eval $(call emit_resgen_targets))
+$(build_xamlg_list): %.xaml.g.cs: %.xaml
+	xamlg '$<'
+
+$(ASSEMBLY_MDB): $(ASSEMBLY)
+
+$(ASSEMBLY): $(build_sources) $(build_resources) $(build_datafiles) $(DLL_REFERENCES) $(PROJECT_REFERENCES) $(build_xamlg_list) $(build_satellite_assembly_list)
+	mkdir -p $(shell dirname $(ASSEMBLY))
+	$(ASSEMBLY_COMPILER_COMMAND) $(ASSEMBLY_COMPILER_FLAGS) -out:$(ASSEMBLY) -target:$(COMPILE_TARGET) $(build_sources_embed) $(build_resources_embed) $(build_references_ref)
