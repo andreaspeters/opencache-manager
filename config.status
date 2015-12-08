@@ -438,7 +438,7 @@ Copyright (C) 2009 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/andreas/temp/ocm/opencachemanager-1.0.15'
+ac_pwd='/home/andreas/Projekte/ocm'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/usr/bin/mkdir -p'
@@ -631,7 +631,7 @@ S["MAINTAINER_MODE_FALSE"]=""
 S["MAINTAINER_MODE_TRUE"]="#"
 S["am__untar"]="${AMTAR} xf -"
 S["am__tar"]="${AMTAR} chof - \"$$tardir\""
-S["AMTAR"]="${SHELL} /home/andreas/temp/ocm/opencachemanager-1.0.15/missing --run tar"
+S["AMTAR"]="${SHELL} /home/andreas/Projekte/ocm/missing --run tar"
 S["am__leading_dot"]="."
 S["SET_MAKE"]=""
 S["AWK"]="gawk"
@@ -639,12 +639,12 @@ S["mkdir_p"]="/usr/bin/mkdir -p"
 S["MKDIR_P"]="/usr/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]=""
-S["install_sh"]="${SHELL} /home/andreas/temp/ocm/opencachemanager-1.0.15/install-sh"
-S["MAKEINFO"]="${SHELL} /home/andreas/temp/ocm/opencachemanager-1.0.15/missing --run makeinfo"
-S["AUTOHEADER"]="${SHELL} /home/andreas/temp/ocm/opencachemanager-1.0.15/missing --run autoheader"
-S["AUTOMAKE"]="${SHELL} /home/andreas/temp/ocm/opencachemanager-1.0.15/missing --run automake-1.11"
-S["AUTOCONF"]="${SHELL} /home/andreas/temp/ocm/opencachemanager-1.0.15/missing --run autoconf"
-S["ACLOCAL"]="${SHELL} /home/andreas/temp/ocm/opencachemanager-1.0.15/missing --run aclocal-1.11"
+S["install_sh"]="${SHELL} /home/andreas/Projekte/ocm/install-sh"
+S["MAKEINFO"]="${SHELL} /home/andreas/Projekte/ocm/missing --run makeinfo"
+S["AUTOHEADER"]="${SHELL} /home/andreas/Projekte/ocm/missing --run autoheader"
+S["AUTOMAKE"]="${SHELL} /home/andreas/Projekte/ocm/missing --run automake-1.11"
+S["AUTOCONF"]="${SHELL} /home/andreas/Projekte/ocm/missing --run autoconf"
+S["ACLOCAL"]="${SHELL} /home/andreas/Projekte/ocm/missing --run aclocal-1.11"
 S["VERSION"]="1.0.14"
 S["PACKAGE"]="opencachemanager"
 S["CYGPATH_W"]="echo"
