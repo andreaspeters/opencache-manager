@@ -1,4 +1,9 @@
-Vweaion 1.0.15
+Version 1.0.16
+-------------
+Various fixes in ndesk, busg and gtk
+
+
+Version 1.0.15
 --------------
 Various fixes (thanks van der Decken)
 - Fixed last found filters not working for caches that have no found logs
@@ -97,7 +102,7 @@ Version 1.0.4
 - Fix bug where OCM didn't refresh caches after importing and viewing field notes
 - Switch to PNGs from SVGs for splash screen
 - Fix missing translations
-- Fix issues where finds were not showing up 
+- Fix issues where finds were not showing up
 - Load map after main window appears
 
 
@@ -112,7 +117,7 @@ Version 1.0.3
 - Some initial groundwork for plugins
 - Add new preference (and option under View menu) to disable map info bubble popups
 - Swedish translations were missing from 1.0
-- Fix some performance issues with the 
+- Fix some performance issues with the
 
 
 Version 1.0.2
@@ -144,7 +149,7 @@ Version 0.23.13
 - View button on images tab only enabled when image selected
 - Add refresh button to images tab
 - Major improvements to View Field Notes dialog. You can now see the cache description, a map, and other cache logs without having to
-click "View Cache" to go back to the main window. 
+click "View Cache" to go back to the main window.
 - Fix bug where log limits on POI export were being ignored.
 
 
@@ -155,7 +160,7 @@ Version 0.23.12
 
 Version 0.23.11
 ---------------
-- Fix bug with gconf and Mandriva 
+- Fix bug with gconf and Mandriva
 - Fix bug where OCM crashed when opening a ZIP file that had spaces in it's name
 - Improve waymark parsing
 - Add new images pane for associating images with caches
@@ -214,7 +219,7 @@ Version 0.23.6
 	-- At the moment, only decimal degree and degree minute format is supported
 - Add GPS profiles support. Users upgrading from previous versions of OCM will have their settings moved
 to the "Default" profile. You can rename this profile from the GPS menu.
-- OCM can now process Corrected Coordinates, First To Find, DNF's, and custom user data fields from GSAK 
+- OCM can now process Corrected Coordinates, First To Find, DNF's, and custom user data fields from GSAK
 (in GSAK, when exporting check the box that says "Include GSAK Extra Fields in Export")
 - On the Advanced filters dialog, bold tab names that have non-default values
 - GUI reorganization to align more with gnome usability guidelines
@@ -309,7 +314,7 @@ that will not be replaced on a GPX import. These caches will appear in italicize
 - Improve delete performance when deleting multiple caches
 - Add support for opencaching.de format. For opencaching users from .us,.se,.pl sites, use GPX GC.
 - Fix bug where waypoint symbol overrides were being ignored. Also disable waypoint symbol overrides for Delorme units,
-as Delorme units have a specific symbol set for Geocaching child waypoints. 
+as Delorme units have a specific symbol set for Geocaching child waypoints.
 - Set description and cmt fields to be the same for Orgeon units.
 - Add indication that advanced filters are applied to main cache pane
 - Fix crash on selecting original coordinate waypoint when using corrected coords
@@ -347,8 +352,8 @@ results were still being processed from a previous filter
 - Add child waypoint filters
 - Add "No Map" mode to cache map for offline use
 - Right-clicking on the map now provides a context menu
-- Fix timing issue with right-click menu on cache list where mark options were not 
-being populated correctly. 
+- Fix timing issue with right-click menu on cache list where mark options were not
+being populated correctly.
 
 Version 0.19.1
 --------------
@@ -363,7 +368,7 @@ cache codes to fit better within the 6 character limit.
 - Show progress when loading large databases
 - Grab Waypoints: On the waypoint tab you can now click Grab Waypoints. OCM will
 scan the cache description and try to extract any waypoint pairs it finds. You can
-have OCM add the waypoints automatically, or review the matches and set the correct 
+have OCM add the waypoints automatically, or review the matches and set the correct
 waypoint time and a better description
 - Fix bug that prevented cancelling transfer waypoints to GPS
 - Fix bug that allowed a user to run OCM without a database, causing a crash
@@ -424,7 +429,7 @@ cache distances and the map position from the GPS coordinates
 - There is now a log export limit of 5 (configurable) for GPX based garmin devices
 - You can now override the waypoint symbols OCM uses when sending to the device from the GPS Configuration menu
 - For eTrex/Map60 units, you can now have waypoint names as either the cache code or the actual cache name
-- For eTrex/Map60 units, you can now have the waypoint description as the cache name, cache code/size/hint, 
+- For eTrex/Map60 units, you can now have the waypoint description as the cache name, cache code/size/hint,
   or cache code/size/type.
 - Improved icon set for maps
 - Fixed bug where OCM crashes if a DBUS session bus is not running
@@ -434,10 +439,10 @@ cache distances and the map position from the GPS coordinates
 
 Version 0.16
 ------------
-- Add Bookmark lists, a new feature to organize your caches. You can create 
-  any number of named bookmark lists and add any cache to it. Caches can be 
+- Add Bookmark lists, a new feature to organize your caches. You can create
+  any number of named bookmark lists and add any cache to it. Caches can be
   in multiple lists. To go back to the main list, choose Bookmarks->Bookmark List->None
-- Reorganized the various links to gc.com, navicache.com, and terracache.com under the 
+- Reorganized the various links to gc.com, navicache.com, and terracache.com under the
   Web menu
 - Cache Notes support. You can now add user notes to a cache on the notes tab. These
   notes will appear on the cache description page on a GPS that supports paperless
@@ -445,7 +450,7 @@ Version 0.16
 - OCM now sets the icons on your GPS to match the icons on it's own map for child
   waypoints
 - OCM now remembers where the map was centered on restart
-- OpenLayers which is used by OCM for the map display, is now directly included to 
+- OpenLayers which is used by OCM for the map display, is now directly included to
   improve map loading speed
 - Coordinates use the "." character always, regardless of language or locale to
   make it easier to copy-paste from the web
@@ -496,7 +501,7 @@ GPS Babel to be installed
 - Fix right-click and delete in cache list
 - Move Reset Center to Home to the Map menu
 - Refresh single cache on log found/mark unfound to improve performance
-  
+
 
 Version 0.13
 ---------------
@@ -537,7 +542,7 @@ Version 0.12
 - Fix display bug with cache names that start with a number and are archived
 - Rerrange hint and travelbug display, hints now wordwrap
 
-  
+
 
 Version 0.11
 
