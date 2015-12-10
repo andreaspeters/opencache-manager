@@ -261,7 +261,7 @@ datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
-exec_prefix = ${prefix}
+exec_prefix = /usr/local
 host_alias = 
 htmldir = ${docdir}
 includedir = ${prefix}/include
@@ -286,7 +286,7 @@ target_alias =
 top_build_prefix = 
 top_builddir = .
 top_srcdir = .
-EXTRA_DIST = expansions.m4
+EXTRA_DIST = m4 expansions.m4
 
 #Warning: This is an automatically generated file, do not edit!
 #SUBDIRS = ocmengine ocm-gtk

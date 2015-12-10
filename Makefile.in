@@ -286,7 +286,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-EXTRA_DIST = expansions.m4
+EXTRA_DIST = m4 expansions.m4
 
 #Warning: This is an automatically generated file, do not edit!
 @ENABLE_DEBUG_TRUE@SUBDIRS = ocmengine ocm-gtk

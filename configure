@@ -2464,9 +2464,46 @@ if test "x$PKG_CONFIG" = "xno"; then
         as_fn_error $? "You need to install pkg-config" "$LINENO" 5
 fi
 
-SHAMROCK_EXPAND_LIBDIR
-SHAMROCK_EXPAND_BINDIR
-SHAMROCK_EXPAND_DATADIR
+##SHAMROCK_EXPAND_LIBDIR
+##SHAMROCK_EXPAND_BINDIR
+##SHAMROCK_EXPAND_DATADIR
+
+    expanded_libdir=`(
+        case $prefix in  
+            NONE) prefix=$ac_default_prefix ;; 
+            *) ;; 
+        esac
+        case $exec_prefix in 
+            NONE) exec_prefix=$prefix ;; 
+            *) ;; 
+        esac
+        eval echo $libdir
+    )`
+
+   expanded_bindir=`(
+        case $prefix in  
+            NONE) prefix=$ac_default_prefix ;; 
+            *) ;; 
+        esac
+        case $exec_prefix in 
+            NONE) exec_prefix=$prefix ;; 
+            *) ;; 
+        esac
+        eval echo $bindir
+    )`
+
+   case $prefix in
+        NONE) prefix=$ac_default_prefix ;;
+        *) ;;
+    esac
+
+    case $exec_prefix in
+        NONE) exec_prefix=$prefix ;;
+        *) ;;
+    esac
+
+    expanded_datadir=`(eval echo $datadir)`
+    expanded_datadir=`(eval echo $expanded_datadir)`
 
 
 

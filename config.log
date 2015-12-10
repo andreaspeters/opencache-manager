@@ -66,50 +66,50 @@ configure:2408: result: no
 configure:2424: checking for pkg-config
 configure:2442: found /usr/bin/pkg-config
 configure:2455: result: /usr/bin/pkg-config
-configure:2475: checking for mcs
-configure:2493: found /usr/bin/mcs
-configure:2506: result: /usr/bin/mcs
-configure:2695: checking pkg-config is at least version 0.9.0
-configure:2698: result: yes
-configure:2708: checking for WEBKIT_SHARP_10
-configure:2715: $PKG_CONFIG --exists --print-errors "webkit-sharp-1.0"
-configure:2718: $? = 0
-configure:2732: $PKG_CONFIG --exists --print-errors "webkit-sharp-1.0"
-configure:2735: $? = 0
-configure:2793: result: yes
-configure:2799: checking for GTK_SHARP_20
-configure:2806: $PKG_CONFIG --exists --print-errors "gtk-sharp-2.0"
-configure:2809: $? = 0
-configure:2823: $PKG_CONFIG --exists --print-errors "gtk-sharp-2.0"
-configure:2826: $? = 0
-configure:2884: result: yes
-configure:2890: checking for GLIB_SHARP_20
-configure:2897: $PKG_CONFIG --exists --print-errors "glib-sharp-2.0"
-configure:2900: $? = 0
-configure:2914: $PKG_CONFIG --exists --print-errors "glib-sharp-2.0"
-configure:2917: $? = 0
-configure:2975: result: yes
-configure:2981: checking for GCONF_SHARP_20
-configure:2988: $PKG_CONFIG --exists --print-errors "gconf-sharp-2.0"
-configure:2991: $? = 0
-configure:3005: $PKG_CONFIG --exists --print-errors "gconf-sharp-2.0"
-configure:3008: $? = 0
-configure:3066: result: yes
-configure:3072: checking for NDESK_DBUS_10
-configure:3079: $PKG_CONFIG --exists --print-errors "dbus-sharp-2.0"
-configure:3082: $? = 0
-configure:3096: $PKG_CONFIG --exists --print-errors "dbus-sharp-2.0"
-configure:3099: $? = 0
-configure:3157: result: yes
-configure:3163: checking for NDESK_DBUS_GLIB_10
-configure:3170: $PKG_CONFIG --exists --print-errors "dbus-sharp-glib-2.0"
-configure:3173: $? = 0
-configure:3187: $PKG_CONFIG --exists --print-errors "dbus-sharp-glib-2.0"
-configure:3190: $? = 0
-configure:3248: result: yes
-configure:3403: checking that generated files are newer than configure
-configure:3409: result: done
-configure:3437: creating ./config.status
+configure:2512: checking for mcs
+configure:2530: found /usr/bin/mcs
+configure:2543: result: /usr/bin/mcs
+configure:2732: checking pkg-config is at least version 0.9.0
+configure:2735: result: yes
+configure:2745: checking for WEBKIT_SHARP_10
+configure:2752: $PKG_CONFIG --exists --print-errors "webkit-sharp-1.0"
+configure:2755: $? = 0
+configure:2769: $PKG_CONFIG --exists --print-errors "webkit-sharp-1.0"
+configure:2772: $? = 0
+configure:2830: result: yes
+configure:2836: checking for GTK_SHARP_20
+configure:2843: $PKG_CONFIG --exists --print-errors "gtk-sharp-2.0"
+configure:2846: $? = 0
+configure:2860: $PKG_CONFIG --exists --print-errors "gtk-sharp-2.0"
+configure:2863: $? = 0
+configure:2921: result: yes
+configure:2927: checking for GLIB_SHARP_20
+configure:2934: $PKG_CONFIG --exists --print-errors "glib-sharp-2.0"
+configure:2937: $? = 0
+configure:2951: $PKG_CONFIG --exists --print-errors "glib-sharp-2.0"
+configure:2954: $? = 0
+configure:3012: result: yes
+configure:3018: checking for GCONF_SHARP_20
+configure:3025: $PKG_CONFIG --exists --print-errors "gconf-sharp-2.0"
+configure:3028: $? = 0
+configure:3042: $PKG_CONFIG --exists --print-errors "gconf-sharp-2.0"
+configure:3045: $? = 0
+configure:3103: result: yes
+configure:3109: checking for NDESK_DBUS_10
+configure:3116: $PKG_CONFIG --exists --print-errors "dbus-sharp-2.0"
+configure:3119: $? = 0
+configure:3133: $PKG_CONFIG --exists --print-errors "dbus-sharp-2.0"
+configure:3136: $? = 0
+configure:3194: result: yes
+configure:3200: checking for NDESK_DBUS_GLIB_10
+configure:3207: $PKG_CONFIG --exists --print-errors "dbus-sharp-glib-2.0"
+configure:3210: $? = 0
+configure:3224: $PKG_CONFIG --exists --print-errors "dbus-sharp-glib-2.0"
+configure:3227: $? = 0
+configure:3285: result: yes
+configure:3440: checking that generated files are newer than configure
+configure:3446: result: done
+configure:3474: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -271,7 +271,7 @@ datadir='${datarootdir}'
 datarootdir='${prefix}/share'
 docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
 dvidir='${docdir}'
-exec_prefix='${prefix}'
+exec_prefix='/usr/local'
 host_alias=''
 htmldir='${docdir}'
 includedir='${prefix}/include'
