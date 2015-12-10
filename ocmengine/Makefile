@@ -197,9 +197,9 @@ EXTRA_DIST = $(build_sources) $(build_resx_files) \
 	$(DATA_FILES) $(build_culture_res_files)
 
 # Warning: This is an automatically generated file, do not edit!
-#ASSEMBLY_COMPILER_COMMAND = gmcs
-ASSEMBLY_COMPILER_COMMAND = gmcs
-#ASSEMBLY_COMPILER_COMMAND = gmcs
+#ASSEMBLY_COMPILER_COMMAND = mcs
+ASSEMBLY_COMPILER_COMMAND = mcs
+#ASSEMBLY_COMPILER_COMMAND = mcs
 #ASSEMBLY_COMPILER_FLAGS = -noconfig -codepage:utf8 -warn:3 -optimize- -debug "-define:DEBUG"
 ASSEMBLY_COMPILER_FLAGS = -noconfig -codepage:utf8 -warn:4 -optimize-
 #ASSEMBLY_COMPILER_FLAGS = -noconfig -codepage:utf8 -warn:4 -optimize-

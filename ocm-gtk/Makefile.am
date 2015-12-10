@@ -4,7 +4,7 @@ EXTRA_DIST =
 # Warning: This is an automatically generated file, do not edit!
 
 if ENABLE_DEBUG
-ASSEMBLY_COMPILER_COMMAND = gmcs
+ASSEMBLY_COMPILER_COMMAND = mcs
 ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:3 -optimize- -debug "-define:DEBUG"
 ASSEMBLY = bind/ocm-gtk.exe
 ASSEMBLY_MDB = $(ASSEMBLY).mdb
@@ -460,7 +460,7 @@ OCM_GTK_EXE_MDB=$(BUILD_DIR)/ocm-gtk.exe.mdb
 endif
 
 if ENABLE_RELEASE
-ASSEMBLY_COMPILER_COMMAND = gmcs
+ASSEMBLY_COMPILER_COMMAND = mcs
 ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:3 -optimize-
 ASSEMBLY = bin/ocm-gtk.exe
 ASSEMBLY_MDB = 
@@ -915,7 +915,7 @@ OCM_GTK_EXE_MDB=
 endif
 
 if ENABLE_RELEASE_TRANSLATED
-ASSEMBLY_COMPILER_COMMAND = gmcs
+ASSEMBLY_COMPILER_COMMAND = mcs
 ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:4 -optimize-
 ASSEMBLY = bin/Release_Translated/ocm-gtk.exe
 ASSEMBLY_MDB = 

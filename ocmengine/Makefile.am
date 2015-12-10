@@ -4,7 +4,7 @@ EXTRA_DIST =
 # Warning: This is an automatically generated file, do not edit!
 
 if ENABLE_DEBUG
-ASSEMBLY_COMPILER_COMMAND = gmcs
+ASSEMBLY_COMPILER_COMMAND = mcs
 ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:3 -optimize- -debug "-define:DEBUG"
 ASSEMBLY = bin/Debug/ocmengine.dll
 ASSEMBLY_MDB = $(ASSEMBLY).mdb
@@ -18,7 +18,7 @@ OCMENGINE_DLL_MDB=$(BUILD_DIR)/ocmengine.dll.mdb
 endif
 
 if ENABLE_RELEASE
-ASSEMBLY_COMPILER_COMMAND = gmcs
+ASSEMBLY_COMPILER_COMMAND = mcs
 ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:4 -optimize-
 ASSEMBLY = bin/Debug/ocmengine.dll
 ASSEMBLY_MDB = 
@@ -31,7 +31,7 @@ OCMENGINE_DLL_MDB=
 endif
 
 if ENABLE_RELEASE_TRANSLATED
-ASSEMBLY_COMPILER_COMMAND = gmcs
+ASSEMBLY_COMPILER_COMMAND = mcs
 ASSEMBLY_COMPILER_FLAGS =  -noconfig -codepage:utf8 -warn:4 -optimize-
 ASSEMBLY = bin/Release_Translated/ocmengine.dll
 ASSEMBLY_MDB = 
