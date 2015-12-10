@@ -11,15 +11,15 @@ if test "x$PKG_CONFIG" = "xno"; then
         AC_MSG_ERROR([You need to install pkg-config])
 fi
 
-SHAMROCK_EXPAND_LIBDIR
-SHAMROCK_EXPAND_BINDIR
-SHAMROCK_EXPAND_DATADIR
+#SHAMROCK_EXPAND_LIBDIR
+#SHAMROCK_EXPAND_BINDIR
+#SHAMROCK_EXPAND_DATADIR
 
 AC_PROG_INSTALL
 
-AC_PATH_PROG(GMCS, gmcs, no)
+AC_PATH_PROG(GMCS, mcs, no)
 if test "x$GMCS" = "xno"; then
-        AC_MSG_ERROR([gmcs Not found])
+        AC_MSG_ERROR([mcs Not found])
 fi
 
 
@@ -58,8 +58,8 @@ PKG_CHECK_MODULES([WEBKIT_SHARP_10], [webkit-sharp-1.0])
 PKG_CHECK_MODULES([GTK_SHARP_20], [gtk-sharp-2.0])
 PKG_CHECK_MODULES([GLIB_SHARP_20], [glib-sharp-2.0])
 PKG_CHECK_MODULES([GCONF_SHARP_20], [gconf-sharp-2.0])
-PKG_CHECK_MODULES([NDESK_DBUS_10], [ndesk-dbus-1.0])
-PKG_CHECK_MODULES([NDESK_DBUS_GLIB_10], [ndesk-dbus-glib-1.0])
+PKG_CHECK_MODULES([NDESK_DBUS_10], [dbus-sharp-2.0])
+PKG_CHECK_MODULES([NDESK_DBUS_GLIB_10], [dbus-sharp-glib-2.0])
 
 dnl package checks, per config
 
