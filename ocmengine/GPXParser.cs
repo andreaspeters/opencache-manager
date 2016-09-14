@@ -1,14 +1,14 @@
 /*
  Copyright 2009 Kyle Campbell
- Licensed under the Apache License, Version 2.0 (the "License"); 
- you may not use this file except in compliance with the License. 
- You may obtain a copy of the License at 
- 
- 		http://www.apache.org/licenses/LICENSE-2.0 
- 
- Unless required by applicable law or agreed to in writing, software distributed under the License 
- is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or 
- implied. See the License for the specific language governing permissions and limitations under the License. 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ 		http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software distributed under the License
+ is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+ implied. See the License for the specific language governing permissions and limitations under the License.
 */
 using System;
 using System.IO;
@@ -23,18 +23,18 @@ namespace ocmengine
 	public class ParseEventArgs:EventArgs
 	{
 		private string m_message;
-		
+
 		public string Message
 		{
 			get { return m_message;}
 		}
-		
+
 		public ParseEventArgs(String message):base()
 		{
 			m_message = message;
 		}
 	}
-	
+
 	public class GPXParser
 	{
 		private ACacheStore m_store = null;
@@ -47,35 +47,35 @@ namespace ocmengine
 		public List<string> CacheOwner
 		{
 			set {m_ownid = value;}
-		}	
-		
+		}
+
 		bool m_ignoreExtraFields = false;
 		public bool IgnoreExtraFields
 		{
 			set { m_ignoreExtraFields = value;}
 		}
-		
+
 		bool m_purgeLogs = false;
 		public bool PurgeLogs
 		{
 			set { m_purgeLogs = value;}
 		}
-		
+
 		bool m_preserveFound = false;
 		public bool PreserveFound
 		{
 			set { m_preserveFound = value;}
 		}
-		
+
 		string m_bookmark = null;
 		public string Bookmark
 		{
 			set { m_bookmark = value;}
 		}
-		
-		
+
+
 		private DateTime gpx_date;
-		
+
 		private Boolean m_cancel = false;
 		private System.Data.IDbTransaction m_trans = null;
 		public Boolean Cancel
@@ -83,21 +83,22 @@ namespace ocmengine
 			set { m_cancel = true;}
 			get { return m_cancel;}
 		}
-		
+
 		public void StartUpdate(ACacheStore store)
 		{
 			store.StartUpdate();
 		}
-		
+
 		public void EndUpdate(ACacheStore store)
 		{
 			store.CompleteUpdate();
 		}
-		
+
 		public int PreParseForSingle(FileStream fs, ACacheStore store)
 		{
 			XmlReader rdr = XmlReader.Create(fs);
-			rdr.Settings.IgnoreWhitespace = true;
+			//rdr.Settings.IgnoreWhitespace = true;
+
 			int count = 0;
 			List<String> waypoints = new List<String>();
 			while (rdr.Read())
@@ -115,6 +116,7 @@ namespace ocmengine
 					waypoints.Add(ACacheStore.Escape(rdr.ReadElementContentAsString()));
 				}
 			}
+
 			rdr.Close();
 			store.PurgeAllTravelBugs(waypoints.ToArray());
 			if (m_purgeLogs)
@@ -122,11 +124,11 @@ namespace ocmengine
 			store.PurgeAllAttributes(waypoints.ToArray());
 			return count;
 		}
-		
+
 		public int parseTotal(FileStream fs)
 		{
 			XmlReader rdr = XmlReader.Create(fs);
-			rdr.Settings.IgnoreWhitespace = true;
+			//rdr.Settings.IgnoreWhitespace = true;
 			int count = 0;
 			while (rdr.Read())
 			{
@@ -142,11 +144,11 @@ namespace ocmengine
 			rdr.Close();
 			return count;
 		}
-		
+
 		public void clearForImport(FileStream fs, ACacheStore store)
 		{
 			XmlReader rdr = XmlReader.Create(fs);
-			rdr.Settings.IgnoreWhitespace = true;
+			//rdr.Settings.IgnoreWhitespace = true;
 			List<String> waypoints = new List<String>();
 			while (rdr.Read())
 			{
@@ -162,12 +164,12 @@ namespace ocmengine
 			store.PurgeAllAttributes(waypoints.ToArray());
 			return;
 		}
-				
+
 		public void parseGPXFile(FileStream fs, ACacheStore store)
-		{			
+		{
 			m_store = store;
 			XmlReader reader = XmlReader.Create(fs);
-			reader.Settings.IgnoreWhitespace = true;
+			//reader.Settings.IgnoreWhitespace = true;
 			while (reader.Read())
 			{
 				if (m_cancel)
@@ -196,7 +198,7 @@ namespace ocmengine
 							if ((pt is Geocache) && (m_bookmark != null))
 								m_store.AddBoormarkEntry(m_bookmark,pt.Name);
 						}
-						
+
 						if (reader.Name == "waypoint" && reader.IsStartElement())
 						{
 							Waypoint pt = processLocWaypoint(reader);
@@ -213,26 +215,26 @@ namespace ocmengine
 			reader.Close();
 			this.Complete(this, EventArgs.Empty);
 		}
-		
-		
-		
+
+
+
 		private Waypoint processWaypoint(XmlReader reader)
 		{
 			Waypoint newPoint = new Waypoint();
-		
+
 			String lat = reader.GetAttribute("lat");
 			String lon = reader.GetAttribute("lon");
-			
+
 			newPoint.Lat = float.Parse(lat, CultureInfo.InvariantCulture);
 			newPoint.Lon = float.Parse(lon, CultureInfo.InvariantCulture);
-			
+
 			bool breakLoop = false;
-			
+
 			while (!breakLoop && reader.Read())
 			{
 				switch (reader.NodeType)
 				{
-					case XmlNodeType.Element:					
+					case XmlNodeType.Element:
 						processWptElement(ref newPoint, reader);
 						break;
 					case XmlNodeType.EndElement:
@@ -243,7 +245,7 @@ namespace ocmengine
 			}
 			return newPoint;
 		}
-		
+
 		private Waypoint processLocWaypoint(XmlReader reader)
 		{
 			Waypoint newPoint = new Waypoint();
@@ -254,7 +256,7 @@ namespace ocmengine
 				{
 					case XmlNodeType.Element:
 						processLocWpt(ref newPoint, reader);
-						break;					
+						break;
 					case XmlNodeType.EndElement:
 						if (reader.Name == "waypoint")
 							breakLoop = true;
@@ -263,7 +265,7 @@ namespace ocmengine
 			}
 			return newPoint;
 		}
-		
+
 		public void processLocWpt(ref Waypoint pt, XmlReader reader)
 		{
 			if (reader.Name == "name")
@@ -289,13 +291,13 @@ namespace ocmengine
 			{
 				string val = reader.ReadString().Trim();
 				if (val == "2")
-					(pt as Geocache).Container = "Micro";	
+					(pt as Geocache).Container = "Micro";
 				else if (val == "8")
-					(pt as Geocache).Container = "Small";	
+					(pt as Geocache).Container = "Small";
 				else if (val == "3")
-					(pt as Geocache).Container = "Regular";	
+					(pt as Geocache).Container = "Regular";
 				else if (val == "4")
-					(pt as Geocache).Container = "Large";	
+					(pt as Geocache).Container = "Large";
 				else if (val == "5")
 					(pt as Geocache).Container = "Virtual";
 				else
@@ -314,7 +316,7 @@ namespace ocmengine
 					{
 						ParseNaviCache (pt);
 					}
-				}					
+				}
 			}
 			else if (reader.Name == "link")
 			{
@@ -323,7 +325,7 @@ namespace ocmengine
 				((Geocache) pt).LongDesc = "<a href=\"" + pt.URL.ToString() + "\">View Online</a>";
 			}
 		}
-		
+
 		private void ParseNaviCache (Waypoint pt)
 		{
 			Geocache cache = pt as Geocache;
@@ -362,12 +364,12 @@ namespace ocmengine
 					{
 						cache.Terrain = float.Parse(detail, CultureInfo.InvariantCulture);
 					}
-					
+
 				}
 			}
 			cache.Desc = cache.CacheName + " ("  + cache.Difficulty + "/" + cache.Terrain + ")";
 		}
-		
+
 		private void processWptElement(ref Waypoint pt, XmlReader reader)
 		{
 			if (pt is Geocache)
@@ -389,7 +391,7 @@ namespace ocmengine
 			else if (String.Equals(reader.LocalName, "parent",StringComparison.InvariantCultureIgnoreCase))
 			{
 				pt.Parent = reader.ReadString();
-			}	
+			}
 			else if (reader.LocalName == "desc")
 			{
 				pt.Desc = reader.ReadElementContentAsString();
@@ -411,7 +413,7 @@ namespace ocmengine
 			else if (reader.LocalName == "sym")
 			{
 				pt.Symbol = reader.ReadString();
-				
+
 			}
 			else if (reader.LocalName == "type")
 			{
@@ -443,7 +445,7 @@ namespace ocmengine
 				}
 			}
 		}
-		
+
 		private void parseGeocacheElement(ref Waypoint pt, XmlReader reader)
 		{
 			Geocache cache = pt as Geocache;
@@ -451,7 +453,7 @@ namespace ocmengine
 			{
 				cache = ParseOpenCache(reader, ref cache);
 			}
-			else if (reader.NamespaceURI.StartsWith("http://www.groundspeak.com/cache") 
+			else if (reader.NamespaceURI.StartsWith("http://www.groundspeak.com/cache")
 			         || reader.NamespaceURI.StartsWith("http://www.gsak.net/xmlv1/5"))
 			{
 				cache = ParseGroundSpeakCache (reader, ref cache);
@@ -461,7 +463,7 @@ namespace ocmengine
 				cache = ParseTerraCache (reader, ref cache);
 			}
 		}
-		
+
 		private Geocache ParseTerraCache (XmlReader reader, ref Geocache cache)
 		{
 			if (reader.LocalName == "terracache")
@@ -561,7 +563,7 @@ namespace ocmengine
 						case 4:
 							cache.Container = "Micro";
 							break;
-						case 5: 
+						case 5:
 							cache.Container = "Micro";
 							break;
 					}
@@ -576,7 +578,7 @@ namespace ocmengine
 			cache.Terrain = 1;
 			return cache;
 		}
-		
+
 		private Geocache ParseOpenCache (XmlReader reader, ref Geocache cache)
 		{
 			if (reader.LocalName == "cache" || reader.LocalName == "geocache")
@@ -627,7 +629,7 @@ namespace ocmengine
 			}
 			else if (reader.LocalName == "long_description" || reader.LocalName == "description")
 			{
-				string html = reader.GetAttribute("html");	
+				string html = reader.GetAttribute("html");
 				string val = reader.ReadElementContentAsString();
 				if (html.Equals("False", StringComparison.InvariantCultureIgnoreCase))
 					val = val.Replace("\n", "<br/>");
@@ -663,7 +665,7 @@ namespace ocmengine
 			}
 			return cache;
 		}
-		
+
 		private Geocache ParseGroundSpeakCache (XmlReader reader, ref Geocache cache)
 		{
 			if (reader.LocalName == "cache")
@@ -727,7 +729,7 @@ namespace ocmengine
 			else if (reader.LocalName == "owner")
 			{
 				cache.OwnerID = reader.GetAttribute("id");
-				cache.CacheOwner = reader.ReadElementContentAsString();					
+				cache.CacheOwner = reader.ReadElementContentAsString();
 			}
 			else if (reader.LocalName == "type")
 			{
@@ -753,7 +755,7 @@ namespace ocmengine
 			}
 			else if (reader.LocalName == "long_description")
 			{
-				string html = reader.GetAttribute("html");	
+				string html = reader.GetAttribute("html");
 				string val = reader.ReadElementContentAsString();
 				if (html.Equals("False", StringComparison.InvariantCultureIgnoreCase))
 					val = val.Replace("\n", "<br/>");
@@ -789,7 +791,7 @@ namespace ocmengine
 			}
 			return cache;
 		}
-		
+
 		private void ParseTravelBugs(ref Geocache cache, XmlReader reader)
 		{
 			while (reader.Read())
@@ -800,8 +802,8 @@ namespace ocmengine
 					return;
 			}
 		}
-	
-		
+
+
 		private void parseTravelBug(ref Geocache cache, XmlReader reader)
 		{
 			TravelBug bug = new TravelBug();
@@ -818,9 +820,9 @@ namespace ocmengine
 				{
 					bug.Name = reader.ReadElementContentAsString();
 				}
-			}			
+			}
 		}
-		
+
 		private void ParseCacheLogs(ref Geocache cache, XmlReader reader)
 		{
 			bool logsChecked = false;
@@ -836,7 +838,7 @@ namespace ocmengine
 				}
 			}
 		}
-		
+
 		private void ParseCacheLog(ref Geocache cache, XmlReader reader, ref bool logsChecked)
 		{
 			CacheLog log = new CacheLog();
@@ -844,7 +846,7 @@ namespace ocmengine
 			log.LogKey = cache.Name + log.LogID;
 			bool breakLoop = false;
 			while (!breakLoop && reader.Read())
-			{					
+			{
 				if ((reader.LocalName == "date" || reader.LocalName == "time"))
 				{
 					string date = reader.ReadString();
@@ -904,7 +906,7 @@ namespace ocmengine
 						log.Encoded = Boolean.Parse(reader.GetAttribute("encoded"));
 					else
 						log.Encoded = false;
-					if( log.LogMessage == "Unknown" ) 
+					if( log.LogMessage == "Unknown" )
 					{
 						log.LogMessage = reader.ReadString();
 					}
@@ -917,7 +919,7 @@ namespace ocmengine
 				{
 					double lat = double.Parse(reader.GetAttribute("lat"), CultureInfo.InvariantCulture);
 					double lon = double.Parse(reader.GetAttribute("lon"), CultureInfo.InvariantCulture);
-					if( log.LogMessage == "Unknown" ) 
+					if( log.LogMessage == "Unknown" )
 					{
 						log.LogMessage = Utilities.getCoordString(lat,lon) + "\n";
 					}
@@ -943,8 +945,8 @@ namespace ocmengine
 				cache.Notes += "----------\n";
 				return;
 			}
-			
-			m_store.AddLog(cache.Name, log);	
+
+			m_store.AddLog(cache.Name, log);
 			if (!logsChecked)
 			{
 				if (log.LogStatus=="Didn't find it" || log.LogStatus == "Needs Maintenance" || log.LogStatus == "no_find")
@@ -958,9 +960,9 @@ namespace ocmengine
 					logsChecked = true;
 				}
 			}
-			
+
 		}
-		
+
 		private void ParseTerraLogs(ref Geocache cache, XmlReader reader)
 		{
 			bool logsChecked = false;
@@ -976,8 +978,8 @@ namespace ocmengine
 				}
 			}
 		}
-		
-		
+
+
 		private void ParseTerraLog(ref Geocache cache, XmlReader reader,ref bool logsChecked)
 		{
 			CacheLog log = new CacheLog();
@@ -1033,9 +1035,9 @@ namespace ocmengine
 					logsChecked = true;
 				}
 			}
-			m_store.AddLog(cache.Name, log);			
+			m_store.AddLog(cache.Name, log);
 		}
-		
+
 		private void parseCacheAttrs(ref Geocache cache, XmlReader reader)
 		{
 			if (reader.IsEmptyElement)
@@ -1052,7 +1054,7 @@ namespace ocmengine
 				}
 			}
 		}
-		
+
 		private void parseCacheAttribute(ref Geocache cache, XmlReader reader)
 		{
 			CacheAttribute attr = new CacheAttribute();
@@ -1066,8 +1068,8 @@ namespace ocmengine
 			m_store.AddAttribute(cache.Name, attr);
 			return;
 		}
-		
-		
+
+
 		private void ParseCacheType(String type, ref Geocache cache)
 		{
 			if ((type == "Unknown Cache") || (type == "Other") || (type == "Puzzle") || (type == "Unknown"))
@@ -1105,7 +1107,7 @@ namespace ocmengine
 				System.Console.WriteLine("WARNING: TYPE UNKNOWN:" + type);
 				cache.TypeOfCache = Geocache.CacheType.GENERIC;
 			}
-				
+
 		}
 	}
 }

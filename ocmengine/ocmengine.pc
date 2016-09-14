@@ -3,4 +3,4 @@ Description: The library provides the geocache library management
 Version: 1.0.14
 
 Requires: 
-Libs: -r:/usr/local/lib/opencachemanager/ocmengine.dll
+Libs: -r:/usr/lib/opencachemanager/ocmengine.dll

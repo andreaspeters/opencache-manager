@@ -22,6 +22,6 @@ namespace ocmgtk
 	public class Paths
 	{
 
-		public const string LOCALE_DIR = "/usr/local/share/locale";
+		public const string LOCALE_DIR = "/usr/share/locale";
 	}
 }
