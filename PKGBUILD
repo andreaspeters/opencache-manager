@@ -8,7 +8,7 @@ license=('GPL')
 depends=('mono' 'dbus-sharp' 'shared-mime-info' 'webkit-sharp' 'desktop-file-utils' 'dbus-sharp-glib' 'gconf-sharp')
 optdepends=('qlandkartegt: display cache on map'
             'gpsbabel: send cache to GPS')
-source=("$pkgname"::'git+https://bitbucket.org/andpeters/ocm.git')
+source=("$pkgname"::'git=https://github.com/andreaspeters/opencache-manager.git')
 sha256sums=('SKIP')
 
 build() {

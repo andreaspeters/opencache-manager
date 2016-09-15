@@ -36,8 +36,12 @@ body {
 	}
 
     </style>
+    <script type="text/javascript">
+alert("hhhh");
+console.log("ahhh");
+    </script>
     <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBGd7Rh2XGioGVLD3eV-OtWYievTkKZFRw&sensor=false'></script>
-    <script src="OpenLayers.js"></script>
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
     <script src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
  
     <script type="text/javascript">
@@ -94,8 +98,13 @@ body {
 	  else
 	    return results[1];
 	}
+
+    function info(text) {
+	    alert(text);
+    }
  
     function init(){
+	    alert("bbbb");
         map = new OpenLayers.Map('map',
                 { maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
                   numZoomLevels: 19,
