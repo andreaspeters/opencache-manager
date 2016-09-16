@@ -1,12 +1,12 @@
-// 
+//
 //  Copyright 2011  campbelk
-// 
+//
 //    Licensed under the Apache License, Version 2.0 (the "License");
 //    you may not use this file except in compliance with the License.
 //    You may obtain a copy of the License at
-// 
+//
 //        http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 //    Unless required by applicable law or agreed to in writing, software
 //    distributed under the License is distributed on an "AS IS" BASIS,
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -39,23 +39,23 @@ namespace ocmgtk
 		private bool m_loadDone = false;
 		private bool m_timerDone = false;
 		bool showChristmasSplash = (System.DateTime.Now.Month == 12 && System.DateTime.Now.Day <= 26)? true:false;
-		
+
 		Timer animTimer = new Timer();
-		
-		string[] christmasBG = new string[]{"./icons/splash/christmas/AXmas.png", "./icons/splash/christmas/BXmas.png", "./icons/splash/christmas/CXmas.png", 
+
+		string[] christmasBG = new string[]{"./icons/splash/christmas/AXmas.png", "./icons/splash/christmas/BXmas.png", "./icons/splash/christmas/CXmas.png",
 			"./icons/splash/christmas/DXmas.png", "./icons/splash/christmas/EXmas.png", "./icons/splash/christmas/FXmas.png",
 			"./icons/splash/christmas/GXmas.png",  "./icons/splash/christmas/HXmas.png", "./icons/splash/christmas/IXmas.png"};
 		Pixmap[] backgrounds = new Pixmap[9];
 		Pixmap[] masks = new Pixmap[9];
 		int animPos = 0;
-		
-		
+
+
 		public OCMSplash () : base(Gtk.WindowType.Toplevel)
-		{	
+		{
 			this.Build ();
 			SetSplashBG ();
-			
-			this.versionLabel.Markup = String.Format(Catalog.GetString("<b><big>Version {0}</big></b>\n<small>Copyright (c) Kyle Campbell 2010-2013</small>"), OCMApp.GetOCMVersion());
+
+			this.versionLabel.Markup = String.Format(Catalog.GetString("<b><big>Version {0}</big></b>\n<small>Copyright (c) Kyle Campbell 2010-2013\nCopyright (c) Andreas Peters 2015-2016</small>"), OCMApp.GetOCMVersion());
 
 			if (showChristmasSplash)
 			{
@@ -64,14 +64,14 @@ namespace ocmgtk
 				animTimer.Interval = 150;
 				animTimer.Start();
 			}
-			
+
 			Timer minWait = new Timer();
 			minWait.Elapsed += HandleMinWaitElapsed;
 			minWait.AutoReset = false;
 			minWait.Interval = 1500;
 			minWait.Start();
 		}
-		
+
 		void SetSplashBG ()
 		{
 			string[] files;
@@ -90,20 +90,20 @@ namespace ocmgtk
 			this.GdkWindow.SetBackPixmap(image, false);
 			this.ShapeCombineMask(mask, 0, 0);
 			this.GdkWindow.InvalidateRect(new Rectangle(0,0, 744,600), true);
-			
+
 			if (showChristmasSplash)
 			{
 				for(int idx2 = 0; idx2 < christmasBG.Length; idx2++)
 				{
 					Pixbuf test2 = new Pixbuf(christmasBG[idx2], 744, 600);
-					Pixmap image2,mask2;	
+					Pixmap image2,mask2;
 					test2.RenderPixmapAndMask(out image2, out mask2, 175);
 					backgrounds[idx2] = image2;
 					masks[idx2] = mask2;
 				}
 			}
 		}
-		
+
 		void UpdateBG ()
 		{
 			int idx = animPos;
@@ -125,7 +125,7 @@ namespace ocmgtk
 			m_timerDone = true;
 			Application.Invoke(delegate {CheckDone();});
 		}
-		
+
 		void CheckDone()
 		{
 			if (m_timerDone && m_loadDone)
@@ -133,15 +133,15 @@ namespace ocmgtk
 				animTimer.Stop();
 				this.Hide();
 				m_App.ShowMainWindow();
-				
+
 			}
-			
+
 		}
-		
+
 		public void Preload(OCMApp app, QuickFilter filter)
 		{
 			m_App = app;
-			
+
 			if (filter != null)
 			{
 				m_App.CacheStore.GlobalFilters.AddFilterCriteria(FilterList.KEY_STATUS,
@@ -177,7 +177,7 @@ namespace ocmgtk
 				loadProgress.Pulse();
 				OCMApp.UpdateGUIThread();
 				m_Count = 0;
-			}
+			} 
 		}
 
 		void HandleAppCacheStoreComplete (object sender, EventArgs args)

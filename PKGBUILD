@@ -1,6 +1,6 @@
 pkgname=opencachemanager
 pkgver=1.0.17
-pkgrel=1
+pkgrel=17
 pkgdesc="Easy to use, linux based program for managing your geocaches"
 arch=('i686' 'x86_64')
 url="http://opencachemanage.sourceforge.net/"

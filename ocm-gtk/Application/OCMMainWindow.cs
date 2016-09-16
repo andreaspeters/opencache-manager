@@ -1,12 +1,12 @@
-// 
+//
 //  Copyright 2011  campbelk
-// 
+//
 //    Licensed under the Apache License, Version 2.0 (the "License");
 //    you may not use this file except in compliance with the License.
 //    You may obtain a copy of the License at
-// 
+//
 //        http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 //    Unless required by applicable law or agreed to in writing, software
 //    distributed under the License is distributed on an "AS IS" BASIS,
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -36,35 +36,35 @@ namespace ocmgtk
 	{
 		private OCMApp m_app = null;
 		private int m_pulseCount = 0;
-		
+
 		static Cursor WAITCURSOR = new Cursor(CursorType.Watch);
 		static Cursor ARROWCURSOR = new Cursor(CursorType.Arrow);
-		
+
 		public CacheListWidget CacheList
 		{
 			get { return cacheList;}
 		}
-		
+
 		public MapWidget CacheMap
 		{
 			get { return ocmMapWidget;}
 		}
-		
+
 		private IConfig Config
 		{
 			get { return m_app.AppConfig;}
 		}
-		
+
 		public CacheInfoWidget CacheInfo
 		{
 			get { return ocmCacheInfo;}
 		}
-		
+
 		public OCMApp App
 		{
 			get { return m_app;}
 		}
-		
+
 		/// <summary>
 		/// Used for GUI Builder only.
 		/// </summary>
@@ -72,7 +72,7 @@ namespace ocmgtk
 		{
 			this.Build ();
 		}
-		
+
 		public OCMMainWindow (OCMApp app) : base(Gtk.WindowType.Toplevel)
 		{
 			this.Build ();
@@ -106,14 +106,14 @@ namespace ocmgtk
 			this.Resize(m_app.AppConfig.WindowWidth, m_app.AppConfig.WindowHeight);
 			this.mainHPane.Position = m_app.AppConfig.HBarPosition;
 			this.mainVPane.Position = m_app.AppConfig.VBarPosition;
-			
+
 			if (m_app.Profiles.GetActiveProfile () != null)
 				SetLastGPS (m_app.Profiles.GetActiveProfile ().Name, m_app.Profiles.GetActiveProfile ().FieldNotesFile != null);
 			else
 				SetLastGPS (null, false);
-			
+
 		}
-		
+
 		public void RebuildProfiles()
 		{
 			Menu transferSub = m_app.Profiles.BuildProfileTransferMenu();
@@ -121,22 +121,22 @@ namespace ocmgtk
 			Menu editSub = m_app.Profiles.BuildProfileEditMenu();
 			(TransferCachesAction.Proxies[0] as MenuItem).Submenu = transferSub;
 			(ReceiveFieldNotesAction.Proxies[0] as MenuItem).Submenu = receiveSub;
-			(EditGPSProfileAction.Proxies[0] as MenuItem).Submenu = editSub;			
+			(EditGPSProfileAction.Proxies[0] as MenuItem).Submenu = editSub;
 		}
-		
-		
+
+
 		private void RebuildLocations()
 		{
 			Menu locationSubMenu = m_app.Locations.BuildLocationlMenu();
 			(LocationsAction.Proxies[0] as MenuItem).Submenu = locationSubMenu;
 		}
-		
+
 		private void RebuildQuickFilters()
 		{
 			Menu qfiltersMenu = m_app.QuickFilterList.BuildQuickFilterMenu();
 			(QuickFilterAction.Proxies[0] as MenuItem).Submenu = qfiltersMenu;
 		}
-		
+
 		private void RebuildBookmarks()
 		{
 			Menu bookmarksMenu = m_app.Bookmarks.BuildBookmarkMenu();
@@ -146,32 +146,32 @@ namespace ocmgtk
 			Menu addSelMenu = m_app.Bookmarks.BuildAddToMenu(HandleSelectedToBookmark);
 			(AddSelectedCacheToAction.Proxies[0] as MenuItem).Submenu = addSelMenu;
 		}
-		
+
 		private void RebuildTools()
 		{
 			Menu toolsMenu = m_app.Tools.BuildEToolMenu();
 			(ExternalToolsAction.Proxies[0] as MenuItem).Submenu = toolsMenu;
 		}
 
-		
+
 		public void SaveWindowSettings()
 		{
 			Config.HBarPosition = mainHPane.Position;
 			Config.VBarPosition = mainVPane.Position;
 		}
-		
+
 		public void UpdateCounts(int visible, int found, int disabled, int mine, int total)
 		{
 			if (!String.IsNullOrEmpty(m_app.CacheStore.ActiveBookmarkList))
-				mainStatusBar.Push (mainStatusBar.GetContextId ("count"), 
-			                  String.Format (Catalog.GetString ("Showing {0} of {1} caches from {2}, {3} found, {4} unavailable/archived, {5} placed by me"), 
+				mainStatusBar.Push (mainStatusBar.GetContextId ("count"),
+			                  String.Format (Catalog.GetString ("Showing {0} of {1} caches from {2}, {3} found, {4} unavailable/archived, {5} placed by me"),
 			                                   visible, total, m_app.CacheStore.ActiveBookmarkList, found, disabled, mine));
 			else
-				mainStatusBar.Push (mainStatusBar.GetContextId ("count"), 
-			                  String.Format (Catalog.GetString ("Showing {0} of {1} caches, {2} found, {3} unavailable/archived, {4} placed by me"), 
+				mainStatusBar.Push (mainStatusBar.GetContextId ("count"),
+			                  String.Format (Catalog.GetString ("Showing {0} of {1} caches, {2} found, {3} unavailable/archived, {4} placed by me"),
 			                                   visible, total, found, disabled, mine));
 		}
-		
+
 		public void LogFind ()
 		{
 			if (Config.UseOfflineLogging) {
@@ -201,7 +201,7 @@ namespace ocmgtk
 			dlg.Hide ();
 			HandleCacheListSelectionChanged(this, new CacheEventArgs(CacheList.SelectedCache));
 		}
-		
+
 		private void LogCacheOnline ()
 		{
 			MarkAsFound ();
@@ -212,7 +212,7 @@ namespace ocmgtk
 			dlg.Run ();
 		}
 
-		
+
 		public bool CreateDB ()
 		{
 			FileChooserDialog dlg = new FileChooserDialog (Catalog.GetString ("Create database"), this, FileChooserAction.Save, Catalog.GetString ("Cancel"), ResponseType.Cancel, Catalog.GetString ("Save"), ResponseType.Accept);
@@ -250,21 +250,21 @@ namespace ocmgtk
 			dlg.Destroy ();
 			return false;
 		}
-		
+
 		private void ShowOpenDBDialog ()
 		{
 			try {
-				FileChooserDialog dlg = new FileChooserDialog (Catalog.GetString ("Open Database"), this, 
+				FileChooserDialog dlg = new FileChooserDialog (Catalog.GetString ("Open Database"), this,
 				                                               FileChooserAction.Open,
-				                                               Catalog.GetString ("Cancel"), 
-				                                               ResponseType.Cancel, Catalog.GetString ("Open"), 
+				                                               Catalog.GetString ("Cancel"),
+				                                               ResponseType.Cancel, Catalog.GetString ("Open"),
 				                                               ResponseType.Accept);
 				dlg.SetCurrentFolder (Config.DataDirectory);
 				FileFilter filter = new FileFilter ();
 				filter.Name = "OCM Databases";
 				filter.AddPattern ("*.ocm");
 				dlg.AddFilter (filter);
-				
+
 				if (dlg.Run () == (int)ResponseType.Accept) {
 					dlg.Hide ();
 					m_app.SetDBFile(dlg.Filename);
@@ -274,18 +274,18 @@ namespace ocmgtk
 				} else {
 					dlg.Hide ();
 				}
-				
+
 			} catch (Exception) {
 				return;
 			}
 
 		}
-		
+
 		public void SetLocation(Location loc)
 		{
 			SetLocation(loc.Name, loc.Latitude, loc.Longitude);
 		}
-		
+
 		public void SetLocation(string name, double lat, double lon)
 		{
 			m_app.CenterName = name;
@@ -293,24 +293,24 @@ namespace ocmgtk
 			m_app.CentreLon = lon;
 			ocmMapWidget.PanTo(m_app.CentreLat, m_app.CentreLon);
 			UpdateLocationLabel();
-			CacheList.Refresh();		
+			CacheList.Refresh();
 		}
-		
+
 		public void ResetToHome()
 		{
 			SetLocation(Catalog.GetString("Home"), Config.HomeLat, Config.HomeLon);
 		}
-		
+
 		private void UpdateLocationLabel()
 		{
-			LocationLabel.Text = String.Format (Catalog.GetString ("Centred on {0} ({1})"), 
+			LocationLabel.Text = String.Format (Catalog.GetString ("Centred on {0} ({1})"),
 			                                    m_app.CenterName, Utilities.getCoordString (m_app.CentreLat, m_app.CentreLon));
 		}
 		public void CorrectCoordinates()
 		{
 			CorrectCoordinates(-1,-1);
 		}
-		
+
 		public void CorrectCoordinates (double lat, double lon)
 		{
 			CorrectedCoordinatesDlg dlg = new CorrectedCoordinatesDlg();
@@ -336,7 +336,7 @@ namespace ocmgtk
 				CacheList.SelectCacheByName(cache.Name);
 			}
 		}
-		
+
 		public void ImportGPXFile (String filename, bool autoclose)
 		{
 			System.IO.FileStream fs = System.IO.File.OpenRead (filename);
@@ -354,7 +354,7 @@ namespace ocmgtk
 			CacheList.Refresh ();
 			fs.Close ();
 		}
-		
+
 		public void ImportZip (string filename)
 		{
 			String tempPath = System.IO.Path.GetTempPath ();
@@ -362,14 +362,14 @@ namespace ocmgtk
 			start.FileName = "unzip";
 			start.Arguments = "-o \"" + filename + "\" -d " + tempPath + "ocm_unzip";
 			Process unzip = Process.Start (start);
-			
+
 			while (!unzip.HasExited) {
-				// Do nothing until exit	
+				// Do nothing until exit
 			}
-			
+
 			ImportDirectory (tempPath + "ocm_unzip", true, Config.AutoCloseWindows);
 		}
-		
+
 		private void ImportDirectory (String path, bool delete, bool autoClose)
 		{
 			GPXParser parser = new GPXParser ();
@@ -385,7 +385,7 @@ namespace ocmgtk
 			pdlg.StartMulti (path, m_app.CacheStore, delete);
 			CacheList.Refresh ();
 		}
-		
+
 		public void AddBookmark ()
 		{
 			AddBookMarkDialog dlg = new AddBookMarkDialog();
@@ -395,7 +395,7 @@ namespace ocmgtk
 				RebuildBookmarks();
 			}
 		}
-		
+
 		private Dictionary<string, string> GetExportMappings ()
 		{
 			String path = System.Environment.GetFolderPath (System.Environment.SpecialFolder.ApplicationData);
@@ -420,16 +420,16 @@ namespace ocmgtk
 			ser.Serialize (fs, mapping);
 			fs.Close ();
 		}
-		
+
 		public void ExportGPX ()
 		{
 			GPXWriter writer = new GPXWriter ();
 			ExportProgressDialog edlg = new ExportProgressDialog (writer);
 			edlg.AutoClose = Config.AutoCloseWindows;
-			
-			
-			
-			
+
+
+
+
 			try {
 				ExportGPXDialog dlg = new ExportGPXDialog ();
 				dlg.SetCurrentFolder (System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments));
@@ -461,7 +461,7 @@ namespace ocmgtk
 					writer.WriteAttributes = dlg.IncludeAttributes;
 					writer.LogLimit = dlg.LogLimit;
 					edlg.Icon = this.Icon;
-					
+
 					Config.ExportAsPlainText = dlg.UsePlainText;
 					Config.ExportChildren = dlg.IncludeChildren;
 					Config.ExportCustomSymbols = dlg.UseMappings;
@@ -494,7 +494,7 @@ namespace ocmgtk
 			writer.MyFindsOwner = m_app.OwnerIDs[0];
 			ExportProgressDialog edlg = new ExportProgressDialog (writer);
 			edlg.AutoClose = Config.AutoCloseWindows;
-			
+
 			try {
 				FileChooserDialog dlg = new FileChooserDialog (Catalog.GetString (" Export Finds GPX File"), this, FileChooserAction.Save, Catalog.GetString ("Cancel"), ResponseType.Cancel, Catalog.GetString ("Export"), ResponseType.Accept);
 				dlg.SetCurrentFolder (System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments));
@@ -502,9 +502,9 @@ namespace ocmgtk
 				FileFilter filter = new FileFilter ();
 				filter.Name = "GPX Files";
 				filter.AddPattern ("*.gpx");
-				
+
 				dlg.AddFilter (filter);
-				
+
 				if (dlg.Run () == (int)ResponseType.Accept) {
 					dlg.Hide ();
 					edlg.Icon = this.Icon;
@@ -521,7 +521,7 @@ namespace ocmgtk
 			}
 		}
 
-		
+
 		public void ExportGarminPOI ()
 		{
 			ExportPOIDialog dlg = new ExportPOIDialog (Config);
@@ -564,7 +564,7 @@ namespace ocmgtk
 			}
 			dlg.Dispose ();
 		}
-		
+
 		public void DeleteCacheImages (String cachename)
 		{
 			string dir = m_app.CacheStore.StoreName;
@@ -575,14 +575,14 @@ namespace ocmgtk
 			if (Directory.Exists (dir))
 				Directory.Delete (dir, true);
 		}
-		
+
 		public void GrabImagesMulti()
 		{
 			string baseURL = String.Empty;
 			Dictionary<string,string[]> files = new Dictionary<string,string[]>();
 			foreach(Geocache cache in CacheList.UnfilteredCaches)
 			{
-				ScanForImages (files,cache);	
+				ScanForImages (files,cache);
 			}
 			if (files.Count <=0)
 			{
@@ -591,28 +591,28 @@ namespace ocmgtk
 				mdlg.Hide();
 				return;
 			}
-			
+
 			FileDownloadProgress dlg = new FileDownloadProgress();
 			dlg.Icon = this.Icon;
 			dlg.Start(files);
 			CacheInfo.SetCache(CacheList.SelectedCache);
 		}
-		
-#region GrabImagesMulti	
+
+#region GrabImagesMulti
 		private void ScanForImages (Dictionary<string, string[]> files, Geocache cache)
 		{
 			string baseURL = String.Empty;
 			if (cache.URL != null)
-				baseURL = cache.URL.Scheme + "://" + cache.URL.Host; 
+				baseURL = cache.URL.Scheme + "://" + cache.URL.Host;
 			const string IMG = "(<[Ii][Mm][Gg])([^sS][^rR]*)([Ss][Rr][Cc]\\s?=\\s?)\"([^\"]*)\"([^>]*>)";
 			MatchCollection matches = Regex.Matches(cache.LongDesc, IMG);
 			if (matches.Count == 0)
 				return;
-			
+
 			string imagesFolder = GetImagesFolder(cache);
 			if (!Directory.Exists(imagesFolder))
 				Directory.CreateDirectory(imagesFolder);
-			
+
 			foreach(Match match in matches)
 			{
 				string url = match.Groups[4].Value;
@@ -624,26 +624,26 @@ namespace ocmgtk
 						url = baseURL + "/" + url;
 				}
 				string key = cache.Name + url;
-				if (!files.ContainsKey(key))	                     
+				if (!files.ContainsKey(key))
 					files.Add(key, new string[]{url, imagesFolder});
 			}
 			return;
 		}
-		
+
 		private string GetImagesFolder(Geocache cache)
 		{
 			string dbName = GetDBName ();
 			return m_app.AppConfig.DataDirectory + "/ocm_images/" + dbName + "/" + cache.Name;
 		}
-		
+
 		private string GetDBName ()
 		{
 			string dbFile = m_app.CacheStore.StoreName;
 			return Utilities.GetShortFileNameNoExtension(dbFile);
 		}
 #endregion
-		
-		
+
+
 		/// <summary>
 		/// Opens the Add Combination Filter Dialog
 		/// </summary>
@@ -658,8 +658,8 @@ namespace ocmgtk
 				CacheList.Refresh();
 			}
 		}
-		
-		
+
+
 		/// <summary>
 		/// Downloads field notes from a device
 		/// </summary>
@@ -669,14 +669,14 @@ namespace ocmgtk
 			dlg.LastScan = Config.LastGPSFieldNoteScan;
 			dlg.LastScanTD = m_app.Profiles.GetActiveProfile ().LastFieldNoteScan;
 			dlg.Icon = this.Icon;
-			if ((int)ResponseType.Ok == dlg.Run ()) 
+			if ((int)ResponseType.Ok == dlg.Run ())
 			{
 				dlg.Hide ();
 				GPSProfile prof =  m_app.Profiles.GetActiveProfile ();
 				FieldNotesProgress fprog = new FieldNotesProgress (this);
 				fprog.Icon = this.Icon;
 				DateTime latest = fprog.ProcessFieldNotes (prof, dlg.LastScan, m_app.OwnerIDs[0]);
-				if (latest == DateTime.MinValue) 
+				if (latest == DateTime.MinValue)
 				{
 					return;
 				}
@@ -687,7 +687,7 @@ namespace ocmgtk
 			dlg.Hide ();
 			dlg.Dispose ();
 		}
-		
+
 		/// <summary>
 		/// Shows the Field Notes Viewer
 		/// </summary>
@@ -695,7 +695,7 @@ namespace ocmgtk
 		{
 			ShowFieldNotes(false);
 		}
-		
+
 		/// <summary>
 		/// Shows the Field Notes Viewer
 		/// </summary>
@@ -710,7 +710,7 @@ namespace ocmgtk
 				mdlg.Hide ();
 				return;
 			}
-			
+
 			List<CacheLog> logs = FieldNotesHandler.GetLogs (Config.FieldNotesFile, m_app.OwnerIDs[0]);
 			OffLineLogViewer dlg = new OffLineLogViewer (this);
 			dlg.NeedsRefresh = forceRefresh;
@@ -720,11 +720,11 @@ namespace ocmgtk
 			if (dlg.NeedsRefresh)
 				CacheList.Refresh();
 		}
-		
+
 		public void ProcessOfflineLog (Geocache cache, CacheLog log, bool ftf)
 		{
 			FieldNotesHandler.WriteToFile (log, Config.FieldNotesFile);
-			
+
 			if (cache == null)
 				return;
 			m_app.CacheStore.AddLog (log.CacheCode, log);
@@ -743,7 +743,7 @@ namespace ocmgtk
 			}
 		}
 
-		
+
 		public void ShowPreferences ()
 		{
 			Preferences dlg = new Preferences (Config, m_app.QuickFilterList);
@@ -769,7 +769,7 @@ namespace ocmgtk
 			}
 			dlg.Dispose ();
 		}
-		
+
 		public void AddGPSProfile ()
 		{
 			GPSConfiguration dlg = new GPSConfiguration ();
@@ -842,13 +842,13 @@ namespace ocmgtk
 					confirm.Dispose ();
 					Config.GPSProf = null;
 				}
-				
+
 				m_app.Profiles.DeleteProfile (dlg.ItemToDelete);
 				RebuildProfiles();
 			}
 		}
 
-		
+
 		public void SendToGPS ()
 		{
 			if (m_app.Profiles.GetActiveProfile () == null) {
@@ -866,12 +866,12 @@ namespace ocmgtk
 			dlg.AutoClose = Config.AutoCloseWindows;
 			dlg.Start (CacheList.UnfilteredCaches, m_app.Profiles.GetActiveProfile (), m_app.CacheStore);
 		}
-		
+
 		public void DeleteSelectedCache ()
 		{
 			String name = CacheList.SelectedCache.Name;
-			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo, 
-			                                       String.Format (Catalog.GetString ("Are you sure you want to delete {0}?"), 
+			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo,
+			                                       String.Format (Catalog.GetString ("Are you sure you want to delete {0}?"),
 			                                                      name));
 			if ((int)ResponseType.Yes == dlg.Run ()) {
 				dlg.Hide();
@@ -881,14 +881,14 @@ namespace ocmgtk
 			}
 			dlg.Hide ();
 		}
-		
+
 		public void OpenInQLandKarte ()
 		{
 			GPXWriter writer = new GPXWriter ();
 			String tempPath = System.IO.Path.GetTempPath ();
 			String tempFile = tempPath + "ocm_export.gpx";
 			ExportProgressDialog dlg = new ExportProgressDialog (writer);
-			
+
 						/*Connection DbusConnection = Bus.Session;
 			IQLandkarteGT ql = DbusConnection.GetObject<IQLandkarteGT> ("org.qlandkarte.dbus", new ObjectPath ("QLandkarteGT"));
 			System.Console.WriteLine("Connected");
@@ -915,7 +915,7 @@ namespace ocmgtk
 			dlg.Icon = this.Icon;
 			dlg.Start (tempFile, cache, GPSProfileList.GetDefaultMappings (), m_app.CacheStore);
 		}
-		
+
 		public void CopyToDB ()
 		{
 			CopyMoveDialog dlg = new CopyMoveDialog ();
@@ -942,9 +942,9 @@ namespace ocmgtk
 				cp.Start (dlg.Filename, true, dlg.Mode, this);
 				CacheList.Refresh ();
 			}
-			
+
 		}
-		
+
 		public void SetLastGPS(string name, bool canReceive)
 		{
 			if (name != null)
@@ -967,7 +967,7 @@ namespace ocmgtk
 				ReceiveFieldNotesFromLastUsedAction.Sensitive = false;
 			}
 		}
-		
+
 		private static void DeregisterBus ()
         {
           try
@@ -982,7 +982,7 @@ namespace ocmgtk
              System.Console.WriteLine("WARNING: Could not deregister from DBUS");
            }
         }
-		
+
 #region Event Handlers
 		protected virtual void OnDeleteWindow (object o, Gtk.DeleteEventArgs args)
 		{
@@ -995,7 +995,7 @@ namespace ocmgtk
 			Config.WindowWidth = args.Allocation.Width;
 			Config.WindowHeight = args.Allocation.Height;
 		}
-		
+
 		void HandleCacheListRefreshPulse (object sender, CacheEventArgs args)
 		{
 			m_pulseCount++;
@@ -1007,7 +1007,7 @@ namespace ocmgtk
 				OCMApp.UpdateGUIThread();
 			}
 		}
-		
+
 		void HandleAllToBookmark(object sender, EventArgs args)
 		{
 			//##AP Action action = sender as Action;
@@ -1021,14 +1021,14 @@ namespace ocmgtk
 			}
 			m_app.CacheStore.CompleteUpdate();
 		}
-		
+
 		void HandleSelectedToBookmark(object sender, EventArgs args)
 		{
 			//##AP Action action = sender as Action;
 			Gtk.Action action = sender as Gtk.Action;
 			string bookmark = action.Label;
 			Geocache cache = CacheList.SelectedCache;
-			m_app.CacheStore.AddBoormarkEntry(bookmark, cache.Name);	
+			m_app.CacheStore.AddBoormarkEntry(bookmark, cache.Name);
 		}
 
 		void HandleCacheListRefreshEnd (object sender, RefreshCompleteArgs args)
@@ -1050,7 +1050,7 @@ namespace ocmgtk
 			this.mainHPane.Sensitive = false;
 			this.mainMenuBar.Sensitive = false;
 			ocmMapWidget.ClearCaches();
-			mainStatusBar.Push (mainStatusBar.GetContextId ("refilter"), 
+			mainStatusBar.Push (mainStatusBar.GetContextId ("refilter"),
 			                    Catalog.GetString("Retrieving caches, please wait.."));
 			m_pulseCount = 0;
 			statusProgressBar.Visible = true;
@@ -1061,27 +1061,27 @@ namespace ocmgtk
 		{
 			ShowOpenDBDialog ();
 		}
-				
+
 		protected virtual void OnNewDatabase (object sender, System.EventArgs e)
 		{
 			CreateDB();
 		}
-		
+
 		protected virtual void OnCompactDatabase (object sender, System.EventArgs e)
 		{
 			m_app.CacheStore.CompactStore();
-			
+
 		}
-		
+
 		protected virtual void OnQuit (object sender, System.EventArgs e)
 		{
 			DeregisterBus();
 			m_app.End();
 		}
-		
-		
+
+
 		void HandleCacheListSelectionChanged (object sender, CacheEventArgs args)
-		{	
+		{
 			if (this.GdkWindow != null)
 				this.GdkWindow.Cursor = Cursor.NewFromName(this.Display, "left_ptr_watch");
 			OCMApp.UpdateGUIThread();
@@ -1103,7 +1103,7 @@ namespace ocmgtk
 					this.GdkWindow.Cursor = ARROWCURSOR;
 				return;
 			}
-	
+
 			CacheAction.Sensitive = true;
 			GrabImagesAction1.Sensitive = true;
 			printAction.Sensitive = true;
@@ -1123,12 +1123,12 @@ namespace ocmgtk
 				RemoveSelectedCacheFromBookmarkListAction.Sensitive = true;
 			else
 				RemoveSelectedCacheFromBookmarkListAction.Sensitive = false;
-			ocmMapWidget.SetCache(cache);	
+			ocmMapWidget.SetCache(cache);
 			OCMApp.UpdateGUIThread();
 			if (this.GdkWindow != null)
 				this.GdkWindow.Cursor = ARROWCURSOR;
 		}
-		
+
 		private void SetFilterFlags ()
 		{
 			if (m_app.CacheStore.CombinationFilter != null)
@@ -1145,13 +1145,13 @@ namespace ocmgtk
 				ClearAdvancedFiltersAction.Sensitive = true;
 			else
 				ClearAdvancedFiltersAction.Sensitive = false;
-			if (CacheList.HasBasicFilters || m_app.CacheStore.AdvancedFilters != null 
+			if (CacheList.HasBasicFilters || m_app.CacheStore.AdvancedFilters != null
 			    || m_app.CacheStore.CombinationFilter != null)
 				ClearAllFiltersAction.Sensitive = true;
 			else
 				ClearAllFiltersAction.Sensitive = false;
 		}
-		
+
 
 		protected virtual void OnToggleShowNearby (object sender, System.EventArgs e)
 		{
@@ -1159,13 +1159,13 @@ namespace ocmgtk
 			ocmMapWidget.ShowNearby = ChildWaypointsAction.Sensitive;
 			ocmMapWidget.Refresh();
 		}
-		
+
 		protected virtual void OnToggleSelectedCache (object sender, System.EventArgs e)
 		{
 			ocmMapWidget.ShowAllChildren = AllWaypointsAction.Active;
 			ocmMapWidget.Refresh();
 		}
-		
+
 		protected virtual void OnPrintCache (object sender, System.EventArgs e)
 		{
 			CachePrinter printer = new CachePrinter ();
@@ -1176,7 +1176,7 @@ namespace ocmgtk
 		{
 			AddAdvancedFilter ();
 		}
-		
+
 		public void AddAdvancedFilter ()
 		{
 			FilterDialog dlg = new FilterDialog();
@@ -1188,26 +1188,26 @@ namespace ocmgtk
 				CacheList.Refresh();
 			}
 		}
-		
+
 		protected virtual void OnWikiClick (object sender, System.EventArgs e)
 		{
 			Process.Start ("http://sourceforge.net/apps/mediawiki/opencachemanage/");
 		}
-		
+
 		protected virtual void OnForumsClick (object sender, System.EventArgs e)
 		{
 			Process.Start("http://ocm.dafb-o.de/index.php");
 		}
-		
+
 		protected virtual void OnAboutClick (object sender, System.EventArgs e)
 		{
-			AboutDialog dialog = new AboutDialog ();		
-			dialog.ProgramName = "Open Cache Manager";			
-			dialog.Icon = this.Icon;			
-			dialog.Version = OCMApp.GetOCMVersion();			
-			dialog.Logo =  new Gdk.Pixbuf ("./icons/scalable/OCMLogo.svg", 96, 96);			
-			dialog.Website = "http://opencachemanage.sourceforge.net/";			
-			dialog.Copyright = "Copyright Kyle Campbell (c) 2010-2013";	
+			AboutDialog dialog = new AboutDialog ();
+			dialog.ProgramName = "Open Cache Manager";
+			dialog.Icon = this.Icon;
+			dialog.Version = OCMApp.GetOCMVersion();
+			dialog.Logo =  new Gdk.Pixbuf ("./icons/scalable/OCMLogo.svg", 96, 96);
+			dialog.Website = "http://www.andreas-peters.net/";
+			dialog.Copyright = "Copyright Kyle Campbell (c) 2010-2013\nCopyright Andreas Peters (c) 2015-2016";	
 			System.IO.StreamReader reader = new System.IO.StreamReader(new System.IO.FileStream("licence/Licence.txt",System.IO.FileMode.Open,System.IO.FileAccess.Read));
 			dialog.License = reader.ReadToEnd();
 			reader.Close();
@@ -1215,29 +1215,29 @@ namespace ocmgtk
 				"Harrie Klomp - Dutch Translation" , "Thor Dekov Buur - Danish Translation",
 				"Michael Massoth/Florian Plähn/Maik Bischoff - German Translation",
 				"Josef Kulhánek - Czech Translation","Vicen - Spanish Translation",
-				"Per Holmberg - Swedish Translation"};		
+				"Per Holmberg - Swedish Translation"};
 			dialog.Run ();
 			dialog.Hide();
 
 		}
-		
+
 		protected virtual void OnChangeHistoryClick (object sender, System.EventArgs e)
 		{
 			ChangeHistory dlg = new ChangeHistory();
 			dlg.Run();
 		}
-		
+
 		protected virtual void OnCheckUpdatesClick (object sender, System.EventArgs e)
 		{
 			string ver;
 			if (m_app.UpdatesAvailable(out ver))
 			{
 				MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Info, ButtonsType.YesNo, Catalog.GetString ("A new version \"{0}\" of OCM is available" + "\nWould you like to go to the download page now?"), ver);
-				if ((int)ResponseType.Yes == dlg.Run ()) 
+				if ((int)ResponseType.Yes == dlg.Run ())
 				{
 					dlg.Hide ();
 					Process.Start ("http://sourceforge.net/projects/opencachemanage/files/");
-				} 
+				}
 				else
 					dlg.Hide ();
 			}
@@ -1249,7 +1249,7 @@ namespace ocmgtk
 
 			}
 		}
-		
+
 		public void ModifyCache(Geocache cache)
 		{
 			cache.Distance = Utilities.calculateDistance(m_app.CentreLat, cache.Lat, m_app.CentreLon, cache.Lon);
@@ -1257,48 +1257,48 @@ namespace ocmgtk
 			m_app.CacheStore.AddWaypointOrCache(cache, false, false);
 			HandleCacheListSelectionChanged(this, new CacheEventArgs(cache));
 		}
-		
+
 		public void Refresh()
 		{
 			HandleCacheListSelectionChanged(this, new CacheEventArgs(CacheList.SelectedCache));
 		}
-		
+
 		public void RefreshCacheList()
 		{
 			CacheList.Refresh();
 		}
-		
-		
+
+
 		protected virtual void OnOCMHomeClick (object sender, System.EventArgs e)
 		{
 			Process.Start ("http://opencachemanage.sourceforge.net/");
 		}
-		
+
 		protected virtual void OnGCHomeClick (object sender, System.EventArgs e)
 		{
 			Process.Start ("http://www.geocaching.com");
 		}
-		
+
 		protected virtual void OnGCProfileClick (object sender, System.EventArgs e)
 		{
 			Process.Start ("http://www.geocaching.com/my");
 		}
-		
+
 		protected virtual void OnGCAccountClick (object sender, System.EventArgs e)
 		{
 			Process.Start ("http://www.geocaching.com/account/default.aspx");
 		}
-		
+
 		protected virtual void OnGCPocketQueryClick (object sender, System.EventArgs e)
 		{
 			Process.Start ("http://www.geocaching.com/pocket/default.aspx");
 		}
-		
+
 		protected virtual void OnGCStatsClick (object sender, System.EventArgs e)
 		{
 			Process.Start("http://www.geocaching.com/my/statistics.aspx");
 		}
-		
+
 		protected virtual void OnGCFindClick (object sender, System.EventArgs e)
 		{
 			Process.Start ("http://www.geocaching.com/seek/default.aspx");
@@ -1308,17 +1308,17 @@ namespace ocmgtk
 		{
 			Process.Start ("http://www.terracaching.com");
 		}
-		
+
 		protected virtual void OnTCTraditionalClick (object sender, System.EventArgs e)
 		{
 			Process.Start ("http://www.terracaching.com/tdl.cgi?NF=1");
 		}
-		
+
 		protected virtual void OnTCLocationlessClick (object sender, System.EventArgs e)
 		{
 			Process.Start ("http://www.terracaching.com/tdl.cgi?NF=1&L=1");
 		}
-		
+
 		protected virtual void OnOCCountryList (object sender, System.EventArgs e)
 		{
 			Process.Start("http://opencaching.eu");
@@ -1328,22 +1328,22 @@ namespace ocmgtk
 		{
 			Process.Start("http://www.gpsbabel.org");
 		}
-		
+
 		protected virtual void OnGPSDClick (object sender, System.EventArgs e)
 		{
 			Process.Start("http://gpsd.berlios.de");
 		}
-		
+
 		protected virtual void OnNaviHome (object sender, System.EventArgs e)
 		{
 			Process.Start("http://www.navicache.com");
 		}
-		
+
 		protected virtual void OnMyNavi (object sender, System.EventArgs e)
 		{
 			Process.Start("http://www.navicache.com/cgi-bin/db/MyNaviCacheHome.pl");
 		}
-		
+
 		protected virtual void OnModifyCache (object sender, System.EventArgs e)
 		{
 			m_app.EditCache ();
@@ -1369,7 +1369,7 @@ namespace ocmgtk
 		{
 			MarkAsFound ();
 		}
-		
+
 		public void MarkAsFound ()
 		{
 			Geocache cache = CacheList.SelectedCache;
@@ -1391,7 +1391,7 @@ namespace ocmgtk
 				CacheList.FoundCount += 1;
 			HandleCacheListSelectionChanged(this, new CacheEventArgs(cache));
 		}
-		
+
 		private void GenerateFindLog (MarkFoundDialog dlg, Geocache cache, bool isDNF)
 		{
 			m_app.LoggingDate = dlg.LogDate;
@@ -1407,17 +1407,17 @@ namespace ocmgtk
 			log.LogKey = cache.Name + log.LogDate.ToFileTime ().ToString ();
 			m_app.CacheStore.AddLog (cache.Name, log);
 		}
-		
+
 		protected virtual void OnMarkFTF (object sender, System.EventArgs e)
 		{
 			MarkAsFTF ();
 		}
-		
+
 		public void MarkAsFTF ()
 		{
 			Geocache cache = CacheList.SelectedCache;
 			MarkFoundDialog dlg = new MarkFoundDialog ();
-			bool alreadyFound = cache.Found;			
+			bool alreadyFound = cache.Found;
 			dlg.Title = Catalog.GetString ("Mark First to Find");
 			dlg.DialogLabel = String.Format ("Do you wish to mark {0} as first to find?", cache.Name);
 			dlg.LogDate = m_app.LoggingDate;
@@ -1435,12 +1435,12 @@ namespace ocmgtk
 				CacheList.FoundCount += 1;
 			HandleCacheListSelectionChanged(this, new CacheEventArgs(cache));
 		}
-		
+
 		protected virtual void OnMarkDNF (object sender, System.EventArgs e)
 		{
 			MarkAsDNF ();
 		}
-		
+
 		public void MarkAsDNF ()
 		{
 			Geocache cache = CacheList.SelectedCache;
@@ -1462,12 +1462,12 @@ namespace ocmgtk
 				CacheList.FoundCount -= 1;
 			HandleCacheListSelectionChanged(this, new CacheEventArgs(cache));
 		}
-		
+
 		protected virtual void OnMarkUnfound (object sender, System.EventArgs e)
 		{
 			MarkUnfound ();
 		}
-		
+
 		public void MarkUnfound ()
 		{
 			Geocache cache = CacheList.SelectedCache;
@@ -1489,15 +1489,15 @@ namespace ocmgtk
 				CacheList.FoundCount -= 1;
 			HandleCacheListSelectionChanged(this, new CacheEventArgs(cache));
 		}
-		
+
 		protected virtual void OnMarkDisabled (object sender, System.EventArgs e)
 		{
 			MarkDisabled ();
 		}
-		
+
 		public void MarkDisabled ()
 		{
-			
+
 			Geocache cache = CacheList.SelectedCache;
 			bool alreadyDisabled = (cache.Archived || !cache.Available)? true:false;
 			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as disabled?");
@@ -1511,12 +1511,12 @@ namespace ocmgtk
 			}
 			dlg.Hide ();
 		}
-		
+
 		protected virtual void OnMarkArchived (object sender, System.EventArgs e)
 		{
 			MarkArchived ();
 		}
-		
+
 		public void MarkArchived ()
 		{
 			Geocache cache = CacheList.SelectedCache;
@@ -1532,12 +1532,12 @@ namespace ocmgtk
 			}
 			dlg.Hide ();
 		}
-		
+
 		protected virtual void OnMarkAvailable (object sender, System.EventArgs e)
 		{
 			MarkAvailable ();
 		}
-		
+
 		public void MarkAvailable ()
 		{
 			Geocache cache = CacheList.SelectedCache;
@@ -1553,18 +1553,18 @@ namespace ocmgtk
 			}
 			dlg.Hide ();
 		}
-		
+
 		protected virtual void OnAddChildWaypoint (object sender, System.EventArgs e)
 		{
 			m_app.AddChildWaypoint();
 		}
-		
+
 		protected virtual void OnUpClick (object sender, System.EventArgs e)
 		{
 			mainVPane.Position = 0;
 			UpdateMapButtons();
 		}
-		
+
 		protected virtual void OnDownClick (object sender, System.EventArgs e)
 		{
 			mapUpButton.Sensitive = true;
@@ -1576,26 +1576,26 @@ namespace ocmgtk
 			{
 				mainVPane.Position = 285;
 			}
-			else 
+			else
 			{
 				mainVPane.Position = 385;
 			}
 			UpdateMapButtons();
 		}
-		
+
 		protected virtual void OnRemoveFromList (object sender, System.EventArgs e)
 		{
 			Geocache cache = CacheList.SelectedCache;
 			m_app.CacheStore.RemoveBookmarkEntry(m_app.CacheStore.ActiveBookmarkList, cache.Name);
 			CacheList.UnfilteredCaches.Remove(cache);
 		}
-		
+
 		protected virtual void OnCreateBookmarkList (object sender, System.EventArgs e)
 		{
 			AddBookmark ();
 		}
-		
-		
+
+
 		protected virtual void OnDeleteBookmarkList (object sender, System.EventArgs e)
 		{
 			DeleteItem dlg = new DeleteItem(m_app.Bookmarks);
@@ -1605,13 +1605,13 @@ namespace ocmgtk
 				RebuildBookmarks();
 			}
 		}
-		
+
 
 		protected virtual void OnAddLocation (object sender, System.EventArgs e)
 		{
 			AddLocation (ocmMapWidget.MapLat, ocmMapWidget.MapLon);
 		}
-		
+
 		public void AddLocation (double lat, double lon)
 		{
 			AddLocationDialog dlg = new AddLocationDialog();
@@ -1636,7 +1636,7 @@ namespace ocmgtk
 				SetLocation(dlg.NewLocation);
 			}
 		}
-		
+
 		protected virtual void OnDeleteLocation (object sender, System.EventArgs e)
 		{
 			DeleteItem dlg = new DeleteItem(m_app.Locations);
@@ -1648,29 +1648,29 @@ namespace ocmgtk
 			}
 			RebuildLocations();
 		}
-	
+
 		protected virtual void OnPanToCentre (object sender, System.EventArgs e)
 		{
 			ocmMapWidget.PanTo(m_app.CentreLat, m_app.CentreLon);
 		}
-		
+
 		protected virtual void OnPanToSelected (object sender, System.EventArgs e)
 		{
 			Geocache cache = CacheList.SelectedCache;
 			ocmMapWidget.PanTo(cache.Lat, cache.Lon);
 		}
-		
+
 		protected virtual void OnZoomToCentre (object sender, System.EventArgs e)
 		{
 			ocmMapWidget.ZoomTo(m_app.CentreLat, m_app.CentreLon);
 		}
-		
+
 		protected virtual void OnZoomToSelected (object sender, System.EventArgs e)
 		{
 			Geocache cache = CacheList.SelectedCache;
 			ocmMapWidget.ZoomTo(cache.Lat, cache.Lon);
 		}
-			
+
 		protected virtual void OnCombinationClick (object sender, System.EventArgs e)
 		{
 			AddComboFilter ();
@@ -1681,20 +1681,20 @@ namespace ocmgtk
 			m_app.CacheStore.AdvancedFilters = null;
 			CacheList.Refresh();
 		}
-		
+
 		protected virtual void OnClearCombo (object sender, System.EventArgs e)
 		{
 			m_app.CacheStore.CombinationFilter = null;
 			CacheList.Refresh();
 		}
-		
-		
+
+
 		protected virtual void OnClearAll (object sender, System.EventArgs e)
 		{
 			CacheList.ApplyQuickFilter(QuickFilter.ALL_FILTER);
 		}
-		
-		
+
+
 		protected virtual void OnImportGPX (object sender, System.EventArgs e)
 		{
 			ImportDialog dlg = new ImportDialog (this);
@@ -1717,7 +1717,7 @@ namespace ocmgtk
 			}
 			dlg.Destroy ();
 		}
-		
+
 		protected virtual void OnImportDirectory (object sender, System.EventArgs e)
 		{
 			ImportDirectoryDialog dlg = new ImportDirectoryDialog (this);
@@ -1738,13 +1738,13 @@ namespace ocmgtk
 			}
 			dlg.Destroy ();
 		}
-		
+
 		private static void RegisterRecentFile (String filename)
 		{
 			RecentManager manager = RecentManager.Default;
 			manager.AddItem ("file://" + filename);
 		}
-		
+
 		protected virtual void OnSaveQuickFilter (object sender, System.EventArgs e)
 		{
 			AddBookMarkDialog dlg = new AddBookMarkDialog ();
@@ -1772,74 +1772,74 @@ namespace ocmgtk
 				RebuildQuickFilters();
 			}
 		}
-	
+
 		protected virtual void OnViewFieldNotes (object sender, System.EventArgs e)
 		{
 			ShowFieldNotes ();
 		}
-	
+
 		protected virtual void OnExportGPX (object sender, System.EventArgs e)
 		{
 			ExportGPX();
 		}
-	
+
 		protected virtual void OnExportPOI (object sender, System.EventArgs e)
 		{
 			ExportGarminPOI();
 		}
-		
+
 		protected virtual void OnDelete (object sender, System.EventArgs e)
 		{
 			DeleteSelectedCache ();
 		}
-	
+
 		protected virtual void OnPreferences (object sender, System.EventArgs e)
 		{
 			ShowPreferences();
 		}
-	
+
 		protected virtual void OnDeselect (object sender, System.EventArgs e)
 		{
 			CacheList.DeselectAll();
 		}
-	
+
 		protected virtual void OnAddProfile (object sender, System.EventArgs e)
 		{
 			AddGPSProfile();
 		}
-		
+
 		protected virtual void OnDeleteProfile (object sender, System.EventArgs e)
 		{
 			DeleteGPSProfile();
 		}
-	
+
 		protected virtual void OnViewInQLGT (object sender, System.EventArgs e)
 		{
 			OpenInQLandKarte();
 		}
-		
+
 		protected virtual void OnViewSelectedInQLGT (object sender, System.EventArgs e)
 		{
 			OpenSelectedCacheInQLandKarte();
 		}
-		
+
 		protected virtual void OnConfigure (object sender, System.EventArgs e)
 		{
 			ConfigureEToolsDlg dlg = new ConfigureEToolsDlg (m_app.Tools);
 			dlg.Run ();
 			RebuildTools();
 		}
-	
+
 		protected virtual void OnLogToFile (object sender, System.EventArgs e)
 		{
 			Config.UseOfflineLogging = LogToFieldNotesFileAction.Active;
 		}
-		
+
 		protected virtual void OnLogFind (object sender, System.EventArgs e)
 		{
 			LogFind();
 		}
-		
+
 
 		protected virtual void OnDeleteAll (object sender, System.EventArgs e)
 		{
@@ -1855,29 +1855,29 @@ namespace ocmgtk
 				dlg.Hide ();
 			}
 		}
-		
-	
+
+
 		protected virtual void OnCopy (object sender, System.EventArgs e)
 		{
 			CopyToDB();
 		}
-		
+
 		protected virtual void OnMove (object sender, System.EventArgs e)
 		{
 			MoveToDB();
 		}
-		
-		
+
+
 		protected virtual void OnTransferLast (object sender, System.EventArgs e)
 		{
 			SendToGPS();
 		}
-		
+
 		protected virtual void OnReceiveLast (object sender, System.EventArgs e)
 		{
 			ReceiveGPSFieldNotes();
 		}
-	
+
 		protected virtual void OnFullToggle (object sender, System.EventArgs e)
 		{
 			if (FullScreenAction.Active)
@@ -1885,8 +1885,8 @@ namespace ocmgtk
 			else
 				Unfullscreen();
 		}
-		
-		
+
+
 		public void UpdateMapButtons()
 		{
 			if (mainVPane.Position == 0)
@@ -1912,15 +1912,15 @@ namespace ocmgtk
 			}
 			CacheInfo.QueueDraw();
 		}
-		
+
 
 		protected virtual void OnMinClick (object sender, System.EventArgs e)
 		{
 			mainVPane.Position = mainVPane.MaxPosition - 20;
 			UpdateMapButtons();
 		}
-		
-		
+
+
 		protected virtual void onMaxClick (object sender, System.EventArgs e)
 		{
 			mainVPane.Position = 0;
@@ -1937,18 +1937,18 @@ namespace ocmgtk
 		{
 			CacheInfo.GrabImages();
 		}
-	
+
 		protected virtual void OnMapPopupToggle (object sender, System.EventArgs e)
 		{
 			CacheMap.SetPopups(MapPopupsAction.Active);
 		}
-	
+
 		protected virtual void OnCleanup (object sender, System.EventArgs e)
 		{
 			CleanupAssistant wizard = new CleanupAssistant(m_app, this);
 			wizard.Show();
 		}
-	
+
 		protected virtual void OnReduceLogs (object sender, System.EventArgs e)
 		{
 			ReduceLogsDialog dlg = new ReduceLogsDialog();
@@ -1963,7 +1963,7 @@ namespace ocmgtk
 				{
 					if (i >= dlg.LogLimit)
 						keys_to_delete.Add(logs[i].LogKey);
-					
+
 				}
 				m_app.CacheStore.PurgeLogsByKey(keys_to_delete.ToArray());
 			}
@@ -1984,13 +1984,13 @@ namespace ocmgtk
 		{
 			m_app.NewCache ();
 		}
-#endregion	
-		
-		
-		
-		
-		
-		
-		
+#endregion
+
+
+
+
+
+
+
 	}
 }
