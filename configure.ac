@@ -1,7 +1,7 @@
 dnl Warning: This is an automatically generated file, do not edit!
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ([2.54])
-AC_INIT([OpenCacheManager], [1.0.14])
+AC_INIT([OpenCacheManager], [1.0.17])
 AM_INIT_AUTOMAKE([foreign])
 AM_MAINTAINER_MODE
 
