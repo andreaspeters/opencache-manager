@@ -682,15 +682,15 @@ namespace ocmgtk
 			if (args != null)
 				if (args.Length > 0)
 					m_file = args[0];
-			//System.Console.WriteLine("Path is " + "/usr/share/locale");
+			//System.Console.WriteLine("Path is " + "/usr/local/share/locale");
 			// Set the localeDirectory right both for developement or for installed versions
-			String localeDirectory = "/usr/share/locale";
+			String localeDirectory = "/usr/local/share/locale";
 			if (localeDirectory.Contains("@" + "expanded_datadir" + "@")) {
 				localeDirectory = "./locale";
 			}
 			Mono.Unix.Catalog.Init ("opencachemanager", localeDirectory);
 			//Mono.Unix.Catalog.Init ("opencachemanager", "./locale");
-			//Mono.Unix.Catalog.Init ("opencachemanager", "/usr/share/locale");
+			//Mono.Unix.Catalog.Init ("opencachemanager", "/usr/local/share/locale");
 			Config config = new Config();
 			bool runWizard = !config.WizardDone;
 			
