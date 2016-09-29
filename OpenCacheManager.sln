@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ocmengine", "ocmengine\ocmengine.csproj", "{A742EB76-61CC-451E-93AA-D9BC7407868C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ocm-gtk", "ocm-gtk\ocm-gtk.csproj", "{56CC4363-E847-4529-AF7D-0252DA748F76}"
+EndProject
+Project("{9344bdbb-3e7f-41fc-a0dd-8665d75ee146}") = "Translations", "Translations\Translations.mdproj", "{E733B1D3-94EF-4B2D-B99D-6896FC4118EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCMTest", "OCMTest\OCMTest.csproj", "{24170B3E-3C9A-4BA3-A0CA-4A3E076FB24E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldAddin", "HelloWorldAddin\HelloWorldAddin.csproj", "{CC84ED8C-D2CB-466B-A1F0-536212521046}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Release_Translated|Any CPU = Release_Translated|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24170B3E-3C9A-4BA3-A0CA-4A3E076FB24E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24170B3E-3C9A-4BA3-A0CA-4A3E076FB24E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24170B3E-3C9A-4BA3-A0CA-4A3E076FB24E}.Release_Translated|Any CPU.ActiveCfg = Debug|Any CPU
+		{24170B3E-3C9A-4BA3-A0CA-4A3E076FB24E}.Release_Translated|Any CPU.Build.0 = Debug|Any CPU
+		{24170B3E-3C9A-4BA3-A0CA-4A3E076FB24E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24170B3E-3C9A-4BA3-A0CA-4A3E076FB24E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56CC4363-E847-4529-AF7D-0252DA748F76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56CC4363-E847-4529-AF7D-0252DA748F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56CC4363-E847-4529-AF7D-0252DA748F76}.Release_Translated|Any CPU.ActiveCfg = Release_Translated|Any CPU
+		{56CC4363-E847-4529-AF7D-0252DA748F76}.Release_Translated|Any CPU.Build.0 = Release_Translated|Any CPU
+		{56CC4363-E847-4529-AF7D-0252DA748F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56CC4363-E847-4529-AF7D-0252DA748F76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A742EB76-61CC-451E-93AA-D9BC7407868C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A742EB76-61CC-451E-93AA-D9BC7407868C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A742EB76-61CC-451E-93AA-D9BC7407868C}.Release_Translated|Any CPU.ActiveCfg = Release_Translated|Any CPU
+		{A742EB76-61CC-451E-93AA-D9BC7407868C}.Release_Translated|Any CPU.Build.0 = Release_Translated|Any CPU
+		{A742EB76-61CC-451E-93AA-D9BC7407868C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A742EB76-61CC-451E-93AA-D9BC7407868C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC84ED8C-D2CB-466B-A1F0-536212521046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC84ED8C-D2CB-466B-A1F0-536212521046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC84ED8C-D2CB-466B-A1F0-536212521046}.Release_Translated|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC84ED8C-D2CB-466B-A1F0-536212521046}.Release_Translated|Any CPU.Build.0 = Debug|Any CPU
+		{CC84ED8C-D2CB-466B-A1F0-536212521046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC84ED8C-D2CB-466B-A1F0-536212521046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E733B1D3-94EF-4B2D-B99D-6896FC4118EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E733B1D3-94EF-4B2D-B99D-6896FC4118EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E733B1D3-94EF-4B2D-B99D-6896FC4118EC}.Release_Translated|Any CPU.ActiveCfg = Release_Translated|Any CPU
+		{E733B1D3-94EF-4B2D-B99D-6896FC4118EC}.Release_Translated|Any CPU.Build.0 = Release_Translated|Any CPU
+		{E733B1D3-94EF-4B2D-B99D-6896FC4118EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E733B1D3-94EF-4B2D-B99D-6896FC4118EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F157E05D-D877-4913-B9CB-C584DBDE315E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F157E05D-D877-4913-B9CB-C584DBDE315E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F157E05D-D877-4913-B9CB-C584DBDE315E}.Default|Any CPU.ActiveCfg = Default|Any CPU
+		{F157E05D-D877-4913-B9CB-C584DBDE315E}.Default|Any CPU.Build.0 = Default|Any CPU
+		{F157E05D-D877-4913-B9CB-C584DBDE315E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F157E05D-D877-4913-B9CB-C584DBDE315E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		description = @Open Cache Manger\n\nAn easy to use Geocache Manager
+		version = 1.0.10
+		outputpath = bin
+		StartupItem = ocm-gtk\ocm-gtk.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.StandardHeader = $2
+		$2.inheritsSet = Apache2License
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 120
+		$3.TabWidth = 4
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/plain
+	EndGlobalSection
+EndGlobal
