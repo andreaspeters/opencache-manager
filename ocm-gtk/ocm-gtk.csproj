@@ -10,7 +10,7 @@
     <AssemblyName>ocm-gtk</AssemblyName>
     <Description>The GTK UI for Open Cache Manager</Description>
     <RootNamespace>ocmgtk</RootNamespace>
-    <ReleaseVersion>1.0.10</ReleaseVersion>
+    <ReleaseVersion>1.0.17</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,49 +35,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="Mono.Posix">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Mono.Posix" />
     <Reference Include="webkit-sharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eaa1d335d2e19745">
-      <Package>webkit-sharp-1.0</Package>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Data" />
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
-      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
-      <Package>glib-sharp-2.0</Package>
     </Reference>
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
-      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="gconf-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
-      <Package>gconf-sharp-2.0</Package>
     </Reference>
-    <Reference Include="NDesk.DBus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f6716e4f9b2ed099">
-      <Package>ndesk-dbus-1.0</Package>
-    </Reference>
-    <Reference Include="NDesk.DBus.GLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f6716e4f9b2ed099">
-      <Package>ndesk-dbus-glib-1.0</Package>
-    </Reference>
+    <Reference Include="NDesk.DBus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f6716e4f9b2ed099" />
+    <Reference Include="NDesk.DBus.GLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f6716e4f9b2ed099" />
     <Reference Include="System.Web" />
     <Reference Include="Mono.Cairo" />
-    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <Package>gtk-sharp-2.0</Package>
-    </Reference>
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="icons\scalable\OCMLogo.svg">
-      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="icons\scalable\OCMLogoSmall.svg" />
@@ -223,8 +208,8 @@
     <Compile Include="Application\Widgets\CacheListWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.CacheListWidget.cs" />
     <Compile Include="Application\OCMApp.cs">
-      <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-HasPathReferences>true</DeployService-HasPathReferences>
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <DeployService-HasPathReferences>True</DeployService-HasPathReferences>
     </Compile>
     <Compile Include="Application\Widgets\CacheInfoWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.CacheInfoWidget.cs" />
@@ -287,8 +272,8 @@
     <Compile Include="Addin\IOCMAddin.cs" />
     <Compile Include="Application\Dialogs\FileDownloadProgress.cs" />
     <Compile Include="Paths.cs">
-      <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-HasPathReferences>true</DeployService-HasPathReferences>
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <DeployService-HasPathReferences>True</DeployService-HasPathReferences>
     </Compile>
     <Compile Include="Application\CleanupAssistant\CleanUpPage1.cs" />
     <Compile Include="gtk-gui\ocmgtk.CleanUpPage1.cs" />
@@ -302,6 +287,8 @@
     <Compile Include="Application\CleanupAssistant\CleanupConfirmPage.cs" />
     <Compile Include="gtk-gui\ocmgtk.CleanupConfirmPage.cs" />
     <Compile Include="Application\CleanupAssistant\CleanupManager.cs" />
+    <Compile Include="Application\Dialogs\ImportOpencachingDialog.cs" />
+    <Compile Include="gtk-gui\ocmgtk.ImportOpencachingDialog.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -338,15 +325,15 @@
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
-        <Deployment.LinuxDeployData generateScript="false" />
-        <MonoDevelop.Autotools.MakefileInfo RelativeMakefileName="Makefile.am" SyncReferences="true" IsAutotoolsProject="true" RelativeConfigureInPath="..">
-          <BuildFilesVar Sync="true" Name="FILES" />
-          <DeployFilesVar Sync="true" Name="PROGRAMFILES" />
-          <ResourcesVar Sync="true" Name="RESOURCES" />
+        <Deployment.LinuxDeployData generateScript="False" />
+        <MonoDevelop.Autotools.MakefileInfo RelativeMakefileName="Makefile.am" SyncReferences="True" IsAutotoolsProject="True" RelativeConfigureInPath="..">
+          <BuildFilesVar Sync="True" Name="FILES" />
+          <DeployFilesVar Sync="True" Name="PROGRAMFILES" />
+          <ResourcesVar Sync="True" Name="RESOURCES" />
           <OthersVar />
-          <GacRefVar Sync="true" Name="REFERENCES" />
-          <AsmRefVar Sync="true" Name="REFERENCES" />
-          <ProjectRefVar Sync="true" Name="REFERENCES" />
+          <GacRefVar Sync="True" Name="REFERENCES" />
+          <AsmRefVar Sync="True" Name="REFERENCES" />
+          <ProjectRefVar Sync="True" Name="REFERENCES" />
         </MonoDevelop.Autotools.MakefileInfo>
       </Properties>
     </MonoDevelop>
@@ -684,8 +671,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="ocm-gtk">
-      <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-HasPathReferences>true</DeployService-HasPathReferences>
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <DeployService-HasPathReferences>True</DeployService-HasPathReferences>
       <DeployService-TargetDirectoryId>Binaries</DeployService-TargetDirectoryId>
     </Resource>
     <Resource Include="icons\scalable\attributes\yes_Recommended_at_night.svg">
@@ -1489,12 +1476,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="x-gpx.xml">
-      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-Deploy>True</DeployService-Deploy>
       <DeployService-RelativeDeployPath>mime/packages/x-gpx.xml</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
     </None>
     <None Include="x-ocm.xml">
-      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-Deploy>True</DeployService-Deploy>
       <DeployService-RelativeDeployPath>mime/packages/x-ocm.xml</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
     </None>
@@ -1685,8 +1672,8 @@
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="OCM.desktop">
-      <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-HasPathReferences>true</DeployService-HasPathReferences>
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <DeployService-HasPathReferences>True</DeployService-HasPathReferences>
       <DeployService-TargetDirectoryId>Linux.DesktopApplications</DeployService-TargetDirectoryId>
     </ApplicationDefinition>
   </ItemGroup>

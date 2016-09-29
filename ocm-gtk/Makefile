@@ -104,14 +104,14 @@ DATA = $(commonapplicationdatarootmimepackages_DATA) \
 	$(programfileswebimg_DATA) $(programfileswebthemedefault_DATA) \
 	$(programfileswebthemedefaultimg_DATA)
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/andreas/Projekte/opencache-manager/missing --run aclocal-1.11
-AMTAR = ${SHELL} /home/andreas/Projekte/opencache-manager/missing --run tar
-AUTOCONF = ${SHELL} /home/andreas/Projekte/opencache-manager/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/andreas/Projekte/opencache-manager/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/andreas/Projekte/opencache-manager/missing --run automake-1.11
+ACLOCAL = aclocal-1.15
+AMTAR = $${TAR-tar}
+AUTOCONF = autoconf
+AUTOHEADER = autoheader
+AUTOMAKE = automake-1.15
 AWK = gawk
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"OpenCacheManager\" -DPACKAGE_TARNAME=\"opencachemanager\" -DPACKAGE_VERSION=\"1.0.14\" -DPACKAGE_STRING=\"OpenCacheManager\ 1.0.14\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"opencachemanager\" -DVERSION=\"1.0.14\"
+DEFS = -DPACKAGE_NAME=\"OpenCacheManager\" -DPACKAGE_TARNAME=\"opencachemanager\" -DPACKAGE_VERSION=\"1.0.17\" -DPACKAGE_STRING=\"OpenCacheManager\ 1.0.17\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"opencachemanager\" -DVERSION=\"1.0.17\"
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
@@ -131,7 +131,7 @@ LIBOBJS =
 LIBS = 
 LTLIBOBJS = 
 MAINT = #
-MAKEINFO = ${SHELL} /home/andreas/Projekte/opencache-manager/missing --run makeinfo
+MAKEINFO = makeinfo
 MKDIR_P = /usr/bin/mkdir -p
 NDESK_DBUS_10_CFLAGS = 
 NDESK_DBUS_10_LIBS = -r:/usr/lib/mono/dbus-sharp-2.0/dbus-sharp.dll
@@ -140,16 +140,16 @@ NDESK_DBUS_GLIB_10_LIBS = -r:/usr/lib/mono/dbus-sharp-glib-2.0/dbus-sharp-glib.d
 PACKAGE = opencachemanager
 PACKAGE_BUGREPORT = 
 PACKAGE_NAME = OpenCacheManager
-PACKAGE_STRING = OpenCacheManager 1.0.14
+PACKAGE_STRING = OpenCacheManager 1.0.17
 PACKAGE_TARNAME = opencachemanager
 PACKAGE_URL = 
-PACKAGE_VERSION = 1.0.14
+PACKAGE_VERSION = 1.0.17
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = 
-VERSION = 1.0.14
+VERSION = 1.0.17
 WEBKIT_SHARP_10_CFLAGS = -I:/usr/lib/pkgconfig/../../share/gapi-2.0/pango-api.xml -I:/usr/lib/pkgconfig/../../share/gapi-2.0/atk-api.xml -I:/usr/lib/pkgconfig/../../share/gapi-2.0/gdk-api.xml -I:/usr/lib/pkgconfig/../../share/gapi-2.0/gtk-api.xml -I:/usr/lib/pkgconfig/../../share/gapi-2.0/glib-api.xml
 WEBKIT_SHARP_10_LIBS = -r:/usr/lib/mono/webkit-sharp/webkit-sharp.dll -r:/usr/lib/pkgconfig/../../lib/mono/gtk-sharp-2.0/pango-sharp.dll -r:/usr/lib/pkgconfig/../../lib/mono/gtk-sharp-2.0/atk-sharp.dll -r:/usr/lib/pkgconfig/../../lib/mono/gtk-sharp-2.0/gdk-sharp.dll -r:/usr/lib/pkgconfig/../../lib/mono/gtk-sharp-2.0/gtk-sharp.dll -r:/usr/lib/pkgconfig/../../lib/mono/gtk-sharp-2.0/glib-sharp.dll
 abs_builddir = /home/andreas/Projekte/opencache-manager/ocm-gtk
@@ -157,8 +157,8 @@ abs_srcdir = /home/andreas/Projekte/opencache-manager/ocm-gtk
 abs_top_builddir = /home/andreas/Projekte/opencache-manager
 abs_top_srcdir = /home/andreas/Projekte/opencache-manager
 am__leading_dot = .
-am__tar = ${AMTAR} chof - "$$tardir"
-am__untar = ${AMTAR} xf -
+am__tar = $${TAR-tar} chof - "$$tardir"
+am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
 build_alias = 
 builddir = .
@@ -166,10 +166,10 @@ datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
-exec_prefix = /usr/local
-expanded_bindir = /usr/local/bin
-expanded_datadir = /usr/local/share
-expanded_libdir = /usr/local/lib
+exec_prefix = ${prefix}
+expanded_bindir = @expanded_bindir@
+expanded_datadir = @expanded_datadir@
+expanded_libdir = @expanded_libdir@
 host_alias = 
 htmldir = ${docdir}
 includedir = ${prefix}/include
@@ -180,7 +180,7 @@ libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
 mandir = ${datarootdir}/man
-mkdir_p = /usr/bin/mkdir -p
+mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
 prefix = /usr/local
@@ -2133,6 +2133,7 @@ FILES = \
 	gtk-gui/ocmgtk.CorrectedCoordinatesDlg.cs \
 	gtk-gui/ocmgtk.OCMQueryPage5.cs \
 	gtk-gui/ocmgtk.ImportDirectoryDialog.cs \
+	gtk-gui/ocmgtk.ImportOpencachingDialog.cs \
 	gtk-gui/ocmgtk.ExportGPXDialog.cs \
 	Widgets/AttributeFilterWidget.cs \
 	gtk-gui/ocmgtk.AttributeFilterWidget.cs \
@@ -2216,6 +2217,7 @@ FILES = \
 	Application/Dialogs/AddComboFilter.cs \
 	Application/Dialogs/ImportDialog.cs \
 	Application/Dialogs/ImportDirectoryDialog.cs \
+	Application/Dialogs/ImportOpencachingDialog.cs \
 	Application/Dialogs/ProgressDialog.cs \
 	Application/Dialogs/OffLineLogViewer.cs \
 	Application/Dialogs/ExportGPXDialog.cs \
