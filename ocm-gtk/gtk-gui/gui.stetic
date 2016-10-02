@@ -5,6 +5,8 @@
     <target-gtk-version>2.12</target-gtk-version>
   </configuration>
   <import>
+    <widget-library name="gconf-sharp-peditors, Version=2.24.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="webkit-sharp, Version=1.1.15.0, Culture=neutral, PublicKeyToken=eaa1d335d2e19745" />
     <widget-library name="../bind/ocm-gtk.exe" internal="true" />
   </import>
   <widget class="Gtk.Bin" id="ocmgtk.WaypointWidget" design-size="391 579">
@@ -701,7 +703,7 @@ For Geocaching.com and Terracaching users, you will need a premium account to us
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Bin" id="ocmgtk.SetupAssistant" design-size="300 300">
+  <widget class="Gtk.Assistant" id="ocmgtk.SetupAssistant" design-size="300 300">
     <property name="MemberName" />
     <property name="Visible">False</property>
     <child>

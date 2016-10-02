@@ -18,6 +18,7 @@ using System.IO;
 using ocmengine;
 using ocmengine.SQLLite;
 using Mono.Unix;
+using Gtk;
 
 namespace ocmgtk
 {

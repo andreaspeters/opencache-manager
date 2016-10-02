@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.50727</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{56CC4363-E847-4529-AF7D-0252DA748F76}</ProjectGuid>
     <OutputType>Exe</OutputType>
@@ -37,28 +37,28 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="Mono.Posix" />
-    <Reference Include="webkit-sharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eaa1d335d2e19745">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Data" />
-    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="gconf-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="NDesk.DBus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f6716e4f9b2ed099" />
     <Reference Include="NDesk.DBus.GLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f6716e4f9b2ed099" />
     <Reference Include="System.Web" />
     <Reference Include="Mono.Cairo" />
+    <Reference Include="dbus-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5675b0c3093115b5" />
+    <Reference Include="dbus-sharp-glib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5675b0c3093115b5" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="MonoDevelop.GtkCore, Version=2.6.0.0, Culture=neutral">
+      <Package>monodevelop-core-addins</Package>
+    </Reference>
+    <Reference Include="gconf-sharp-peditors, Version=2.24.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gconf-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="webkit-sharp, Version=1.1.15.0, Culture=neutral, PublicKeyToken=eaa1d335d2e19745" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="icons\scalable\OCMLogo.svg">
@@ -70,14 +70,14 @@
     <EmbeddedResource Include="icons\scalable\DistIcon.svg" />
     <EmbeddedResource Include="icons\scalable\SearchIcon.svg" />
     <EmbeddedResource Include="icons\scalable\log.svg" />
-    <EmbeddedResource Include="gtk-gui\gui.stetic">
-      <LogicalName>gui.stetic</LogicalName>
-    </EmbeddedResource>
     <EmbeddedResource Include="icons\scalable\up_icon.svg" />
     <EmbeddedResource Include="icons\scalable\down_icon.svg" />
     <EmbeddedResource Include="icons\scalable\maxicon.svg" />
     <EmbeddedResource Include="icons\scalable\minicon.svg" />
     <EmbeddedResource Include="icons\scalable\restore.svg" />
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
@@ -110,28 +110,96 @@
     <Compile Include="Widgets\SetupAssistantPage4.cs" />
     <Compile Include="Dialogs\CopyMoveDialog.cs" />
     <Compile Include="Dialogs\CopyingProgress.cs" />
+    <Compile Include="Dialogs\ScanWaypointsDialog.cs" />
+    <Compile Include="Widgets\GarminSerialWidget.cs" />
+    <Compile Include="Widgets\OCMTreeView.cs" />
+    <Compile Include="Dialogs\ConfigureEToolsDlg.cs" />
+    <Compile Include="Widgets\DeLormeWidget.cs" />
+    <Compile Include="Dialogs\AddCommandDialog.cs" />
+    <Compile Include="Widgets\GarminEdgeWidget.cs" />
+    <Compile Include="Widgets\DelormeGPXWidget.cs" />
+    <Compile Include="Widgets\AttributeFilterWidget.cs" />
+    <Compile Include="configuration\Config.cs" />
+    <Compile Include="configuration\IConfig.cs" />
+    <Compile Include="configuration\EToolList.cs" />
+    <Compile Include="configuration\ExternalTool.cs" />
+    <Compile Include="configuration\UpdateChecker.cs" />
+    <Compile Include="Dialogs\LoggingDialog.cs" />
+    <Compile Include="Dialogs\OfflineLogDialog.cs" />
+    <Compile Include="Widgets\MapSelectionWidget.cs" />
+    <Compile Include="Dialogs\ExportPOIDialog.cs" />
+    <Compile Include="Dialogs\WebBrowser.cs" />
+    <Compile Include="Dialogs\ImageDialog.cs" />
+    <Compile Include="Application\OCMApp.cs">
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <DeployService-HasPathReferences>True</DeployService-HasPathReferences>
+    </Compile>
+    <Compile Include="Application\IconManager.cs" />
+    <Compile Include="Application\Splash\OCMSplash.cs" />
+    <Compile Include="Application\Dialogs\Preferences.cs" />
+    <Compile Include="Application\Printing\CachePrinter.cs" />
+    <Compile Include="Application\MapManager\MapDescription.cs" />
+    <Compile Include="Application\MapManager\MapManager.cs" />
+    <Compile Include="Application\Locations\Location.cs" />
+    <Compile Include="Application\Locations\LocationList.cs" />
+    <Compile Include="Application\Dialogs\ManageListDialog.cs" />
+    <Compile Include="Application\Models\CacheStoreModel.cs" />
+    <Compile Include="Application\Dialogs\FilterDialog.cs" />
+    <Compile Include="Application\QuickFilters\QuickFilter.cs" />
+    <Compile Include="Application\QuickFilters\QuickFilters.cs" />
+    <Compile Include="Application\Dialogs\ChangeHistory.cs" />
+    <Compile Include="Application\Dialogs\ModifyCacheDialog.cs" />
+    <Compile Include="Application\Dialogs\CorrectedCoordinatesDlg.cs" />
+    <Compile Include="Application\Dialogs\MarkFoundDialog.cs" />
+    <Compile Include="Application\Dialogs\WaypointDialog.cs" />
+    <Compile Include="Application\Dialogs\ReviewWaypointDialog.cs" />
+    <Compile Include="Application\Bookmarks\BookmarkManager.cs" />
+    <Compile Include="Application\Dialogs\AddBookMarkDialog.cs" />
+    <Compile Include="Application\Dialogs\DeleteItem.cs" />
+    <Compile Include="Application\Dialogs\AddLocationDialog.cs" />
+    <Compile Include="Application\GPSD\GPS.cs" />
+    <Compile Include="Application\Dialogs\AddComboFilter.cs" />
+    <Compile Include="Application\Dialogs\ImportDialog.cs" />
+    <Compile Include="Application\Dialogs\ImportDirectoryDialog.cs" />
+    <Compile Include="Application\Dialogs\ProgressDialog.cs" />
+    <Compile Include="Application\Dialogs\OffLineLogViewer.cs" />
+    <Compile Include="Application\Dialogs\ExportGPXDialog.cs" />
+    <Compile Include="Application\GPS\GPSProfile.cs" />
+    <Compile Include="Application\GPS\GPSProfileList.cs" />
+    <Compile Include="Application\Dialogs\ErrorDialog.cs" />
+    <Compile Include="Application\Dialogs\FieldNotesProgress.cs" />
+    <Compile Include="Application\Dialogs\LoadGPSFieldNotes.cs" />
+    <Compile Include="Application\Dialogs\SendWaypointsDialog.cs" />
+    <Compile Include="Addin\IOCMAddin.cs" />
+    <Compile Include="Application\Dialogs\FileDownloadProgress.cs" />
+    <Compile Include="Paths.cs">
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <DeployService-HasPathReferences>True</DeployService-HasPathReferences>
+    </Compile>
+    <Compile Include="Application\CleanupAssistant\CleanUpPage1.cs" />
+    <Compile Include="Application\CleanupAssistant\CleanupPage2.cs" />
+    <Compile Include="Application\CleanupAssistant\CleanupAssistant.cs" />
+    <Compile Include="Application\CleanupAssistant\CleanupSummary.cs" />
+    <Compile Include="Application\Dialogs\ReduceLogsDialog.cs" />
+    <Compile Include="Application\CleanupAssistant\CleanupConfirmPage.cs" />
+    <Compile Include="Application\CleanupAssistant\CleanupManager.cs" />
+    <Compile Include="Application\Dialogs\ImportOpencachingDialog.cs" />
     <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="gtk-gui\ocmgtk.GeocacheInfoPanel.cs" />
     <Compile Include="gtk-gui\ocmgtk.WaypointWidget.cs" />
-    <Compile Include="gtk-gui\ocmgtk.LogViewerWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.WaypointDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.HTMLWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.ProgressDialog.cs" />
-    <Compile Include="gtk-gui\ocmgtk.Preferences.cs" />
     <Compile Include="gtk-gui\ocmgtk.CoordinateWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.SetupAssistantPage1.cs" />
     <Compile Include="gtk-gui\ocmgtk.SetupAssistant.cs" />
     <Compile Include="gtk-gui\ocmgtk.SetupAssistantPage2.cs" />
     <Compile Include="gtk-gui\ocmgtk.SetupAssistantPage3.cs" />
     <Compile Include="gtk-gui\ocmgtk.ExportProgressDialog.cs" />
-    <Compile Include="gtk-gui\ocmgtk.DescriptionWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.OCMQueryPage1.cs" />
-    <Compile Include="gtk-gui\ocmgtk.FilterDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.OCMQueryPage2.cs" />
     <Compile Include="gtk-gui\ocmgtk.GPSConfiguration.cs" />
     <Compile Include="gtk-gui\ocmgtk.GPXWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.GarminUSBWidget.cs" />
-    <Compile Include="gtk-gui\ocmgtk.SendWaypointsDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.MagellanExploristWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.GenericGPSWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.OCMQueryPage3.cs" />
@@ -150,145 +218,84 @@
     <Compile Include="gtk-gui\ocmgtk.SetupAssistantPage4.cs" />
     <Compile Include="gtk-gui\ocmgtk.CopyMoveDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.CopyingProgress.cs" />
-    <Compile Include="Dialogs\ScanWaypointsDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.ScanWaypointsDialog.cs" />
-    <Compile Include="Widgets\GarminSerialWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.GarminSerialWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.ReviewWaypointWidget.cs" />
-    <Compile Include="gtk-gui\ocmgtk.ReviewWaypointDialog.cs" />
-    <Compile Include="Widgets\OCMTreeView.cs" />
-    <Compile Include="Dialogs\ConfigureEToolsDlg.cs" />
     <Compile Include="gtk-gui\ocmgtk.ConfigureEToolsDlg.cs" />
     <Compile Include="gtk-gui\ocmgtk.OCMQueryPage4.cs" />
-    <Compile Include="Widgets\DeLormeWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.DeLormeWidget.cs" />
-    <Compile Include="Dialogs\AddCommandDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.AddCommandDialog.cs" />
-    <Compile Include="Widgets\GarminEdgeWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.GarminEdgeWidget.cs" />
-    <Compile Include="Widgets\DelormeGPXWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.DelormeGPXWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.MarkFoundDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.CorrectedCoordinatesDlg.cs" />
     <Compile Include="gtk-gui\ocmgtk.OCMQueryPage5.cs" />
     <Compile Include="gtk-gui\ocmgtk.ImportDirectoryDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.ExportGPXDialog.cs" />
-    <Compile Include="Widgets\AttributeFilterWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.AttributeFilterWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.AddLocationDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.LocationWidget.cs" />
-    <Compile Include="gtk-gui\ocmgtk.DeleteItem.cs" />
-    <Compile Include="configuration\Config.cs" />
-    <Compile Include="configuration\IConfig.cs" />
-    <Compile Include="configuration\EToolList.cs" />
-    <Compile Include="configuration\ExternalTool.cs" />
-    <Compile Include="configuration\UpdateChecker.cs" />
-    <Compile Include="Dialogs\LoggingDialog.cs" />
-    <Compile Include="Dialogs\OfflineLogDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.OCMQueryPage6.cs" />
     <Compile Include="gtk-gui\ocmgtk.LoggingDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.OfflineLogDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.OffLineLogViewer.cs" />
-    <Compile Include="gtk-gui\ocmgtk.LoadGPSFieldNotes.cs" />
     <Compile Include="gtk-gui\ocmgtk.ImportDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.AddComboFilter.cs" />
-    <Compile Include="Widgets\MapSelectionWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.MapSelectionWidget.cs" />
-    <Compile Include="Dialogs\ExportPOIDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.ExportPOIDialog.cs" />
-    <Compile Include="Dialogs\WebBrowser.cs" />
     <Compile Include="gtk-gui\ocmgtk.WebBrowser.cs" />
     <Compile Include="gtk-gui\ocmgtk.ImagesWidget.cs" />
-    <Compile Include="Dialogs\ImageDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.ImageDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.FileDownloadProgress.cs" />
-    <Compile Include="gtk-gui\ocmgtk.FieldNotesProgress.cs" />
-    <Compile Include="Application\OCMMainWindow.cs" />
     <Compile Include="gtk-gui\ocmgtk.OCMMainWindow.cs" />
-    <Compile Include="Application\Widgets\CacheListWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.CacheListWidget.cs" />
-    <Compile Include="Application\OCMApp.cs">
-      <DeployService-Deploy>True</DeployService-Deploy>
-      <DeployService-HasPathReferences>True</DeployService-HasPathReferences>
-    </Compile>
-    <Compile Include="Application\Widgets\CacheInfoWidget.cs" />
-    <Compile Include="gtk-gui\ocmgtk.CacheInfoWidget.cs" />
-    <Compile Include="Application\Widgets\MapWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.MapWidget.cs" />
+    <Compile Include="gtk-gui\ocmgtk.GeocacheInfoPanel.cs" />
+    <Compile Include="gtk-gui\ocmgtk.CacheInfoWidget.cs" />
+    <Compile Include="gtk-gui\ocmgtk.GeoCachePane.cs" />
+    <Compile Include="gtk-gui\ocmgtk.DescriptionWidget.cs" />
+    <Compile Include="gtk-gui\ocmgtk.OCMSplash.cs" />
+    <Compile Include="gtk-gui\ocmgtk.Preferences.cs" />
+    <Compile Include="gtk-gui\ocmgtk.ManageListDialog.cs" />
+    <Compile Include="gtk-gui\ocmgtk.FilterDialog.cs" />
+    <Compile Include="gtk-gui\ocmgtk.LogViewerWidget.cs" />
+    <Compile Include="gtk-gui\ocmgtk.ReviewWaypointDialog.cs" />
+    <Compile Include="gtk-gui\ocmgtk.DeleteItem.cs" />
+    <Compile Include="gtk-gui\ocmgtk.ErrorDialog.cs" />
+    <Compile Include="gtk-gui\ocmgtk.FieldNotesProgress.cs" />
+    <Compile Include="gtk-gui\ocmgtk.LoadGPSFieldNotes.cs" />
+    <Compile Include="gtk-gui\ocmgtk.SendWaypointsDialog.cs" />
+    <Compile Include="gtk-gui\ocmgtk.CleanUpPage1.cs" />
+    <Compile Include="gtk-gui\ocmgtk.CleanupPage2.cs" />
+    <Compile Include="gtk-gui\ocmgtk.CleanupSummary.cs" />
+    <Compile Include="gtk-gui\ocmgtk.ReduceLogsDialog.cs" />
+    <Compile Include="gtk-gui\ocmgtk.CleanupConfirmPage.cs" />
+    <Compile Include="gtk-gui\ocmgtk.ImportOpencachingDialog.cs" />
+    <Compile Include="Application\OCMMainWindow.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Application\Widgets\CacheListWidget.cs">
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Application\Widgets\CacheInfoWidget.cs">
+      <DeployService-Deploy>True</DeployService-Deploy>
+    </Compile>
+    <Compile Include="Application\Widgets\DescriptionWidget.cs" />
     <Compile Include="Application\Widgets\GeocacheInfoPanel.cs" />
     <Compile Include="Application\Widgets\ImagesWidget.cs" />
+    <Compile Include="Application\Widgets\LocationWidget.cs" />
+    <Compile Include="Application\Widgets\MapWidget.cs" />
     <Compile Include="Application\Widgets\NotesWidget.cs" />
     <Compile Include="Application\Widgets\WaypointWidget.cs" />
-    <Compile Include="gtk-gui\ocmgtk.GeoCachePane.cs" />
-    <Compile Include="Application\Widgets\DescriptionWidget.cs" />
-    <Compile Include="Application\IconManager.cs" />
-    <Compile Include="gtk-gui\ocmgtk.OCMSplash.cs" />
-    <Compile Include="Application\Splash\OCMSplash.cs" />
-    <Compile Include="Application\Dialogs\Preferences.cs" />
-    <Compile Include="Application\Printing\CachePrinter.cs" />
-    <Compile Include="Application\MapManager\MapDescription.cs" />
-    <Compile Include="Application\MapManager\MapManager.cs" />
-    <Compile Include="Application\Locations\Location.cs" />
-    <Compile Include="Application\Locations\LocationList.cs" />
-    <Compile Include="Application\Dialogs\ManageListDialog.cs" />
-    <Compile Include="gtk-gui\ocmgtk.ManageListDialog.cs" />
-    <Compile Include="Application\Models\CacheStoreModel.cs" />
-    <Compile Include="Application\Dialogs\FilterDialog.cs" />
     <Compile Include="Application\Widgets\OCMQueryPage1.cs" />
     <Compile Include="Application\Widgets\OCMQueryPage2.cs" />
     <Compile Include="Application\Widgets\OCMQueryPage3.cs" />
     <Compile Include="Application\Widgets\OCMQueryPage4.cs" />
     <Compile Include="Application\Widgets\OCMQueryPage5.cs" />
     <Compile Include="Application\Widgets\OCMQueryPage6.cs" />
-    <Compile Include="Application\QuickFilters\QuickFilter.cs" />
-    <Compile Include="Application\QuickFilters\QuickFilters.cs" />
-    <Compile Include="Application\Dialogs\ChangeHistory.cs" />
-    <Compile Include="Application\Dialogs\ModifyCacheDialog.cs" />
-    <Compile Include="Application\Dialogs\CorrectedCoordinatesDlg.cs" />
-    <Compile Include="Application\Dialogs\MarkFoundDialog.cs" />
     <Compile Include="Application\Widgets\LogViewerWidget.cs" />
-    <Compile Include="Application\Dialogs\WaypointDialog.cs" />
-    <Compile Include="Application\Dialogs\ReviewWaypointDialog.cs" />
     <Compile Include="Application\Widgets\ReviewWaypointWidget.cs" />
-    <Compile Include="Application\Bookmarks\BookmarkManager.cs" />
-    <Compile Include="Application\Dialogs\AddBookMarkDialog.cs" />
-    <Compile Include="Application\Dialogs\DeleteItem.cs" />
-    <Compile Include="Application\Dialogs\AddLocationDialog.cs" />
-    <Compile Include="Application\GPSD\GPS.cs" />
-    <Compile Include="Application\Dialogs\AddComboFilter.cs" />
-    <Compile Include="Application\Dialogs\ImportDialog.cs" />
-    <Compile Include="Application\Dialogs\ImportDirectoryDialog.cs" />
-    <Compile Include="Application\Dialogs\ProgressDialog.cs" />
-    <Compile Include="Application\Dialogs\OffLineLogViewer.cs" />
-    <Compile Include="Application\Dialogs\ExportGPXDialog.cs" />
-    <Compile Include="Application\GPS\GPSProfile.cs" />
-    <Compile Include="Application\GPS\GPSProfileList.cs" />
-    <Compile Include="Application\Dialogs\ErrorDialog.cs" />
-    <Compile Include="gtk-gui\ocmgtk.ErrorDialog.cs" />
-    <Compile Include="Application\Dialogs\FieldNotesProgress.cs" />
-    <Compile Include="Application\Dialogs\LoadGPSFieldNotes.cs" />
-    <Compile Include="Application\Widgets\LocationWidget.cs" />
-    <Compile Include="Application\Dialogs\SendWaypointsDialog.cs" />
-    <Compile Include="Addin\IOCMAddin.cs" />
-    <Compile Include="Application\Dialogs\FileDownloadProgress.cs" />
-    <Compile Include="Paths.cs">
-      <DeployService-Deploy>True</DeployService-Deploy>
-      <DeployService-HasPathReferences>True</DeployService-HasPathReferences>
-    </Compile>
-    <Compile Include="Application\CleanupAssistant\CleanUpPage1.cs" />
-    <Compile Include="gtk-gui\ocmgtk.CleanUpPage1.cs" />
-    <Compile Include="Application\CleanupAssistant\CleanupPage2.cs" />
-    <Compile Include="gtk-gui\ocmgtk.CleanupPage2.cs" />
-    <Compile Include="Application\CleanupAssistant\CleanupAssistant.cs" />
-    <Compile Include="Application\CleanupAssistant\CleanupSummary.cs" />
-    <Compile Include="gtk-gui\ocmgtk.CleanupSummary.cs" />
-    <Compile Include="Application\Dialogs\ReduceLogsDialog.cs" />
-    <Compile Include="gtk-gui\ocmgtk.ReduceLogsDialog.cs" />
-    <Compile Include="Application\CleanupAssistant\CleanupConfirmPage.cs" />
-    <Compile Include="gtk-gui\ocmgtk.CleanupConfirmPage.cs" />
-    <Compile Include="Application\CleanupAssistant\CleanupManager.cs" />
-    <Compile Include="Application\Dialogs\ImportOpencachingDialog.cs" />
-    <Compile Include="gtk-gui\ocmgtk.ImportOpencachingDialog.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -667,7 +674,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="version\Version.txt">
-      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <Gettext-ScanForTranslations>False</Gettext-ScanForTranslations>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="ocm-gtk">
@@ -1669,6 +1676,7 @@
     <None Include="icons\24x24\clogs-write_note.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="OCM.desktop">

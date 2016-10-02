@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ocmengine", "ocmengine\ocmengine.csproj", "{A742EB76-61CC-451E-93AA-D9BC7407868C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ocm-gtk", "ocm-gtk\ocm-gtk.csproj", "{56CC4363-E847-4529-AF7D-0252DA748F76}"
