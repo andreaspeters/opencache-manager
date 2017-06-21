@@ -27,6 +27,8 @@ autom4te.cache/
 tarballs/
 test-results/
 Thumbs.db
+Makefile
+config.log
 
 #Mac bundle stuff
 *.dmg
