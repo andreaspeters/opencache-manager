@@ -1739,6 +1739,15 @@ namespace ocmgtk
 			dlg.Destroy ();
 		}
 
+		protected virtual void OnImportOpencaching (object sender, System.EventArgs e)
+		{
+			ImportOpencachingDialog dlg = new ImportOpencachingDialog (this);
+			if (dlg.Run () == (int)ResponseType.Ok) {
+				dlg.Hide ();
+			}
+			dlg.Destroy ();
+		}		
+
 		private static void RegisterRecentFile (String filename)
 		{
 			RecentManager manager = RecentManager.Default;

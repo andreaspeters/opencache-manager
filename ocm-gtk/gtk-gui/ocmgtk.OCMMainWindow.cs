@@ -887,7 +887,7 @@ namespace ocmgtk {
             this.ZoomToCentreAction.Activated += new System.EventHandler(this.OnZoomToCentre);
             this.ImportGPXLocZipAction.Activated += new System.EventHandler(this.OnImportGPX);
             this.ImportDirectoryAction.Activated += new System.EventHandler(this.OnImportDirectory);
-            this.ImportOpencachingAction.Activated += new System.EventHandler(this.OnImportDirectory);
+            this.ImportOpencachingAction.Activated += new System.EventHandler(this.OnImportOpencaching);
             this.SaveCurrentViewAsQuickFilterAction.Activated += new System.EventHandler(this.OnSaveQuickFilter);
             this.DeleteQuickFilterAction.Activated += new System.EventHandler(this.OnDeleteQuickFilter);
             this.ExportGPXAction.Activated += new System.EventHandler(this.OnExportGPX);

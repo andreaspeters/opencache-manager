@@ -1954,6 +1954,7 @@ FILES = \
 	gtk-gui/ocmgtk.CorrectedCoordinatesDlg.cs \
 	gtk-gui/ocmgtk.OCMQueryPage5.cs \
 	gtk-gui/ocmgtk.ImportDirectoryDialog.cs \
+	gtk-gui/ocmgtk.ImportOpencachingDialog.cs \
 	gtk-gui/ocmgtk.ExportGPXDialog.cs \
 	Widgets/AttributeFilterWidget.cs \
 	gtk-gui/ocmgtk.AttributeFilterWidget.cs \
@@ -2037,6 +2038,7 @@ FILES = \
 	Application/Dialogs/AddComboFilter.cs \
 	Application/Dialogs/ImportDialog.cs \
 	Application/Dialogs/ImportDirectoryDialog.cs \
+	Application/Dialogs/ImportOpencachingDialog.cs \
 	Application/Dialogs/ProgressDialog.cs \
 	Application/Dialogs/OffLineLogViewer.cs \
 	Application/Dialogs/ExportGPXDialog.cs \

@@ -187,6 +187,7 @@
     <Compile Include="gtk-gui\ocmgtk.CorrectedCoordinatesDlg.cs" />
     <Compile Include="gtk-gui\ocmgtk.OCMQueryPage5.cs" />
     <Compile Include="gtk-gui\ocmgtk.ImportDirectoryDialog.cs" />
+    <Compile Include="gtk-gui\ocmgtk.ImportOpencachingDialog.cs" />
     <Compile Include="gtk-gui\ocmgtk.ExportGPXDialog.cs" />
     <Compile Include="Widgets\AttributeFilterWidget.cs" />
     <Compile Include="gtk-gui\ocmgtk.AttributeFilterWidget.cs" />
@@ -273,6 +274,7 @@
     <Compile Include="Application\Dialogs\AddComboFilter.cs" />
     <Compile Include="Application\Dialogs\ImportDialog.cs" />
     <Compile Include="Application\Dialogs\ImportDirectoryDialog.cs" />
+    <Compile Include="Application\Dialogs\ImportOpencachingDialog.cs" />
     <Compile Include="Application\Dialogs\ProgressDialog.cs" />
     <Compile Include="Application\Dialogs\OffLineLogViewer.cs" />
     <Compile Include="Application\Dialogs\ExportGPXDialog.cs" />
