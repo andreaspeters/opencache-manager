@@ -1,5 +1,6 @@
+Dies ist ein Fork der eingestellen Geocaching Software "Opencachemanager" (http://opencachemanage.sourceforge.net/). Mein Ziel ist die Weiterentwickligung der Software. Hierfuer benoetige ich jedoch Eure unterstuetzung. Bitte testet die Software, benutzt sie, oeffnet Feature Requests und spendet auch etwas.
 
-Dies ist ein Fork von Opencachemanager (http://opencachemanage.sourceforge.net/) und angepasst an die Veraenderungen in ndesk und der Mono GTK Library.
+[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/~10452/donate)
 
 ### Kompilieren/Installieren
 
