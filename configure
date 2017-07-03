@@ -604,6 +604,9 @@ ENABLE_RELEASE_TRUE
 ENABLE_DEBUG_FALSE
 ENABLE_DEBUG_TRUE
 GMCS
+expanded_datadir
+expanded_bindir
+expanded_libdir
 PKG_CONFIG
 MAINT
 MAINTAINER_MODE_FALSE
@@ -1787,7 +1790,7 @@ ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $
 ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
-am__api_version='1.15'
+am__api_version='1.14'
 
 ac_aux_dir=
 for ac_dir in "$srcdir" "$srcdir/.." "$srcdir/../.."; do
@@ -1988,8 +1991,8 @@ test "$program_suffix" != NONE &&
 ac_script='s/[\\$]/&&/g;s/;s,x,x,$//'
 program_transform_name=`$as_echo "$program_transform_name" | sed "$ac_script"`
 
-# Expand $ac_aux_dir to an absolute path.
-am_aux_dir=`cd "$ac_aux_dir" && pwd`
+# expand $ac_aux_dir to an absolute path
+am_aux_dir=`cd $ac_aux_dir && pwd`
 
 if test x"${MISSING+set}" != xset; then
   case $am_aux_dir in
@@ -2008,7 +2011,7 @@ else
 $as_echo "$as_me: WARNING: 'missing' script is too old or missing" >&2;}
 fi
 
-if test x"${install_sh+set}" != xset; then
+if test x"${install_sh}" != xset; then
   case $am_aux_dir in
   *\ * | *\	*)
     install_sh="\${SHELL} '$am_aux_dir/install-sh'" ;;
@@ -2336,8 +2339,8 @@ MAKEINFO=${MAKEINFO-"${am_missing_run}makeinfo"}
 # <http://lists.gnu.org/archive/html/automake/2012-07/msg00014.html>
 mkdir_p='$(MKDIR_P)'
 
-# We need awk for the "check" target (and possibly the TAP driver).  The
-# system "awk" is bad on some platforms.
+# We need awk for the "check" target.  The system "awk" is bad on
+# some platforms.
 # Always define AMTAR for backward compatibility.  Yes, it's still used
 # in the wild :-(  We should find a proper way to deprecate it ...
 AMTAR='$${TAR-tar}'
@@ -2394,7 +2397,6 @@ END
     as_fn_error $? "Your 'rm' program is bad, sorry." "$LINENO" 5
   fi
 fi
-
 
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to enable maintainer-specific portions of Makefiles" >&5
 $as_echo_n "checking whether to enable maintainer-specific portions of Makefiles... " >&6; }
@@ -2464,9 +2466,58 @@ if test "x$PKG_CONFIG" = "xno"; then
         as_fn_error $? "You need to install pkg-config" "$LINENO" 5
 fi
 
-SHAMROCK_EXPAND_LIBDIR
-SHAMROCK_EXPAND_BINDIR
-SHAMROCK_EXPAND_DATADIR
+
+
+
+
+
+
+
+
+
+	expanded_libdir=`(
+		case $prefix in
+			NONE) prefix=$ac_default_prefix ;;
+			*) ;;
+		esac
+		case $exec_prefix in
+			NONE) exec_prefix=$prefix ;;
+			*) ;;
+		esac
+		eval echo $libdir
+	)`
+
+
+
+	expanded_bindir=`(
+		case $prefix in
+			NONE) prefix=$ac_default_prefix ;;
+			*) ;;
+		esac
+		case $exec_prefix in
+			NONE) exec_prefix=$prefix ;;
+			*) ;;
+		esac
+		eval echo $bindir
+	)`
+
+
+
+	case $prefix in
+		NONE) prefix=$ac_default_prefix ;;
+		*) ;;
+	esac
+
+	case $exec_prefix in
+		NONE) exec_prefix=$prefix ;;
+		*) ;;
+	esac
+
+	expanded_datadir=`(eval echo $datadir)`
+	expanded_datadir=`(eval echo $expanded_datadir)`
+
+
+
 
 
 
