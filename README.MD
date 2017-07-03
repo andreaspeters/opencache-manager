@@ -25,3 +25,12 @@ make
 ```
 
 Anschliessend kann man es mit dem Befehl "ocm-gtk" starten.
+
+
+
+## Beteiligte 
+
+Folgende Personen haben und helfen mir bei der Pflege:
+
+- [Jens Boettge](https://github.com/J-U-B)
+
