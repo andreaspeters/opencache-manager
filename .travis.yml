@@ -2,10 +2,10 @@ language: c
  
 install:
   - sudo apt-get install mono-devel mono-gmcs nunit-console
-  - apt-get install libwebkit-cil-dev libwebkit1.1-cil
-  - apt-get install gtk-sharp2 libgtk2.0-cil libgtk2.0-cil-dev
-  - apt-get install libgconf2.0-cil libgconf2.0-cil-dev
-  - apt-get install libdbus2.0-cil libdbus2.0-cil-dev libdbus-glib2.0-cil libdbus-glib2.0-cil-dev
+  - sudo apt-get install libwebkit-cil-dev libwebkit1.1-cil
+  - sudo apt-get install gtk-sharp2 libgtk2.0-cil libgtk2.0-cil-dev
+  - sudo apt-get install libgconf2.0-cil libgconf2.0-cil-dev
+  - sudo apt-get install libdbus2.0-cil libdbus2.0-cil-dev libdbus-glib2.0-cil libdbus-glib2.0-cil-dev
 
 script:
   - make
