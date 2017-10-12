@@ -14,6 +14,7 @@
 //    limitations under the License.
 
 using System;
+using WebKit;
 using Gtk;
 
 namespace ocmgtk
@@ -23,7 +24,7 @@ namespace ocmgtk
 	[System.ComponentModel.ToolboxItem(true)]
 	public partial class HTMLWidget : Gtk.Bin
 	{
-		protected WebKit.WebView m_view;
+		protected WebView m_view;
 		bool contentLoaded = false;
 		
 		OCMApp m_App;

@@ -1,0 +1,556 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <style type="text/css">
+#map {
+        width: 100%;
+        height: 100%;
+        border: 0px;
+        padding: 0px;
+        position: absolute;
+     }
+body {
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+     }
+
+	div.popup
+	{
+		position:absolute;
+		top:150px;
+		left:50px;
+		width: 150px;
+		font-family:Arial;
+		font-size: 10pt;
+		padding:10px;
+		border:1px solid gray;
+		margin:0px;
+		text-align:left;
+		vertical-align:middle;
+		background-color:#FFFFFF;
+		z-index:15;
+		display: none;
+		border-radius: 5px;
+		opacity: 0.9;
+	}
+
+    </style>
+
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBGd7Rh2XGioGVLD3eV-OtWYievTkKZFRw&sensor=false'></script>
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    <script src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
+
+    <script type="text/javascript">
+        <!--
+    // complex map object
+    var map;
+
+	// Start position for the map (hardcoded here for simplicity,
+	// but maybe you want to get from URL params)
+	var lat = 0;
+	var lon = 0;
+	var zoom = 14;
+	var pois,extra, diffTerr, eDiffTerr;
+	var notify;
+	var currentPopup;
+	var mouse;
+	var emptyMap;
+	var greymap;
+	var autoSelectCache = false;
+	var showPopups = true;
+
+	var popup_no_cache = "<div onmousedown='doSetCentre()' onmouseover='doHighlight(this)' onmouseout='doNohighlight(this)'>"
+					+ "Set as Centre</div>"
+					+  "<div onmousedown='doSetHome()' onmouseover='doHighlight(this)' onmouseout='doNohighlight(this)'>"
+					+ "Set as Home</div>"
+					+ "<hr noshade/>"
+					+  "<div onmousedown='doAddLocation()' onmouseover='doHighlight(this)' onmouseout='doNohighlight(this)'>"
+					+ "Add Location</div>"
+					+ "<div onmousedown='doAddWaypoint()' onmouseover='doHighlight(this)' onmouseout='doNohighlight(this)'>"
+					+ "Add Waypoint</div>"
+					+ "<div onmousedown='doCorrectCoordinate()' onmouseover='doHighlight(this)' onmouseout='doNohighlight(this)'>"
+					+ "Correct Coordinates</div>";
+
+	var popup_cache = "<div onmousedown='doSetCentre()' onmouseover='doHighlight(this)' onmouseout='doNohighlight(this)'>"
+					+ "Set as Centre</div>"
+					+  "<div onmousedown='doSetHome()' onmouseover='doHighlight(this)' onmouseout='doNohighlight(this)'>"
+					+ "Set as Home</div>"
+					+ "<hr noshade/>"
+					+  "<div onmousedown='doAddLocation()' onmouseover='doHighlight(this)' onmouseout='doNohighlight(this)'>"
+					+ "Add Location</div>"
+					+ "<div onmousedown='doAddWaypoint()' onmouseover='doHighlight(this)' onmouseout='doNohighlight(this)'>"
+					+ "Add Waypoint</div>"
+					+ "<div onmousedown='doCorrectCoordinate()' onmouseover='doHighlight(this)' onmouseout='doNohighlight(this)'>"
+					+ "Correct Coordinates</div>";
+
+	function getParm( name )
+	{
+	  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	  var regexS = "[\\?&]"+name+"=([^&#]*)";
+	  var regex = new RegExp( regexS );
+	  var results = regex.exec( window.location.href );
+	  if( results == null )
+	    return "";
+	  else
+	    return results[1];
+	}
+
+    function info(text) {
+	    alert(text);
+    }
+
+    function init(){
+	      map = new OpenLayers.Map('map',
+                { maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
+                  numZoomLevels: 19,
+                  maxResolution: 156543.0399,
+                  units: 'm',
+                  projection: new OpenLayers.Projection("EPSG:900913"),
+                  displayProjection: new OpenLayers.Projection("EPSG:4326")
+                });
+
+        try
+        {
+			// there were map addings here, but right now we don't use them anymore at startup.
+        }
+        catch(err)
+        {
+        	// No internet connection
+        }
+
+        var options = {numZoomLevels: 19, isBaseLayer: true };
+		// Code for empty map out of the defaultmaps.xml
+        emptyMap = new OpenLayers.Layer.Image(
+   				 'No Map','nomap.png',
+    			   new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
+    				new OpenLayers.Size(1125,558), options);
+		// The greymap is for starting and if no other map is there.
+    	greymap = new OpenLayers.Layer.Image(
+   				 'No Map','nomap.png',
+    			   new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
+    				new OpenLayers.Size(1125,558), options);
+    	map.addLayer(greymap);
+
+	    extra = new OpenLayers.Layer.Markers("Other Geocaches");
+	    map.addLayer(extra);
+
+
+        map.addControl(new OpenLayers.Control.ScaleLine())
+        map.addControl(new OpenLayers.Control.LayerSwitcher());
+
+        lon = getParm('lon');
+        lat = getParm('lat');
+
+        var lonLat = new OpenLayers.LonLat(lon, lat).transform(map.displayProjection,  map.projection);
+        map.setCenter (lonLat, zoom);
+        clearAllMarkers();
+        map.events.register('moveend', null, mapMoved)
+    }
+
+    function togglePopups(popupsOn)
+    {
+    	showPopups = popupsOn;
+    }
+
+    function clearAllMarkers()
+    {
+    	if (pois)
+			pois.destroy();
+		if (notify)
+			notify.destroy();
+		if (extra)
+			extra.destroy();
+		if (diffTerr)
+			diffTerr.destroy();
+		if (eDiffTerr)
+			eDiffTerr.destroy();
+    	pois = new OpenLayers.Layer.Markers( "Waypoints" );
+    	map.addLayer(pois);
+
+    	extra = new OpenLayers.Layer.Markers("Other Geocaches");
+    	map.addLayer(extra);
+
+    	diffTerr = new OpenLayers.Layer.Markers("Difficulty/Terrain");
+    	map.addLayer(diffTerr);
+    	map.raiseLayer(diffTerr, -2)
+
+    	eDiffTerr = new OpenLayers.Layer.Markers("Difficulty/Terrain (Other)");
+    	map.addLayer(eDiffTerr);
+    	map.raiseLayer(eDiffTerr, -2)
+    }
+
+    function clearActiveMarkers()
+    {
+    	if (pois)
+			pois.destroy();
+		if (notify)
+			notify.destroy();
+		if (diffTerr)
+			diffTerr.destroy();
+    	pois = new OpenLayers.Layer.Markers( "Waypoints" );
+    	map.addLayer(pois);
+
+    	diffTerr = new OpenLayers.Layer.Markers("Difficulty/Terrain");
+    	map.addLayer(diffTerr);
+    	map.raiseLayer(diffTerr, -2)
+    }
+
+    function clearExtraMarkers()
+	{
+		if (extra != null)
+			extra.destroy();
+		if (eDiffTerr != null)
+			eDiffTerr.destroy();
+		extra = new OpenLayers.Layer.Markers("Other Geocaches");
+		map.addLayer(extra);
+		eDiffTerr = new OpenLayers.Layer.Markers("Difficulty/Terrain (Other)");
+    	map.addLayer(eDiffTerr);
+    	map.raiseLayer(eDiffTerr, -2)
+	}
+
+	function addMarker(lat, lon, icon, wptName, wptFullName, wptDescription, mode, diff, terr)
+	{
+		var size = new OpenLayers.Size(24,24);
+		var offset = new OpenLayers.Pixel(-(size.w/2), -size.h/2);
+		var icon = new OpenLayers.Icon(icon,size,offset);
+		var lonlat = new OpenLayers.LonLat(lon, lat).transform(map.displayProjection,  map.projection);
+		var feature = new OpenLayers.Feature(pois, lonlat);
+
+		var openspan = "<span style='font-face:sans-serif; font-weight:bolder; font-size:12pt;";
+		if (mode == "archived")
+			openspan += " color:darkred; text-decoration:line-through;'>";
+		else if (mode == "disabled")
+			openspan += " color:darkred;'>";
+		else if (mode == "checknotes")
+			openspan += " color:darkorange;'>";
+		else
+			openspan += "'>";
+
+			feature.popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud, {'autoSize': true,  'maxSize': new OpenLayers.Size(300,300)});
+			feature.data.popupContentHTML ="<div>" + openspan + wptName
+			+ ": " + wptFullName + "</span><hr noshade>"
+			+ wptDescription;
+
+		icon.imageDiv.title = wptName + ":" + wptFullName;
+		feature.data.icon = icon;
+		var marker = feature.createMarker();
+		marker.events.register('mousedown',feature,mousedown);
+		pois.addMarker(marker);
+		if (!diff || !terr)
+			return;
+		var size = new OpenLayers.Size(32,32);
+		var offset = new OpenLayers.Pixel(-(size.w/2), -(size.h/2));
+		var icon = new OpenLayers.Icon(getDIconName(diff),size,offset);
+		diffTerr.addMarker(new OpenLayers.Marker(lonlat,icon));
+		icon = new OpenLayers.Icon(getTIconName(terr),size,offset);
+		diffTerr.addMarker(new OpenLayers.Marker(lonlat,icon));
+	}
+
+	function getTIconName(difficulty)
+	{
+		// Note: D & T have been flipped, so d icons=terrain, t=difficulty
+		// Should rename icons at some point
+		switch(difficulty)
+		{
+			case 1:
+				return "../icons/32x32/d10.png";
+			case 1.5:
+				return "../icons/32x32/d15.png";
+			case 2:
+				return "../icons/32x32/d20.png";
+			case 2.5:
+				return "../icons/32x32/d25.png";
+			case 3:
+				return "../icons/32x32/d30.png";
+			case 3.5:
+				return "../icons/32x32/d35.png";
+			case 4:
+				return "../icons/32x32/d40.png";
+			case 4.5:
+				return "../icons/32x32/d45.png";
+			default:
+				return "../icons/32x32/d50.png";
+			}
+	}
+
+	function getDIconName(terrain)
+	{
+		// Note: D & T have been flipped, so d icons=terrain, t=difficulty
+		// Should rename icons at some point
+		switch(terrain)
+		{
+			case 1:
+				return "../icons/32x32/t10.png";
+			case 1.5:
+				return "../icons/32x32/t15.png";
+			case 2:
+				return "../icons/32x32/t20.png";
+			case 2.5:
+				return "../icons/32x32/t25.png";
+			case 3:
+				return "../icons/32x32/t30.png";
+			case 3.5:
+				return "../icons/32x32/t35.png";
+			case 4:
+				return "../icons/32x32/t40.png";
+			case 4.5:
+				return "../icons/32x32/t45.png";
+			default:
+				return "../icons/32x32/t50.png";
+			}
+	}
+
+	function addExtraMarker(lat, lon, icon, wptName, wptFullName, wptDescription, mode, diff, terr)
+	{
+		var size = new OpenLayers.Size(24,24);
+		var offset = new OpenLayers.Pixel(-(size.w/2), -size.h/2);
+		var icon = new OpenLayers.Icon(icon,size,offset);
+		var lonlat = new OpenLayers.LonLat(lon, lat).transform(map.displayProjection,  map.projection);
+		var feature = new OpenLayers.Feature(extra, lonlat);
+		icon.imageDiv.title = wptName + ":" + wptFullName;
+		var openspan = "<span style='font-face:sans-serif; font-weight:bolder; font-size:12pt;";
+		if (mode == "archived")
+			openspan += " color:darkred; text-decoration:line-through;'>";
+		else if (mode == "disabled")
+			openspan += " color:darkred;'>";
+		else if (mode == "checknotes")
+			openspan += " color:darkorange;'>";
+		else
+			openspan += "'>";
+
+
+		feature.popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud, {'autoSize': true, 'minSize': new OpenLayers.Size(300,200), 'maxSize': new OpenLayers.Size(500,300)});
+		feature.data.popupContentHTML ="<div>" + openspan + wptName + ": " + wptFullName + "</span><hr noshade>" + wptDescription
+		+ (autoSelectCache ? "</div>" : ("<hr noshade><a href='javascript:doSelectCache(\"" + wptName + "\")'>[Select this cache]</a></div>"));
+
+		feature.data.wpt = wptName;
+		feature.data.icon = icon;
+		var marker = feature.createMarker();
+		marker.setOpacity(0.66);
+		marker.events.register('mousedown',feature,mousedown);
+		extra.addMarker(marker);
+
+		if (!diff || !terr)
+			return;
+		var size = new OpenLayers.Size(32,32);
+		var offset = new OpenLayers.Pixel(-(size.w/2), -(size.h/2));
+		var icon = new OpenLayers.Icon(getDIconName(diff),size,offset);
+		marker = new OpenLayers.Marker(lonlat,icon);
+		marker.setOpacity(0.66);
+		eDiffTerr.addMarker(marker);
+		icon = new OpenLayers.Icon(getTIconName(terr),size,offset);
+		marker = new OpenLayers.Marker(lonlat,icon);
+		marker.setOpacity(0.66);
+		eDiffTerr.addMarker(marker);
+	}
+
+	function mousedown(evt)
+	{
+		if (evt.which == 3)
+		{
+			doPopup(evt, true);
+			return;
+		}
+
+		if (showPopups)
+		{
+
+			if (currentPopup != null)
+		  	{
+		  		currentPopup.hide();
+		  	}
+
+		  	if (this.popup == null) {
+				this.popup = this.createPopup(true);
+				map.addPopup(this.popup);
+			}
+			this.popup.show();
+			currentPopup= this.popup;
+			OpenLayers.Event.stop(evt);
+        }
+        if (autoSelectCache) {
+	           	hidden.innerHTML = "<iframe src='ocm://select/" + this.data.wpt + "'/>";
+	        }
+	}
+
+	function panTo(lat, lon)
+	{
+		var lonLat = new OpenLayers.LonLat(lon, lat).transform(map.displayProjection,  map.projection);
+		map.panTo(lonLat);
+	}
+
+	function zoomTo(lat, lon)
+	{
+		var lonLat = new OpenLayers.LonLat(lon, lat).transform(map.displayProjection,  map.projection);
+		map.setCenter (lonLat, zoom);
+	}
+
+	function doSelectCache(wpt)
+	{
+		currentPopup.hide();
+		hidden.innerHTML = "<iframe src='ocm://select/" + wpt + "'/>";
+	}
+
+	function zoomToPoint(lat, lon)
+	{
+		var lonLat = new OpenLayers.LonLat(lon, lat).transform(map.displayProjection,  map.projection);
+		if (notify)
+			notify.destroy();
+		notify = new OpenLayers.Layer.Markers( "Notify" );
+		var size = new OpenLayers.Size(48,48);
+		var offset = new OpenLayers.Pixel(-(size.w/2), -(size.h/2));
+		var icon = new OpenLayers.Icon("../icons/48x48/circle.png",size,offset);
+		notify.addMarker(new OpenLayers.Marker(lonLat,icon));
+		map.addLayer(notify);
+		map.raiseLayer(notify, -2)
+		map.panTo(lonLat);
+	}
+
+	function mapMoved(evt)
+	{
+		setTimeout('doMapMove()', 300);
+	}
+
+	function doMapMove()
+	{
+		var lonlat = map.getCenter().transform(map.projection, map.displayProjection);
+		hidden.innerHTML = "<iframe src='ocm://mapmoved/" + lonlat.lat + "/" + lonlat.lon + "'/>";
+	}
+
+	function doPopup(e, isCache)
+	{
+		var popup = document.getElementById("popup");
+		if (e.which != 3)
+		{
+			return;
+		}
+		if (popup.style.display == "inline")
+		{
+			doHidePopup();
+			return;
+		}
+		popup.style.position = "absolute";
+		popup.style.left= e.clientX + "px";
+		popup.style.top = e.clientY + "px";
+		popup.style.display = "inline";
+		if (isCache)
+			popup.innerHTML = popup_cache;
+		else
+			popup.innerHTML = popup_no_cache;
+		var point = new OpenLayers.Pixel(e.pageX, e.pageY);
+		mouse = map.getLonLatFromViewPortPx(point);
+	}
+
+	function doHighlight(obj)
+	{
+		obj.style.color = "#0000FF";
+	}
+
+	function doNohighlight(obj)
+	{
+		obj.style.color = "#000000";
+	}
+
+	function doHidePopup()
+	{
+		var popup = document.getElementById("popup");
+		popup.style.display = "none";
+	}
+
+	function doSetCentre()
+	{
+		doHidePopup();
+		var lonlat = mouse.transform(map.projection, map.displayProjection);
+		hidden.innerHTML = "<iframe src='ocm://setcentre/" + lonlat.lat + "/" + lonlat.lon + "'/>";
+	}
+
+	function doSetHome()
+	{
+		doHidePopup();
+		var lonlat = mouse.transform(map.projection, map.displayProjection);
+		hidden.innerHTML = "<iframe src='ocm://sethome/" + lonlat.lat + "/" + lonlat.lon + "'/>";
+	}
+
+	function doAddLocation()
+	{
+		doHidePopup();
+		var lonlat = mouse.transform(map.projection, map.displayProjection);
+		hidden.innerHTML = "<iframe src='ocm://addlocation/" + lonlat.lat + "/" + lonlat.lon + "'/>";
+	}
+
+	function doAddWaypoint()
+	{
+		doHidePopup();
+		var lonlat = mouse.transform(map.projection, map.displayProjection);
+		hidden.innerHTML = "<iframe src='ocm://addwaypoint/" + lonlat.lat + "/" + lonlat.lon + "'/>";
+	}
+
+	function doCorrectCoordinate()
+	{
+		doHidePopup();
+		var lonlat = mouse.transform(map.projection, map.displayProjection);
+		hidden.innerHTML = "<iframe src='ocm://correctcoordinate/" + lonlat.lat + "/" + lonlat.lon + "'/>";
+	}
+
+	// Seting if the Caches will be opened in OCM while clicking it one the map
+	function setAutoSelectCache(value) {
+		autoSelectCache = stringToBoolean(value);
+	}
+
+	// This Method add some maprenderer to the map
+	function addMapRenderer(newMap) {
+		try
+        {
+			map.addLayer(newMap);
+			map.removeLayer(greymap);
+        }
+        catch(err)
+        {
+        	// No internet connection
+        }
+	}
+
+	// Helping method for ADFC Bike Map: a better solution should be found for other specials.
+    function get_mm_bikeTracks(bounds) {
+        llbounds = new OpenLayers.Bounds();
+        llbounds.extend(OpenLayers.Layer.SphericalMercator.inverseMercator(bounds.left,bounds.bottom));
+        llbounds.extend(OpenLayers.Layer.SphericalMercator.inverseMercator(bounds.right,bounds.top));
+        url = "http://mm-lbserver.dnsalias.com/mm-mapserver_v2/wms/wms.php?REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=MM_BIKETRACKS&STYLES=&FORMAT=image/png&BGCOLOR=0xFFFFFF&TRANSPARENT=TRUE&SRS=EPSG:4326&BBOX="
+        url = url + llbounds.toBBOX() + "&WIDTH=256&HEIGHT=256"
+        return url
+    }
+
+    // Helping method for some kinds of OSM Maps
+    function osm_getTileURL(bounds) {
+        var res = this.map.getResolution();
+        var x = Math.round((bounds.left - this.maxExtent.left) / (res * this.tileSize.w));
+        var y = Math.round((this.maxExtent.top - bounds.top) / (res * this.tileSize.h));
+        var z = this.map.getZoom();
+        var limit = Math.pow(2, z);
+        if (y < 0 || y >= limit) {
+          	return OpenLayers.Util.getImagesLocation() + "404.png";
+        }
+        else {
+          	x = ((x % limit) + limit) % limit;
+          	return this.url + z + "/" + x + "/" + y + "." + this.type;
+        }
+    }
+
+	function stringToBoolean(string) {
+        switch(string.toLowerCase()) {
+    		case "true": case "yes": case "1": return true;
+            case "false": case "no": case "0": case null: return false;
+            default: return Boolean(string);
+        }
+	}
+
+// -->
+    </script>
+  </head>
+  <body onload="init()" oncontextmenu="return false;" onmousedown="doPopup(event)">
+    <div id="popup" class="popup"></div>
+    <div id="map"></div>
+    <div id="hidden" style='visibility:hidden'/>
+  </body>
+</html>

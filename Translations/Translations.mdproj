@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ItemType>TranslationProject</ItemType>
-    <ProductVersion>8.0.50727</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{E733B1D3-94EF-4B2D-B99D-6896FC4118EC}</ProjectGuid>
     <packageName>opencachemanager</packageName>
     <outputType>SystemPath</outputType>
     <relPath>locale</relPath>
-    <ReleaseVersion>1.0.10</ReleaseVersion>
+    <ReleaseVersion>1.0.17</ReleaseVersion>
     <projectInformations>
       <projectInformations>
-        <TranslationProjectInformation projectName="ocmengine" isIncluded="true" />
-        <TranslationProjectInformation projectName="ocm-gtk" isIncluded="true" />
+        <TranslationProjectInformation projectName="ocmengine" isIncluded="True" />
+        <TranslationProjectInformation projectName="ocm-gtk" isIncluded="True" />
       </projectInformations>
     </projectInformations>
     <translations>
@@ -26,7 +26,7 @@
         <Translation isoCode="sv" />
       </translations>
     </translations>
-    <Configuration Condition=" '$(Configuration)' == '' ">Release_Translated</Configuration>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release_Translated|AnyCPU' " />
