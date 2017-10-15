@@ -9,6 +9,7 @@ TestResults/
 
 # globs
 Makefile.in
+Makefile
 *.DS_Store
 *.sln.cache
 *.suo
@@ -40,3 +41,4 @@ Thumbs.db
 *.dotCover
 
 ./ocm-gtk/bin
+./ocmengine/bin
