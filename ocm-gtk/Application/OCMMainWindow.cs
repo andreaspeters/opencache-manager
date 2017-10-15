@@ -1191,12 +1191,12 @@ namespace ocmgtk
 
 		protected virtual void OnWikiClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("https://github.com/andreaspeters/opencache-manager/wiki");
+			Process.Start ("http://sourceforge.net/apps/mediawiki/opencachemanage/");
 		}
 
 		protected virtual void OnForumsClick (object sender, System.EventArgs e)
 		{
-			Process.Start("http://www.andreas-peters.net");
+			Process.Start("http://ocm.dafb-o.de/index.php");
 		}
 
 		protected virtual void OnAboutClick (object sender, System.EventArgs e)
@@ -1983,14 +1983,7 @@ namespace ocmgtk
 		protected virtual void OnNewCache (object sender, System.EventArgs e)
 		{
 			m_app.NewCache ();
-		} 
-
-		protected void OnImportOpencaching (object sender, EventArgs e)
-		{
-			ImportOpencachingDialog dlg = new ImportOpencachingDialog (this);
 		}
-
-	
 #endregion
 
 
