@@ -11,6 +11,8 @@ if test "x$PKG_CONFIG" = "xno"; then
         AC_MSG_ERROR([You need to install pkg-config])
 fi
 
+m4_include([expansions.m4])
+
 SHAMROCK_EXPAND_LIBDIR
 SHAMROCK_EXPAND_BINDIR
 SHAMROCK_EXPAND_DATADIR

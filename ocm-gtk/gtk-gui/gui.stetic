@@ -5,8 +5,9 @@
     <target-gtk-version>2.12</target-gtk-version>
   </configuration>
   <import>
+    <widget-library name="gconf-sharp-peditors, Version=2.24.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="webkit-sharp, Version=1.1.15.0, Culture=neutral, PublicKeyToken=eaa1d335d2e19745" />
-    <widget-library name="../bin/Release_Translated/ocm-gtk.exe" internal="true" />
+    <widget-library name="../bind/ocm-gtk.exe" internal="true" />
   </import>
   <widget class="Gtk.Bin" id="ocmgtk.WaypointWidget" design-size="391 579">
     <action-group name="Default">
@@ -702,7 +703,7 @@ For Geocaching.com and Terracaching users, you will need a premium account to us
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Bin" id="ocmgtk.SetupAssistant" design-size="300 300">
+  <widget class="Gtk.Assistant" id="ocmgtk.SetupAssistant" design-size="300 300">
     <property name="MemberName" />
     <property name="Visible">False</property>
     <child>
@@ -16523,10 +16524,10 @@ Cache Name</property>
         <property name="ShortLabel" translatable="yes">_OCM Wiki...</property>
         <signal name="Activated" handler="OnWikiClick" />
       </action>
-      <action id="OCMForumsAction">
+      <action id="OCMWebsiteAction">
         <property name="Type">Action</property>
-        <property name="Label" translatable="yes">OCM _Forums...</property>
-        <property name="ShortLabel" translatable="yes">OCM _Forums...</property>
+        <property name="Label" translatable="yes">OCM _Website...</property>
+        <property name="ShortLabel" translatable="yes">OCM _Website...</property>
         <signal name="Activated" handler="OnForumsClick" />
       </action>
       <action id="AboutAction">
@@ -16995,6 +16996,13 @@ Cache Name</property>
         <property name="ShortLabel" translatable="yes">Grab Images...</property>
         <signal name="Activated" handler="OnGrabImages" />
       </action>
+      <action id="ImportOpenCachingAction">
+        <property name="Type">Action</property>
+        <property name="HideIfEmpty">False</property>
+        <property name="Label" translatable="yes">_Import OpenCaching</property>
+        <property name="ShortLabel" translatable="yes">_Import OpenCaching</property>
+        <signal name="Activated" handler="OnImportOpencaching" />
+      </action>
     </action-group>
     <property name="MemberName" />
     <property name="Visible">False</property>
@@ -17021,6 +17029,7 @@ Cache Name</property>
                 <node type="Separator" />
                 <node type="Menuitem" action="ImportGPXLocZipAction" />
                 <node type="Menuitem" action="ImportDirectoryAction" />
+                <node type="Menuitem" action="ImportOpenCachingAction" />
                 <node type="Separator" />
                 <node type="Menu" action="ExportAction">
                   <node type="Menuitem" action="ExportGPXAction" />
@@ -17161,7 +17170,7 @@ Cache Name</property>
               </node>
               <node type="Menu" action="HelpAction">
                 <node type="Menuitem" action="OCMWikiAction" />
-                <node type="Menuitem" action="OCMForumsAction" />
+                <node type="Menuitem" action="OCMWebsiteAction" />
                 <node type="Separator" />
                 <node type="Menuitem" action="AboutAction" />
                 <node type="Menuitem" action="ChangeHistoryAction" />
@@ -19165,7 +19174,8 @@ Cache Name</property>
                 <property name="Xalign">0</property>
                 <property name="Yalign">0</property>
                 <property name="LabelProp">&lt;b&gt;&lt;big&gt;Version XXX&lt;/big&gt;&lt;/b&gt;
-&lt;small&gt;Copyright (c) Kyle Campbell 2010-2011&lt;/small&gt;</property>
+&lt;small&gt;Copyright (c) Andreas Peters 2015-2016&lt;/small&gt;
+&lt;small&gt;Copyright (c) Kyle Campbell 2010-2014&lt;/small&gt;</property>
                 <property name="UseMarkup">True</property>
               </widget>
             </child>
@@ -22307,6 +22317,64 @@ By reducing the number of logs per cache and compacting your database, you can g
           <packing>
             <property name="Position">2</property>
             <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Dialog" id="ocmgtk.ImportOpencachingDialog" design-size="400 300">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">dialog1</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <property name="Buttons">2</property>
+    <property name="HelpButton">False</property>
+    <child internal-child="VBox">
+      <widget class="Gtk.VBox" id="dialog1_VBox">
+        <property name="MemberName" />
+        <property name="BorderWidth">2</property>
+        <child>
+          <placeholder />
+        </child>
+      </widget>
+    </child>
+    <child internal-child="ActionArea">
+      <widget class="Gtk.HButtonBox" id="dialog1_ActionArea">
+        <property name="MemberName" />
+        <property name="Spacing">10</property>
+        <property name="BorderWidth">5</property>
+        <property name="Size">2</property>
+        <property name="LayoutStyle">End</property>
+        <child>
+          <widget class="Gtk.Button" id="buttonCancel">
+            <property name="MemberName" />
+            <property name="CanDefault">True</property>
+            <property name="CanFocus">True</property>
+            <property name="UseStock">True</property>
+            <property name="Type">StockItem</property>
+            <property name="StockId">gtk-cancel</property>
+            <property name="ResponseId">-6</property>
+            <property name="label">gtk-cancel</property>
+          </widget>
+          <packing>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="buttonOk">
+            <property name="MemberName" />
+            <property name="CanDefault">True</property>
+            <property name="CanFocus">True</property>
+            <property name="UseStock">True</property>
+            <property name="Type">StockItem</property>
+            <property name="StockId">gtk-ok</property>
+            <property name="ResponseId">-5</property>
+            <property name="label">gtk-ok</property>
+          </widget>
+          <packing>
+            <property name="Position">1</property>
             <property name="Expand">False</property>
             <property name="Fill">False</property>
           </packing>
