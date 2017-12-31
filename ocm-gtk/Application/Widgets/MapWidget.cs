@@ -17,6 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
+using System.Reflection;
 using ocmengine;
 using Mono.Unix;
 using Gdk;
@@ -188,10 +189,22 @@ namespace ocmgtk
 		public void Reload()
 		{
 			m_Loaded = false;
+			string myPosition;
+			string localSite="file://" + System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/web/";
 
-			m_View.LoadUri("http://andreas-peters.net/ocm/web/wpt_viewer.html?lat="
+			myPosition = "lat="  + m_App.AppConfig.LastLat.ToString (CultureInfo.InvariantCulture)
+			           + "&lon=" + m_App.AppConfig.LastLon.ToString (CultureInfo.InvariantCulture);
+			System.Console.WriteLine("myPosition = [" + myPosition + "]");
+			System.Console.WriteLine("localSite = [" + localSite + "]");
+			
+			/*
+			m_View.LoadUri("https://andreas-peters.net/ocm/web/wpt_viewer.html?lat="
 			               + m_App.AppConfig.LastLat.ToString (CultureInfo.InvariantCulture)
 			               + "&lon=" + m_App.AppConfig.LastLon.ToString (CultureInfo.InvariantCulture));
+			*/
+			
+			m_View.LoadUri(localSite + "wpt_viewer.html?" + myPosition);
+			
 
 			AddMaps(AppConfig.OpenLayerMaps);
 			LoadScript("setAutoSelectCache('" + AppConfig.AutoSelectCacheFromMap + "');");

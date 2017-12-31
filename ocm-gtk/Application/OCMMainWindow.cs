@@ -1207,7 +1207,7 @@ namespace ocmgtk
 			dialog.Version = OCMApp.GetOCMVersion();
 			dialog.Logo =  new Gdk.Pixbuf ("./icons/scalable/OCMLogo.svg", 96, 96);
 			dialog.Website = "http://www.andreas-peters.net/";
-			dialog.Copyright = "Copyright Kyle Campbell (c) 2010-2013\nCopyright Andreas Peters (c) 2015-2016";	
+			dialog.Copyright = "Copyright Kyle Campbell (c) 2010-2013\nCopyright Andreas Peters (c) 2015-2017";	
 			System.IO.StreamReader reader = new System.IO.StreamReader(new System.IO.FileStream("licence/Licence.txt",System.IO.FileMode.Open,System.IO.FileAccess.Read));
 			dialog.License = reader.ReadToEnd();
 			reader.Close();
@@ -1215,7 +1215,8 @@ namespace ocmgtk
 				"Harrie Klomp - Dutch Translation" , "Thor Dekov Buur - Danish Translation",
 				"Michael Massoth/Florian Plähn/Maik Bischoff - German Translation",
 				"Josef Kulhánek - Czech Translation","Vicen - Spanish Translation",
-				"Per Holmberg - Swedish Translation"};
+				"Per Holmberg - Swedish Translation",
+				"Jens Böttge - Programming"};
 			dialog.Run ();
 			dialog.Hide();
 

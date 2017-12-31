@@ -1,3 +1,0 @@
-#!/bin/sh
-cd "/usr/local/opencachemanager/lib/opencachemanager"
-exec mono "/usr/local/opencachemanager/lib/opencachemanager/ocm-gtk.exe" "$@"

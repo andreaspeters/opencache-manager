@@ -32,6 +32,7 @@ Makefile
 config.log
 config.status
 **/*/Makefile
+site/
 
 #Mac bundle stuff
 *.dmg
@@ -46,3 +47,4 @@ config.status
 
 ./ocm-gtk/bin
 ./ocmengine/bin
+
