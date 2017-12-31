@@ -1,0 +1,4687 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2012-04-01 20:01:42+0000\n"
+"PO-Revision-Date: 2011-07-04 23:00+0100\n"
+"Last-Translator: Per Holmberg <ocm@perholmberg.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: MonoDevelop Gettext addin\n"
+
+#: ../ocmengine/CacheLog.cs:119
+#: ../ocm-gtk/gtk-gui/ocmgtk.ConfigureEToolsDlg.cs:95
+msgid "Delete"
+msgstr "Ta bort"
+
+#: ../ocmengine/CacheLog.cs:121
+#: ../ocm-gtk/gtk-gui/ocmgtk.ConfigureEToolsDlg.cs:83
+#: ../ocm-gtk/gtk-gui/ocmgtk.ManageListDialog.cs:73
+msgid "Edit"
+msgstr "Redigera"
+
+#: ../ocmengine/Waypoint.cs:129
+msgid "Original Location"
+msgstr "Originalplats"
+
+#: ../ocmengine/Utilities.cs:137
+msgid "N {0}° {1}"
+msgstr "N {0}° {1}"
+
+#: ../ocmengine/Utilities.cs:139
+msgid "S {0}° {1}"
+msgstr "S {0}° {1}"
+
+#: ../ocmengine/Utilities.cs:162
+msgid "  E {0}° {1}"
+msgstr "  E {0}° {1}"
+
+#: ../ocmengine/Utilities.cs:164
+msgid "  W {0}° {1}"
+msgstr "  W {0}° {1}"
+
+#: ../ocmengine/Utilities.cs:227
+msgid "Unknown Coordinate Format"
+msgstr "Okänt koordinatformat"
+
+#: ../ocmengine/Geocache.cs:418
+msgid "Original Coordinate:"
+msgstr "Ursprunglig koordinat:"
+
+#: ../ocmengine/Geocache.cs:429
+msgid "Y:"
+msgstr "J:"
+
+#: ../ocmengine/Geocache.cs:433
+msgid "N:"
+msgstr "N:"
+
+#: ../ocm-gtk/Widgets/HTMLWidget.cs:64
+#, fuzzy
+msgid "Are you sure you wish to delete this log?"
+msgstr "Är du säker på att du vill ta bort '{0}'"
+
+#: ../ocm-gtk/Widgets/CoordinateWidget.cs:91
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:384
+msgid "N"
+msgstr "N"
+
+#: ../ocm-gtk/Widgets/CoordinateWidget.cs:92
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:389
+msgid "S"
+msgstr "S"
+
+#: ../ocm-gtk/Widgets/CoordinateWidget.cs:96
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:387
+msgid "E"
+msgstr "E"
+
+#: ../ocm-gtk/Widgets/CoordinateWidget.cs:97
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:391
+msgid "W"
+msgstr "W"
+
+#: ../ocm-gtk/Widgets/CoordinateWidget.cs:118
+msgid "Invalid Coordinate"
+msgstr "Ogiltig koordinat"
+
+#: ../ocm-gtk/Dialogs/SetupAssistant.cs:43
+msgid "Setup Assistant"
+msgstr "Installationsguiden"
+
+#: ../ocm-gtk/Dialogs/SetupAssistant.cs:44
+msgid "Welcome"
+msgstr "Välkommen"
+
+#: ../ocm-gtk/Dialogs/SetupAssistant.cs:47
+msgid "Setup a Database"
+msgstr "Installera en databas"
+
+#: ../ocm-gtk/Dialogs/SetupAssistant.cs:49
+msgid "User Details"
+msgstr "Användardetaljer"
+
+#: ../ocm-gtk/Widgets/SetupAssistantPage2.cs:70
+msgid "Choose Database Location"
+msgstr "Välj plats för databas"
+
+#: ../ocm-gtk/Widgets/SetupAssistantPage2.cs:70
+#: ../ocm-gtk/Widgets/SetupAssistantPage2.cs:95
+#: ../ocm-gtk/Widgets/GPXWidget.cs:116 ../ocm-gtk/Widgets/GPXWidget.cs:136
+#: ../ocm-gtk/Widgets/GenericGPSWidget.cs:152
+#: ../ocm-gtk/Dialogs/AddCommandDialog.cs:56
+#: ../ocm-gtk/Widgets/GarminEdgeWidget.cs:120
+#: ../ocm-gtk/Widgets/DelormeGPXWidget.cs:128
+#: ../ocm-gtk/Widgets/DelormeGPXWidget.cs:167
+#: ../ocm-gtk/Widgets/MapSelectionWidget.cs:180
+#: ../ocm-gtk/Dialogs/ExportPOIDialog.cs:236
+#: ../ocm-gtk/Dialogs/ExportPOIDialog.cs:272
+#: ../ocm-gtk/Application/OCMMainWindow.cs:217
+#: ../ocm-gtk/Application/OCMMainWindow.cs:258
+#: ../ocm-gtk/Application/OCMMainWindow.cs:498
+#: ../ocm-gtk/Application/OCMApp.cs:530 ../ocm-gtk/Application/OCMApp.cs:563
+#: ../ocm-gtk/Application/Dialogs/Preferences.cs:176
+#: ../ocm-gtk/Application/Dialogs/Preferences.cs:186
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ../ocm-gtk/Widgets/SetupAssistantPage2.cs:70
+#: ../ocm-gtk/Widgets/MapSelectionWidget.cs:180
+#: ../ocm-gtk/Application/OCMMainWindow.cs:259
+#: ../ocm-gtk/Application/OCMApp.cs:564
+msgid "Open"
+msgstr "Öppna"
+
+#: ../ocm-gtk/Widgets/SetupAssistantPage2.cs:95
+msgid "Choose Data Directory"
+msgstr "Välj datakatalog"
+
+#: ../ocm-gtk/Widgets/SetupAssistantPage2.cs:95
+#: ../ocm-gtk/Widgets/GPXWidget.cs:116 ../ocm-gtk/Widgets/GPXWidget.cs:136
+#: ../ocm-gtk/Widgets/GenericGPSWidget.cs:152
+#: ../ocm-gtk/Widgets/GarminEdgeWidget.cs:120
+#: ../ocm-gtk/Widgets/DelormeGPXWidget.cs:128
+#: ../ocm-gtk/Widgets/DelormeGPXWidget.cs:167
+#: ../ocm-gtk/Dialogs/ExportPOIDialog.cs:236
+#: ../ocm-gtk/Dialogs/ExportPOIDialog.cs:272
+msgid "Select"
+msgstr "Välj"
+
+#: ../ocm-gtk/Dialogs/ExportProgressDialog.cs:61
+#: ../ocm-gtk/Application/Dialogs/ProgressDialog.cs:202
+msgid "<b>File: </b>"
+msgstr "<b>Fil: </b>"
+
+#: ../ocm-gtk/Dialogs/ExportProgressDialog.cs:79
+msgid "<i>{0} Geocaches exported.</i>"
+msgstr "<i>{0} geocachar exporterade.</i>"
+
+#: ../ocm-gtk/Dialogs/ExportProgressDialog.cs:80
+#: ../ocm-gtk/Dialogs/CopyingProgress.cs:65
+#: ../ocm-gtk/Dialogs/CopyingProgress.cs:154
+#: ../ocm-gtk/Application/Dialogs/ProgressDialog.cs:61
+#: ../ocm-gtk/Application/Dialogs/FieldNotesProgress.cs:115
+#: ../ocm-gtk/Application/Dialogs/SendWaypointsDialog.cs:166
+#: ../ocm-gtk/Application/Dialogs/FileDownloadProgress.cs:100
+msgid "Complete"
+msgstr "Klar"
+
+#: ../ocm-gtk/Dialogs/ExportProgressDialog.cs:106
+msgid ""
+"Cancelling an export will result in an invalid GPX file.\n"
+"Are you sure?"
+msgstr ""
+"Om du avbryter exporten kommer du få en felaktig gps-fil.\n"
+"Är du säker?"
+
+#: ../ocm-gtk/Widgets/GPXWidget.cs:116
+#: ../ocm-gtk/Widgets/GarminEdgeWidget.cs:120
+#: ../ocm-gtk/Widgets/DelormeGPXWidget.cs:128
+msgid "Select GPX location"
+msgstr "Välj plats för gpx"
+
+#: ../ocm-gtk/Widgets/GPXWidget.cs:136
+#: ../ocm-gtk/Widgets/DelormeGPXWidget.cs:167
+msgid "Select Field Notes location"
+msgstr "Välj plats för fältanteckningar"
+
+#: ../ocm-gtk/Widgets/GPXWidget.cs:140
+#: ../ocm-gtk/Widgets/DelormeGPXWidget.cs:171
+msgid "Text Files"
+msgstr "Textfiler"
+
+#: ../ocm-gtk/Widgets/GenericGPSWidget.cs:152
+msgid "Select File location"
+msgstr "Välj plats för filen"
+
+#: ../ocm-gtk/Dialogs/CopyingProgress.cs:41
+msgid "<big><b>Deleting Geocaches</b></big>"
+msgstr "<big><b>Tar bort geocachar</b></big>"
+
+#: ../ocm-gtk/Dialogs/CopyingProgress.cs:42
+msgid "Delete Caches...."
+msgstr "Ta bort gömmor"
+
+#: ../ocm-gtk/Dialogs/CopyingProgress.cs:64
+#: ../ocm-gtk/Dialogs/CopyingProgress.cs:153
+msgid "<i>Complete</i>"
+msgstr "<i>Klar</i>"
+
+#: ../ocm-gtk/Dialogs/CopyingProgress.cs:75
+msgid "Move Caches..."
+msgstr "Flytta gömmor..."
+
+#: ../ocm-gtk/Dialogs/CopyingProgress.cs:76
+msgid "Moving Geocaches"
+msgstr "Flyttar gömmor"
+
+#: ../ocm-gtk/Dialogs/CopyingProgress.cs:101
+msgid ""
+"The target database needs to be upgraded. Please open the target database "
+"before trying to copy/move caches."
+msgstr ""
+"Måldatabasen behöver uppgraderas. Vänligen öppna måldatabasen före du "
+"försöker kopiera/flytta gömmor."
+
+#: ../ocm-gtk/Dialogs/CopyingProgress.cs:165
+msgid "<i>Copying:{0}</i>"
+msgstr "<i>Kopierar:{0}</i>"
+
+#: ../ocm-gtk/Dialogs/CopyingProgress.cs:175
+msgid "<i>Deleting:{0}</i>"
+msgstr "<i>Tar bort:{0}</i>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:194
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:668
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:678
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:688
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:698
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:170
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:204
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:208
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:212
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:216
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:235
+#: ../ocm-gtk/Application/Bookmarks/BookmarkManager.cs:49
+msgid "None"
+msgstr "Ingen"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:206
+msgid "<b>Attributes</b>"
+msgstr "<b>Attribut</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:225
+#: ../ocm-gtk/Application/Printing/CachePrinter.cs:113
+msgid "<b>A cache by:</b>"
+msgstr "<b>Av:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:250
+#: ../ocm-gtk/Application/Printing/CachePrinter.cs:117
+msgid "<b>Hidden on:</b>"
+msgstr "<b>Gömd:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:273
+msgid "<b>Last Update:</b>"
+msgstr "<b>Senaste uppdatering:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:305
+#: ../ocm-gtk/Application/Printing/CachePrinter.cs:121
+msgid "<b>Cache Size:</b>"
+msgstr "<b>Storlek:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:327
+#: ../ocm-gtk/Application/Printing/CachePrinter.cs:125
+msgid "<b>Difficulty:</b>"
+msgstr "<b>Svårighetsgrad:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:379
+#: ../ocm-gtk/Application/Printing/CachePrinter.cs:129
+msgid "<b>Terrain:</b>"
+msgstr "<b>Terrängfaktor:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:442
+msgid "<country>"
+msgstr "<land>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:451
+msgid "<b>Last Log By You:</b>"
+msgstr "<b>Senaste loggning av dig:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:461
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:194
+#: ../ocm-gtk/Application/Dialogs/LoadGPSFieldNotes.cs:35
+#: ../ocm-gtk/Application/Dialogs/LoadGPSFieldNotes.cs:52
+msgid "Never"
+msgstr "Aldrig"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:472
+msgid "<b>Last Found:</b>"
+msgstr "<b>Senast hittad:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:482
+msgid "<lfound>"
+msgstr "..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:542
+msgid "label1"
+msgstr "label1"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:603
+msgid "Log My Find..."
+msgstr "Logga mitt fynd..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:624
+msgid "<b>User Data 3:</b>"
+msgstr "<b>Användardata 3:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:636
+msgid "<b>User Data 4:</b>"
+msgstr "<b>Användardata 4:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:647
+msgid "<b>User Data 1:</b>"
+msgstr "<b>Användardata 1:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:657
+msgid "<b>User Data 2:</b>"
+msgstr "<b>Användardata 2:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeocacheInfoPanel.cs:717
+msgid "View Online..."
+msgstr "Visa uppkopplat..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointWidget.cs:114
+msgid "_Grab Waypoints..."
+msgstr "H_ämta brytpunkter..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointDialog.cs:59
+msgid "Add/Edit Waypoint..."
+msgstr "Lägg till/ändra brytpunkt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointDialog.cs:95
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointWidget.cs:63
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:227
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:279
+msgid "Final Location"
+msgstr "Slutkoordinater"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointDialog.cs:96
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:112
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointWidget.cs:64
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:228
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:280
+msgid "Parking Area"
+msgstr "Parkering"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointDialog.cs:97
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointWidget.cs:65
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:229
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:281
+msgid "Question To Answer"
+msgstr "Svar på fråga"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointDialog.cs:98
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointWidget.cs:66
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:230
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:282
+msgid "Reference Point"
+msgstr "Referenspunkt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointDialog.cs:99
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointWidget.cs:67
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:231
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:283
+msgid "Stages of a Multicache"
+msgstr "Steg i flerstegsgömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointDialog.cs:100
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointWidget.cs:68
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:232
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:284
+msgid "Trailhead"
+msgstr "Ledens början"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointDialog.cs:101
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointWidget.cs:69
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:233
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:285
+msgid "Other"
+msgstr "Övrigt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointDialog.cs:137
+#: ../ocm-gtk/gtk-gui/ocmgtk.AddBookMarkDialog.cs:43
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointWidget.cs:122
+#: ../ocm-gtk/gtk-gui/ocmgtk.AddCommandDialog.cs:129
+#: ../ocm-gtk/gtk-gui/ocmgtk.AddLocationDialog.cs:53
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:290
+msgid "Name:"
+msgstr "Namn:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointDialog.cs:146
+msgid "Symbol:"
+msgstr "Symbol:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointDialog.cs:176
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:269
+msgid "<b>Location</b>"
+msgstr "<b>Plats</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WaypointDialog.cs:205
+msgid "<b>Description</b>"
+msgstr "<b>Beskrivning</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ProgressDialog.cs:36
+msgid "Import Data..."
+msgstr "Importera data"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ProgressDialog.cs:52
+msgid "<big><b>Importing GPX data</b></big>"
+msgstr "<big><b>Importerar gpx-data</b></big>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ProgressDialog.cs:71
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportProgressDialog.cs:60
+msgid "<b>File:</b>"
+msgstr "<b>Fil:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ProgressDialog.cs:99
+#: ../ocm-gtk/gtk-gui/ocmgtk.SendWaypointsDialog.cs:70
+#: ../ocm-gtk/gtk-gui/ocmgtk.FieldNotesProgress.cs:74
+msgid "<i>Initializing</i>"
+msgstr "<i>Initierar</i>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:202
+msgid "Preferences..."
+msgstr "Inställningar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:245
+msgid "<b>Home Location</b>"
+msgstr "<b>Hemkoordinater</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:282
+msgid "Changing or adding an account requires a restart of OCM"
+msgstr "Ändra eller lägga till ett konto kräver omstart av OCM"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:296
+msgid "User name or Account ID #2:"
+msgstr "Användarnamn eller konto-ID 2:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:307
+msgid "User name or Account ID:"
+msgstr "Användarnamn eller konto-ID:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:317
+msgid "User name or Account ID #3:"
+msgstr "Användarnamn eller konto-ID 3:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:327
+msgid "User name or Account ID #4:"
+msgstr "Användarnamn eller konto-ID 4:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:393
+msgid "<b>Account Information</b>"
+msgstr "<b>Kontoinformation</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:407
+msgid "Home/Account"
+msgstr "Hem/Konto"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:490
+msgid "Startup Filter:"
+msgstr "Filter vid uppstart:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:501
+msgid "Database Default Directory:"
+msgstr "Databasens standardkatalog:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:510
+msgid "Import Default Directory:"
+msgstr "Standardkatalog för import:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:521
+msgid "Units:"
+msgstr "Enheter:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:540
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage2.cs:188
+msgid "Metric"
+msgstr "Meter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:541
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage2.cs:189
+msgid "U.S./Imperial"
+msgstr "U.S."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:558
+msgid "General"
+msgstr "Generellt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:571
+msgid "Don't show import/export summary on completion"
+msgstr "Visa inte sammanfattning vid import och export"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:585
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:877
+msgid "Child Waypoints:"
+msgstr "Tillhörande brytpunkter:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:594
+msgid "Show difficulty/terrain indicators on map"
+msgstr "Visa svårighet/terräng-indikatorer på karta"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:608
+msgid "Use direct entry mode for coordinates"
+msgstr "Använd direktinmatning för koordinater"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:622
+msgid "Show DNF icon in list and on map"
+msgstr "Visa DNF-ikon i listan och på karta"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:645
+msgid "Only puzzle cache types with corrected coordinats/final location"
+msgstr "Bara pusselgömmor med korrigerade koordinater/slutkoordinater"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:657
+msgid "All caches with corrected coordinates/final location"
+msgstr "Alla gömmor med korrigerade koordinater/slutkoordinater"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:669
+msgid "Never Show"
+msgstr "Visa aldrig"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:684
+msgid "<b>Solved puzzle icon</b>"
+msgstr "<b>Ikon för lösta pussel</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:702
+msgid "60"
+msgstr ""
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:713
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:747
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:1024
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:124
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:137
+msgid "days"
+msgstr "dagar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:735
+#, fuzzy
+msgid "14"
+msgstr "1"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:773
+msgid "Show Map Popups"
+msgstr "Visa popuper i kartor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:785
+msgid "Prefix with Type (e.g. PKABCD01)"
+msgstr "Prefix för typ (e.g. PKABCD01)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:786
+msgid "Use GC name (e.g. GCABCD01)"
+msgstr "Använd GC-namn (e.g. GCABCD01)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:798
+msgid "Automatically select cache when clicked on the map"
+msgstr "Välj automatiskt gömma vid klick på kartan"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:812
+#, fuzzy
+msgid "Highlight new caches published within:"
+msgstr "Senast uppdaterad inom:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:825
+#, fuzzy
+msgid "Highlight caches not updated within:"
+msgstr "Senast uppdaterad inom:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:840
+msgid "Behaviour"
+msgstr "Uppförande"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:851
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:353
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:355
+msgid "Selected Cache Only"
+msgstr "Endast markerad gömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:852
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:357
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:359
+msgid "All Waypoints"
+msgstr "Alla brytpunkter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:888
+msgid "Caches on Map:"
+msgstr "Gömmor på kartan:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:899
+msgid "Nearby Caches on Map:"
+msgstr "Närliggande gömmor på kartan:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:908
+msgid "100"
+msgstr "100"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:931
+msgid "Enabled on Startup"
+msgstr "Aktiverat vid uppstart"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:932
+msgid "Disabled on Startup"
+msgstr "Inaktiverat vid uppstart"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:947
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:362
+msgid "Map"
+msgstr "Karta"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:959
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSDConfig.cs:99
+msgid "Continuously Recenter Map"
+msgstr "Centrera kartan kontinuerligt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:975
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSDConfig.cs:62
+msgid "Poll Interval:"
+msgstr "Intervall:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:985
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSDConfig.cs:85
+msgid "30"
+msgstr "30"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:995
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSDConfig.cs:72
+msgid "seconds"
+msgstr "sekunder"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:1012
+msgid "GPSD"
+msgstr "GPSD"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:1035
+msgid "Check for updates every"
+msgstr "Kolla efter uppdateringar efter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:1046
+msgid "7"
+msgstr "7"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:1061
+msgid "Update"
+msgstr "Uppdatera"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:1073
+msgid "Enable Trace Log"
+msgstr "Aktivera felsökningslogg"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:1086
+msgid "Clear Log on Startup"
+msgstr "Töm logg vid uppstart"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.Preferences.cs:1100
+msgid "Logging"
+msgstr "Loggning"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CoordinateWidget.cs:58
+msgid "°"
+msgstr "°"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage1.cs:36
+msgid ""
+"Welcome to OCM! This assistant will guide you through setting up OCM for "
+"first time use. You will need to know your home coordinates from your GPS, "
+"plus some information from your preferred caching website. \n"
+"\n"
+"For Geocaching.com and Terracaching users, you will need a premium account "
+"to use all of the features of OCM. If you don't have an account, click on "
+"the button below to sign up to Geocaching.com"
+msgstr ""
+"Välkommen till OCM! Denna guide kommer att ta dig genom installationen av "
+"OCM. Du kommer att behöva veta dina hemkoordinater från din gps, plus lite "
+"information från din föredragna geocaching-sajt.\n"
+"\n"
+"För Geocaching.com- och Terracaching-användare behöver du ett premimumkonto "
+"för att använda alla funktioner i OCM. Om du inte har ett konto, klicka på "
+"knappen nedan för att registrera ett."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage1.cs:49
+msgid "Sign Up for an Account..."
+msgstr "Registrera ett konto..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage2.cs:61
+msgid "You should choose an default directory for OCM to store data:"
+msgstr "Välj en katalog där OCM ska lagra data:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage2.cs:104
+msgid ""
+"You will need to create a database to use OCM, or open an existing OCM "
+"database if you already have one from somewhere else. "
+msgstr ""
+"Du behöver skapa en OCM-databas, alternativt välja en befintlig om du redan "
+"har en sedan tidigare."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage2.cs:154
+msgid "OCM should report distances in "
+msgstr "OCM ska visa avstånd i "
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage2.cs:163
+msgid "Default map that OCM should use"
+msgstr "Karta som OCM ska använda som standard"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage2.cs:172
+msgid "Open Street Maps"
+msgstr "Open Street Maps"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage2.cs:173
+msgid "Google Hybrid"
+msgstr "Google Hybrid"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage2.cs:174
+msgid "Google Street Maps"
+msgstr "Google Street Maps"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage2.cs:175
+msgid "Google Terrain"
+msgstr "Google Terräng"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage3.cs:50
+msgid ""
+"Finally, you need to enter your home coordinates and user ID so that OCM can "
+"correctly calculate the distance to caches from your home and correctly "
+"identify which caches are yours. \n"
+"\n"
+"If you don't know these settings and are a Geocaching.com user, click on <b>"
+"\"View Account Online...\"</b> to see your information from Geocaching.com\n"
+"\n"
+"You can also set your home location later using the map in OCM. Scroll the "
+"map to your home location, right-click on the map and select <b>Set as Home</"
+"b>."
+msgstr ""
+"Slutligen behöver du skriva in dina hemkoordinater och användar-ID så att "
+"OCM kan beräkna avståndet till gömmor från ditt hem och identifiera vilka "
+"gömmor som är dina.\n"
+"\n"
+"Om du inte vet dessa inställningar och är en Geocaching.com-användare, "
+"klicka på <b>\"Visa konto uppkopplat...\"</b> för att se din information "
+"från Geocaching.com\n"
+"\n"
+"Du kan också sätta dina hemkoordinater senare genom att använda kartan i "
+"OCM. Navigera kartan till där du bor, högerklicka på kartan och välj <b>Sätt "
+"som Hem</b>."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage3.cs:73
+msgid "View Account Online..."
+msgstr "Visa konto uppkopplat..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage3.cs:83
+msgid ""
+"You can enter either your account ID or user name to help OCM identify your "
+"caches and finds"
+msgstr ""
+"Du kan skriva in ditt konto-ID eller ditt användarnamn för att hjälpa OCM "
+"identifiera vilka gömmor du gömt och hittat."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage3.cs:95
+msgid "Home Latitude:"
+msgstr "Hem-latitud:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage3.cs:106
+msgid "Home Longitude:"
+msgstr "Hem-longitud:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportProgressDialog.cs:32
+msgid "Saving File..."
+msgstr "Sparar fil"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportProgressDialog.cs:48
+msgid "<big><b>Generating GPX File</b></big>"
+msgstr "<big><b>Genererar gpx-fil</b></big>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportProgressDialog.cs:80
+msgid "<i>Intializing</i>"
+msgstr "<i>Intitierar</i>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.DescriptionWidget.cs:49
+#, fuzzy
+msgid "<span fgcolor=\"blue\">Hint</span>"
+msgstr "Ett kombinationsfilter är tillämpat."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.DescriptionWidget.cs:76
+msgid "<b>Trackables</b>"
+msgstr "<b>Spårbara objekt</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:129
+msgid "Difficulty"
+msgstr "Svårighetsgrad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:138
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:187
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:583
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:605
+msgid "Greater Than"
+msgstr "Större än"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:139
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:188
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:585
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:607
+msgid "Greater Than or Equal To"
+msgstr "Minst"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:140
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:189
+msgid "Equal To"
+msgstr "Är"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:141
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:190
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:587
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:609
+msgid "Less Than or Equal To"
+msgstr "Maximalt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:142
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:191
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:589
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:611
+msgid "Less Than"
+msgstr "Mindre än"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:154
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:205
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:427
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:584
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:246
+msgid "1"
+msgstr "1"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:155
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:206
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:428
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:585
+msgid "1.5"
+msgstr "1,5"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:156
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:207
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:429
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:586
+msgid "2"
+msgstr "2"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:157
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:208
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:430
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:587
+msgid "2.5"
+msgstr "2,5"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:158
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:209
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:431
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:588
+msgid "3"
+msgstr "3"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:159
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:210
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:432
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:589
+msgid "3.5"
+msgstr "3,5"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:160
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:211
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:433
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:590
+msgid "4"
+msgstr "4"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:161
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:212
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:434
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:591
+msgid "4.5"
+msgstr "4,5"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:162
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:213
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPXWidget.cs:104
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:435
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:592
+#: ../ocm-gtk/gtk-gui/ocmgtk.DeLormeWidget.cs:138
+#: ../ocm-gtk/gtk-gui/ocmgtk.DelormeGPXWidget.cs:103
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:283
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:364
+#: ../ocm-gtk/gtk-gui/ocmgtk.CleanupPage2.cs:78
+msgid "5"
+msgstr "5"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:176
+msgid "Terrain"
+msgstr "Terrängfaktor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:229
+msgid "<b>Difficulty &amp; Terrain</b>"
+msgstr "<b>Svårighet &amp; Terräng</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:250
+msgid "Any cache type"
+msgstr "Alla typer"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:263
+msgid "Any of the following types:"
+msgstr "Är av följande typer:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:293
+msgid "Adventure Maze"
+msgstr "Labyrint"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:307
+msgid "A.P.E."
+msgstr "A.P.E."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:319
+msgid "CITO"
+msgstr "CITO"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:333
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:413
+msgid "Earth Cache"
+msgstr "Earthcache"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:347
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:416
+msgid "Event Cache"
+msgstr "Evenemang"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:359
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:365
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:419
+msgid "Letterbox Hybrid"
+msgstr "Letterbox-hybrid"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:371
+msgid "Locationless"
+msgstr "Omvända"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:385
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:425
+msgid "Mega Event"
+msgstr "Megaevenemang"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:399
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:362
+msgid "Multi-Cache"
+msgstr "Flerstegsgömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:411
+msgid "Traditional"
+msgstr "Traditionell"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:421
+#: ../ocm-gtk/Application/OCMApp.cs:336
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:115
+msgid "Unknown"
+msgstr "Okänt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:433
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:216
+msgid "Virtual"
+msgstr "Virtuell"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:445
+msgid "Webcam"
+msgstr "Webbkamera"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:459
+msgid "Wherigo"
+msgstr "Wherigo"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:480
+msgid "Cache Source:"
+msgstr "Källa:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:506
+msgid "Geocaching.com"
+msgstr "Geocaching.com"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:516
+msgid "NaviCache"
+msgstr "NaviCache"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:528
+msgid "OpenCaching (.eu/.us/.jp)"
+msgstr "OpenCaching (.eu/.us/.jp)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:540
+msgid "Terracaching.com"
+msgstr "Terracaching.com"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:554
+msgid "Waymarking.com"
+msgstr "Waymarking.com"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage1.cs:572
+msgid "<b>Cache Types</b>"
+msgstr "<b>Typer av gömmor</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.FilterDialog.cs:49
+msgid "Advanced Filters..."
+msgstr "Avancerat filter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.FilterDialog.cs:76
+#: ../ocm-gtk/Application/Dialogs/FilterDialog.cs:487
+msgid "Difficulty/Terrain/Type"
+msgstr "Svårighet/Terräng/Typ"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.FilterDialog.cs:93
+#: ../ocm-gtk/Application/Dialogs/FilterDialog.cs:456
+msgid "Container/Description/Status"
+msgstr "Behållare/Beskrivning/Status"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.FilterDialog.cs:111
+#: ../ocm-gtk/Application/Dialogs/FilterDialog.cs:364
+msgid "Placement/Location"
+msgstr "Placering"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.FilterDialog.cs:127
+msgid "Notes/User Data/Waypoints/Corrected"
+msgstr "Användardata/Brytpunkter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.FilterDialog.cs:140
+#: ../ocm-gtk/Application/Dialogs/FilterDialog.cs:261
+msgid "Attributes"
+msgstr "Attribut"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.FilterDialog.cs:162
+#: ../ocm-gtk/Application/Dialogs/FilterDialog.cs:416
+msgid "Updated/Found"
+msgstr "Uppdaterad/Hittad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:128
+msgid "Has any container size"
+msgstr "Alla storlekar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:156
+msgid "Large"
+msgstr "Stor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:168
+msgid "Micro"
+msgstr "Mikro"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:178
+msgid "Not Chosen"
+msgstr "Inte valt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:192
+msgid "Regular"
+msgstr "Reguljär"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:204
+msgid "Small"
+msgstr "Liten"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:235
+msgid "Has any of the following sizes:"
+msgstr "Är någon av följande storlekar:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:251
+msgid "<b>Container Type</b>"
+msgstr "<b>Behållare</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:275
+msgid "Description contains the following words:"
+msgstr "Beskrivning innehåller följande ord:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:296
+msgid "<b>Cache Description</b>"
+msgstr "<b>Beskrivning</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:320
+msgid "Only caches that are marked:"
+msgstr "Bara gömmor som är markerade med:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:343
+msgid "Didn't Find It"
+msgstr "Kunte inte hitta den"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:356
+msgid "First to Find"
+msgstr "FTF"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:366
+msgid "Not Didn't Find It"
+msgstr "Inget misslyckat försök"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:380
+msgid "Not First to Find"
+msgstr "Ingen FTF"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:401
+msgid "Caches with the following status flags:"
+msgstr "Gömmor med följande statusflaggor:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:427
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheListWidget.cs:221
+msgid "Archived"
+msgstr "Arkiverad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:442
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheListWidget.cs:236
+msgid "Available"
+msgstr "Aktiv"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:455
+msgid "Disabled"
+msgstr "Inaktiv"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:470
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheListWidget.cs:249
+msgid "Found"
+msgstr "Hittad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:481
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:126
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheListWidget.cs:260
+#: ../ocm-gtk/Application/QuickFilters/QuickFilter.cs:162
+msgid "Mine"
+msgstr "Min"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:494
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheListWidget.cs:288
+msgid "Not Found"
+msgstr "Inte hittad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage2.cs:513
+msgid "<b>Cache Status</b>"
+msgstr "<b>Status</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:45
+msgid "Add GPS Profile..."
+msgstr "Lägg till gps-profil"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:66
+msgid "Profile Name:"
+msgstr "Profilnamn:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:76
+msgid "New Profile"
+msgstr "Ny profil"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:100
+msgid "Garmin GPX (Colorado/Oregon/Dakotai/Map62/Nuvi 5xx)"
+msgstr "Garmin GPX (Colorado/Oregon/Dakotai/Map62/Nuvi 5xx)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:101
+msgid "Garmin USB (eTrex/GPSMap60/StreetPiot)"
+msgstr "Garmin USB (eTrex/GPSMap60/StreetPiot)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:102
+msgid "Garmin Serial (original eTrex/eTrex H/Gecko)"
+msgstr "Garmin Serial (original eTrex/eTrex H/Gecko)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:103
+msgid "Garmin Edge (605/705)/Garmin Nuvi"
+msgstr "Garmin Edge (605/705)/Garmin Nuvi"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:104
+msgid "DeLorme USB (PN-20/PN-30/PN-40)"
+msgstr "DeLorme USB (PN-20/PN-30/PN-40)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:105
+msgid "DeLorme GPX (PN-60/PN-40 v2.8+)"
+msgstr "DeLorme GPX (PN-60/PN-40 v2.8+)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:106
+msgid "Magellan GPX (Explorist GC/310/510/610/710)"
+msgstr ""
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:107
+msgid "Other GPS"
+msgstr "Annan gps"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:120
+msgid "Select a GPS Type:"
+msgstr "Välj en gps-typ:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:129
+msgid "Device"
+msgstr "Enhet"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSConfiguration.cs:142
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:410
+msgid "Waypoint Symbols"
+msgstr "Symboler"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPXWidget.cs:68
+#: ../ocm-gtk/gtk-gui/ocmgtk.MagellanExploristWidget.cs:51
+#: ../ocm-gtk/gtk-gui/ocmgtk.GenericGPSWidget.cs:109
+#: ../ocm-gtk/gtk-gui/ocmgtk.DelormeGPXWidget.cs:67
+msgid "Limit Number of Caches"
+msgstr "Begränsa antalet gömmor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPXWidget.cs:91
+#: ../ocm-gtk/gtk-gui/ocmgtk.DeLormeWidget.cs:125
+#: ../ocm-gtk/gtk-gui/ocmgtk.DelormeGPXWidget.cs:90
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:271
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:350
+msgid "Limit Number of Logs"
+msgstr "Begränsa antalet loggar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPXWidget.cs:128
+#: ../ocm-gtk/gtk-gui/ocmgtk.DeLormeWidget.cs:49
+#: ../ocm-gtk/gtk-gui/ocmgtk.DelormeGPXWidget.cs:127
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:258
+msgid "Include Attributes in Description"
+msgstr "Inkludera attribut i beskrivning"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPXWidget.cs:138
+#: ../ocm-gtk/gtk-gui/ocmgtk.DelormeGPXWidget.cs:137
+msgid "Auto name on internal drive"
+msgstr "Automatiskt namn på intern disk"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPXWidget.cs:220
+#: ../ocm-gtk/gtk-gui/ocmgtk.DelormeGPXWidget.cs:219
+msgid "Field Notes File:"
+msgstr "Fil för fältanteckningar:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPXWidget.cs:228
+#: ../ocm-gtk/gtk-gui/ocmgtk.DelormeGPXWidget.cs:227
+msgid "Use specified file:"
+msgstr "Använd filen:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminUSBWidget.cs:56
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminUSBWidget.cs:118
+#: ../ocm-gtk/gtk-gui/ocmgtk.GenericGPSWidget.cs:70
+#: ../ocm-gtk/gtk-gui/ocmgtk.GenericGPSWidget.cs:133
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminSerialWidget.cs:104
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminEdgeWidget.cs:49
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminEdgeWidget.cs:154
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:334
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:370
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:175
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:378
+msgid "Cache Name"
+msgstr "Namn"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminUSBWidget.cs:57
+#: ../ocm-gtk/gtk-gui/ocmgtk.GenericGPSWidget.cs:71
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminEdgeWidget.cs:50
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:335
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:176
+msgid "Cache Code/Size/Hint"
+msgstr "Kod/Storlek/Tips"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminUSBWidget.cs:58
+#: ../ocm-gtk/gtk-gui/ocmgtk.GenericGPSWidget.cs:72
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminEdgeWidget.cs:51
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:336
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:177
+msgid "Cache Code/Size/Type"
+msgstr "Kod/Storlek/Typ"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminUSBWidget.cs:73
+#: ../ocm-gtk/gtk-gui/ocmgtk.GenericGPSWidget.cs:87
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminSerialWidget.cs:59
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminEdgeWidget.cs:98
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:351
+msgid "Waypoint Name Format:"
+msgstr "Namnformat på brytpunkt:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminUSBWidget.cs:84
+#: ../ocm-gtk/gtk-gui/ocmgtk.GenericGPSWidget.cs:98
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminEdgeWidget.cs:109
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:360
+msgid "Waypoint Description Format:"
+msgstr "Format på brytpunktens beskrivning:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminUSBWidget.cs:95
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminSerialWidget.cs:81
+#: ../ocm-gtk/gtk-gui/ocmgtk.DeLormeWidget.cs:101
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminEdgeWidget.cs:131
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:155
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:321
+msgid "Limit Number of Geocaches"
+msgstr "Begränsa antalet gömmor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminUSBWidget.cs:117
+#: ../ocm-gtk/gtk-gui/ocmgtk.GenericGPSWidget.cs:132
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminSerialWidget.cs:103
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminEdgeWidget.cs:153
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:369
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:377
+msgid "Cache Code"
+msgstr "Kod"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminUSBWidget.cs:155
+msgid ""
+"<b>Important:</b>  You may need to configure non-root access to\n"
+"USB to allow OCM to write to your Garmin Device. See:\n"
+"<span fgcolor=\"blue\">http://www.gpsbabel.org/os/Linux_Hotplug.html</span>"
+msgstr ""
+"<b>Observera:</b> Du kan behöva konfigurera icke-root-access till\n"
+"USB för att OCM ska kunna skriva till din Garmin-enhet. Se:\n"
+"http://www.gpsbabel.org/os/Linux_Hotplug.html"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SendWaypointsDialog.cs:32
+msgid "Sending Caches..."
+msgstr "Skickar gömmor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SendWaypointsDialog.cs:50
+msgid "<big><b>Sending Caches To GPS</b></big>"
+msgstr "<big><b>Skickar gömmor till gps</b></big>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SendWaypointsDialog.cs:106
+msgid "Close"
+msgstr "Stäng"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.MagellanExploristWidget.cs:81
+msgid "Serial Port or File:"
+msgstr "Serieport eller fil:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GenericGPSWidget.cs:134
+msgid "Shot Cache Code"
+msgstr "Kort kod"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GenericGPSWidget.cs:166
+msgid ""
+"Read the GPSBabel Documentation to choose the right values for these fields "
+"<span fgcolor=\"blue\">http://www.gpsbabel.org/readme.html</span>"
+msgstr ""
+"Läs GPSBabel-dokumentationen för rätt värden på dessa fält http://www."
+"gpsbabel.org/readme.html"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GenericGPSWidget.cs:184
+msgid "Output Format:"
+msgstr "Utformat:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GenericGPSWidget.cs:213
+msgid "Output FIle:"
+msgstr "Utfil:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:110
+msgid "Hidden:"
+msgstr "Gömd:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:121
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:148
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:321
+msgid "On or before"
+msgstr "Senast"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:122
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:149
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:322
+msgid "On or after"
+msgstr "Tidigast"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:150
+msgid "Placed by anyone"
+msgstr "Gömd av vem som helst"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:162
+msgid "Placed by:"
+msgstr "Gömd av:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:192
+msgid "<b>Cache Placement</b>"
+msgstr "<b>Placering</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:217
+msgid "Country:"
+msgstr "Land:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:240
+msgid "Distance is:"
+msgstr "Avståndet är:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:269
+msgid "Less than"
+msgstr "Mindre än"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:270
+msgid "Greater than"
+msgstr "Större än"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:271
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:581
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:603
+msgid "Equal to"
+msgstr "Är"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:291
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:160
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:161
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:519
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:520
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheListWidget.cs:145
+msgid "km"
+msgstr "km"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:302
+msgid "From current centre point"
+msgstr "Från nuvarande mittpunkt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:319
+msgid "From location:"
+msgstr "Från plats:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:348
+msgid "From position:"
+msgstr "Från position:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:387
+msgid "State or province:"
+msgstr "Stat eller landskap:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage3.cs:414
+msgid "<b>Cache Location</b>"
+msgstr "<b>Placering</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ChangeHistory.cs:25
+msgid "Change History..."
+msgstr "Ändringshistorik"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.NotesWidget.cs:81
+msgid "_Save"
+msgstr "_Spara"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.AddBookMarkDialog.cs:29
+msgid "Create Bookmark List..."
+msgstr "Skapa bokmärkeslista"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:175
+msgid "Add/Modify Geocache..."
+msgstr "Lägg till/ändra geocache..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:240
+msgid ""
+"Use <span fgcolor=\"blue\">corrected coordinates</span> to prevent GPX "
+"imports from overwriting the cache location"
+msgstr "Använd korrigerade koordinater för att hindra importen att skriva över"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:307
+msgid "<b>Waypoint Description</b>"
+msgstr "<b>Beskrivning för brytpunkt</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:319
+msgid "URL:"
+msgstr "URL:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:330
+msgid "URL Name:"
+msgstr "Namn för URL:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:341
+msgid "Cache Type:"
+msgstr "Typ:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:352
+msgid "Cache Code:"
+msgstr "Kod:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:359
+msgid "Generic"
+msgstr "Generell"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:360
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:440
+msgid "Traditional Cache"
+msgstr "Traditionell gömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:361
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:431
+msgid "Unknown Cache"
+msgstr "Pusselgömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:363
+msgid "Earthcache"
+msgstr "Earthcache"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:364
+msgid "Eventcache"
+msgstr "Evenemang"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:366
+msgid "Project A.P.E Cache"
+msgstr "Project A.P.E cache"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:367
+msgid "GPS Adventures Exhibit"
+msgstr "GPS Adventures Exhibit"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:368
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:437
+msgid "Locationless Cache"
+msgstr "Omvänd gömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:369
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:443
+msgid "Virtual Cache"
+msgstr "Virtuell gömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:370
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:446
+msgid "Webcam Cache"
+msgstr "Webbkamera"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:371
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:449
+msgid "Wherigo Cache"
+msgstr "Wherigo-gömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:372
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:410
+msgid "Cache In Trash Out Event"
+msgstr "CITO-evenemang"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:373
+msgid "Mega Event Cache"
+msgstr "Mega-evenemang"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:416
+msgid "Waypoint Properties"
+msgstr "Egenskaper för brytpunkt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:468
+msgid "<b>Short Description</b>"
+msgstr "<b>Kort beskrivning</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:500
+msgid "<b>Long Description</b>"
+msgstr "<b>Lång beskrivning</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:531
+msgid "<b>Hint</b>"
+msgstr "<b>Tips</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:544
+msgid "Cache Name:"
+msgstr "Gömmans namn:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:553
+msgid "Difficulty:"
+msgstr "Svårighetsgrad:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:564
+msgid "Terrain:"
+msgstr "Terrängfaktor:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:609
+msgid "Paperless Caching Details"
+msgstr "Papperslöst utövande"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:647
+msgid "Owner:"
+msgstr "Ägare:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:656
+msgid "Owner ID:"
+msgstr "Ägar-ID:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:667
+msgid "Placed By:"
+msgstr "Gömd av:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:678
+msgid "Cache ID:"
+msgstr "Gömmans ID:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:726
+msgid "<b>Owner Details</b>"
+msgstr "<b>Ägardetaljer</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:750
+msgid "User Data 2:"
+msgstr "Användardata 2:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:760
+msgid "User Data 3:"
+msgstr "Användardata 3:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:770
+msgid "User Data 4:"
+msgstr "Användardata 4:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:780
+msgid "User Data 1:"
+msgstr "Användardata 1:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:839
+msgid "<b>User Data</b>"
+msgstr "<b>Användardata</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ModifyCacheDialog.cs:853
+msgid "Other Properties"
+msgstr "Andra egenskaper"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.NoDBDialog.cs:31
+msgid "Error"
+msgstr "Fel"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.NoDBDialog.cs:54
+msgid "Unable to open database"
+msgstr "Kunde inte öppna databas"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.NoDBDialog.cs:77
+msgid "New Database..."
+msgstr "Ny databas..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.NoDBDialog.cs:87
+msgid "Open Database..."
+msgstr "Öppna databas"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.NoDBDialog.cs:98
+msgid "Quit"
+msgstr "Avsluta"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSDConfig.cs:37
+msgid "Configure GPSD..."
+msgstr "Konfigurera GPSD..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GPSDConfig.cs:114
+msgid "Enable On Startup"
+msgstr "Aktivera vid uppstart"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:34
+#: ../ocm-gtk/gtk-gui/ocmgtk.LoadGPSFieldNotes.cs:151
+msgid "label4"
+msgstr "label4"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:43
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:452
+msgid "Geocache"
+msgstr "Geocache"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:44
+msgid "Geocache Found"
+msgstr "Gömmand hittad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:45
+msgid "Flag, Red"
+msgstr "Flagga, röd"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:46
+msgid "Flag, Blue"
+msgstr "Flagga, blå"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:47
+msgid "Flag, Green"
+msgstr "Flagga, grön"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:48
+msgid "Pin, Red"
+msgstr "Nål, röd"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:49
+msgid "Pin, Blue"
+msgstr "Nål, blå"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:50
+msgid "Pin, Green"
+msgstr "Nål, grön"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:51
+msgid "Block, Red"
+msgstr "Kub, röd"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:52
+msgid "Block, Blue"
+msgstr "Kub, blå"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:53
+msgid "Block, Green"
+msgstr "Kub, blå"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:54
+msgid "Custom 0"
+msgstr "Valfri 0"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:55
+msgid "Custom 1"
+msgstr "Valfri 1"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:56
+msgid "Custom 2"
+msgstr "Valfri 2"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:57
+msgid "Custom 3"
+msgstr "Valfri 3"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:58
+msgid "Custom 4"
+msgstr "Valfri 4"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:59
+msgid "Custom 5"
+msgstr "Valfri 5"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:60
+msgid "Custom 6"
+msgstr "Valfri 6"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:61
+msgid "Custom 7"
+msgstr "Valfri 7"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:62
+msgid "Custom 8"
+msgstr "Valfri 8"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:63
+msgid "Custom 9"
+msgstr "Valfri 9"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:64
+msgid "Custom 10"
+msgstr "Valfri 10"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:65
+msgid "Custom 11"
+msgstr "Valfri 11"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:66
+msgid "Custom 12"
+msgstr "Valfri 12"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:67
+msgid "Custom 13"
+msgstr "Valfri 13"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:68
+msgid "Custom 14"
+msgstr "Valfri 14"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:69
+msgid "Custom 15"
+msgstr "Valfri 15"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:70
+msgid "Custom 16"
+msgstr "Valfri 16"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:71
+msgid "Custom 17"
+msgstr "Valfri 17"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:72
+msgid "Custom 18"
+msgstr "Valfri 18"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:73
+msgid "Custom 19"
+msgstr "Valfri 19"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:74
+msgid "Custom 20"
+msgstr "Valfri 20"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:75
+msgid "Custom 21"
+msgstr "Valfri 21"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:76
+msgid "Custom 22"
+msgstr "Valfri 22"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:77
+msgid "Custom 23"
+msgstr "Valfri 23"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:78
+msgid "Custom 24"
+msgstr "Valfri 24"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:79
+msgid "Anchor"
+msgstr "Ankare"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:80
+msgid "Bell"
+msgstr "Klocka"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:81
+msgid "Diver Down Flag 1"
+msgstr "Dykare flagga 1"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:82
+msgid "Diver Down Flag 2"
+msgstr "Dykakre flagga 2"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:83
+msgid "Bank"
+msgstr "Bank"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:84
+msgid "Fishing Area"
+msgstr "Fiske"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:85
+msgid "Gas Station"
+msgstr "Mack"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:86
+msgid "Horn"
+msgstr "Horn"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:87
+msgid "Residence"
+msgstr "Bostad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:88
+msgid "Restaurant"
+msgstr "Restaurang"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:89
+msgid "Light"
+msgstr "Ljus"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:90
+msgid "Bar"
+msgstr "Bar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:91
+msgid "Skull and Crossbones"
+msgstr "Döskalle"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:92
+msgid "Buoy, White"
+msgstr "Boj, vit"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:93
+msgid "Shipwreck"
+msgstr "Vrak"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:94
+msgid "Man Overboard"
+msgstr "Man överbord"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:95
+msgid "Navaid, Amber"
+msgstr "Navigering, gul"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:96
+msgid "Navaid, Black"
+msgstr "Navigering, svart"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:97
+msgid "Navaid, Blue"
+msgstr "Navigering, blå"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:98
+msgid "Navaid, Green"
+msgstr "Navigering, grön"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:99
+msgid "Navaid, Orange"
+msgstr "Navigering, orange"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:100
+msgid "Navaid, Red"
+msgstr "Navigering, röd"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:101
+msgid "Navaid, Violet"
+msgstr "Navigering, violett"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:102
+msgid "Navaid, White"
+msgstr "Navigering, vit"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:103
+msgid "Radio Beacon"
+msgstr "Radiosändare"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:104
+msgid "Boat Ramp"
+msgstr "Båtramp"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:105
+msgid "Campground"
+msgstr "Camping"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:106
+msgid "Restroom"
+msgstr "Toalett"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:107
+msgid "Shower"
+msgstr "Dusch"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:108
+msgid "Drinking Water"
+msgstr "Dricksvatten"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:109
+msgid "Telephone"
+msgstr "Telefon"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:110
+msgid "Medical Facility"
+msgstr "Medicinskt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:111
+msgid "Information"
+msgstr "Information"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:113
+msgid "Park"
+msgstr "Park"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:114
+msgid "Picnic Area"
+msgstr "Picnic"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:115
+msgid "Scenic Area"
+msgstr "Vackert"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:116
+msgid "Skiing Area"
+msgstr "Skidor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:117
+msgid "Swimming Area"
+msgstr "Simning"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:118
+msgid "Dam"
+msgstr "Damm"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:119
+msgid "Controlled Area"
+msgstr "Övervakat område"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:120
+msgid "Danger Area"
+msgstr "Farligt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:121
+msgid "Restricted Area"
+msgstr "Förbjudet"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:122
+msgid "Ball Park"
+msgstr "Bollarena"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:123
+msgid "Car"
+msgstr "Bil"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:124
+msgid "Shopping Center"
+msgstr "Shopping"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:125
+msgid "Lodging"
+msgstr "Stuguthyrning"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:127
+msgid "Trail Head"
+msgstr "Ledens början"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:128
+msgid "Truck Stop"
+msgstr "Rastställe"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:129
+msgid "Golf Course"
+msgstr "Golfbana"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:130
+msgid "City (Small)"
+msgstr "Stad (liten)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:131
+msgid "City (Medium)"
+msgstr "Stad (mellanstor)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:132
+msgid "City (Large)"
+msgstr "Stad (stor)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:133
+msgid "Amusement Park"
+msgstr "Nöjespark"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:134
+msgid "Bowling"
+msgstr "Bowling"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:135
+msgid "Car Rental"
+msgstr "Biluthyrning"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:136
+msgid "Car Repair"
+msgstr "Bilverkstad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:137
+msgid "Fast Food"
+msgstr "Snabbmat"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:138
+msgid "Fitness Center"
+msgstr "Gym"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:139
+msgid "Movie Theater"
+msgstr "Bio"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:140
+msgid "Museum"
+msgstr "Museum"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:141
+msgid "Pharmacy"
+msgstr "Apotek"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:142
+msgid "Pizza"
+msgstr "Pizza"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:143
+msgid "Post Office"
+msgstr "Postkontor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:144
+msgid "RV Park"
+msgstr "Camping"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:145
+msgid "School"
+msgstr "Skola"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:146
+msgid "Stadium"
+msgstr "Arena"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:147
+msgid "Department Store"
+msgstr "Affär 1"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:148
+msgid "Zoo"
+msgstr "Djurpark"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:149
+msgid "Convenience Store"
+msgstr "Affär 2"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:150
+msgid "Live Theater"
+msgstr "Teater"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:151
+msgid "Scales"
+msgstr "Skalor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:152
+msgid "Toll Booth"
+msgstr "Tull"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:153
+msgid "Bridge"
+msgstr "Bro"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:154
+msgid "Building"
+msgstr "Byggnad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:155
+msgid "Cemetery"
+msgstr "Begravningsplats"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:156
+msgid "Church"
+msgstr "Kyrka"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:157
+msgid "Civil"
+msgstr "Civilt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:158
+msgid "Crossing"
+msgstr "Korsning"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:159
+msgid "Oil Field"
+msgstr "Olja"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:160
+msgid "Tunnel"
+msgstr "Tunnel"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:161
+msgid "Beach"
+msgstr "Strand"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:162
+msgid "Forest"
+msgstr "Skog"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:163
+msgid "Summit"
+msgstr "Topp"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:164
+msgid "Airport"
+msgstr "Flygplats"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:165
+msgid "Tall Tower"
+msgstr "Högt torn"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:166
+msgid "Short Tower"
+msgstr "Torn"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:167
+msgid "Glider Area"
+msgstr "Segelflygplan"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:168
+msgid "Ultralight Area"
+msgstr "Lätta flygplan"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:169
+msgid "Parachute Area"
+msgstr "Fallskärm"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:170
+msgid "Bike Trail"
+msgstr "Cykelstig"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:171
+msgid "Fishing Hot Spot Facility"
+msgstr "Fiske"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:172
+msgid "Police Station"
+msgstr "Polis"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:173
+msgid "Ski Resort"
+msgstr "Skidort"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:174
+msgid "Ice Skating"
+msgstr "Skridsko"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:175
+msgid "Wrecker"
+msgstr "Bärgning"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:176
+msgid "ATV"
+msgstr "Fyrhjuling"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:177
+msgid "Big Game"
+msgstr "Stort spel"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:178
+msgid "Blind"
+msgstr "Blind"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:179
+msgid "Blood Trail"
+msgstr "Spår"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:180
+msgid "Cover"
+msgstr "Skydd"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:181
+msgid "Covey"
+msgstr "Flock"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:182
+msgid "Food Source"
+msgstr "Mat"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:183
+msgid "Furbearer"
+msgstr "Djur"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:184
+msgid "Lodge"
+msgstr "Stuga"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:185
+msgid "Small Game"
+msgstr "Litet spel"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:186
+msgid "Animal Tracks"
+msgstr "Djurspår"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:187
+msgid "Treed Quarry"
+msgstr "Stenbrott"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:188
+msgid "Tree Stand"
+msgstr "Koja"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:189
+msgid "Truck"
+msgstr "Truck"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:190
+msgid "Upland Game"
+msgstr "Spel"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:191
+msgid "Waterfowl"
+msgstr "Vattenfall"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SymbolChooser.cs:192
+msgid "Water Source"
+msgstr "Vattenkälla"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.SetupAssistantPage4.cs:28
+msgid ""
+"OCM Is now ready to use. Click Close to close this assistant and begin using "
+"OCM.\n"
+"\n"
+"You will need to use a GPX or LOC file to populate the OCM database with "
+"caches. In Geocaching.com you can build a Pocket Query if you are a Premium "
+"Member. For Terraching, go to the \"To Do List\" on Terracaching.com. For "
+"Navicache, create an advanced search and download the caches from \"My "
+"NaviCache\". You can find links to all of these under the Web menu.\n"
+"\n"
+"Visit the OCM wiki for help and how to guides by click on Help>OCM Wiki...\n"
+msgstr ""
+"OCM är klart att användas. Klicka Stäng för att stänga denna guide och börja "
+"använda OCM.\n"
+"\n"
+"Du kommer att behöva en gpx- eller loc-fil för att populera OCM-databasen "
+"med gömmor. På geocaching.com kan du bygga en s.k. Pocket Query om du är "
+"premiummedlem. För Terracaching, gå till \"To Do List\" på Terracaching.com. "
+"För Navicache, skapa en avancerad sökning och ladda ner gömmorna från \"My "
+"NaviCache\". Du kan hitta länkar till alla dessa under Webb-menyn.\n"
+"\n"
+"Besök OCM-wikin för hjälp genom att att klicka på Hjälp>OCM-wiki...\n"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CopyMoveDialog.cs:44
+msgid "Copy/Move"
+msgstr "Kopiera/Flytta"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CopyMoveDialog.cs:64
+msgid "Target Database:"
+msgstr "Måldatabas:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CopyMoveDialog.cs:71
+msgid "Select A File"
+msgstr "Välj en fil"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CopyMoveDialog.cs:95
+msgid "All unfiltered caches"
+msgstr "Alla ofiltrerade gömmor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CopyMoveDialog.cs:107
+msgid "Just the selected cache"
+msgstr "Bara den markerade gömman"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CopyMoveDialog.cs:119
+msgid "The entire database"
+msgstr "Hela databasen"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CopyMoveDialog.cs:135
+msgid "<b>Move Options</b>"
+msgstr "<b>Alternativ för flytt</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CopyingProgress.cs:38
+msgid "Copy Geocaches..."
+msgstr "Kopiera gömmor..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CopyingProgress.cs:56
+msgid "<big><b>Copying Geocaches</b></big>"
+msgstr "<big><b>Kopierar geocachar</span></big>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CopyingProgress.cs:72
+msgid "<b>Target:</b>"
+msgstr "<b>Mål:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CopyingProgress.cs:96
+msgid "0%"
+msgstr "0 %"
+
+#: ../ocm-gtk/Dialogs/ScanWaypointsDialog.cs:32
+msgid ""
+"OCM found {0} waypoints in the cache description. You can add them all "
+"automatically, or review the matches one by one."
+msgstr ""
+"OCM hittade {0} brytpunkter i beskrivningen. Du kan lägga till den "
+"automatiskt, eller granska matchningarna en för en."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ScanWaypointsDialog.cs:27
+msgid "Grab Waypoints..."
+msgstr "Hämta brytpunkter..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ScanWaypointsDialog.cs:42
+msgid ""
+"OCM found {0} waypoints in the cache description. You can add them all "
+"automatically, or review the matches one by one. "
+msgstr ""
+"OCM hittade {0} brytpunkter i beskrivningen. Du kan lägga till den "
+"automatiskt, eller granska matchningarna en för en. "
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ScanWaypointsDialog.cs:73
+msgid "_Add All"
+msgstr "Lägg till _alla"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ScanWaypointsDialog.cs:85
+msgid "_Review"
+msgstr "G_ranska"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminSerialWidget.cs:44
+msgid "/dev/tty0"
+msgstr "/dev/tty0"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminSerialWidget.cs:70
+msgid "Serial Port:"
+msgstr "Serieport:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminSerialWidget.cs:93
+msgid "500"
+msgstr "500"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminSerialWidget.cs:105
+msgid "Short Cache Code"
+msgstr "Kort kod"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointWidget.cs:101
+#: ../ocm-gtk/Application/Widgets/LocationWidget.cs:28
+msgid "Coordinate:"
+msgstr "Koordinat:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointWidget.cs:111
+msgid "Source:"
+msgstr "Källa:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointWidget.cs:133
+msgid "Type:"
+msgstr "Typ:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointWidget.cs:145
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:299
+msgid "Description:"
+msgstr "Beskrivning:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointDialog.cs:28
+msgid "Review Waypoint (0 of 0)"
+msgstr "Granska brytpunkt (0 av 0)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReviewWaypointDialog.cs:67
+msgid "_Skip"
+msgstr "Hoppa över"
+
+#: ../ocm-gtk/Dialogs/ConfigureEToolsDlg.cs:45
+#: ../ocm-gtk/Widgets/MapSelectionWidget.cs:66
+#: ../ocm-gtk/Application/Widgets/WaypointWidget.cs:65
+#: ../ocm-gtk/Application/Widgets/DescriptionWidget.cs:71
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:126
+msgid "Name"
+msgstr "Namn"
+
+#: ../ocm-gtk/Dialogs/ConfigureEToolsDlg.cs:46
+msgid "Exec"
+msgstr "Exec"
+
+#: ../ocm-gtk/Dialogs/ConfigureEToolsDlg.cs:120
+msgid "Are you sure you wish to delete '{0}'"
+msgstr "Är du säker på att du vill ta bort '{0}'"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ConfigureEToolsDlg.cs:35
+msgid "External Tools..."
+msgstr "Externa verktyg"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ConfigureEToolsDlg.cs:72
+msgid "Add"
+msgstr "Lägg till"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:90
+msgid "Has user notes"
+msgstr "Har fältanteckningar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:100
+msgid "User Data 1 contains:"
+msgstr "Användardata 1 innehåller:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:112
+msgid "User Data 2 contains:"
+msgstr "Användardata 2 innehåller:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:124
+msgid "User Data 3 contains:"
+msgstr "Användardata 3 innehåller:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:136
+msgid "User Data 4 contains:"
+msgstr "Användardata 4 innehåller:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:204
+msgid "<b>User Notes &amp; Data</b>"
+msgstr "<b>Anteckningar &amp; data</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:247
+msgid "Has at least one child of type:"
+msgstr "Har minst en tillhörande brytpunkt av typ:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:257
+msgid "Has corrected coordinates"
+msgstr "Har korrigerade koordinater"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:269
+msgid "Does not have any children of type:"
+msgstr "Har inga tillhörande brytpunkter av typen:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:301
+msgid "Does not have corrected coordinates"
+msgstr "Har inte korrigerade koordinater"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage4.cs:313
+msgid "<b>Waypoints &amp; Corrected Coordinates</b>"
+msgstr "<b>Brytpunkter &amp; Korrigerade koordinater</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.DeLormeWidget.cs:81
+msgid "<b>Important:</b>DeLorme USB format is only available in GPSBabel 1.4"
+msgstr ""
+"<b>Observera:</b> DeLorme USB format är endast tillgängligt i GPSBabel 1.4"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.DeLormeWidget.cs:113
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:335
+msgid "1000"
+msgstr "1000"
+
+#: ../ocm-gtk/Dialogs/AddCommandDialog.cs:55
+msgid "Choose Executable or Script"
+msgstr "Välj program eller skript"
+
+#: ../ocm-gtk/Dialogs/AddCommandDialog.cs:57
+#: ../ocm-gtk/Application/Dialogs/Preferences.cs:176
+#: ../ocm-gtk/Application/Dialogs/Preferences.cs:186
+msgid "OK"
+msgstr "OK"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.AddCommandDialog.cs:43
+msgid "Add External Tool"
+msgstr "Lägg till externt verktyg"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.AddCommandDialog.cs:111
+msgid ""
+"You can use %gpx% to have OCM send a GPX file to the external program, or %"
+"selected% to send just the selected cache as a GPX. You may also use %finds% "
+"to generate a Geocaching.com \"My Finds\" style GPX. "
+msgstr ""
+"Du kan använda %gpx% för att låta OCM skicka gpx-filen till ett externt "
+"program, eller %selected% för att bara skicka vald gömma som en gpx. Du kan "
+"också använda %finds% för att generera motsvarande Geocaching.com:s \"My "
+"Finds\"."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.AddCommandDialog.cs:138
+msgid "Exec Path:"
+msgstr "Sökväg:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.GarminEdgeWidget.cs:120
+msgid "GPX Output File:"
+msgstr "Gpx utfil:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.MarkFoundDialog.cs:35
+msgid "Mark Found"
+msgstr "Markera som Hittad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.MarkFoundDialog.cs:97
+msgid "Found date:"
+msgstr "Hittad datum:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CorrectedCoordinatesDlg.cs:45
+msgid "Corrected Coordinates"
+msgstr "Korrigerade koordinater"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CorrectedCoordinatesDlg.cs:73
+msgid "Coodinate:"
+msgstr "Koordinat:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CorrectedCoordinatesDlg.cs:93
+msgid "<b>Original Location</b>"
+msgstr "<b>Ursprunglig plats</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CorrectedCoordinatesDlg.cs:119
+msgid "<b>Corrected Location</b>"
+msgstr "<b>Ny plats</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CorrectedCoordinatesDlg.cs:151
+msgid "Reset"
+msgstr "Nollställ"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage5.cs:603
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage5.cs:1461
+msgid "Click on the attribute icon to change the yes/no/disabled state"
+msgstr "Klicka på attributikonen för att ändra läget"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage5.cs:1146
+msgid "Must Have The Following Attributes Set"
+msgstr "Måste ha följande attribut satta"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage5.cs:2004
+msgid "Must Not Have The Following Attributes Set"
+msgstr "Får inte ha följande attribut satta"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDirectoryDialog.cs:56
+msgid "Import Directory"
+msgstr "Importera katalog"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDirectoryDialog.cs:73
+msgid "Select A Folder"
+msgstr "Välj en mapp"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDirectoryDialog.cs:84
+msgid "Directory:"
+msgstr "Katalog:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDirectoryDialog.cs:110
+msgid "Delete files on completion"
+msgstr "Ta bort filer när klar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDirectoryDialog.cs:122
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDialog.cs:93
+msgid "Do not overwrite existing found status in database"
+msgstr "Skriv inte över existerande hittad-status i databasen"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDirectoryDialog.cs:134
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDialog.cs:81
+msgid "Purge old cache logs"
+msgstr "Ta bort gamla loggar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDirectoryDialog.cs:146
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDialog.cs:105
+msgid "Ignore GSAK/OCM extra fields in GPX file"
+msgstr "Ignorera extra fält för GSAK/OCM i gpx-filen"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDirectoryDialog.cs:162
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDialog.cs:121
+msgid "Add to bookmark list:"
+msgstr "Lägg till i bokmärkeslista:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDirectoryDialog.cs:204
+msgid "<b>Options</b>"
+msgstr "<b>Alternativ</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:95
+msgid "Export GPX..."
+msgstr "Exportera GPX"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:127
+msgid "File"
+msgstr "Fil"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:181
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:276
+msgid "Include Child Waypoints"
+msgstr "Inkludera tillhörande brytpunkter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:194
+msgid "Export Paperless Caching Details"
+msgstr "Exportera detaljer för papperslöst utövande"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:208
+msgid "Export Extra Fields in GPX"
+msgstr "Exportera extra fält i gpx"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:220
+msgid "Use Custom Waypoint Symbols"
+msgstr "Använd anpassade symboler"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:232
+msgid "<b>General</b>"
+msgstr "<b>Generellt</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:296
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:403
+msgid "Convert HTML to Plain Text"
+msgstr "Konvertera HTML till ren text"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:310
+msgid "<b>Paperless Options</b>"
+msgstr "<b>Alternativ för papperslöst utövande</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:383
+msgid "<b>Waypoint Options</b>"
+msgstr "<b>Alternativ för brytpunkter</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportGPXDialog.cs:397
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDialog.cs:161
+#: ../ocm-gtk/Application/CleanupAssistant/CleanupAssistant.cs:53
+msgid "Options"
+msgstr "Alternativ"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.AddLocationDialog.cs:31
+msgid "Add Location..."
+msgstr "Lägg till plats"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.LocationWidget.cs:69
+msgid "Latitude:"
+msgstr "Latitud:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.LocationWidget.cs:87
+msgid "Longitude:"
+msgstr "Longitud:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.DeleteItem.cs:30
+msgid "Delete Bookmark List..."
+msgstr "Ta bort bokmärkeslista"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.DeleteItem.cs:50
+msgid "Bookmark List:"
+msgstr "Bokmärkeslista"
+
+#: ../ocm-gtk/configuration/Config.cs:62
+#: ../ocm-gtk/Application/OCMMainWindow.cs:300
+#: ../ocm-gtk/Application/OCMMainWindow.cs:759
+#: ../ocm-gtk/Application/Locations/LocationList.cs:122
+#: ../ocm-gtk/Application/Widgets/OCMQueryPage3.cs:243
+msgid "Home"
+msgstr "Hem"
+
+#: ../ocm-gtk/configuration/EToolList.cs:62
+#: ../ocm-gtk/Application/OCMMainWindow.cs:1622
+#: ../ocm-gtk/Application/QuickFilters/QuickFilters.cs:70
+#: ../ocm-gtk/Application/GPS/GPSProfileList.cs:109
+msgid "Are you sure you wish to overwrite \"{0}\"?"
+msgstr "Är du säker på att du vill skriva över \"{0}\"?"
+
+#: ../ocm-gtk/configuration/ExternalTool.cs:63
+#: ../ocm-gtk/configuration/ExternalTool.cs:75
+#: ../ocm-gtk/configuration/ExternalTool.cs:97
+#: ../ocm-gtk/configuration/ExternalTool.cs:113
+msgid "Preparing GPX File"
+msgstr "Förbereder gpx-fil"
+
+#: ../ocm-gtk/configuration/ExternalTool.cs:86
+msgid "No cache selected."
+msgstr "Ingen gömma vald."
+
+#: ../ocm-gtk/Dialogs/LoggingDialog.cs:51
+msgid "{0}% complete"
+msgstr "{0} %"
+
+#: ../ocm-gtk/Dialogs/LoggingDialog.cs:56
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheListWidget.cs:198
+msgid "Loading..."
+msgstr "Laddar..."
+
+#: ../ocm-gtk/Dialogs/OfflineLogDialog.cs:116
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:309
+msgid "<Name Unavailable>"
+msgstr "<Namn inte tillgängligt>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:97
+msgid "Condition matches:"
+msgstr "Matchar:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:171
+msgid "Last update date:"
+msgstr "Senaste uppdateringsdatum:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:183
+msgid "Last updated within:"
+msgstr "Senast uppdaterad inom:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:226
+msgid "Not updated within:"
+msgstr "Inte uppdaterad inom:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:249
+msgid "<b>Last Updated</b>"
+msgstr "<b>Senast uppdaterad</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:274
+msgid "Last found by you"
+msgstr "Senast hittad av dig"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:282
+msgid "on:"
+msgstr "datum:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:283
+msgid "on or after:"
+msgstr "tidigast:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:284
+msgid "on or before:"
+msgstr "senast:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:311
+msgid "Last found by anyone"
+msgstr "Senast hittad av någon"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMQueryPage6.cs:353
+msgid "<b>Last Found</b>"
+msgstr "<b>Senast hittad</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.LoggingDialog.cs:35
+msgid "Log Cache..."
+msgstr "Logga gömma..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.LoggingDialog.cs:59
+msgid ""
+"After completing your log online, click \"Close\" to return to OCM. To use "
+"offline logging, goto <b>Cache → Log to Field Notes File </b>"
+msgstr ""
+"Efter att du har loggat, klicka \"Stäng\" för att återvända till OCM. För "
+"att logga i nerkopplat läge, gå till <b>Gömma → Logga till fil för "
+"fältanteckningar</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OfflineLogDialog.cs:53
+msgid "Log"
+msgstr "Logg"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OfflineLogDialog.cs:101
+msgid "Log Date:"
+msgstr "Loggdatum:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OfflineLogDialog.cs:130
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:242
+msgid "Log Type:"
+msgstr "Typ av logg:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OfflineLogDialog.cs:138
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:250
+msgid "Found it"
+msgstr "Hittad den"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OfflineLogDialog.cs:139
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:251
+msgid "Didn't Find it"
+msgstr "Kunde inte hitta den"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OfflineLogDialog.cs:140
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:252
+msgid "Write Note"
+msgstr "Kommentar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OfflineLogDialog.cs:141
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:253
+msgid "Needs Maintenance"
+msgstr "Behöver underhåll"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OfflineLogDialog.cs:164
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:274
+msgid "First To Find"
+msgstr "FTF"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:95
+#: ../ocm-gtk/gtk-gui/ocmgtk.FieldNotesProgress.cs:109
+msgid "View Field Notes..."
+msgstr "Visa fältanteckningar..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:134
+msgid "Please wait..."
+msgstr "Var god vänta..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:182
+msgid "View Cache"
+msgstr "Visa gömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:205
+msgid "Delete All"
+msgstr "Ta bort alla"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:314
+msgid "Field Log"
+msgstr "Fältlogg"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:328
+msgid "Waypoint:"
+msgstr "Brytpunkt:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:375
+msgid "Cache Description"
+msgstr "Beskrivning"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:388
+msgid "Cache Logs"
+msgstr "Loggar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OffLineLogViewer.cs:401
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheInfoWidget.cs:111
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeoCachePane.cs:116
+msgid "Notes"
+msgstr "Anteckningar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.LoadGPSFieldNotes.cs:52
+msgid "Receive Field Notes..."
+msgstr "Ta emot fältanteckningar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.LoadGPSFieldNotes.cs:83
+msgid ""
+"The field notes file from your GPS will be scanned and OCM will "
+"automatically update your caches based on the field notes file. \n"
+"\n"
+"If you wish to work with the comments entered in the field before logging "
+"your finds online, go to <b>View → Field Notes...</b>"
+msgstr ""
+"Fältanteckningarna från din gps kommer att genomsökas och OCM kommer att "
+"automatiskt uppdatera gömmorna baserat på filen för fältanteckningar.\n"
+"\n"
+"Om du vill arbeta med kommentarerna inmatade i fältet före loggning du "
+"loggar uppkopplat, gå till <b>Visa → Fältanteckningar...</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.LoadGPSFieldNotes.cs:113
+msgid "<b>Last field notes scan:</b>"
+msgstr "<b>Senaste sökning efter fältanteckningar:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.LoadGPSFieldNotes.cs:123
+msgid "label3"
+msgstr "label3"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.LoadGPSFieldNotes.cs:141
+msgid "<b>Last field notes scan from this device:</b>"
+msgstr "<b>Senaste sökning efter fältanteckningar från denna enhet:</b>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.LoadGPSFieldNotes.cs:178
+msgid "Ignore logs before:"
+msgstr "Ignorera loggar före:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImportDialog.cs:49
+msgid "Import GPX/LOC/ZIP.."
+msgstr "Importera gpx/loc/zip"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.AddComboFilter.cs:47
+msgid "Create Combination Filter..."
+msgstr "Skapa kombinationsfilter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.AddComboFilter.cs:77
+msgid ""
+"Click <b>Add</b> to add a new filter condition, caches that meet any of the "
+"conditions\n"
+"will be returned."
+msgstr ""
+"Klicka <b>Lägg till</b> för att lägga till ett nytt filter, gömmor som "
+"följer något av villkoren\n"
+"kommer att inkluderas."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.AddComboFilter.cs:129
+msgid "Import _Quick Filter"
+msgstr "_Importera snabbfilter"
+
+#: ../ocm-gtk/Widgets/MapSelectionWidget.cs:67
+msgid "Baselayer"
+msgstr "Baslagar"
+
+#: ../ocm-gtk/Widgets/MapSelectionWidget.cs:68
+msgid "Covered"
+msgstr "Täckning"
+
+#: ../ocm-gtk/Widgets/MapSelectionWidget.cs:132
+msgid "yes"
+msgstr "ja"
+
+#: ../ocm-gtk/Widgets/MapSelectionWidget.cs:132
+msgid "no"
+msgstr "nej"
+
+#: ../ocm-gtk/Widgets/MapSelectionWidget.cs:180
+msgid "Open Map Description File"
+msgstr "Öppna beskrivningsfil för karta"
+
+#: ../ocm-gtk/Widgets/MapSelectionWidget.cs:183
+msgid "OCM Map Files"
+msgstr "Kartfiler för OCM"
+
+#: ../ocm-gtk/Widgets/MapSelectionWidget.cs:211
+msgid "Are you sure you want to delete map {0}?"
+msgstr "Är du säker på att du vill ta bort kartan {0}?"
+
+#: ../ocm-gtk/Widgets/MapSelectionWidget.cs:221
+msgid "Are really want to delete all maps and restore the default maps?"
+msgstr ""
+"Är du säker på att du vill ta bort alla kartor och återställa standardvärden?"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.MapSelectionWidget.cs:77
+msgid "The highest map in the list will be the default map when OCM starts."
+msgstr "Kartan högst i listan kommer att vara standard när OCM startar."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.MapSelectionWidget.cs:123
+msgid "Enable Map"
+msgstr "Aktivera karta"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.MapSelectionWidget.cs:151
+msgid "Disable Map"
+msgstr "Inaktivera karta"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.MapSelectionWidget.cs:179
+msgid "Delete Map"
+msgstr "Ta bort karta"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.MapSelectionWidget.cs:207
+#: ../ocm-gtk/gtk-gui/ocmgtk.ManageListDialog.cs:94
+msgid "Move Down"
+msgstr "Flytta ner"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.MapSelectionWidget.cs:259
+msgid "Import Map File"
+msgstr "Importera kartfil"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.MapSelectionWidget.cs:286
+msgid "Restore Defaults"
+msgstr "Återställ till standardvärden"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.MapSelectionWidget.cs:314
+#: ../ocm-gtk/gtk-gui/ocmgtk.ManageListDialog.cs:83
+msgid "Move Up"
+msgstr "Flytta up"
+
+#: ../ocm-gtk/Dialogs/ExportPOIDialog.cs:236
+msgid "Select GPI location"
+msgstr "Välj plats för gpi-fil"
+
+#: ../ocm-gtk/Dialogs/ExportPOIDialog.cs:272
+msgid "Select BMP File"
+msgstr "Välj BMP-fil"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:86
+msgid "Export Garmin POI"
+msgstr "Exportera Garmin POI"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:110
+msgid "File:"
+msgstr "Fil:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:162
+msgid "Geocaches"
+msgstr "Gömmor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:178
+msgid "Full Paperless"
+msgstr "Papperslöst"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:197
+msgid "BMP Icon:"
+msgstr "BMP-ikon:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:254
+msgid "kilometers"
+msgstr "kilometer"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:255
+msgid "miles"
+msgstr "engelska mil"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:310
+msgid "Category:"
+msgstr "Kategori:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:390
+msgid "Proximity Alert:"
+msgstr "Varna inom:"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ExportPOIDialog.cs:417
+msgid "<b>POI Options</b>"
+msgstr "<b>Alternativ för POI</b>"
+
+#: ../ocm-gtk/Dialogs/WebBrowser.cs:52
+msgid "Loading ({0}%)"
+msgstr "Laddar ({0} %)"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.WebBrowser.cs:29
+msgid "WebBrowser"
+msgstr "Webbläsare"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImagesWidget.cs:105
+msgid "View"
+msgstr "Visa"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImagesWidget.cs:115
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:642
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:643
+msgid "Grab Images..."
+msgstr "Hämta bilder..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImagesWidget.cs:126
+msgid "Open Folder"
+msgstr "Öppna mapp"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ImageDialog.cs:25
+msgid "Image"
+msgstr "Bild"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.FileDownloadProgress.cs:32
+msgid "Downloading File"
+msgstr "Laddar ner fil"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.FileDownloadProgress.cs:53
+msgid "<big><b>Downloading File</b></big>"
+msgstr "<big><b>Laddar ner fil</b></big>"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.FileDownloadProgress.cs:64
+msgid "Initializing"
+msgstr "Initierar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.FieldNotesProgress.cs:34
+msgid "Receiving Field Notes"
+msgstr "Tar emot fältanteckningar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.FieldNotesProgress.cs:55
+msgid "<big><b>Receiving Field Notes</b></big>"
+msgstr "<big><b>Tar emot fältanteckningar</b></big>"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:166
+msgid ""
+"Showing {0} of {1} caches from {2}, {3} found, {4} unavailable/archived, {5} "
+"placed by me"
+msgstr ""
+"Visar {0} av {1} gömmor från {2}, {3} hittade, {4} inaktiva/arkiverade, {5} "
+"gömda av mig"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:170
+msgid ""
+"Showing {0} of {1} caches, {2} found, {3} unavailable/archived, {4} placed "
+"by me"
+msgstr ""
+"Visar {0} av {1} gömmor, {2} hittade, {3} inaktiva/arkiverade, {4} gömda av "
+"mig"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:217
+#: ../ocm-gtk/Application/OCMApp.cs:530
+msgid "Create database"
+msgstr "Skapa databas"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:217
+#: ../ocm-gtk/Application/OCMApp.cs:530
+msgid "Save"
+msgstr "Spara"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:227
+msgid "You cannot overwrite the currently open database."
+msgstr "Du kan inte skriva över databasen du har öppen."
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:233
+#: ../ocm-gtk/Application/OCMApp.cs:540
+msgid "Are you sure you want to overwrite '{0}'"
+msgstr "Är du säker på att du vill skriva över '{0}'"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:256
+#: ../ocm-gtk/Application/OCMApp.cs:561
+msgid "Open Database"
+msgstr "Öppna databas"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:305
+msgid "Centred on {0} ({1})"
+msgstr "Centrerad på {0} ({1})"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:498
+msgid " Export Finds GPX File"
+msgstr " Exporterade hittade till gpx-fil"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:498
+msgid "Export"
+msgstr "Exportera"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:588
+#: ../ocm-gtk/Application/Widgets/ImagesWidget.cs:153
+msgid "No Images Found."
+msgstr "Inga bilder hittade."
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:707
+msgid "There are no field notes."
+msgstr "Det finns inga fältanteckningar."
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:801
+msgid "Edit GPS Profile..."
+msgstr "Ändra gps-profil..."
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:834
+msgid "\"{0}\" is the active GPS profile. Are you sure you wish to delete it?"
+msgstr ""
+"\"{0}\" är den aktiva gps-profilen. Är du säker på att du vill radera den?"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:855
+msgid ""
+"There is no active GPS profile. Either select an existing one from the GPS "
+"Menu or add a new profile ."
+msgstr ""
+"Det finns ingen aktiv gps-profil. Välj en befintlig från Gps-menyn eller "
+"lägg till en ny profil."
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:873
+msgid "Are you sure you want to delete {0}?"
+msgstr "Är du säker på att du vill ta bort {0}?"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:897
+#: ../ocm-gtk/Application/OCMMainWindow.cs:912
+msgid "Preparing to send to QLandKarte GT"
+msgstr "Förbereder att skicka till QLandKarte GT"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:934
+msgid "Move Geocaches..."
+msgstr "Flytta gömmor..."
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:951
+msgid "Transfer _Caches to Last Used ({0})..."
+msgstr "Överför _gömmor till senast använda ({0})..."
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:955
+msgid "Receive F_ield Notes from Last Used ({0})..."
+msgstr "Ta emot fältanteckningar från senast använda ({0})..."
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:1051
+msgid "Retrieving caches, please wait.."
+msgstr "Läser in gömmor, var god vänta..."
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:1232
+#: ../ocm-gtk/Application/OCMApp.cs:425
+msgid ""
+"A new version \"{0}\" of OCM is available\n"
+"Would you like to go to the download page now?"
+msgstr ""
+"En ny version \"{0}\" av OCM finns tillgänglig.\n"
+"Vill du gå till nerladdningssidan nu?"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:1243
+msgid "OCM is at the latest version."
+msgstr "Detta är den senaste versionen av OCM."
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:1418
+msgid "Mark First to Find"
+msgstr "Markera som FTF"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:1446
+#: ../ocm-gtk/Application/OCMMainWindow.cs:1473
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:639
+msgid "Mark Did Not Find"
+msgstr "Markera som Kunde inte hitta"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:1640
+msgid "Delete Location..."
+msgstr "Ta bort plats..."
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:1748
+msgid "Save QuickFilter"
+msgstr "Spara snabbfilter"
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:1764
+msgid "Delete Quick Filter..."
+msgstr "Ta bort snabbfilter..."
+
+#: ../ocm-gtk/Application/OCMMainWindow.cs:1843
+msgid ""
+"Are you sure you want to delete these {0} caches?\n"
+"This operation cannot be undone."
+msgstr ""
+"Är du säker på att du vill radera alla {0} gömmor?\n"
+"Denna operation kan inte ångras."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:292
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:293
+msgid "_File"
+msgstr "_Arkiv"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:295
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:296
+msgid "_Edit"
+msgstr "_Redigera"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:298
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:299
+msgid "_View"
+msgstr "_Visa"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:301
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:302
+msgid "F_ilter"
+msgstr "F_ilter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:304
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:305
+msgid "_Go"
+msgstr "_Gå till"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:307
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:308
+msgid "_Bookmarks"
+msgstr "_Bokmärken"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:310
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:311
+msgid "_Cache"
+msgstr "Gö_mma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:313
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:314
+msgid "_Web"
+msgstr "_Webb"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:316
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:317
+msgid "G_PS"
+msgstr "G_PS"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:319
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:320
+msgid "_Tools"
+msgstr "Verk_tyg"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:322
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:323
+msgid "_Help"
+msgstr "_Hjälp"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:325
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:326
+msgid "_New"
+msgstr "_Ny"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:328
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:329
+msgid "_Open Database..."
+msgstr "_Öppna databas..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:331
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:332
+msgid "_Compact Database"
+msgstr "_Optimera databas"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:334
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:335
+msgid "_Quit"
+msgstr "_Avsluta"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:337
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:338
+msgid "_New Database..."
+msgstr "_Ny databas..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:340
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:341
+msgid "New _Cache..."
+msgstr "Ny _gömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:343
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:345
+msgid "_Show Nearby Caches"
+msgstr "Visa _närliggande gömmor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:347
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:348
+msgid "_Child Waypoints"
+msgstr "_Tillhörande brytpunkter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:350
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:351
+msgid "_Field Notes..."
+msgstr "_Fältanteckningar..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:361
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:362
+msgid "_Print"
+msgstr "Skriv _ut"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:364
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:365
+msgid "_Locations"
+msgstr "P_latser"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:367
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:368
+msgid "_Add Location..."
+msgstr "Lägg till pl_ats..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:370
+msgid "_Delete Location..."
+msgstr "_Ta bort plats..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:371
+msgid "_Manage Locations..."
+msgstr "Hantera platser..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:373
+msgid "_Pan to Centre"
+msgstr "_Panorera till mittpunkt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:374
+msgid "_Pan Map to Centre"
+msgstr "_Panorera kartan till mittpunkten"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:376
+msgid "Pan to _Selected Cache"
+msgstr "Panorera till _markerad gömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:377
+msgid "Pan Map to _Selected Cache"
+msgstr "Panorera karta till _markerad gömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:379
+msgid "_Zoom to Selected Cache"
+msgstr "Zooma till markerad _gömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:380
+msgid "_Zoom Map to Selected Cache"
+msgstr "Zooma karta till markerad _gömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:382
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:383
+msgid "_Advanced Filters..."
+msgstr "_Avancerade filter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:385
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:386
+msgid "C_ombination Filter..."
+msgstr "K_ombinationsfilter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:388
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:390
+msgid "_Clear Advanced Filters..."
+msgstr "Rensa avan_cerade filter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:392
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:394
+msgid "C_lear Combo Filter"
+msgstr "Rensa kombofi_lter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:396
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:398
+msgid "Clear _All Filters"
+msgstr "Rensa _alla filter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:400
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:401
+msgid "_Quick Filter"
+msgstr "_Snabbfilter"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:403
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:404
+msgid "_OCM Wiki..."
+msgstr "OCM _wiki..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:406
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:407
+msgid "OCM _Forums..."
+msgstr "OCM:s _forum..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:409
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:410
+msgid "_About"
+msgstr "_Om"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:412
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:413
+msgid "_Change History..."
+msgstr "_Ändringshistorik..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:415
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:416
+msgid "Check For _Updates..."
+msgstr "Kolla efter _uppdateringar..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:418
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:419
+msgid "_OCM Home Page..."
+msgstr "_OCM:s hemsida..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:421
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:422
+msgid "_Geocaching.com"
+msgstr "_Geocaching.com"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:424
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:425
+msgid "_Terracaching.com"
+msgstr "_Terracaching.com"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:427
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:428
+msgid "O_pencaching"
+msgstr "O_pencaching"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:430
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:431
+msgid "G_PSBabel Home Page..."
+msgstr "G_PSBabels hemsida..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:433
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:434
+msgid "GPS_D Home Page..."
+msgstr "GPS_D:s hemsida..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:436
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:437
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:454
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:455
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:472
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:473
+msgid "_Home Page..."
+msgstr "_Hemsida..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:439
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:440
+msgid "_View My Profile..."
+msgstr "_Visa min profil"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:442
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:443
+msgid "_My Account Details..."
+msgstr "_Mitt konto..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:445
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:446
+msgid "_Create Pocket Queries..."
+msgstr "Skapa Po_cket Queries..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:448
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:449
+msgid "_Statistics..."
+msgstr "_Statistik..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:451
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:452
+msgid "_Find a Cache..."
+msgstr "Hitta en gömma..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:457
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:458
+msgid "To _Do List"
+msgstr "Att-_göra-lista"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:460
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:461
+msgid "_Traditional..."
+msgstr "_Traditionella..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:463
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:464
+msgid "_Locationless..."
+msgstr "Omvända..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:466
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:467
+msgid "_List Of Country Sites"
+msgstr "Webbplatser per _land"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:469
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:470
+msgid "_Navicache.com"
+msgstr "_NaviCache.com"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:475
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:476
+msgid "_My Navicache..."
+msgstr "_My NaviCache..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:478
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:479
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:635
+msgid "_Mark"
+msgstr "_Markera"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:481
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:482
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:645
+msgid "Add Child _Waypoint..."
+msgstr "Lägg till tillhörande _brytpunkt..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:484
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:485
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:644
+msgid "_Corrected Coordinates..."
+msgstr "_Korrigerade koordinater..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:487
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:488
+msgid "_View Online..."
+msgstr "_Visa uppkopplat..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:490
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:491
+msgid "_Set Selected Cache As Centre"
+msgstr "_Sätt markerad gömma som mittpunkt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:493
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:494
+msgid "M_odify Cache"
+msgstr "_Ändra gömma"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:496
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:497
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:637
+msgid "Mark _Found"
+msgstr "Markera som _Hittad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:499
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:500
+msgid "Mark F_irst To Find"
+msgstr "Markera som _FTF"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:502
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:503
+msgid "Mark Did _Not Find"
+msgstr "Markera som Ku_nde inte hitta"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:505
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:506
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:640
+msgid "Mark _Unfound"
+msgstr "Markera som _Inte hittad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:508
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:509
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:641
+msgid "Mark _Disabled"
+msgstr "Markera som I_naktiv"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:511
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:512
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:642
+msgid "Mark _Archived"
+msgstr "Markera som _Arkiverad"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:514
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:515
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:643
+msgid "Mark A_vailable"
+msgstr "Markera som A_ktiv"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:517
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:518
+msgid "Bookmark _List"
+msgstr "Bokmärkes_lista"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:520
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:521
+msgid "_Add All Unfiltered Caches to"
+msgstr "Lägg till _alla ofilterade gömmor till"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:523
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:525
+msgid "Add _Selected Cache to"
+msgstr "Lägg till _markerad gömma till"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:527
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:529
+msgid "_Remove Selected Cache from Bookmark List"
+msgstr "Ta bo_rt markerad gömma från bokmärkeslistan"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:531
+msgid "_Create Bookmark List..."
+msgstr "_Skapa bokmärkeslista..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:532
+msgid "_Create Bookmark List"
+msgstr "_Skapa bokmärkeslista"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:534
+msgid "_Delete Bookmark List..."
+msgstr "_Ta bort bokmärkeslista..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:535
+msgid "_Manage Bookmark Lists..."
+msgstr "Hantera bok_märkeslista..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:537
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:538
+msgid "Zoom to _Centre"
+msgstr "_Zooma till mittpunkt"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:540
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:541
+msgid "_Import GPX/Loc/Zip..."
+msgstr "_Importera gpx/loc/zip-fil..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:543
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:544
+msgid "_Import Directory..."
+msgstr "Importera _katalog..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:546
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:547
+msgid "_Save Current View as QuickFilter..."
+msgstr "_Spara aktuell vy som snabbfilter..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:549
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:550
+msgid "_Delete Quick Filter..."
+msgstr "_Ta bort snabbfilter..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:552
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:553
+msgid "_Export"
+msgstr "_Exportera"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:555
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:556
+msgid "_Export GPX..."
+msgstr "_Exportera gpx"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:558
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:559
+msgid "Export _Finds GPX..."
+msgstr "Exportera _hittade gömmor till gpx..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:561
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:562
+msgid "Export _Garmin POI File..."
+msgstr "Exportera _Garmin poi-fil..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:564
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:565
+msgid "_Copy To..."
+msgstr "_Kopiera till..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:567
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:568
+msgid "_Move To..."
+msgstr "_Flytta till..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:570
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:571
+msgid "_Delete..."
+msgstr "_Ta bort..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:573
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:574
+msgid "Delete _All..."
+msgstr "Ta bort _alla..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:576
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:577
+msgid "De_select"
+msgstr "A_vmarkera"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:579
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:580
+msgid "_Preferences..."
+msgstr "_Inställningar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:582
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:584
+msgid "Transfer _Caches to Last Used..."
+msgstr "Överför _gömmor till senast använda..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:586
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:588
+msgid "Receive _Field Notes from Last Used..."
+msgstr "Överför _fältanteckningar från senast använda..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:590
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:591
+msgid "_Transfer Caches..."
+msgstr "_Överför gömmor..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:593
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:594
+msgid "_Receive Field Notes..."
+msgstr "Ta bort fältanteckninga_r"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:596
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:597
+msgid "_Add GPS Profile..."
+msgstr "_Lägg till gps-profil..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:599
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:600
+msgid "_Edit GPS Profile..."
+msgstr "R_edigera gps-profil..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:602
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:603
+msgid "_Delete GPS Profile..."
+msgstr "_Ta bort gps-profil"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:605
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:606
+msgid "_View All in QLandkarte GT..."
+msgstr "_Visa alla i QLandkarte GT..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:608
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:609
+msgid "View _Selected Cache in QLandkarte GT..."
+msgstr "Visa markerad _gömma i QLandkarte GT..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:611
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:612
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:651
+msgid "_External Tools"
+msgstr "_Externa verktyg"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:614
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:615
+msgid "_Configure External Tools"
+msgstr "_Konfigurera externa verktyg"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:617
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:618
+msgid "_Log Find..."
+msgstr "_Logga hittad..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:620
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:621
+msgid "Log to _Field Notes File"
+msgstr "Logga till fil för _fältanteckningar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:623
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:624
+msgid "Full _Screen"
+msgstr "Full_skärm"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:626
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:627
+msgid "_Grab Images..."
+msgstr "H_ämta bilder..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:629
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:631
+msgid "_Map Popups"
+msgstr "_Popuper i kartor"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:633
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:634
+msgid "Database Cleanup Assistant..."
+msgstr ""
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:636
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:637
+#, fuzzy
+msgid "_Reduce Number of Logs..."
+msgstr "Begränsa antalet loggar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:639
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:640
+#, fuzzy
+msgid "Grab All Images..."
+msgstr "Hämta bilder..."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMMainWindow.cs:648
+msgid "OCM"
+msgstr "OCM"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:155
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:156
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:514
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:515
+#: ../ocm-gtk/Application/Widgets/OCMQueryPage3.cs:255
+msgid "Mi"
+msgstr "Mi"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:224
+#: ../ocm-gtk/Application/Widgets/WaypointWidget.cs:59
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:122
+msgid "Type"
+msgstr "Typ"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:227
+#: ../ocm-gtk/Application/Widgets/WaypointWidget.cs:61
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:124
+msgid "Code"
+msgstr "Kod"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:230
+msgid "Km"
+msgstr "Km"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:233
+msgid "Title"
+msgstr "Titel"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:633
+msgid "_Set As Map Centre"
+msgstr "_Sätt som kartans mittpunkt"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:634
+msgid "_View Cache Online"
+msgstr "_Visa gömman uppkopplat"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:638
+msgid "Mark First To Find"
+msgstr "Markera som FTF"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:646
+msgid "Delete..."
+msgstr "Ta bort..."
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:647
+msgid "_Add to Bookmark List"
+msgstr "Lägg till i bokmärkeslist_a"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:648
+msgid "_Remove From Bookmark List"
+msgstr "Ta bo_rt från bokmärkeslista"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:649
+msgid "View in _QLandkarte GT..."
+msgstr "Visa i _QLandkarte GT..."
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:650
+msgid "_Log Find"
+msgstr "Logga hittad"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:652
+msgid "_Grab Images"
+msgstr "H_ämta bilder"
+
+#: ../ocm-gtk/Application/Widgets/CacheListWidget.cs:1017
+msgid "Value is not a number"
+msgstr "Värdet är inte ett nummer"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheListWidget.cs:273
+msgid "Not Available"
+msgstr "Inte tillgänglig"
+
+#: ../ocm-gtk/Application/OCMApp.cs:333
+#, fuzzy
+msgid "Unnamed Cache"
+msgstr "Pusselgömma"
+
+#: ../ocm-gtk/Application/OCMApp.cs:453
+msgid "Unable to check for updates, check your network connection."
+msgstr ""
+"Kunde inte kolla efter uppdateringar, kontrollera din nätverksanslutning."
+
+#: ../ocm-gtk/Application/Widgets/CacheInfoWidget.cs:71
+#: ../ocm-gtk/Application/Widgets/CacheInfoWidget.cs:73
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheInfoWidget.cs:124
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeoCachePane.cs:129
+msgid "Images"
+msgstr "Bilder"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheInfoWidget.cs:59
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeoCachePane.cs:64
+msgid "Quick Info"
+msgstr "Snabbinfo"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheInfoWidget.cs:72
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeoCachePane.cs:77
+msgid "Description"
+msgstr "Beskrivning"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheInfoWidget.cs:85
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeoCachePane.cs:90
+msgid "Logs"
+msgstr "Loggar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CacheInfoWidget.cs:98
+#: ../ocm-gtk/gtk-gui/ocmgtk.GeoCachePane.cs:103
+msgid "Waypoints"
+msgstr "Brytpunkter"
+
+#: ../ocm-gtk/Application/Widgets/MapWidget.cs:136
+msgid "Map Point"
+msgstr "Kartpunkt"
+
+#: ../ocm-gtk/Application/Widgets/MapWidget.cs:308
+msgid "<b>A cache by:</b> "
+msgstr "<b>En geocache av:</b> "
+
+#: ../ocm-gtk/Application/Widgets/MapWidget.cs:310
+msgid " <b>Hidden on: </b>"
+msgstr " <b>Gömd: </b>"
+
+#: ../ocm-gtk/Application/Widgets/MapWidget.cs:312
+msgid "<br><b>Difficulty: </b>"
+msgstr "<br><b>Svårighetsgrad: </b>"
+
+#: ../ocm-gtk/Application/Widgets/MapWidget.cs:314
+msgid " <b>Terrain: </b>"
+msgstr " <b>Terrängfaktor: </b>"
+
+#: ../ocm-gtk/Application/Widgets/MapWidget.cs:316
+msgid "<br><b>Cache size: </b>"
+msgstr "<br><b>Storlek: </b>"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:30
+msgid ""
+"<span font='bold italic 10' fgcolor='darkgreen'>You have already found this "
+"cache on {0}</span>"
+msgstr "<i>Du hittade denna gömma {0}</i>"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:31
+msgid ""
+"<span font='bold italic 10' fgcolor='darkgreen'>You have already found this "
+"cache</span>"
+msgstr "<i>Du har hitta denna gömma</i>"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:32
+msgid ""
+"<span font='bold italic 10' fgcolor='darkgreen'>You were first to find this "
+"cache on {0}</span>"
+msgstr "<i>Du var först att hitta denna gömma {0}</i>"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:33
+msgid ""
+"<span font='bold italic 10' fgcolor='darkgreen'>You were first to find this "
+"cache</span>"
+msgstr "<i>Du har först att hitta denna gömma</i>"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:34
+msgid ""
+"<span font='bold italic 10' fgcolor='blue'>You didn't find this cache on {0}"
+"</span>"
+msgstr "<i>Du kunde inte hitta denna gömma {0}</i>"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:35
+msgid ""
+"<span font='bold italic 10' fgcolor='blue'>You didn't find this cache</span>"
+msgstr "<i>Du kunde inte hitta denna gömma</i>"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:36
+msgid ""
+"<span font='bold italic 10' fgcolor='darkgreen'>You own this cache</span>"
+msgstr "<i>Du äger denna gömma</i>"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:37
+msgid ""
+"<span font='bold italic 10' fgcolor='red'>This cache is temporarily "
+"unavailable, check the logs for more information.</span>"
+msgstr ""
+"<i>Denna gömma är tillfälligt inaktiv, kolla loggarna för mer information</i>"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:38
+msgid ""
+"<span font='bold italic 10' fgcolor='red'>This cache has been archived, "
+"check the logs for more information.</span>"
+msgstr ""
+"<i>Denna gömma har blivit arkiverad, kolla loggarna för mer information.</i>"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:39
+msgid ""
+"<span font='bold italic 10' fgcolor='darkorange'>This cache has a recent DNF "
+"or requires maintenance, check the logs for more information</span>"
+msgstr ""
+"<i>Denna gömma har en aktuell DNF eller kräver underhåll, kolla loggarna för "
+"mer information</i>"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:154
+msgid "<b>Location: </b> {0},{1}"
+msgstr "<b>Plats: </b> {0},{1}"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:156
+msgid "<b>Location: </b> {0}"
+msgstr "<b>Plats: </b> {0}"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:222
+#: ../ocm-gtk/Application/Widgets/LogViewerWidget.cs:108
+msgid "NO CACHE SELECTED"
+msgstr "INGEN GÖMMA VALD"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:375
+msgid "<i>Original: "
+msgstr "<i>Original: "
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:386
+msgid "NE"
+msgstr "NÖ"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:388
+msgid "SE"
+msgstr "SÖ"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:390
+msgid "SW"
+msgstr "SV"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:392
+msgid "NW"
+msgstr "NV"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:397
+msgid "<span font='bold italic 10'>({0} miles {1} from {2})</span>"
+msgstr "({0} miles {1} från {2})"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:399
+msgid "<span font='bold italic 10'>({0} km {1} from {2})</span>"
+msgstr "({0} km {1} från {2})"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:407
+msgid "Project A.P.E"
+msgstr "Project A.P.E"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:422
+msgid "Geo Adventures Maze"
+msgstr "Äventyrslabyrint"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:428
+msgid "Multi Cache"
+msgstr "Flerstegsgömma"
+
+#: ../ocm-gtk/Application/Widgets/GeocacheInfoPanel.cs:434
+msgid "Undefined Cache Type"
+msgstr "Odefinierad typ av gömma"
+
+#: ../ocm-gtk/Application/Widgets/ImagesWidget.cs:88
+msgid "Images Folder: {0}"
+msgstr "Mapp för bilder: {0}"
+
+#: ../ocm-gtk/Application/Widgets/NotesWidget.cs:49
+msgid "You have unsaved notes, do you wish to save them?"
+msgstr "Du har osparade anteckningar, vill du spara dem?"
+
+#: ../ocm-gtk/Application/Widgets/WaypointWidget.cs:63
+msgid "Location"
+msgstr "Plats"
+
+#: ../ocm-gtk/Application/Widgets/WaypointWidget.cs:317
+msgid "OCM was unable to find any child waypoints."
+msgstr "OCM kunde inte hitta några tillhörande brytpunkter."
+
+#: ../ocm-gtk/Application/Widgets/WaypointWidget.cs:338
+#: ../ocm-gtk/Application/Widgets/ReviewWaypointWidget.cs:72
+msgid "Grabbed Waypoint"
+msgstr "Hämtad brytpunkt"
+
+#: ../ocm-gtk/Application/Widgets/DescriptionWidget.cs:52
+msgid "<b>NO CACHE SELECTED</b>"
+msgstr "<b>INGEN GÖMMA VALD</b>"
+
+#: ../ocm-gtk/Application/Widgets/DescriptionWidget.cs:70
+msgid "Ref"
+msgstr "Ref"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.OCMSplash.cs:31
+msgid "OCMSplash"
+msgstr "OCMSplash"
+
+#: ../ocm-gtk/Application/Splash/OCMSplash.cs:57
+msgid ""
+"<b><big>Version {0}</big></b>\n"
+"<small>Copyright (c) Kyle Campbell 2010-2011</small>"
+msgstr ""
+"<b><big>Version {0}</big></b>\n"
+"<small>Copyright (c) Kyle Campbell 2010-2011</small>"
+
+#: ../ocm-gtk/Application/Dialogs/Preferences.cs:176
+#: ../ocm-gtk/Application/Dialogs/Preferences.cs:186
+msgid "Choose Directory"
+msgstr "Välj katalog"
+
+#: ../ocm-gtk/Application/Printing/CachePrinter.cs:135
+msgid "<b>Short Description:</b>"
+msgstr "<b>Kort beskrivning:</b>"
+
+#: ../ocm-gtk/Application/Printing/CachePrinter.cs:140
+msgid "<b>Long Description:</b>"
+msgstr "<b>Lång beskrivning:</b>"
+
+#: ../ocm-gtk/Application/Printing/CachePrinter.cs:146
+msgid "<b>Notes:</b>"
+msgstr "<b>Anteckningar:</b>"
+
+#: ../ocm-gtk/Application/Printing/CachePrinter.cs:153
+msgid "<b>Hint:</b>"
+msgstr "<b>Tips:</b>"
+
+#: ../ocm-gtk/Application/Printing/CachePrinter.cs:241
+msgid "Page {0} of {1}"
+msgstr "Sida {0} av {1}"
+
+#: ../ocm-gtk/Application/Locations/LocationList.cs:135
+msgid "GPSD Position"
+msgstr "Position från GPSD"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ManageListDialog.cs:105
+msgid "GtkButton"
+msgstr "GtkButton"
+
+#: ../ocm-gtk/Application/Dialogs/FilterDialog.cs:315
+msgid "Notes/Children/Corrected"
+msgstr "Anteckningar/Brytpunkter/Justeringar"
+
+#: ../ocm-gtk/Application/QuickFilters/QuickFilter.cs:136
+msgid "Done"
+msgstr "Klar"
+
+#: ../ocm-gtk/Application/QuickFilters/QuickFilter.cs:149
+msgid "To Do"
+msgstr "Att göra"
+
+#: ../ocm-gtk/Application/QuickFilters/QuickFilter.cs:176
+msgid "DNF"
+msgstr ""
+
+#: ../ocm-gtk/Application/QuickFilters/QuickFilter.cs:189
+msgid "All"
+msgstr "Alla"
+
+#: ../ocm-gtk/Application/QuickFilters/QuickFilter.cs:203
+#, fuzzy
+msgid "Stale"
+msgstr "Skalor"
+
+#: ../ocm-gtk/Application/QuickFilters/QuickFilter.cs:219
+msgid "Stale - Unsolved"
+msgstr ""
+
+#: ../ocm-gtk/Application/QuickFilters/QuickFilter.cs:233
+msgid "Recently Published"
+msgstr ""
+
+#: ../ocm-gtk/Application/Dialogs/ReviewWaypointDialog.cs:52
+#: ../ocm-gtk/Application/Dialogs/ReviewWaypointDialog.cs:73
+msgid "Reviewing Waypoint {0} of {1}"
+msgstr "Granskar brytpunkt {0} av {1}"
+
+#: ../ocm-gtk/Application/Dialogs/DeleteItem.cs:51
+msgid "Quick Filter:"
+msgstr "Snabbfilter:"
+
+#: ../ocm-gtk/Application/Dialogs/DeleteItem.cs:73
+msgid "Location:"
+msgstr "Plats:"
+
+#: ../ocm-gtk/Application/Dialogs/DeleteItem.cs:89
+msgid "GPS Profile:"
+msgstr "Gps-profil"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:94
+msgid "Conditions"
+msgstr "Villkor"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:211
+msgid "<b>Distance: </b>"
+msgstr "<b>Avständ: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:221
+msgid " mi"
+msgstr " mi"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:223
+msgid " km"
+msgstr " km"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:241
+msgid "<b>User 1 contains: </b>"
+msgstr "<b>Användardata 1 innehåller: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:247
+msgid "<b>User 2 contains: </b>"
+msgstr "<b>Användardata 2 innehåller: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:253
+msgid "<b>User 3 contains: </b>"
+msgstr "<b>Användardata 3 innehåller:: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:259
+msgid "<b>User 4 contains: </b>"
+msgstr "<b>Användardata 4 innehåller: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:269
+msgid "<b>Not updated within: </b>"
+msgstr "<b>Inte uppdaterad inom: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:271
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:282
+msgid " days"
+msgstr " dagar"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:280
+msgid "<b>Updated within: </b>"
+msgstr "<b>Uppdaterad inom: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:291
+msgid "<b>Status: </b>"
+msgstr "<b>Status: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:294
+msgid "Found "
+msgstr "Hittade"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:296
+msgid "Unfound "
+msgstr "Inte hittade"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:298
+msgid "Mine "
+msgstr "Mina"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:300
+msgid "Available "
+msgstr "Aktiva"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:302
+msgid "Disabled "
+msgstr "Inaktiverade"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:304
+msgid "Archived "
+msgstr "Arkiverade"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:450
+msgid "<b>State/Province: </b>"
+msgstr "<b>Stat/landskap: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:460
+msgid "<b>Country: </b>"
+msgstr "<b>Land: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:470
+msgid "<b>Last found by you on: </b>"
+msgstr "<b>Senast hittad av dig: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:480
+msgid "<b>Last found by you on or before: </b>"
+msgstr "<b>Hittad av dig senast: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:490
+msgid "<b>Last found by you on or after: </b>"
+msgstr "<b>Hittad av dig tidigast: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:500
+msgid "<b>Last updated on or after: </b>"
+msgstr "<b>Senast uppdaterad tidigast: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:510
+msgid "<b>Last updated on or before: </b>"
+msgstr "<b>Senast uppdaterad senast: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:520
+msgid "<b>Placed on or after: </b>"
+msgstr "<b>Gömd tidigast: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:530
+msgid "<b>Placed on or before: </b>"
+msgstr "<b>Gömd senast: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:540
+msgid "Description Contains:"
+msgstr "Beskrivning innehåller:"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:550
+msgid "<b>Placed By: </b>"
+msgstr "<b>Gömd av: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:560
+msgid "<b>Container: </b>"
+msgstr "<b>Behållare: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:578
+msgid "<b>Terrain: </b>"
+msgstr "<b>Terrängfaktor: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:600
+msgid "<b>Difficulty: </b>"
+msgstr "<b>Svårighetsgrad: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:623
+msgid "<b>Cache Types: </b>"
+msgstr "<b>Typer av gömmor: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:642
+msgid "<b>Cache Sources: </b>"
+msgstr "<b>Källor: </b>"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:673
+msgid "Add Condition..."
+msgstr "Lägg till villkor"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:691
+msgid "Edit Condition..."
+msgstr "Redigera villkor..."
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:713
+msgid "Are you sure you want to remove this filter?"
+msgstr "Är du säker på att du vill ta bort detta filter?"
+
+#: ../ocm-gtk/Application/Dialogs/AddComboFilter.cs:753
+msgid "Import Quick Filter"
+msgstr "Importera snabbfilter"
+
+#: ../ocm-gtk/Application/Dialogs/ProgressDialog.cs:62
+msgid "<i>Import complete, {0} waypoints processed in {1}:{2}:{3}</i>"
+msgstr "<i>Import klar, {0} brytpunkter behandlade på {1}:{2}:{3}</i>"
+
+#: ../ocm-gtk/Application/Dialogs/ProgressDialog.cs:94
+#: ../ocm-gtk/Application/Dialogs/ProgressDialog.cs:98
+msgid "Unzipping"
+msgstr "Packar upp"
+
+#: ../ocm-gtk/Application/Dialogs/ProgressDialog.cs:97
+msgid "Unizpping"
+msgstr "Packar upp"
+
+#: ../ocm-gtk/Application/Dialogs/ProgressDialog.cs:139
+msgid "Processing File {0} of {1}"
+msgstr "Behandlar fil {0} av {1}"
+
+#: ../ocm-gtk/Application/Dialogs/ProgressDialog.cs:228
+msgid "Import cancelled, all changes reverted."
+msgstr "Importen avbruten, inga ändringar genomförda."
+
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:70
+msgid "File Location: {0}"
+msgstr "Plats för fil: {0}"
+
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:128
+msgid "Date"
+msgstr "Datum"
+
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:212
+msgid " by "
+msgstr " av "
+
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:263
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:400
+msgid "You have unsaved changes that will be lost. Do you wish to save?\n"
+msgstr "Du har osparade ändringar som kommer att förloras. Vill du spara?\n"
+
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:377
+msgid "<b>Information Unavailable. This cache is not in your OCM database.</b>"
+msgstr ""
+"<b>Informationen inte tillgänglig. Gömman finns inte i din OCM-databas.</b>"
+
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:422
+msgid "Are you sure you want to remove the field note for '{0}'?"
+msgstr "Är du säker på att du vill ta bort fältanteckningen för '{0}'?"
+
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:438
+msgid "Are you sure you want to remove all field notes?"
+msgstr "Är du säker på att du vill ta bort alla fältanteckningar?"
+
+#: ../ocm-gtk/Application/Dialogs/OffLineLogViewer.cs:467
+msgid ""
+"'{0}' is not within the list of unfiltered caches. Your filter settings may "
+"have filtered it out or it may not be in your database."
+msgstr ""
+"'{0}' finns inte i listan av ofiltrerade gömmor. Dina filterinställningar "
+"kan ha filtrerat ut den eller så finns den inte i din databas."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ErrorDialog.cs:37
+msgid "An Error Occured"
+msgstr "Ett fel inträffade"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ErrorDialog.cs:94
+msgid "<b>Error Details:</b>"
+msgstr "<b>Feldetaljer:</b>"
+
+#: ../ocm-gtk/Application/Dialogs/FieldNotesProgress.cs:70
+msgid "<i>Receiving from device...</i>"
+msgstr "<i>Tar emot från enhet...</i>"
+
+#: ../ocm-gtk/Application/Dialogs/FieldNotesProgress.cs:76
+msgid "<i>Processing Field Notes...</i>"
+msgstr "<i>Behandlar fältanteckningar...</i>"
+
+#: ../ocm-gtk/Application/Dialogs/FieldNotesProgress.cs:114
+msgid "<i>Scanned {0} Field Notes, {1} new.</i>"
+msgstr "<i>Sökte igenom {0} fältanteckningar, {1} nya.</i>"
+
+#: ../ocm-gtk/Application/Widgets/LocationWidget.cs:167
+msgid "Coordinates must be typed in using English formatting"
+msgstr "Koordinater måste skrivas i engelskt format"
+
+#: ../ocm-gtk/Application/Dialogs/SendWaypointsDialog.cs:130
+msgid "Are you sure you want to cancel?"
+msgstr "Är du säker på att du vill avbryta?"
+
+#: ../ocm-gtk/Application/Dialogs/SendWaypointsDialog.cs:168
+msgid "<i>Send Complete:{0} geocaches transferred</i>"
+msgstr "<i>Utsändning klar: {0} geocachar överförda</i>"
+
+#: ../ocm-gtk/Application/Dialogs/SendWaypointsDialog.cs:175
+msgid "<i>Sending Geocaches to Device</i>"
+msgstr "<i>Skickar geocachar till enhet</i>"
+
+#: ../ocm-gtk/Application/Dialogs/FileDownloadProgress.cs:59
+#, fuzzy
+msgid "Download Failed for {0}"
+msgstr "Laddar ner fil"
+
+#: ../ocm-gtk/Application/Dialogs/FileDownloadProgress.cs:65
+#: ../ocm-gtk/Application/Dialogs/FileDownloadProgress.cs:98
+#, fuzzy
+msgid "Cancelled"
+msgstr "Avbryt"
+
+#: ../ocm-gtk/Application/Dialogs/FileDownloadProgress.cs:67
+msgid "Complete, {0} files failed to download"
+msgstr ""
+
+#: ../ocm-gtk/Application/Dialogs/FileDownloadProgress.cs:125
+msgid "File {0} of {1}"
+msgstr "Fil {0} av {1}"
+
+#: ../ocm-gtk/Application/Dialogs/FileDownloadProgress.cs:134
+msgid "Received {0} bytes of {1} bytes"
+msgstr "Tog emot {0} av {1} bytes"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CleanUpPage1.cs:33
+msgid ""
+"This assistant will help guide you through cleaning up your OCM database.\n"
+"\n"
+"By reducing the number of logs per cache and compacting your database, you "
+"can greatly reduce the size of you OCM database which will improve "
+"performance. "
+msgstr ""
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CleanupPage2.cs:42
+msgid "Backup database before cleaning"
+msgstr ""
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CleanupPage2.cs:55
+#, fuzzy
+msgid "Compact the size of the database"
+msgstr "Optimera databas"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CleanupPage2.cs:67
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReduceLogsDialog.cs:66
+#, fuzzy
+msgid "logs"
+msgstr "Loggar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CleanupPage2.cs:90
+#, fuzzy
+msgid "Limit the number of logs per cache to:"
+msgstr "Begränsa antalet gömmor"
+
+#: ../ocm-gtk/Application/CleanupAssistant/CleanupAssistant.cs:49
+#, fuzzy
+msgid "Cleanup Assistant"
+msgstr "Installationsguiden"
+
+#: ../ocm-gtk/Application/CleanupAssistant/CleanupAssistant.cs:50
+#, fuzzy
+msgid "Introduction"
+msgstr "Information"
+
+#: ../ocm-gtk/Application/CleanupAssistant/CleanupAssistant.cs:56
+msgid "Confirm Cleanup"
+msgstr ""
+
+#: ../ocm-gtk/Application/CleanupAssistant/CleanupAssistant.cs:59
+#, fuzzy
+msgid "Summary"
+msgstr "Topp"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CleanupSummary.cs:35
+#, fuzzy
+msgid "Database cleanup complete"
+msgstr "Databasen optimerad."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReduceLogsDialog.cs:31
+#, fuzzy
+msgid "Reduce Number of Logs..."
+msgstr "Begränsa antalet loggar"
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReduceLogsDialog.cs:45
+msgid "Limit cache to:"
+msgstr ""
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.ReduceLogsDialog.cs:55
+#, fuzzy
+msgid "10"
+msgstr "100"
+
+#: ../ocm-gtk/Application/CleanupAssistant/CleanupConfirmPage.cs:38
+msgid ""
+"\n"
+"\n"
+"{0} logs will be purged."
+msgstr ""
+
+#: ../ocm-gtk/Application/CleanupAssistant/CleanupConfirmPage.cs:42
+msgid ""
+"\n"
+"\n"
+"Database will be backed up."
+msgstr ""
+
+#: ../ocm-gtk/Application/CleanupAssistant/CleanupConfirmPage.cs:46
+#, fuzzy
+msgid ""
+"\n"
+"\n"
+"Database will be compacted."
+msgstr "Databasen optimerad."
+
+#: ../ocm-gtk/gtk-gui/ocmgtk.CleanupConfirmPage.cs:36
+msgid "The following items will be cleaned up:"
+msgstr ""
+
+#: ../HelloWorldAddin/gtk-gui/HelloWorldAddin.HelloWorldWidget.cs:30
+msgid "This is a sample Plugin"
+msgstr "Detta är ett exempel på insticksprogram"
+
+#, fuzzy
+#~ msgid "15"
+#~ msgstr "1,5"
+
+#, fuzzy
+#~ msgid "Do not remove caches with corrected coordinates/final waypoints"
+#~ msgstr "Alla gömmor med korrigerade koordinater/slutkoordinater"
+
+#, fuzzy
+#~ msgid "<b>Cache Cleanup</b>"
+#~ msgstr "<b>Status</b>"
+
+#, fuzzy
+#~ msgid "<big><b>Analyzing Database</b></big>"
+#~ msgstr "<big><b>Laddar ner fil</b></big>"
+
+#~ msgid " The advanced filter settings override basic distance filter."
+#~ msgstr ""
+#~ " Inställningarna för avancerade filter går före grundläggande filter."
+
+#~ msgid " The advanced filter settings override the basic status filter."
+#~ msgstr ""
+#~ " Inställningarna för avancerade filter går före enkla status-filter. "
+
+#~ msgid " The combination filter settings override basic distance filter."
+#~ msgstr " Kombinationsfilter går före grundläggande avståndsfilter."
+
+#~ msgid " The combination filter settings override the basic status filter."
+#~ msgstr " Kombinationsfilter går före enkla status-filter."
+
+#~ msgid "Miles"
+#~ msgstr "Engelska mil"
+
+#~ msgid "Loading Caches"
+#~ msgstr "Laddar gömmor"
+
+#~ msgid "Loading Caches {0}"
+#~ msgstr "Laddar gömmor {0}"
+
+#~ msgid "Grabbing Waypoints"
+#~ msgstr "Hämtar brytpunkter"
+
+#~ msgid "Processing Children..."
+#~ msgstr "Behandlar tillhörande brytpunkter..."
+
+#~ msgid "Loading Map {0}"
+#~ msgstr "Laddar karta {0}"
+
+#~ msgid "Loading Map"
+#~ msgstr "Laddar karta"
+
+#~ msgid ""
+#~ "OCM needs to upgrade your database.\n"
+#~ "Would you like to backup your database first?"
+#~ msgstr ""
+#~ "OCM behöver uppgradera din databas.\n"
+#~ "Vill du skapa en backup av den först?"
+
+#~ msgid "Upgrade complete."
+#~ msgstr "Uppgradering klar."
+
+#~ msgid "<br><b>Hidden on: </b>"
+#~ msgstr "<br><b>Gömd: </b>"
+
+#~ msgid "Are you sure you want to clear all advanced filters?"
+#~ msgstr "Är du säker på att du vill rensa alla avancerade filter?"
+
+#~ msgid "{0} added to {1}"
+#~ msgstr "{0} är tillagd till {1}"
+
+#~ msgid "{0} caches added to {1}"
+#~ msgstr "{0} gömmor tillagda till {1}"
+
+#~ msgid "Are you sure you want to remove {0} from {1}?"
+#~ msgstr "Är du säker på att du vill ta bort {0} från {1}?"
+
+#~ msgid "Delete QuickFilter"
+#~ msgstr "Ta bort snabbfilter"
+
+#~ msgid "You have to select a cache first."
+#~ msgstr "Du måste markera en gömma först."
+
+#~ msgid "Delete Location...."
+#~ msgstr "Ta bort plats"
+
+#~ msgid "Are you sure you want to clear all Field Notes?"
+#~ msgstr "Är du säker på att du vill rensa alla fältanteckningar?"
+
+#~ msgid "Clear All Filters"
+#~ msgstr "Rensa alla filter"
+
+#~ msgid "_View Online"
+#~ msgstr "_Visa uppkopplat"
+
+#~ msgid "_Delete"
+#~ msgstr "Ta bort"
+
+#~ msgid "Open _Database..."
+#~ msgstr "Öppna _databas..."
+
+#~ msgid "_Mark Unfound"
+#~ msgstr "_Markera som Inte hittad"
+
+#~ msgid "_Map"
+#~ msgstr "Karta"
+
+#~ msgid "_Configure GPS..."
+#~ msgstr "Konfigurera GPS..."
+
+#~ msgid "_Reset Centre to Home"
+#~ msgstr "Åte_rställ mittpunkt till Hem"
+
+#~ msgid "_TerraCaching.com"
+#~ msgstr "_TerraCaching.com"
+
+#~ msgid "All Caches"
+#~ msgstr "Alla gömmor"
+
+#~ msgid "_My NaviCache"
+#~ msgstr "_My NaviCache"
+
+#~ msgid "_To Do"
+#~ msgstr "Att göra"
+
+#~ msgid "_Done"
+#~ msgstr "_Klar"
+
+#~ msgid "_Solved Puzzles"
+#~ msgstr "Lö_sta pussel"
+
+#~ msgid "New Cache..."
+#~ msgstr "Ny gömma..."
+
+#~ msgid "Use GPSD as Centre"
+#~ msgstr "Centrera på GPSD-position"
+
+#~ msgid "Deselect"
+#~ msgstr "Avmarkera"
+
+#~ msgid "_Save Current as Quick Filter"
+#~ msgstr "_Spara aktuell som snabbfilter"
+
+#~ msgid "Database Tools"
+#~ msgstr "Databasverktyg"
+
+#~ msgid "Copy Visible Caches..."
+#~ msgstr "Kopiera synliga gömmor..."
+
+#~ msgid "Move Visible Caches..."
+#~ msgstr "Flytta synliga gömmor..."
+
+#~ msgid "Database"
+#~ msgstr "Databas"
+
+#~ msgid "Locations"
+#~ msgstr "Platser"
+
+#~ msgid "GPS Profile"
+#~ msgstr "Gps-profil"
+
+#~ msgid "Process Field Notes..."
+#~ msgstr "Behandla fältanteckningar..."
+
+#~ msgid "Clear Offline Logs..."
+#~ msgstr "Rensa loggar för nerkopplat läge"
+
+#~ msgid "Field Notes"
+#~ msgstr "Fältanteckningar"
+
+#~ msgid "Clear Field Notes..."
+#~ msgstr "Rensa fältanteckningar..."
+
+#~ msgid "Zoom"
+#~ msgstr "Zoom"
+
+#~ msgid "Test"
+#~ msgstr "Test"
+
+#~ msgid "Transfer Caches to Last Used..."
+#~ msgstr "Överför gömmor till senast använda..."
+
+#~ msgid "Import _Directory"
+#~ msgstr "Importera _katalog"
+
+#~ msgid "Not Set"
+#~ msgstr "Inget valt"
+
+#~ msgid "Includes:"
+#~ msgstr "Inkluderar:"
+
+#~ msgid "Filter"
+#~ msgstr "Filter"
+
+#~ msgid "<span fgcolor=\"blue\">Advanced filters</span> have been applied."
+#~ msgstr "Avancerade filter har tillämpats."
+
+#~ msgid "{0} kb of {1} kb"
+#~ msgstr "{0} kB av {1} kB"
