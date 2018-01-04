@@ -23,6 +23,7 @@ sudo apt-get install libdbus2.0-cil libdbus2.0-cil-dev libdbus-glib2.0-cil libdb
 
 ./configure
 make
+sudo make install
 ```
 
 Anschliessend kann man es mit dem Befehl "ocm-gtk" starten.
