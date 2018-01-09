@@ -8,6 +8,15 @@
 [Bb]in/
 packages/
 TestResults/
+Translations/*.gmo
+*.in
+
+
+./ocmengine/ocmengine.pc
+./ocm-gtk/ocm-gtk
+./ocm-gtk/OCM.desktop
+./ocm-gtk/OCMApps.cs
+./ocm-gtk/Paths.cs
 
 # globs
 Makefile.in
@@ -34,6 +43,7 @@ Makefile
 config.log
 config.status
 **/*/Makefile
+site/
 
 #Mac bundle stuff
 *.dmg
@@ -48,3 +58,5 @@ config.status
 
 ./ocm-gtk/bin
 ./ocmengine/bin
+
+
