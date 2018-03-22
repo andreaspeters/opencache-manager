@@ -16,7 +16,7 @@ Tätigkeiten einen externer Entwickler beauftragen. :-)
 #### Archlinux:
 
 ```
-	yaourt opencachemanager-git
+yaourt opencachemanager-git
 
 ```
 
