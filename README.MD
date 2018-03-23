@@ -74,6 +74,8 @@ Es folgt der klassische Dreisatz:
 ./configure
 make
 make install
+sudo make install
+osm
 ```
 
 Anschliessend kann man es mit dem Befehl "ocm-gtk" starten.
