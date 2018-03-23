@@ -189,10 +189,16 @@ namespace ocmgtk
 		{
 			m_Loaded = false;
 
+			
 			m_View.LoadUri("http://andreas-peters.net/ocm/web/wpt_viewer.html?lat="
 			               + m_App.AppConfig.LastLat.ToString (CultureInfo.InvariantCulture)
 			               + "&lon=" + m_App.AppConfig.LastLon.ToString (CultureInfo.InvariantCulture));
-
+			/*
+			m_View.LoadUri("file://web/wpt_viewer.html?lat="
+			               + m_App.AppConfig.LastLat.ToString (CultureInfo.InvariantCulture)
+			               + "&lon=" + m_App.AppConfig.LastLon.ToString (CultureInfo.InvariantCulture));;
+			*/
+			               
 			AddMaps(AppConfig.OpenLayerMaps);
 			LoadScript("setAutoSelectCache('" + AppConfig.AutoSelectCacheFromMap + "');");
 		}

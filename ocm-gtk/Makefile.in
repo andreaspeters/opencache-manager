@@ -373,6 +373,9 @@ EXTRA_DIST = $(build_sources) $(build_resx_files) \
 @ENABLE_DEBUG_TRUE@OPENLAYERS_JS_SOURCE = web/OpenLayers.js
 @ENABLE_RELEASE_TRANSLATED_TRUE@OPENLAYERS_JS_SOURCE = web/OpenLayers.js
 @ENABLE_RELEASE_TRUE@OPENLAYERS_JS_SOURCE = web/OpenLayers.js
+@ENABLE_DEBUG_TRUE@OPENSTREETMAP_JS_SOURCE = web/OpenStreetMap.js
+@ENABLE_RELEASE_TRANSLATED_TRUE@OPENSTREETMAP_JS_SOURCE = web/OpenStreetMap.js
+@ENABLE_RELEASE_TRUE@OPENSTREETMAP_JS_SOURCE = web/OpenStreetMap.js
 @ENABLE_DEBUG_TRUE@BLANK_GIF_SOURCE = web/img/blank.gif
 @ENABLE_RELEASE_TRANSLATED_TRUE@BLANK_GIF_SOURCE = web/img/blank.gif
 @ENABLE_RELEASE_TRUE@BLANK_GIF_SOURCE = web/img/blank.gif
@@ -1605,6 +1608,7 @@ PROGRAMFILES_ICONS_SCALABLE = \
 PROGRAMFILES_WEB = \
 	$(WPT_VIEWER_HTML) \
 	$(OPENLAYERS_JS) \
+	$(OPENSTREETMAP_JS) \
 	$(NOMAP_PNG)  
 
 PROGRAMFILES_ICONS_24X24 = \
@@ -2536,6 +2540,7 @@ LICENCE_TXT = $(BUILD_DIR)/licence/Licence.txt
 TREASURE_SVG = $(BUILD_DIR)/icons/scalable/treasure.svg
 TREASURE_PNG = $(BUILD_DIR)/icons/24x24/treasure.png
 OPENLAYERS_JS = $(BUILD_DIR)/web/OpenLayers.js
+OPENSTREETMAP_JS = $(BUILD_DIR)/web/OpenStreetMap.js
 BLANK_GIF = $(BUILD_DIR)/web/img/blank.gif
 CLOUD_POPUP_RELATIVE_PNG = $(BUILD_DIR)/web/img/cloud-popup-relative.png
 DRAG_RECTANGLE_OFF_PNG = $(BUILD_DIR)/web/img/drag-rectangle-off.png
@@ -3724,6 +3729,7 @@ $(eval $(call emit-deploy-target,LICENCE_TXT))
 $(eval $(call emit-deploy-target,TREASURE_SVG))
 $(eval $(call emit-deploy-target,TREASURE_PNG))
 $(eval $(call emit-deploy-target,OPENLAYERS_JS))
+$(eval $(call emit-deploy-target,OPENSTREETMAP_JS))
 $(eval $(call emit-deploy-target,BLANK_GIF))
 $(eval $(call emit-deploy-target,CLOUD_POPUP_RELATIVE_PNG))
 $(eval $(call emit-deploy-target,DRAG_RECTANGLE_OFF_PNG))
