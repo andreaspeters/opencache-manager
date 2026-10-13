@@ -47,7 +47,7 @@ namespace ocmgtk {
         
         private Gtk.Label label1;
         
-        private Gtk.ComboBox logChoice;
+        private Gtk.ComboBoxText logChoice;
         
         private Gtk.HBox hbox4;
         
@@ -67,7 +67,7 @@ namespace ocmgtk {
         
         private Gtk.Label wptCombo;
         
-        private Gtk.ComboBox waypointCombo;
+        private Gtk.ComboBoxText waypointCombo;
         
         private ocmgtk.MapWidget mapView;
         
@@ -98,12 +98,12 @@ namespace ocmgtk {
             this.WindowPosition = ((Gtk.WindowPosition)(4));
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
-            this.AllowShrink = true;
+            this.Resizable = true;
             this.Gravity = ((Gdk.Gravity)(5));
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.OffLineLogViewer.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.Spacing = 6;
             w1.BorderWidth = ((uint)(2));
@@ -247,7 +247,7 @@ namespace ocmgtk {
             w14.Expand = false;
             w14.Fill = false;
             // Container child hbox5.Gtk.Box+BoxChild
-            this.logChoice = Gtk.ComboBox.NewText();
+            this.logChoice = new Gtk.ComboBoxText();
             this.logChoice.AppendText(Mono.Unix.Catalog.GetString("Found it"));
             this.logChoice.AppendText(Mono.Unix.Catalog.GetString("Didn't Find it"));
             this.logChoice.AppendText(Mono.Unix.Catalog.GetString("Write Note"));
@@ -333,7 +333,7 @@ namespace ocmgtk {
             w23.Expand = false;
             w23.Fill = false;
             // Container child hbox3.Gtk.Box+BoxChild
-            this.waypointCombo = Gtk.ComboBox.NewText();
+            this.waypointCombo = new Gtk.ComboBoxText();
             this.waypointCombo.Name = "waypointCombo";
             this.hbox3.Add(this.waypointCombo);
             Gtk.Box.BoxChild w24 = ((Gtk.Box.BoxChild)(this.hbox3[this.waypointCombo]));
@@ -407,7 +407,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w32 = ((Gtk.Box.BoxChild)(w1[this.vpaned1]));
             w32.Position = 0;
             // Internal child ocmgtk.OffLineLogViewer.ActionArea
-            Gtk.HButtonBox w33 = this.ActionArea;
+            Gtk.ButtonBox w33 = this.ActionArea;
             w33.Name = "dialog1_ActionArea";
             w33.Spacing = 10;
             w33.BorderWidth = ((uint)(5));

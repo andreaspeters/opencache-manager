@@ -57,7 +57,7 @@ namespace ocmgtk {
         
         private Gtk.Label label8;
         
-        private Gtk.ComboBox typeEntry;
+        private Gtk.ComboBoxText typeEntry;
         
         private Gtk.Entry urlEntry;
         
@@ -67,7 +67,7 @@ namespace ocmgtk {
         
         private Gtk.Table table3;
         
-        private Gtk.ComboBox diffEntry;
+        private Gtk.ComboBoxText diffEntry;
         
         private Gtk.Frame frame5;
         
@@ -107,7 +107,7 @@ namespace ocmgtk {
         
         private Gtk.Entry nameEntry;
         
-        private Gtk.ComboBox terrEntry;
+        private Gtk.ComboBoxText terrEntry;
         
         private Gtk.Label name;
         
@@ -177,7 +177,7 @@ namespace ocmgtk {
             this.WindowPosition = ((Gtk.WindowPosition)(4));
             this.BorderWidth = ((uint)(6));
             // Internal child ocmgtk.ModifyCacheDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -356,7 +356,7 @@ namespace ocmgtk {
             w19.XOptions = ((Gtk.AttachOptions)(4));
             w19.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table2.Gtk.Table+TableChild
-            this.typeEntry = Gtk.ComboBox.NewText();
+            this.typeEntry = new Gtk.ComboBoxText();
             this.typeEntry.AppendText(Mono.Unix.Catalog.GetString("Generic"));
             this.typeEntry.AppendText(Mono.Unix.Catalog.GetString("Traditional Cache"));
             this.typeEntry.AppendText(Mono.Unix.Catalog.GetString("Unknown Cache"));
@@ -424,7 +424,7 @@ namespace ocmgtk {
             this.table3.ColumnSpacing = ((uint)(6));
             this.table3.BorderWidth = ((uint)(6));
             // Container child table3.Gtk.Table+TableChild
-            this.diffEntry = Gtk.ComboBox.NewText();
+            this.diffEntry = new Gtk.ComboBoxText();
             this.diffEntry.AppendText(Mono.Unix.Catalog.GetString("1"));
             this.diffEntry.AppendText(Mono.Unix.Catalog.GetString("1.5"));
             this.diffEntry.AppendText(Mono.Unix.Catalog.GetString("2"));
@@ -581,7 +581,7 @@ namespace ocmgtk {
             w40.RightAttach = ((uint)(2));
             w40.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table3.Gtk.Table+TableChild
-            this.terrEntry = Gtk.ComboBox.NewText();
+            this.terrEntry = new Gtk.ComboBoxText();
             this.terrEntry.AppendText(Mono.Unix.Catalog.GetString("1"));
             this.terrEntry.AppendText(Mono.Unix.Catalog.GetString("1.5"));
             this.terrEntry.AppendText(Mono.Unix.Catalog.GetString("2"));
@@ -859,7 +859,7 @@ namespace ocmgtk {
             w66.Position = 0;
             w66.Padding = ((uint)(6));
             // Internal child ocmgtk.ModifyCacheDialog.ActionArea
-            Gtk.HButtonBox w67 = this.ActionArea;
+            Gtk.ButtonBox w67 = this.ActionArea;
             w67.Name = "dialog1_ActionArea";
             w67.Spacing = 10;
             w67.BorderWidth = ((uint)(5));

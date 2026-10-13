@@ -35,11 +35,11 @@ namespace ocmgtk {
             this.WindowPosition = ((Gtk.WindowPosition)(4));
             this.Modal = true;
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.FileDownloadProgress.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -83,7 +83,7 @@ namespace ocmgtk {
             w5.Expand = false;
             w5.Fill = false;
             // Internal child ocmgtk.FileDownloadProgress.ActionArea
-            Gtk.HButtonBox w6 = this.ActionArea;
+            Gtk.ButtonBox w6 = this.ActionArea;
             w6.Name = "dialog1_ActionArea";
             w6.Spacing = 10;
             w6.BorderWidth = ((uint)(5));

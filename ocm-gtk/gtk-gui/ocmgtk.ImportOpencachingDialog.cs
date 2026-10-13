@@ -16,11 +16,11 @@ namespace ocmgtk
 			this.Title = global::Mono.Unix.Catalog.GetString ("dialog1");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Internal child ocmgtk.ImportOpencachingDialog.VBox
-			global::Gtk.VBox w1 = this.VBox;
+			global::Gtk.Box w1 = this.ContentArea;
 			w1.Name = "dialog1_VBox";
 			w1.BorderWidth = ((uint)(2));
 			// Internal child ocmgtk.ImportOpencachingDialog.ActionArea
-			global::Gtk.HButtonBox w2 = this.ActionArea;
+			global::Gtk.ButtonBox w2 = this.ActionArea;
 			w2.Name = "dialog1_ActionArea";
 			w2.Spacing = 10;
 			w2.BorderWidth = ((uint)(5));

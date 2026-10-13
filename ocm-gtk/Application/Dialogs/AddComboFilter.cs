@@ -732,7 +732,7 @@ namespace ocmgtk
 		void HandleConditionListSelectionChanged (object sender, EventArgs e)
 		{
 			TreeIter iter;
-			TreeModel model;
+			Gtk.ITreeModel model;
 			
 			if (((TreeSelection)sender).GetSelected (out model, out iter)) {
 				FilterList val = (FilterList)model.GetValue (iter, 0);

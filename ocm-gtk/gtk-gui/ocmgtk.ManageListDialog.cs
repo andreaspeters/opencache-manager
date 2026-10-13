@@ -41,7 +41,7 @@ namespace ocmgtk {
             this.WindowPosition = ((Gtk.WindowPosition)(4));
             this.BorderWidth = ((uint)(6));
             // Internal child ocmgtk.ManageListDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -118,7 +118,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w9 = ((Gtk.Box.BoxChild)(w1[this.hbox1]));
             w9.Position = 0;
             // Internal child ocmgtk.ManageListDialog.ActionArea
-            Gtk.HButtonBox w10 = this.ActionArea;
+            Gtk.ButtonBox w10 = this.ActionArea;
             w10.Name = "dialog1_ActionArea";
             w10.Spacing = 10;
             w10.BorderWidth = ((uint)(5));

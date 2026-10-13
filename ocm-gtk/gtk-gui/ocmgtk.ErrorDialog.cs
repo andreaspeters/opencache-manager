@@ -40,7 +40,7 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             // Internal child ocmgtk.ErrorDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -100,7 +100,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w7 = ((Gtk.Box.BoxChild)(w1[this.expander1]));
             w7.Position = 1;
             // Internal child ocmgtk.ErrorDialog.ActionArea
-            Gtk.HButtonBox w8 = this.ActionArea;
+            Gtk.ButtonBox w8 = this.ActionArea;
             w8.Name = "dialog1_ActionArea";
             w8.Spacing = 10;
             w8.BorderWidth = ((uint)(5));

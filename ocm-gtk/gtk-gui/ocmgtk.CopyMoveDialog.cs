@@ -48,11 +48,11 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.CopyMoveDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -98,7 +98,7 @@ namespace ocmgtk {
             this.visibleRadio.Name = "visibleRadio";
             this.visibleRadio.DrawIndicator = true;
             this.visibleRadio.UseUnderline = true;
-            this.visibleRadio.Group = new GLib.SList(System.IntPtr.Zero);
+            this.visibleRadio.Group = null;
             this.vbox2.Add(this.visibleRadio);
             Gtk.Box.BoxChild w5 = ((Gtk.Box.BoxChild)(this.vbox2[this.visibleRadio]));
             w5.Position = 0;
@@ -142,7 +142,7 @@ namespace ocmgtk {
             w10.Expand = false;
             w10.Fill = false;
             // Internal child ocmgtk.CopyMoveDialog.ActionArea
-            Gtk.HButtonBox w11 = this.ActionArea;
+            Gtk.ButtonBox w11 = this.ActionArea;
             w11.Name = "dialog1_ActionArea";
             w11.Spacing = 10;
             w11.BorderWidth = ((uint)(5));

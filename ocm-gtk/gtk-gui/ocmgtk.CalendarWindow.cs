@@ -25,7 +25,7 @@ namespace ocmgtk {
             this.Decorated = false;
             this.DestroyWithParent = true;
             // Internal child ocmgtk.CalendarWindow.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -39,7 +39,7 @@ namespace ocmgtk {
             w2.Expand = false;
             w2.Fill = false;
             // Internal child ocmgtk.CalendarWindow.ActionArea
-            Gtk.HButtonBox w3 = this.ActionArea;
+            Gtk.ButtonBox w3 = this.ActionArea;
             w3.Name = "dialog1_ActionArea";
             w3.Spacing = 10;
             w3.BorderWidth = ((uint)(5));

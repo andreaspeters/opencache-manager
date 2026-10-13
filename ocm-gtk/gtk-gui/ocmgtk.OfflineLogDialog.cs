@@ -31,7 +31,7 @@ namespace ocmgtk {
         
         private Gtk.Label label4;
         
-        private Gtk.ComboBox logChoice;
+        private Gtk.ComboBoxText logChoice;
         
         private Gtk.HSeparator hseparator1;
         
@@ -55,7 +55,7 @@ namespace ocmgtk {
             this.WindowPosition = ((Gtk.WindowPosition)(4));
             this.BorderWidth = ((uint)(6));
             // Internal child ocmgtk.OfflineLogDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.Spacing = 6;
             w1.BorderWidth = ((uint)(2));
@@ -135,7 +135,7 @@ namespace ocmgtk {
             w9.Expand = false;
             w9.Fill = false;
             // Container child hbox4.Gtk.Box+BoxChild
-            this.logChoice = Gtk.ComboBox.NewText();
+            this.logChoice = new Gtk.ComboBoxText();
             this.logChoice.AppendText(Mono.Unix.Catalog.GetString("Found it"));
             this.logChoice.AppendText(Mono.Unix.Catalog.GetString("Didn't Find it"));
             this.logChoice.AppendText(Mono.Unix.Catalog.GetString("Write Note"));
@@ -183,7 +183,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w15 = ((Gtk.Box.BoxChild)(w1[this.GtkScrolledWindow]));
             w15.Position = 6;
             // Internal child ocmgtk.OfflineLogDialog.ActionArea
-            Gtk.HButtonBox w16 = this.ActionArea;
+            Gtk.ButtonBox w16 = this.ActionArea;
             w16.Name = "dialog1_ActionArea";
             w16.Spacing = 10;
             w16.BorderWidth = ((uint)(5));

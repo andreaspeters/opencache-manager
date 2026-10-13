@@ -28,7 +28,7 @@ namespace ocmgtk {
             this.DefaultWidth = 500;
             this.DefaultHeight = 400;
             // Internal child ocmgtk.ChangeHistory.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -46,7 +46,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w3 = ((Gtk.Box.BoxChild)(w1[this.scrolledwindow1]));
             w3.Position = 0;
             // Internal child ocmgtk.ChangeHistory.ActionArea
-            Gtk.HButtonBox w4 = this.ActionArea;
+            Gtk.ButtonBox w4 = this.ActionArea;
             w4.Name = "dialog1_ActionArea";
             w4.Spacing = 10;
             w4.BorderWidth = ((uint)(5));

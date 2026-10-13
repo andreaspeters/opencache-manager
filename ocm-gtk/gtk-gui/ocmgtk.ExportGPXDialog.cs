@@ -67,13 +67,13 @@ namespace ocmgtk {
         
         private Gtk.Table table3;
         
-        private Gtk.ComboBox descMode;
+        private Gtk.ComboBoxText descMode;
         
         private Gtk.Label label1;
         
         private Gtk.Label label5;
         
-        private Gtk.ComboBox nameMode;
+        private Gtk.ComboBoxText nameMode;
         
         private Gtk.Label GtkLabel21;
         
@@ -99,11 +99,11 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.ExportGPXDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -331,7 +331,7 @@ namespace ocmgtk {
             this.table3.ColumnSpacing = ((uint)(6));
             this.table3.BorderWidth = ((uint)(6));
             // Container child table3.Gtk.Table+TableChild
-            this.descMode = Gtk.ComboBox.NewText();
+            this.descMode = new Gtk.ComboBoxText();
             this.descMode.AppendText(Mono.Unix.Catalog.GetString("Cache Name"));
             this.descMode.AppendText(Mono.Unix.Catalog.GetString("Cache Code/Size/Hint"));
             this.descMode.AppendText(Mono.Unix.Catalog.GetString("Cache Code/Size/Type"));
@@ -366,7 +366,7 @@ namespace ocmgtk {
             w23.XOptions = ((Gtk.AttachOptions)(4));
             w23.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table3.Gtk.Table+TableChild
-            this.nameMode = Gtk.ComboBox.NewText();
+            this.nameMode = new Gtk.ComboBoxText();
             this.nameMode.AppendText(Mono.Unix.Catalog.GetString("Cache Code"));
             this.nameMode.AppendText(Mono.Unix.Catalog.GetString("Cache Name"));
             this.nameMode.Name = "nameMode";
@@ -415,7 +415,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w30 = ((Gtk.Box.BoxChild)(w1[this.notebook1]));
             w30.Position = 0;
             // Internal child ocmgtk.ExportGPXDialog.ActionArea
-            Gtk.HButtonBox w31 = this.ActionArea;
+            Gtk.ButtonBox w31 = this.ActionArea;
             w31.Name = "dialog1_ActionArea";
             w31.Spacing = 10;
             w31.BorderWidth = ((uint)(5));

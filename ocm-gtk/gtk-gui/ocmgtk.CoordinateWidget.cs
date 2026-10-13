@@ -15,7 +15,7 @@ namespace ocmgtk {
         
         private Gtk.HBox hbox5;
         
-        private Gtk.ComboBox directionCombo;
+        private Gtk.ComboBoxText directionCombo;
         
         private Gtk.Entry degreeEntry;
         
@@ -33,7 +33,7 @@ namespace ocmgtk {
             this.hbox5.Name = "hbox5";
             this.hbox5.Spacing = 6;
             // Container child hbox5.Gtk.Box+BoxChild
-            this.directionCombo = Gtk.ComboBox.NewText();
+            this.directionCombo = new Gtk.ComboBoxText();
             this.directionCombo.WidthRequest = 50;
             this.directionCombo.Name = "directionCombo";
             this.hbox5.Add(this.directionCombo);

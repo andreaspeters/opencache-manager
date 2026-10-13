@@ -29,7 +29,7 @@ namespace ocmgtk {
         
         private Gtk.CheckButton addToListCheck;
         
-        private Gtk.ComboBox bmCombo;
+        private Gtk.ComboBoxText bmCombo;
         
         private Gtk.Button addBmrkButton;
         
@@ -53,11 +53,11 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.ImportDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -127,7 +127,7 @@ namespace ocmgtk {
             w6.Position = 0;
             w6.Expand = false;
             // Container child hbox1.Gtk.Box+BoxChild
-            this.bmCombo = Gtk.ComboBox.NewText();
+            this.bmCombo = new Gtk.ComboBoxText();
             this.bmCombo.Sensitive = false;
             this.bmCombo.Name = "bmCombo";
             this.hbox1.Add(this.bmCombo);
@@ -169,7 +169,7 @@ namespace ocmgtk {
             w12.Fill = false;
             w12.Padding = ((uint)(6));
             // Internal child ocmgtk.ImportDialog.ActionArea
-            Gtk.HButtonBox w13 = this.ActionArea;
+            Gtk.ButtonBox w13 = this.ActionArea;
             w13.Name = "dialog1_ActionArea";
             w13.Spacing = 10;
             w13.BorderWidth = ((uint)(5));

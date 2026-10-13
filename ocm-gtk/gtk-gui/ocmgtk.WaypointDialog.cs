@@ -21,7 +21,7 @@ namespace ocmgtk {
         
         private Gtk.Alignment alignment3;
         
-        private Gtk.ComboBox flagEntry;
+        private Gtk.ComboBoxText flagEntry;
         
         private Gtk.HSeparator hseparator1;
         
@@ -61,7 +61,7 @@ namespace ocmgtk {
             this.WindowPosition = ((Gtk.WindowPosition)(4));
             this.BorderWidth = ((uint)(6));
             // Internal child ocmgtk.WaypointDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -92,7 +92,7 @@ namespace ocmgtk {
             this.alignment3.TopPadding = ((uint)(6));
             this.alignment3.RightPadding = ((uint)(12));
             // Container child alignment3.Gtk.Container+ContainerChild
-            this.flagEntry = Gtk.ComboBox.NewText();
+            this.flagEntry = new Gtk.ComboBoxText();
             this.flagEntry.AppendText(Mono.Unix.Catalog.GetString("Final Location"));
             this.flagEntry.AppendText(Mono.Unix.Catalog.GetString("Parking Area"));
             this.flagEntry.AppendText(Mono.Unix.Catalog.GetString("Question To Answer"));
@@ -210,7 +210,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w17 = ((Gtk.Box.BoxChild)(w1[this.frame2]));
             w17.Position = 2;
             // Internal child ocmgtk.WaypointDialog.ActionArea
-            Gtk.HButtonBox w18 = this.ActionArea;
+            Gtk.ButtonBox w18 = this.ActionArea;
             w18.Name = "dialog1_ActionArea";
             w18.Spacing = 10;
             w18.BorderWidth = ((uint)(5));

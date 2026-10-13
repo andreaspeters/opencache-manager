@@ -48,11 +48,11 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.CorrectedCoordinatesDlg.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.Spacing = 6;
             w1.BorderWidth = ((uint)(2));
@@ -126,7 +126,7 @@ namespace ocmgtk {
             w9.Expand = false;
             w9.Fill = false;
             // Internal child ocmgtk.CorrectedCoordinatesDlg.ActionArea
-            Gtk.HButtonBox w10 = this.ActionArea;
+            Gtk.ButtonBox w10 = this.ActionArea;
             w10.Name = "dialog1_ActionArea";
             w10.Spacing = 10;
             w10.BorderWidth = ((uint)(5));

@@ -23,11 +23,11 @@ namespace ocmgtk {
             this.Name = "ocmgtk.QTLandKarteDialog";
             this.WindowPosition = ((Gtk.WindowPosition)(4));
             // Internal child ocmgtk.QTLandKarteDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Internal child ocmgtk.QTLandKarteDialog.ActionArea
-            Gtk.HButtonBox w2 = this.ActionArea;
+            Gtk.ButtonBox w2 = this.ActionArea;
             w2.Name = "dialog1_ActionArea";
             w2.Spacing = 10;
             w2.BorderWidth = ((uint)(5));

@@ -56,6 +56,21 @@ add_custom_target(opencache-manager ALL
     COMMAND "${CMAKE_COMMAND}" -E copy_directory
         "${CMAKE_CURRENT_SOURCE_DIR}/ocm-gtk/web"
         "${CMAKE_BINARY_DIR}/out/app/web"
+    COMMAND "${CMAKE_COMMAND}" -E copy_directory
+        "${CMAKE_CURRENT_SOURCE_DIR}/ocm-gtk/icons"
+        "${CMAKE_BINARY_DIR}/out/app/icons"
+    COMMAND "${CMAKE_COMMAND}" -E copy_directory
+        "${CMAKE_CURRENT_SOURCE_DIR}/ocm-gtk/maps"
+        "${CMAKE_BINARY_DIR}/out/app/maps"
+    COMMAND "${CMAKE_COMMAND}" -E copy_directory
+        "${CMAKE_CURRENT_SOURCE_DIR}/ocm-gtk/version"
+        "${CMAKE_BINARY_DIR}/out/app/version"
+    COMMAND "${CMAKE_COMMAND}" -E copy_directory
+        "${CMAKE_CURRENT_SOURCE_DIR}/ocm-gtk/licence"
+        "${CMAKE_BINARY_DIR}/out/app/licence"
+    COMMAND "${CMAKE_COMMAND}" -E copy_directory
+        "${CMAKE_CURRENT_SOURCE_DIR}/ocm-gtk/docs"
+        "${CMAKE_BINARY_DIR}/out/app/docs"
     WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
     DEPENDS opencache-engine
         "${CMAKE_CURRENT_SOURCE_DIR}/ocm-gtk/ocm-gtk.csproj"

@@ -33,7 +33,7 @@ namespace ocmgtk {
             this.TypeHint = ((Gdk.WindowTypeHint)(4));
             this.WindowPosition = ((Gtk.WindowPosition)(3));
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.Decorated = false;
             // Container child ocmgtk.OCMSplash.Gtk.Container+ContainerChild
             this.splashVBox = new Gtk.VBox();

@@ -23,7 +23,7 @@ namespace ocmgtk {
         
         private Gtk.Table table1;
         
-        private Gtk.ComboBox deviceCombo;
+        private Gtk.ComboBoxText deviceCombo;
         
         private Gtk.Label deviceLabel;
         
@@ -49,11 +49,11 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.GPSConfiguration.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -97,7 +97,7 @@ namespace ocmgtk {
             this.table1.ColumnSpacing = ((uint)(6));
             this.table1.BorderWidth = ((uint)(6));
             // Container child table1.Gtk.Table+TableChild
-            this.deviceCombo = Gtk.ComboBox.NewText();
+            this.deviceCombo = new Gtk.ComboBoxText();
             this.deviceCombo.AppendText(Mono.Unix.Catalog.GetString("Garmin GPX (Colorado/Oregon/Dakotai/Map62/Nuvi 5xx)"));
             this.deviceCombo.AppendText(Mono.Unix.Catalog.GetString("Garmin USB (eTrex/GPSMap60/StreetPiot)"));
             this.deviceCombo.AppendText(Mono.Unix.Catalog.GetString("Garmin Serial (original eTrex/eTrex H/Gecko)"));
@@ -147,7 +147,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w9 = ((Gtk.Box.BoxChild)(w1[this.notebook1]));
             w9.Position = 1;
             // Internal child ocmgtk.GPSConfiguration.ActionArea
-            Gtk.HButtonBox w10 = this.ActionArea;
+            Gtk.ButtonBox w10 = this.ActionArea;
             w10.Name = "dialog1_ActionArea";
             w10.Spacing = 10;
             w10.BorderWidth = ((uint)(5));

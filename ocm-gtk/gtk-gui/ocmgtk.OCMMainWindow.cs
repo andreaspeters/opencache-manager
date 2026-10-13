@@ -352,7 +352,7 @@ namespace ocmgtk {
             this.FieldNotesAction.ShortLabel = Mono.Unix.Catalog.GetString("_Field Notes...");
             w1.Add(this.FieldNotesAction, null);
             this.SelectedCacheOnlyAction = new Gtk.RadioAction("SelectedCacheOnlyAction", Mono.Unix.Catalog.GetString("Selected Cache Only"), null, null, 0);
-            this.SelectedCacheOnlyAction.Group = new GLib.SList(System.IntPtr.Zero);
+            this.SelectedCacheOnlyAction.Group = null;
             this.SelectedCacheOnlyAction.ShortLabel = Mono.Unix.Catalog.GetString("Selected Cache Only");
             w1.Add(this.SelectedCacheOnlyAction, null);
             this.AllWaypointsAction = new Gtk.RadioAction("AllWaypointsAction", Mono.Unix.Catalog.GetString("All Waypoints"), null, null, 0);

@@ -17,7 +17,7 @@ namespace ocmgtk {
         
         private Gtk.Label coordLabel;
         
-        private Gtk.ComboBox flagEntry;
+        private Gtk.ComboBoxText flagEntry;
         
         private Gtk.ScrolledWindow GtkScrolledWindow1;
         
@@ -60,7 +60,7 @@ namespace ocmgtk {
             w1.XOptions = ((Gtk.AttachOptions)(4));
             w1.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.flagEntry = Gtk.ComboBox.NewText();
+            this.flagEntry = new Gtk.ComboBoxText();
             this.flagEntry.AppendText(Mono.Unix.Catalog.GetString("Final Location"));
             this.flagEntry.AppendText(Mono.Unix.Catalog.GetString("Parking Area"));
             this.flagEntry.AppendText(Mono.Unix.Catalog.GetString("Question To Answer"));

@@ -32,7 +32,7 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             // Internal child ocmgtk.ReviewWaypointDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -43,7 +43,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w2 = ((Gtk.Box.BoxChild)(w1[this.reviewWidget]));
             w2.Position = 0;
             // Internal child ocmgtk.ReviewWaypointDialog.ActionArea
-            Gtk.HButtonBox w3 = this.ActionArea;
+            Gtk.ButtonBox w3 = this.ActionArea;
             w3.Name = "dialog1_ActionArea";
             w3.Spacing = 10;
             w3.BorderWidth = ((uint)(5));

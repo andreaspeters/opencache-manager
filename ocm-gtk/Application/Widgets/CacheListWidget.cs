@@ -267,7 +267,7 @@ namespace ocmgtk
 			}
 			
 			TreeIter itr;
-			IITreeModel model = cacheListTree.Model;
+			ITreeModel model = cacheListTree.Model;
 			cacheListTree.Model.GetIterFirst(out itr);
 			do
 			{
@@ -574,7 +574,7 @@ namespace ocmgtk
 			else
 			{
 				statusInfo.Sensitive = false;
-				statusInfo.HideAll();
+				statusInfo.Hide();
 			}
 		}
 		

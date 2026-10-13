@@ -132,7 +132,7 @@ namespace ocmgtk {
             this.allContRadio.Active = true;
             this.allContRadio.DrawIndicator = true;
             this.allContRadio.UseUnderline = true;
-            this.allContRadio.Group = new GLib.SList(System.IntPtr.Zero);
+            this.allContRadio.Group = null;
             this.table1.Add(this.allContRadio);
             Gtk.Table.TableChild w1 = ((Gtk.Table.TableChild)(this.table1[this.allContRadio]));
             w1.XOptions = ((Gtk.AttachOptions)(4));
@@ -347,7 +347,7 @@ namespace ocmgtk {
             this.dnfRadio.Active = true;
             this.dnfRadio.DrawIndicator = true;
             this.dnfRadio.UseUnderline = true;
-            this.dnfRadio.Group = new GLib.SList(System.IntPtr.Zero);
+            this.dnfRadio.Group = null;
             this.table3.Add(this.dnfRadio);
             Gtk.Table.TableChild w21 = ((Gtk.Table.TableChild)(this.table3[this.dnfRadio]));
             w21.TopAttach = ((uint)(1));

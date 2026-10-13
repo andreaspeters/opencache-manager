@@ -25,7 +25,7 @@ namespace ocmgtk {
         
         private Gtk.Entry limitEntry;
         
-        private Gtk.ComboBox nameMode;
+        private Gtk.ComboBoxText nameMode;
         
         protected virtual void Build() {
             Stetic.Gui.Initialize(this);
@@ -100,7 +100,7 @@ namespace ocmgtk {
             w5.RightAttach = ((uint)(2));
             w5.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.nameMode = Gtk.ComboBox.NewText();
+            this.nameMode = new Gtk.ComboBoxText();
             this.nameMode.AppendText(Mono.Unix.Catalog.GetString("Cache Code"));
             this.nameMode.AppendText(Mono.Unix.Catalog.GetString("Cache Name"));
             this.nameMode.AppendText(Mono.Unix.Catalog.GetString("Short Cache Code"));

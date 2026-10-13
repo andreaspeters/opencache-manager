@@ -26,7 +26,7 @@ namespace ocmgtk {
             this.Title = Mono.Unix.Catalog.GetString("Image");
             this.WindowPosition = ((Gtk.WindowPosition)(4));
             // Internal child ocmgtk.ImageDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -46,7 +46,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w5 = ((Gtk.Box.BoxChild)(w1[this.scrolledwindow1]));
             w5.Position = 0;
             // Internal child ocmgtk.ImageDialog.ActionArea
-            Gtk.HButtonBox w6 = this.ActionArea;
+            Gtk.ButtonBox w6 = this.ActionArea;
             w6.Name = "dialog1_ActionArea";
             w6.Spacing = 10;
             w6.BorderWidth = ((uint)(5));

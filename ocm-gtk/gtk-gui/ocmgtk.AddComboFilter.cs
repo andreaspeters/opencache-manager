@@ -51,11 +51,11 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.AddComboFilter.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.Spacing = 6;
             w1.BorderWidth = ((uint)(2));
@@ -168,7 +168,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w12 = ((Gtk.Box.BoxChild)(w1[this.hbox1]));
             w12.Position = 1;
             // Internal child ocmgtk.AddComboFilter.ActionArea
-            Gtk.HButtonBox w13 = this.ActionArea;
+            Gtk.ButtonBox w13 = this.ActionArea;
             w13.Name = "dialog1_ActionArea";
             w13.Spacing = 10;
             w13.BorderWidth = ((uint)(5));

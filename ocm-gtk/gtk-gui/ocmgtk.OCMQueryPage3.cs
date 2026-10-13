@@ -23,7 +23,7 @@ namespace ocmgtk {
         
         private Gtk.CheckButton hiddenCheck;
         
-        private Gtk.ComboBox hiddenCombo;
+        private Gtk.ComboBoxText hiddenCombo;
         
         private ocmgtk.DateWidget hiddenDateEntry;
         
@@ -55,7 +55,7 @@ namespace ocmgtk {
         
         private Gtk.HBox hbox2;
         
-        private Gtk.ComboBox distCombo;
+        private Gtk.ComboBoxText distCombo;
         
         private Gtk.Entry distEntry;
         
@@ -67,7 +67,7 @@ namespace ocmgtk {
         
         private Gtk.RadioButton locRadio;
         
-        private Gtk.ComboBox locationCombo;
+        private Gtk.ComboBoxText locationCombo;
         
         private Gtk.HBox hbox4;
         
@@ -118,7 +118,7 @@ namespace ocmgtk {
             w1.XOptions = ((Gtk.AttachOptions)(4));
             w1.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table3.Gtk.Table+TableChild
-            this.hiddenCombo = Gtk.ComboBox.NewText();
+            this.hiddenCombo = new Gtk.ComboBoxText();
             this.hiddenCombo.AppendText(Mono.Unix.Catalog.GetString("On or before"));
             this.hiddenCombo.AppendText(Mono.Unix.Catalog.GetString("On or after"));
             this.hiddenCombo.Sensitive = false;
@@ -154,7 +154,7 @@ namespace ocmgtk {
             this.placedAnyRadio.Active = true;
             this.placedAnyRadio.DrawIndicator = true;
             this.placedAnyRadio.UseUnderline = true;
-            this.placedAnyRadio.Group = new GLib.SList(System.IntPtr.Zero);
+            this.placedAnyRadio.Group = null;
             this.table3.Add(this.placedAnyRadio);
             Gtk.Table.TableChild w4 = ((Gtk.Table.TableChild)(this.table3[this.placedAnyRadio]));
             w4.XOptions = ((Gtk.AttachOptions)(4));
@@ -266,7 +266,7 @@ namespace ocmgtk {
             this.hbox2.Name = "hbox2";
             this.hbox2.Spacing = 6;
             // Container child hbox2.Gtk.Box+BoxChild
-            this.distCombo = Gtk.ComboBox.NewText();
+            this.distCombo = new Gtk.ComboBoxText();
             this.distCombo.AppendText(Mono.Unix.Catalog.GetString("Less than"));
             this.distCombo.AppendText(Mono.Unix.Catalog.GetString("Greater than"));
             this.distCombo.AppendText(Mono.Unix.Catalog.GetString("Equal to"));
@@ -306,7 +306,7 @@ namespace ocmgtk {
             this.radiobutton1.Active = true;
             this.radiobutton1.DrawIndicator = true;
             this.radiobutton1.UseUnderline = true;
-            this.radiobutton1.Group = new GLib.SList(System.IntPtr.Zero);
+            this.radiobutton1.Group = null;
             this.vbox3.Add(this.radiobutton1);
             Gtk.Box.BoxChild w17 = ((Gtk.Box.BoxChild)(this.vbox3[this.radiobutton1]));
             w17.Position = 1;
@@ -328,7 +328,7 @@ namespace ocmgtk {
             w18.Position = 0;
             w18.Expand = false;
             // Container child hbox3.Gtk.Box+BoxChild
-            this.locationCombo = Gtk.ComboBox.NewText();
+            this.locationCombo = new Gtk.ComboBoxText();
             this.locationCombo.Sensitive = false;
             this.locationCombo.Name = "locationCombo";
             this.hbox3.Add(this.locationCombo);

@@ -33,7 +33,7 @@ namespace ocmgtk {
             this.WindowPosition = ((Gtk.WindowPosition)(4));
             this.BorderWidth = ((uint)(6));
             // Internal child ocmgtk.NoDBDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -65,7 +65,7 @@ namespace ocmgtk {
             w4.Expand = false;
             w4.Fill = false;
             // Internal child ocmgtk.NoDBDialog.ActionArea
-            Gtk.HButtonBox w5 = this.ActionArea;
+            Gtk.ButtonBox w5 = this.ActionArea;
             w5.Name = "dialog1_ActionArea";
             w5.Spacing = 10;
             w5.BorderWidth = ((uint)(5));

@@ -33,7 +33,7 @@ namespace ocmgtk {
             this.WindowPosition = ((Gtk.WindowPosition)(4));
             this.BorderWidth = ((uint)(6));
             // Internal child ocmgtk.ReduceLogsDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -77,7 +77,7 @@ namespace ocmgtk {
             w5.Fill = false;
             w5.Padding = ((uint)(6));
             // Internal child ocmgtk.ReduceLogsDialog.ActionArea
-            Gtk.HButtonBox w6 = this.ActionArea;
+            Gtk.ButtonBox w6 = this.ActionArea;
             w6.Name = "dialog1_ActionArea";
             w6.Spacing = 10;
             w6.BorderWidth = ((uint)(5));

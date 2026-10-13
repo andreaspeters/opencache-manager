@@ -1,7 +1,4 @@
 ![](./ocm-gtk/icons/OCMdesktopLogo.png "OpenCacheManager")
-[![Build Status](https://travis-ci.org/andreaspeters/opencache-manager.svg?branch=master)](https://travis-ci.org/andreaspeters/opencache-manager)
-[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/~10452/donate)
-
 
 Dies ist ein Fork der eingestellen Geocaching Software "OpenCacheManager" 
 (http://opencachemanage.sourceforge.net/).  

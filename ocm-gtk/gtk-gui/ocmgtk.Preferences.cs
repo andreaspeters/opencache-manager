@@ -81,9 +81,9 @@ namespace ocmgtk {
         
         private Gtk.Label label7;
         
-        private Gtk.ComboBox startupFilterCombo;
+        private Gtk.ComboBoxText startupFilterCombo;
         
-        private Gtk.ComboBox unitsCombo;
+        private Gtk.ComboBoxText unitsCombo;
         
         private Gtk.Label label3;
         
@@ -129,7 +129,7 @@ namespace ocmgtk {
         
         private Gtk.CheckButton mapPopupCheck;
         
-        private Gtk.ComboBox prefixModeCombo;
+        private Gtk.ComboBoxText prefixModeCombo;
         
         private Gtk.CheckButton selectCachesFromMapCheck;
         
@@ -141,7 +141,7 @@ namespace ocmgtk {
         
         private Gtk.Table table3;
         
-        private Gtk.ComboBox childPointCombo;
+        private Gtk.ComboBoxText childPointCombo;
         
         private Gtk.HSeparator hseparator6;
         
@@ -155,7 +155,7 @@ namespace ocmgtk {
         
         private ocmgtk.MapSelectionWidget mapsWidget;
         
-        private Gtk.ComboBox nearbyCombo;
+        private Gtk.ComboBoxText nearbyCombo;
         
         private Gtk.Label label14;
         
@@ -206,11 +206,11 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.Preferences.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -527,7 +527,7 @@ namespace ocmgtk {
             w30.XOptions = ((Gtk.AttachOptions)(4));
             w30.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.startupFilterCombo = Gtk.ComboBox.NewText();
+            this.startupFilterCombo = new Gtk.ComboBoxText();
             this.startupFilterCombo.Name = "startupFilterCombo";
             this.table1.Add(this.startupFilterCombo);
             Gtk.Table.TableChild w31 = ((Gtk.Table.TableChild)(this.table1[this.startupFilterCombo]));
@@ -537,7 +537,7 @@ namespace ocmgtk {
             w31.RightAttach = ((uint)(2));
             w31.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.unitsCombo = Gtk.ComboBox.NewText();
+            this.unitsCombo = new Gtk.ComboBoxText();
             this.unitsCombo.AppendText(Mono.Unix.Catalog.GetString("Metric"));
             this.unitsCombo.AppendText(Mono.Unix.Catalog.GetString("U.S./Imperial"));
             this.unitsCombo.Name = "unitsCombo";
@@ -648,7 +648,7 @@ namespace ocmgtk {
             this.solvedPuzzRadio.Name = "solvedPuzzRadio";
             this.solvedPuzzRadio.DrawIndicator = true;
             this.solvedPuzzRadio.UseUnderline = true;
-            this.solvedPuzzRadio.Group = new GLib.SList(System.IntPtr.Zero);
+            this.solvedPuzzRadio.Group = null;
             this.vbox2.Add(this.solvedPuzzRadio);
             Gtk.Box.BoxChild w39 = ((Gtk.Box.BoxChild)(this.vbox2[this.solvedPuzzRadio]));
             w39.Position = 0;
@@ -782,7 +782,7 @@ namespace ocmgtk {
             w52.XOptions = ((Gtk.AttachOptions)(4));
             w52.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table5.Gtk.Table+TableChild
-            this.prefixModeCombo = Gtk.ComboBox.NewText();
+            this.prefixModeCombo = new Gtk.ComboBoxText();
             this.prefixModeCombo.AppendText(Mono.Unix.Catalog.GetString("Prefix with Type (e.g. PKABCD01)"));
             this.prefixModeCombo.AppendText(Mono.Unix.Catalog.GetString("Use GC name (e.g. GCABCD01)"));
             this.prefixModeCombo.Name = "prefixModeCombo";
@@ -848,7 +848,7 @@ namespace ocmgtk {
             this.table3.ColumnSpacing = ((uint)(6));
             this.table3.BorderWidth = ((uint)(6));
             // Container child table3.Gtk.Table+TableChild
-            this.childPointCombo = Gtk.ComboBox.NewText();
+            this.childPointCombo = new Gtk.ComboBoxText();
             this.childPointCombo.AppendText(Mono.Unix.Catalog.GetString("Selected Cache Only"));
             this.childPointCombo.AppendText(Mono.Unix.Catalog.GetString("All Waypoints"));
             this.childPointCombo.Name = "childPointCombo";
@@ -928,7 +928,7 @@ namespace ocmgtk {
             w64.RightAttach = ((uint)(2));
             w64.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table3.Gtk.Table+TableChild
-            this.nearbyCombo = Gtk.ComboBox.NewText();
+            this.nearbyCombo = new Gtk.ComboBoxText();
             this.nearbyCombo.AppendText(Mono.Unix.Catalog.GetString("Enabled on Startup"));
             this.nearbyCombo.AppendText(Mono.Unix.Catalog.GetString("Disabled on Startup"));
             this.nearbyCombo.Name = "nearbyCombo";
@@ -1105,7 +1105,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w80 = ((Gtk.Box.BoxChild)(w1[this.notebook1]));
             w80.Position = 0;
             // Internal child ocmgtk.Preferences.ActionArea
-            Gtk.HButtonBox w81 = this.ActionArea;
+            Gtk.ButtonBox w81 = this.ActionArea;
             w81.Name = "dialog1_ActionArea";
             w81.Spacing = 10;
             w81.BorderWidth = ((uint)(5));

@@ -7,6 +7,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Deterministic>false</Deterministic>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="**/*.cs" Exclude="bind/**/*.cs;bin/**/*.cs;obj/**/*.cs;Application/SetupAssistant.cs" />
@@ -15,8 +16,23 @@
   <ItemGroup>
     <PackageReference Include="GtkSharp" Version="3.24.24.95" />
     <PackageReference Include="WebkitGtkSharp" Version="3.24.24.95" />
+    <PackageReference Include="Mono.Data.Sqlite.Core" Version="1.0.61.1" />
     <PackageReference Include="Mono.Posix.NETStandard" Version="1.0.0" />
     <PackageReference Include="NDesk.DBus" Version="0.15.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="icons/scalable/OCMLogo.svg" LogicalName="ocmgtk.icons.scalable.OCMLogo.svg" />
+    <EmbeddedResource Include="icons/scalable/OCMLogoSmall.svg" LogicalName="ocmgtk.icons.scalable.OCMLogoSmall.svg" />
+    <EmbeddedResource Include="icons/OpenLayers.png" LogicalName="ocmgtk.icons.OpenLayers.png" />
+    <EmbeddedResource Include="icons/scalable/DistIcon.svg" LogicalName="ocmgtk.icons.scalable.DistIcon.svg" />
+    <EmbeddedResource Include="icons/scalable/SearchIcon.svg" LogicalName="ocmgtk.icons.scalable.SearchIcon.svg" />
+    <EmbeddedResource Include="icons/scalable/log.svg" LogicalName="ocmgtk.icons.scalable.log.svg" />
+    <EmbeddedResource Include="gtk-gui/gui.stetic" LogicalName="gtk-gui.gui.stetic" />
+    <EmbeddedResource Include="icons/scalable/up_icon.svg" LogicalName="ocmgtk.icons.scalable.up_icon.svg" />
+    <EmbeddedResource Include="icons/scalable/down_icon.svg" LogicalName="ocmgtk.icons.scalable.down_icon.svg" />
+    <EmbeddedResource Include="icons/scalable/maxicon.svg" LogicalName="ocmgtk.icons.scalable.maxicon.svg" />
+    <EmbeddedResource Include="icons/scalable/minicon.svg" LogicalName="ocmgtk.icons.scalable.minicon.svg" />
+    <EmbeddedResource Include="icons/scalable/restore.svg" LogicalName="ocmgtk.icons.scalable.restore.svg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="NDesk.DBus">

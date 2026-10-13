@@ -89,7 +89,7 @@ namespace ocmgtk
 		void HandleMapViewSelectionChanged (object sender, EventArgs e)
 		{
 			TreeIter iter;
-			TreeModel model;
+			Gtk.ITreeModel model;
 			
 			if (((TreeSelection)sender).GetSelected (out model, out iter)) {
 				MapDescription val = (MapDescription) model.GetValue (iter, 0);

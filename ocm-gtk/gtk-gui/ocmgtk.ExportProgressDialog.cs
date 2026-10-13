@@ -35,10 +35,10 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.SkipPagerHint = true;
             // Internal child ocmgtk.ExportProgressDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.Spacing = 6;
             w1.BorderWidth = ((uint)(6));
@@ -86,7 +86,7 @@ namespace ocmgtk {
             w5.Expand = false;
             w5.Fill = false;
             // Internal child ocmgtk.ExportProgressDialog.ActionArea
-            Gtk.HButtonBox w6 = this.ActionArea;
+            Gtk.ButtonBox w6 = this.ActionArea;
             w6.Name = "dialog1_ActionArea";
             w6.Spacing = 10;
             w6.BorderWidth = ((uint)(5));

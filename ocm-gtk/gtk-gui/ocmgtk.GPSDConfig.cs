@@ -39,7 +39,7 @@ namespace ocmgtk {
             this.WindowPosition = ((Gtk.WindowPosition)(4));
             this.BorderWidth = ((uint)(6));
             // Internal child ocmgtk.GPSDConfig.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -127,7 +127,7 @@ namespace ocmgtk {
             w8.Expand = false;
             w8.Fill = false;
             // Internal child ocmgtk.GPSDConfig.ActionArea
-            Gtk.HButtonBox w9 = this.ActionArea;
+            Gtk.ButtonBox w9 = this.ActionArea;
             w9.Name = "dialog1_ActionArea";
             w9.Spacing = 10;
             w9.BorderWidth = ((uint)(5));

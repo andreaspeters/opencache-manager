@@ -15,7 +15,7 @@ namespace ocmgtk {
         
         private Gtk.Table table1;
         
-        private Gtk.ComboBox descMode;
+        private Gtk.ComboBoxText descMode;
         
         private Gtk.Button fileButton;
         
@@ -33,7 +33,7 @@ namespace ocmgtk {
         
         private Gtk.Entry limitEntry;
         
-        private Gtk.ComboBox nameMode;
+        private Gtk.ComboBoxText nameMode;
         
         protected virtual void Build() {
             Stetic.Gui.Initialize(this);
@@ -46,7 +46,7 @@ namespace ocmgtk {
             this.table1.RowSpacing = ((uint)(6));
             this.table1.ColumnSpacing = ((uint)(6));
             // Container child table1.Gtk.Table+TableChild
-            this.descMode = Gtk.ComboBox.NewText();
+            this.descMode = new Gtk.ComboBoxText();
             this.descMode.AppendText(Mono.Unix.Catalog.GetString("Cache Name"));
             this.descMode.AppendText(Mono.Unix.Catalog.GetString("Cache Code/Size/Hint"));
             this.descMode.AppendText(Mono.Unix.Catalog.GetString("Cache Code/Size/Type"));
@@ -150,7 +150,7 @@ namespace ocmgtk {
             w9.RightAttach = ((uint)(3));
             w9.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.nameMode = Gtk.ComboBox.NewText();
+            this.nameMode = new Gtk.ComboBoxText();
             this.nameMode.AppendText(Mono.Unix.Catalog.GetString("Cache Code"));
             this.nameMode.AppendText(Mono.Unix.Catalog.GetString("Cache Name"));
             this.nameMode.Name = "nameMode";

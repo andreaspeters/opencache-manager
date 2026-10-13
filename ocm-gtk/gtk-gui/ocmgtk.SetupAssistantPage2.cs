@@ -41,9 +41,9 @@ namespace ocmgtk {
         
         private Gtk.Label label3;
         
-        private Gtk.ComboBox mapsCombo;
+        private Gtk.ComboBoxText mapsCombo;
         
-        private Gtk.ComboBox unitsCombo;
+        private Gtk.ComboBoxText unitsCombo;
         
         protected virtual void Build() {
             Stetic.Gui.Initialize(this);
@@ -169,7 +169,7 @@ namespace ocmgtk {
             w12.XOptions = ((Gtk.AttachOptions)(4));
             w12.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table2.Gtk.Table+TableChild
-            this.mapsCombo = Gtk.ComboBox.NewText();
+            this.mapsCombo = new Gtk.ComboBoxText();
             this.mapsCombo.AppendText(Mono.Unix.Catalog.GetString("Open Street Maps"));
             this.mapsCombo.AppendText(Mono.Unix.Catalog.GetString("Google Hybrid"));
             this.mapsCombo.AppendText(Mono.Unix.Catalog.GetString("Google Street Maps"));
@@ -185,7 +185,7 @@ namespace ocmgtk {
             w13.XOptions = ((Gtk.AttachOptions)(4));
             w13.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table2.Gtk.Table+TableChild
-            this.unitsCombo = Gtk.ComboBox.NewText();
+            this.unitsCombo = new Gtk.ComboBoxText();
             this.unitsCombo.AppendText(Mono.Unix.Catalog.GetString("Metric"));
             this.unitsCombo.AppendText(Mono.Unix.Catalog.GetString("U.S./Imperial"));
             this.unitsCombo.Name = "unitsCombo";

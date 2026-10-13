@@ -225,13 +225,13 @@ namespace ocmgtk
 			if (dlg.Run () == (int)ResponseType.Accept) {
 				if (dlg.Filename == m_app.CacheStore.StoreName) {
 					dlg.Hide ();
-					MessageDialog mdlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Error, ButtonsType.Ok, Catalog.GetString ("You cannot overwrite the " + "currently open database."));
+					MessageDialog mdlg = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Error, ButtonsType.Ok, Catalog.GetString ("You cannot overwrite the " + "currently open database."));
 					mdlg.Run ();
 					mdlg.Hide ();
 					return false;
 				} else if (System.IO.File.Exists (dlg.Filename)) {
 					dlg.Hide ();
-					MessageDialog mdlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Warning, ButtonsType.YesNo, Catalog.GetString ("Are you sure you want to overwrite '{0}'"), dlg.Filename);
+					MessageDialog mdlg = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Warning, ButtonsType.YesNo, Catalog.GetString ("Are you sure you want to overwrite '{0}'"), dlg.Filename);
 					if ((int)ResponseType.No == mdlg.Run ()) {
 						mdlg.Hide ();
 						return false;
@@ -586,7 +586,7 @@ namespace ocmgtk
 			}
 			if (files.Count <=0)
 			{
-				MessageDialog mdlg = new MessageDialog(null, DialogFlags.Modal, MessageType.Info, ButtonsType.Ok, Catalog.GetString("No Images Found."));
+				MessageDialog mdlg = new MessageDialog(null, DialogFlags.Modal, Gtk.MessageType.Info, ButtonsType.Ok, Catalog.GetString("No Images Found."));
 				mdlg.Run();
 				mdlg.Hide();
 				return;
@@ -705,7 +705,7 @@ namespace ocmgtk
 		public void ShowFieldNotes (bool forceRefresh)
 		{
 			if (!System.IO.File.Exists (Config.FieldNotesFile)) {
-				MessageDialog mdlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Info, ButtonsType.Ok, Catalog.GetString ("There are no field notes."));
+				MessageDialog mdlg = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Info, ButtonsType.Ok, Catalog.GetString ("There are no field notes."));
 				mdlg.Run ();
 				mdlg.Hide ();
 				return;
@@ -832,7 +832,7 @@ namespace ocmgtk
 			DeleteItem dlg = new DeleteItem (m_app.Profiles);
 			if ((int)ResponseType.Ok == dlg.Run ()) {
 				if ((m_app.Profiles.GetActiveProfile () != null) && (dlg.ItemToDelete == m_app.Profiles.GetActiveProfile ().Name)) {
-					MessageDialog confirm = new MessageDialog (this, DialogFlags.Modal, MessageType.Warning, ButtonsType.YesNo, Catalog.GetString ("\"{0}\" is the active" + " GPS profile. Are you sure you wish to delete it?"), dlg.ItemToDelete);
+					MessageDialog confirm = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Warning, ButtonsType.YesNo, Catalog.GetString ("\"{0}\" is the active" + " GPS profile. Are you sure you wish to delete it?"), dlg.ItemToDelete);
 					if ((int)ResponseType.No == confirm.Run ()) {
 						confirm.Hide ();
 						confirm.Dispose ();
@@ -852,7 +852,7 @@ namespace ocmgtk
 		public void SendToGPS ()
 		{
 			if (m_app.Profiles.GetActiveProfile () == null) {
-				MessageDialog err = new MessageDialog (this, DialogFlags.Modal, MessageType.Error, ButtonsType.Ok,
+				MessageDialog err = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Error, ButtonsType.Ok,
 				                                       Catalog.GetString ("There is no active GPS profile. Either select an"
 				                                                          + " existing one from the GPS Menu or add a new profile ."));
 				err.Run ();
@@ -870,7 +870,7 @@ namespace ocmgtk
 		public void DeleteSelectedCache ()
 		{
 			String name = CacheList.SelectedCache.Name;
-			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo,
+			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, Gtk.MessageType.Question, ButtonsType.YesNo,
 			                                       String.Format (Catalog.GetString ("Are you sure you want to delete {0}?"),
 			                                                      name));
 			if ((int)ResponseType.Yes == dlg.Run ()) {
@@ -1083,7 +1083,7 @@ namespace ocmgtk
 		void HandleCacheListSelectionChanged (object sender, CacheEventArgs args)
 		{
 			if (this.GdkWindow != null)
-				this.GdkWindow.Cursor = Cursor.NewFromName(this.Display, "left_ptr_watch");
+				this.GdkWindow.Cursor = new Cursor(this.Display, "left_ptr_watch");
 			OCMApp.UpdateGUIThread();
 			SetFilterFlags ();
 			Geocache cache = args.Cache;
@@ -1233,7 +1233,7 @@ namespace ocmgtk
 			string ver;
 			if (m_app.UpdatesAvailable(out ver))
 			{
-				MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Info, ButtonsType.YesNo, Catalog.GetString ("A new version \"{0}\" of OCM is available" + "\nWould you like to go to the download page now?"), ver);
+				MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Info, ButtonsType.YesNo, Catalog.GetString ("A new version \"{0}\" of OCM is available" + "\nWould you like to go to the download page now?"), ver);
 				if ((int)ResponseType.Yes == dlg.Run ())
 				{
 					dlg.Hide ();
@@ -1244,7 +1244,7 @@ namespace ocmgtk
 			}
 			else
 			{
-				MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Info, ButtonsType.Ok, Catalog.GetString ("OCM is at the latest version."));
+				MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Info, ButtonsType.Ok, Catalog.GetString ("OCM is at the latest version."));
 				dlg.Run ();
 				dlg.Hide ();
 
@@ -1501,7 +1501,7 @@ namespace ocmgtk
 
 			Geocache cache = CacheList.SelectedCache;
 			bool alreadyDisabled = (cache.Archived || !cache.Available)? true:false;
-			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as disabled?");
+			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, Gtk.MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as disabled?");
 			if ((int)ResponseType.Yes == dlg.Run ()) {
 				cache.Available = false;
 				cache.Archived = false;
@@ -1522,7 +1522,7 @@ namespace ocmgtk
 		{
 			Geocache cache = CacheList.SelectedCache;
 			bool alreadyDisabled = (cache.Archived || !cache.Available)? true:false;
-			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as archived?");
+			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, Gtk.MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as archived?");
 			if ((int)ResponseType.Yes == dlg.Run ()) {
 				cache.Available = false;
 				cache.Archived = true;
@@ -1543,7 +1543,7 @@ namespace ocmgtk
 		{
 			Geocache cache = CacheList.SelectedCache;
 			bool alreadyDisabled = (cache.Archived || !cache.Available)? true:false;
-			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as available?");
+			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, Gtk.MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as available?");
 			if ((int)ResponseType.Yes == dlg.Run ()) {
 				cache.Available = true;
 				cache.Archived = false;
@@ -1622,7 +1622,7 @@ namespace ocmgtk
 			{
 				if (m_app.Locations.GetLocation(dlg.LocationName) != null)
 				{
-					MessageDialog warnDlg = new MessageDialog(this, DialogFlags.Modal, MessageType.Warning, ButtonsType.YesNo,
+					MessageDialog warnDlg = new MessageDialog(this, DialogFlags.Modal, Gtk.MessageType.Warning, ButtonsType.YesNo,
 					                                          Catalog.GetString("Are you sure you wish to overwrite \"{0}\"?"),
 					                                          dlg.LocationName);
 					if ((int)ResponseType.No == warnDlg.Run())
@@ -1844,7 +1844,7 @@ namespace ocmgtk
 
 		protected virtual void OnDeleteAll (object sender, System.EventArgs e)
 		{
-			MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Warning, ButtonsType.YesNo, String.Format (Catalog.GetString ("Are you sure you want to delete these {0} caches?\nThis operation cannot be undone."), CacheList.UnfilteredCaches.Count));
+			MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Warning, ButtonsType.YesNo, String.Format (Catalog.GetString ("Are you sure you want to delete these {0} caches?\nThis operation cannot be undone."), CacheList.UnfilteredCaches.Count));
 			if ((int)ResponseType.Yes == dlg.Run ()) {
 				dlg.Hide ();
 				OCMApp.UpdateGUIThread();

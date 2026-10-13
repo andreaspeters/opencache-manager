@@ -47,7 +47,7 @@ namespace ocmgtk {
         
         private Gtk.Table table3;
         
-        private Gtk.ComboBox childCombo;
+        private Gtk.ComboBoxText childCombo;
         
         private Gtk.CheckButton hasChildCheck;
         
@@ -55,7 +55,7 @@ namespace ocmgtk {
         
         private Gtk.CheckButton hasNoChildCheck;
         
-        private Gtk.ComboBox noChildCombo;
+        private Gtk.ComboBoxText noChildCombo;
         
         private Gtk.CheckButton noCorrectCheck;
         
@@ -224,7 +224,7 @@ namespace ocmgtk {
             this.table3.RowSpacing = ((uint)(6));
             this.table3.ColumnSpacing = ((uint)(6));
             // Container child table3.Gtk.Table+TableChild
-            this.childCombo = Gtk.ComboBox.NewText();
+            this.childCombo = new Gtk.ComboBoxText();
             this.childCombo.AppendText(Mono.Unix.Catalog.GetString("Final Location"));
             this.childCombo.AppendText(Mono.Unix.Catalog.GetString("Parking Area"));
             this.childCombo.AppendText(Mono.Unix.Catalog.GetString("Question To Answer"));
@@ -276,7 +276,7 @@ namespace ocmgtk {
             w16.BottomAttach = ((uint)(2));
             w16.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table3.Gtk.Table+TableChild
-            this.noChildCombo = Gtk.ComboBox.NewText();
+            this.noChildCombo = new Gtk.ComboBoxText();
             this.noChildCombo.AppendText(Mono.Unix.Catalog.GetString("Final Location"));
             this.noChildCombo.AppendText(Mono.Unix.Catalog.GetString("Parking Area"));
             this.noChildCombo.AppendText(Mono.Unix.Catalog.GetString("Question To Answer"));

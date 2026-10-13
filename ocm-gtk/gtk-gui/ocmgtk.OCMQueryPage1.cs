@@ -23,15 +23,15 @@ namespace ocmgtk {
         
         private Gtk.CheckButton diffCheck;
         
-        private Gtk.ComboBox diffRange;
+        private Gtk.ComboBoxText diffRange;
         
-        private Gtk.ComboBox diffValue;
+        private Gtk.ComboBoxText diffValue;
         
         private Gtk.CheckButton terrainCheck;
         
-        private Gtk.ComboBox terrRange;
+        private Gtk.ComboBoxText terrRange;
         
-        private Gtk.ComboBox terrValue;
+        private Gtk.ComboBoxText terrValue;
         
         private Gtk.Label GtkLabel19;
         
@@ -135,7 +135,7 @@ namespace ocmgtk {
             w1.XOptions = ((Gtk.AttachOptions)(4));
             w1.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.diffRange = Gtk.ComboBox.NewText();
+            this.diffRange = new Gtk.ComboBoxText();
             this.diffRange.AppendText(Mono.Unix.Catalog.GetString("Greater Than"));
             this.diffRange.AppendText(Mono.Unix.Catalog.GetString("Greater Than or Equal To"));
             this.diffRange.AppendText(Mono.Unix.Catalog.GetString("Equal To"));
@@ -151,7 +151,7 @@ namespace ocmgtk {
             w2.XOptions = ((Gtk.AttachOptions)(4));
             w2.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.diffValue = Gtk.ComboBox.NewText();
+            this.diffValue = new Gtk.ComboBoxText();
             this.diffValue.AppendText(Mono.Unix.Catalog.GetString("1"));
             this.diffValue.AppendText(Mono.Unix.Catalog.GetString("1.5"));
             this.diffValue.AppendText(Mono.Unix.Catalog.GetString("2"));
@@ -184,7 +184,7 @@ namespace ocmgtk {
             w4.XOptions = ((Gtk.AttachOptions)(4));
             w4.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.terrRange = Gtk.ComboBox.NewText();
+            this.terrRange = new Gtk.ComboBoxText();
             this.terrRange.AppendText(Mono.Unix.Catalog.GetString("Greater Than"));
             this.terrRange.AppendText(Mono.Unix.Catalog.GetString("Greater Than or Equal To"));
             this.terrRange.AppendText(Mono.Unix.Catalog.GetString("Equal To"));
@@ -202,7 +202,7 @@ namespace ocmgtk {
             w5.XOptions = ((Gtk.AttachOptions)(4));
             w5.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.terrValue = Gtk.ComboBox.NewText();
+            this.terrValue = new Gtk.ComboBoxText();
             this.terrValue.AppendText(Mono.Unix.Catalog.GetString("1"));
             this.terrValue.AppendText(Mono.Unix.Catalog.GetString("1.5"));
             this.terrValue.AppendText(Mono.Unix.Catalog.GetString("2"));
@@ -254,7 +254,7 @@ namespace ocmgtk {
             this.allCacheRadio.Active = true;
             this.allCacheRadio.DrawIndicator = true;
             this.allCacheRadio.UseUnderline = true;
-            this.allCacheRadio.Group = new GLib.SList(System.IntPtr.Zero);
+            this.allCacheRadio.Group = null;
             this.vbox2.Add(this.allCacheRadio);
             Gtk.Box.BoxChild w10 = ((Gtk.Box.BoxChild)(this.vbox2[this.allCacheRadio]));
             w10.Position = 0;

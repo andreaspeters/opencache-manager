@@ -41,7 +41,7 @@ namespace ocmgtk {
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.ConfigureEToolsDlg.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -108,7 +108,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w8 = ((Gtk.Box.BoxChild)(w1[this.hbox1]));
             w8.Position = 0;
             // Internal child ocmgtk.ConfigureEToolsDlg.ActionArea
-            Gtk.HButtonBox w9 = this.ActionArea;
+            Gtk.ButtonBox w9 = this.ActionArea;
             w9.Name = "dialog1_ActionArea";
             w9.Spacing = 10;
             w9.BorderWidth = ((uint)(5));

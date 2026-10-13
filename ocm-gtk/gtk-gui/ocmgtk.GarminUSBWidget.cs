@@ -17,7 +17,7 @@ namespace ocmgtk {
         
         private Gtk.Table table1;
         
-        private Gtk.ComboBox descMode;
+        private Gtk.ComboBoxText descMode;
         
         private Gtk.Label label1;
         
@@ -27,7 +27,7 @@ namespace ocmgtk {
         
         private Gtk.Entry limitEntry;
         
-        private Gtk.ComboBox nameMode;
+        private Gtk.ComboBoxText nameMode;
         
         private Gtk.HBox hbox2;
         
@@ -53,7 +53,7 @@ namespace ocmgtk {
             this.table1.RowSpacing = ((uint)(6));
             this.table1.ColumnSpacing = ((uint)(6));
             // Container child table1.Gtk.Table+TableChild
-            this.descMode = Gtk.ComboBox.NewText();
+            this.descMode = new Gtk.ComboBoxText();
             this.descMode.AppendText(Mono.Unix.Catalog.GetString("Cache Name"));
             this.descMode.AppendText(Mono.Unix.Catalog.GetString("Cache Code/Size/Hint"));
             this.descMode.AppendText(Mono.Unix.Catalog.GetString("Cache Code/Size/Type"));
@@ -114,7 +114,7 @@ namespace ocmgtk {
             w5.RightAttach = ((uint)(2));
             w5.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.nameMode = Gtk.ComboBox.NewText();
+            this.nameMode = new Gtk.ComboBoxText();
             this.nameMode.AppendText(Mono.Unix.Catalog.GetString("Cache Code"));
             this.nameMode.AppendText(Mono.Unix.Catalog.GetString("Cache Name"));
             this.nameMode.Name = "nameMode";

@@ -142,7 +142,7 @@ namespace ocmgtk {
             this.autoNameRado.Active = true;
             this.autoNameRado.DrawIndicator = true;
             this.autoNameRado.UseUnderline = true;
-            this.autoNameRado.Group = new GLib.SList(System.IntPtr.Zero);
+            this.autoNameRado.Group = null;
             this.table2.Add(this.autoNameRado);
             Gtk.Table.TableChild w7 = ((Gtk.Table.TableChild)(this.table2[this.autoNameRado]));
             w7.TopAttach = ((uint)(1));

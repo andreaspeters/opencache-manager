@@ -33,7 +33,7 @@ namespace ocmgtk {
         
         private Gtk.Entry catagoryEntry;
         
-        private Gtk.ComboBox descCombo;
+        private Gtk.ComboBoxText descCombo;
         
         private Gtk.HBox hbox2;
         
@@ -49,7 +49,7 @@ namespace ocmgtk {
         
         private Gtk.Entry proxEntry;
         
-        private Gtk.ComboBox proxCombo;
+        private Gtk.ComboBoxText proxCombo;
         
         private Gtk.CheckButton includeChildrenCheck;
         
@@ -67,7 +67,7 @@ namespace ocmgtk {
         
         private Gtk.Entry logEntry;
         
-        private Gtk.ComboBox nameCombo;
+        private Gtk.ComboBoxText nameCombo;
         
         private Gtk.CheckButton proximityAlertCheck;
         
@@ -90,11 +90,11 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.ExportPOIDialog.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -172,7 +172,7 @@ namespace ocmgtk {
             w7.XOptions = ((Gtk.AttachOptions)(4));
             w7.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.descCombo = Gtk.ComboBox.NewText();
+            this.descCombo = new Gtk.ComboBoxText();
             this.descCombo.AppendText(Mono.Unix.Catalog.GetString("Cache Name"));
             this.descCombo.AppendText(Mono.Unix.Catalog.GetString("Cache Code/Size/Hint"));
             this.descCombo.AppendText(Mono.Unix.Catalog.GetString("Cache Code/Size/Type"));
@@ -251,7 +251,7 @@ namespace ocmgtk {
             Gtk.Box.BoxChild w14 = ((Gtk.Box.BoxChild)(this.hbox3[this.proxEntry]));
             w14.Position = 0;
             // Container child hbox3.Gtk.Box+BoxChild
-            this.proxCombo = Gtk.ComboBox.NewText();
+            this.proxCombo = new Gtk.ComboBoxText();
             this.proxCombo.AppendText(Mono.Unix.Catalog.GetString("kilometers"));
             this.proxCombo.AppendText(Mono.Unix.Catalog.GetString("miles"));
             this.proxCombo.Sensitive = false;
@@ -374,7 +374,7 @@ namespace ocmgtk {
             w24.XOptions = ((Gtk.AttachOptions)(4));
             w24.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.nameCombo = Gtk.ComboBox.NewText();
+            this.nameCombo = new Gtk.ComboBoxText();
             this.nameCombo.AppendText(Mono.Unix.Catalog.GetString("Cache Code"));
             this.nameCombo.AppendText(Mono.Unix.Catalog.GetString("Cache Name"));
             this.nameCombo.Name = "nameCombo";
@@ -429,7 +429,7 @@ namespace ocmgtk {
             w31.Expand = false;
             w31.Fill = false;
             // Internal child ocmgtk.ExportPOIDialog.ActionArea
-            Gtk.HButtonBox w32 = this.ActionArea;
+            Gtk.ButtonBox w32 = this.ActionArea;
             w32.Name = "dialog1_ActionArea";
             w32.Spacing = 10;
             w32.BorderWidth = ((uint)(5));

@@ -33,7 +33,7 @@ namespace ocmgtk {
         
         private Gtk.Label label4;
         
-        private Gtk.ComboBox lastUpdateCombo;
+        private Gtk.ComboBoxText lastUpdateCombo;
         
         private ocmgtk.DateWidget lastUpdateDate;
         
@@ -57,13 +57,13 @@ namespace ocmgtk {
         
         private Gtk.CheckButton foundCheck;
         
-        private Gtk.ComboBox foundCombo;
+        private Gtk.ComboBoxText foundCombo;
         
         private ocmgtk.DateWidget foundDateEntry;
         
         private Gtk.CheckButton lFoundAnyOneCheck;
         
-        private Gtk.ComboBox lFoundAnyoneCombo;
+        private Gtk.ComboBoxText lFoundAnyoneCombo;
         
         private ocmgtk.DateWidget lFoundAnyoneDate;
         
@@ -145,7 +145,7 @@ namespace ocmgtk {
             w3.XOptions = ((Gtk.AttachOptions)(4));
             w3.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.lastUpdateCombo = Gtk.ComboBox.NewText();
+            this.lastUpdateCombo = new Gtk.ComboBoxText();
             this.lastUpdateCombo.AppendText(Mono.Unix.Catalog.GetString("On or before"));
             this.lastUpdateCombo.AppendText(Mono.Unix.Catalog.GetString("On or after"));
             this.lastUpdateCombo.Name = "lastUpdateCombo";
@@ -175,7 +175,7 @@ namespace ocmgtk {
             this.lUpdateDate.Active = true;
             this.lUpdateDate.DrawIndicator = true;
             this.lUpdateDate.UseUnderline = true;
-            this.lUpdateDate.Group = new GLib.SList(System.IntPtr.Zero);
+            this.lUpdateDate.Group = null;
             this.table1.Add(this.lUpdateDate);
             Gtk.Table.TableChild w6 = ((Gtk.Table.TableChild)(this.table1[this.lUpdateDate]));
             w6.XOptions = ((Gtk.AttachOptions)(4));
@@ -279,7 +279,7 @@ namespace ocmgtk {
             Gtk.Table.TableChild w17 = ((Gtk.Table.TableChild)(this.table2[this.foundCheck]));
             w17.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table2.Gtk.Table+TableChild
-            this.foundCombo = Gtk.ComboBox.NewText();
+            this.foundCombo = new Gtk.ComboBoxText();
             this.foundCombo.AppendText(Mono.Unix.Catalog.GetString("on:"));
             this.foundCombo.AppendText(Mono.Unix.Catalog.GetString("on or after:"));
             this.foundCombo.AppendText(Mono.Unix.Catalog.GetString("on or before:"));
@@ -318,7 +318,7 @@ namespace ocmgtk {
             w20.BottomAttach = ((uint)(2));
             w20.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table2.Gtk.Table+TableChild
-            this.lFoundAnyoneCombo = Gtk.ComboBox.NewText();
+            this.lFoundAnyoneCombo = new Gtk.ComboBoxText();
             this.lFoundAnyoneCombo.AppendText(Mono.Unix.Catalog.GetString("On or before"));
             this.lFoundAnyoneCombo.AppendText(Mono.Unix.Catalog.GetString("On or after"));
             this.lFoundAnyoneCombo.Sensitive = false;

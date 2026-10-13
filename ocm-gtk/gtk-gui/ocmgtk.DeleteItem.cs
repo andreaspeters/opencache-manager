@@ -17,7 +17,7 @@ namespace ocmgtk {
         
         private Gtk.Label label1;
         
-        private Gtk.ComboBox bmrkCombo;
+        private Gtk.ComboBoxText bmrkCombo;
         
         private Gtk.Button buttonCancel;
         
@@ -34,11 +34,11 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.DeleteItem.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.BorderWidth = ((uint)(2));
             // Container child dialog1_VBox.Gtk.Box+BoxChild
@@ -55,7 +55,7 @@ namespace ocmgtk {
             w2.Expand = false;
             w2.Fill = false;
             // Container child hbox1.Gtk.Box+BoxChild
-            this.bmrkCombo = Gtk.ComboBox.NewText();
+            this.bmrkCombo = new Gtk.ComboBoxText();
             this.bmrkCombo.Name = "bmrkCombo";
             this.hbox1.Add(this.bmrkCombo);
             Gtk.Box.BoxChild w3 = ((Gtk.Box.BoxChild)(this.hbox1[this.bmrkCombo]));
@@ -66,7 +66,7 @@ namespace ocmgtk {
             w4.Expand = false;
             w4.Fill = false;
             // Internal child ocmgtk.DeleteItem.ActionArea
-            Gtk.HButtonBox w5 = this.ActionArea;
+            Gtk.ButtonBox w5 = this.ActionArea;
             w5.Name = "dialog1_ActionArea";
             w5.Spacing = 10;
             w5.BorderWidth = ((uint)(5));

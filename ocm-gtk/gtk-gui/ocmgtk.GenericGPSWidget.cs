@@ -17,7 +17,7 @@ namespace ocmgtk {
         
         private Gtk.Table table1;
         
-        private Gtk.ComboBox descCombo;
+        private Gtk.ComboBoxText descCombo;
         
         private Gtk.Label label1;
         
@@ -27,7 +27,7 @@ namespace ocmgtk {
         
         private Gtk.Entry limitEntry;
         
-        private Gtk.ComboBox nameCombo;
+        private Gtk.ComboBoxText nameCombo;
         
         private Gtk.HSeparator hseparator1;
         
@@ -67,7 +67,7 @@ namespace ocmgtk {
             this.table1.RowSpacing = ((uint)(6));
             this.table1.ColumnSpacing = ((uint)(6));
             // Container child table1.Gtk.Table+TableChild
-            this.descCombo = Gtk.ComboBox.NewText();
+            this.descCombo = new Gtk.ComboBoxText();
             this.descCombo.AppendText(Mono.Unix.Catalog.GetString("Cache Name"));
             this.descCombo.AppendText(Mono.Unix.Catalog.GetString("Cache Code/Size/Hint"));
             this.descCombo.AppendText(Mono.Unix.Catalog.GetString("Cache Code/Size/Type"));
@@ -129,7 +129,7 @@ namespace ocmgtk {
             w5.XOptions = ((Gtk.AttachOptions)(4));
             w5.YOptions = ((Gtk.AttachOptions)(4));
             // Container child table1.Gtk.Table+TableChild
-            this.nameCombo = Gtk.ComboBox.NewText();
+            this.nameCombo = new Gtk.ComboBoxText();
             this.nameCombo.AppendText(Mono.Unix.Catalog.GetString("Cache Code"));
             this.nameCombo.AppendText(Mono.Unix.Catalog.GetString("Cache Name"));
             this.nameCombo.AppendText(Mono.Unix.Catalog.GetString("Shot Cache Code"));

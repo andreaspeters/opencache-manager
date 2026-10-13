@@ -56,11 +56,11 @@ namespace ocmgtk {
             this.Modal = true;
             this.BorderWidth = ((uint)(6));
             this.Resizable = false;
-            this.AllowGrow = false;
+            this.Resizable = false;
             this.SkipPagerHint = true;
             this.SkipTaskbarHint = true;
             // Internal child ocmgtk.LoadGPSFieldNotes.VBox
-            Gtk.VBox w1 = this.VBox;
+            Gtk.Box w1 = this.ContentArea;
             w1.Name = "dialog1_VBox";
             w1.Spacing = 6;
             w1.BorderWidth = ((uint)(2));
@@ -200,7 +200,7 @@ namespace ocmgtk {
             w15.Expand = false;
             w15.Fill = false;
             // Internal child ocmgtk.LoadGPSFieldNotes.ActionArea
-            Gtk.HButtonBox w16 = this.ActionArea;
+            Gtk.ButtonBox w16 = this.ActionArea;
             w16.Name = "dialog1_ActionArea";
             w16.Spacing = 10;
             w16.BorderWidth = ((uint)(5));
