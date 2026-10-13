@@ -113,7 +113,7 @@ namespace ocmgtk
 			}
 		}
 
-		private void RenderMapName (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderMapName (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			MapDescription map = (MapDescription)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;
@@ -126,21 +126,21 @@ namespace ocmgtk
 			}
 		}
 
-		private void RenderMapBaseLayer (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderMapBaseLayer (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			MapDescription map = (MapDescription)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;
 			text.Text = map.BaseLayer ? Catalog.GetString("yes") : Catalog.GetString("no");
 		}
 
-		private void RenderMapCovered (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderMapCovered (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			MapDescription map = (MapDescription)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;
 			text.Text = map.Covered;
 		}
 
-		private void UpdateMaps (Gtk.TreeModel model, Gtk.TreeIter itr)
+		private void UpdateMaps (Gtk.ITreeModel model, Gtk.TreeIter itr)
 		{
 			model.EmitRowChanged (model.GetPath (itr), itr);
 		}
@@ -155,7 +155,7 @@ namespace ocmgtk
 		protected virtual void OnActivateButtonClicked (object sender, System.EventArgs e)
 		{
 			Gtk.TreeIter itr;
-			Gtk.TreeModel model;
+			Gtk.ITreeModel model;
 			if (mapView.Selection.GetSelected (out model, out itr)) {
 				MapDescription map = (MapDescription)model.GetValue (itr, 0);
 				map.Active = true;
@@ -166,7 +166,7 @@ namespace ocmgtk
 		protected virtual void OnDeactivateButtonClicked (object sender, System.EventArgs e)
 		{
 			Gtk.TreeIter itr;
-			Gtk.TreeModel model;
+			Gtk.ITreeModel model;
 			if (mapView.Selection.GetSelected (out model, out itr)) {
 				MapDescription map = (MapDescription)model.GetValue (itr, 0);
 				map.Active = false;
@@ -206,7 +206,7 @@ namespace ocmgtk
 		protected virtual void OnDeleteButtonClicked (object sender, System.EventArgs e)
 		{
 			Gtk.TreeIter itr;
-			Gtk.TreeModel model;
+			Gtk.ITreeModel model;
 			if (mapView.Selection.GetSelected (out model, out itr)) {
 				MapDescription map = (MapDescription)model.GetValue (itr, 0);
 				MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo, String.Format (Catalog.GetString ("Are you sure you want to delete map {0}?"), map.Name));
@@ -230,7 +230,7 @@ namespace ocmgtk
 		protected virtual void OnUpButtonClicked (object sender, System.EventArgs e)
 		{
 			Gtk.TreeIter itr;
-			Gtk.TreeModel model;
+			Gtk.ITreeModel model;
 			if (mapView.Selection.GetSelected (out model, out itr)) {
 				MapDescription map = (MapDescription)model.GetValue (itr, 0);
 				int index = m_maps.IndexOf(map);
@@ -254,7 +254,7 @@ namespace ocmgtk
 		protected virtual void OnDownButtonClicked (object sender, System.EventArgs e)
 		{
 			Gtk.TreeIter itr;
-			Gtk.TreeModel model;
+			Gtk.ITreeModel model;
 			if (mapView.Selection.GetSelected (out model, out itr)) {
 				MapDescription map = (MapDescription)model.GetValue (itr, 0);
 				int index = m_maps.IndexOf(map);

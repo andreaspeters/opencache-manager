@@ -171,7 +171,7 @@ namespace ocmgtk
 		}
 
 #region FilterList Rendering Code
-		private void RenderCondition(Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderCondition(Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			FilterList list = (FilterList) model.GetValue (iter, 0);
 			CellRendererText condition_cell = cell as CellRendererText;
@@ -684,7 +684,7 @@ namespace ocmgtk
 		protected virtual void OnEditClicked (object sender, System.EventArgs e)
 		{
 			Gtk.TreeIter itr;
-			Gtk.TreeModel model;
+			Gtk.ITreeModel model;
 			if (conditionList.Selection.GetSelected (out model, out itr)) 
 			{
 				FilterList condition = (FilterList)model.GetValue (itr, 0);
@@ -722,7 +722,7 @@ namespace ocmgtk
 			dlg.Hide();
 			dlg.Dispose();
 			Gtk.TreeIter itr;
-			Gtk.TreeModel model;
+			Gtk.ITreeModel model;
 			if (conditionList.Selection.GetSelected (out model, out itr)) 
 			{
 				m_Store.Remove(ref itr);

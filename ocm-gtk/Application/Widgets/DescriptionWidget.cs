@@ -77,14 +77,14 @@ namespace ocmgtk
 			tbugView.Model = tbStore;
 		}
 
-		private void RenderRefCell (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderRefCell (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			TravelBug bug = (TravelBug)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;
 			text.Text = bug.Ref;
 		}
 
-		private void RenderNameCell (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderNameCell (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			TravelBug bug = (TravelBug)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;

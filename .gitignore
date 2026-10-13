@@ -3,7 +3,7 @@
 
 .vscode
 
-#build
+build*
 [Oo]bj/
 [Bb]in/
 packages/

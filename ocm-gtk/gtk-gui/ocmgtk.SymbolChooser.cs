@@ -17,7 +17,7 @@ namespace ocmgtk {
         
         private Gtk.Label symbolLabel;
         
-        private Gtk.ComboBoxEntry symbolCombo;
+        private Gtk.ComboBoxText symbolCombo;
         
         protected virtual void Build() {
             Stetic.Gui.Initialize(this);
@@ -40,7 +40,7 @@ namespace ocmgtk {
             w1.Expand = false;
             w1.Fill = false;
             // Container child hbox1.Gtk.Box+BoxChild
-            this.symbolCombo = Gtk.ComboBoxEntry.NewText();
+            this.symbolCombo = Gtk.ComboBoxText.NewWithEntry();
             this.symbolCombo.AppendText(Mono.Unix.Catalog.GetString("Geocache"));
             this.symbolCombo.AppendText(Mono.Unix.Catalog.GetString("Geocache Found"));
             this.symbolCombo.AppendText(Mono.Unix.Catalog.GetString("Flag, Red"));

@@ -21,7 +21,7 @@ using System.Diagnostics;
 using Mono.Unix;
 using ocmgtk.printing;
 using ocmengine;
-using DBus;
+using NDesk.DBus;
 using Gtk;
 using Gdk;
 using System.Text;

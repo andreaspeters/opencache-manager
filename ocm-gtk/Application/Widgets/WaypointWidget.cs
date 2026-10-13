@@ -86,7 +86,7 @@ namespace ocmgtk
 			wptView.Selection.Changed += OnSelectionChanged;
 		}
 		
-		private int NameCompare (TreeModel model, TreeIter tia, TreeIter tib)
+		private int NameCompare (ITreeModel model, TreeIter tia, TreeIter tib)
 		{
 			Waypoint cacheA = (Waypoint)model.GetValue (tia, 0);
 			Waypoint cacheB = (Waypoint)model.GetValue (tib, 0);
@@ -95,7 +95,7 @@ namespace ocmgtk
 			return String.Compare (cacheA.Desc, cacheB.Desc);
 		}
 		
-		private int TypeCompare (TreeModel model, TreeIter tia, TreeIter tib)
+		private int TypeCompare (ITreeModel model, TreeIter tia, TreeIter tib)
 		{
 			Waypoint cacheA = (Waypoint)model.GetValue (tia, 0);
 			Waypoint cacheB = (Waypoint)model.GetValue (tib, 0);
@@ -104,7 +104,7 @@ namespace ocmgtk
 			return String.Compare (cacheA.Symbol, cacheB.Symbol);
 		}
 		
-		private int LocationCompare (TreeModel model, TreeIter tia, TreeIter tib)
+		private int LocationCompare (ITreeModel model, TreeIter tia, TreeIter tib)
 		{
 			Waypoint cacheA = (Waypoint)model.GetValue (tia, 0);
 			Waypoint cacheB = (Waypoint)model.GetValue (tib, 0);
@@ -126,7 +126,7 @@ namespace ocmgtk
 		}
 
 		
-		private int CodeCompare (TreeModel model, TreeIter tia, TreeIter tib)
+		private int CodeCompare (ITreeModel model, TreeIter tia, TreeIter tib)
 		{
 			Waypoint cacheA = (Waypoint)model.GetValue (tia, 0);
 			Waypoint cacheB = (Waypoint)model.GetValue (tib, 0);
@@ -138,7 +138,7 @@ namespace ocmgtk
 		private void OnSelectionChanged (object sender, EventArgs e)
 		{
 			TreeIter iter;
-			TreeModel model;
+			ITreeModel model;
 			
 			if (((TreeSelection)sender).GetSelected (out model, out iter)) {
 				Waypoint val = (Waypoint)model.GetValue (iter, 0);
@@ -187,28 +187,28 @@ namespace ocmgtk
 			}
 		}
 		
-		private void RenderTitle (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderTitle (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			Waypoint wpt = (Waypoint)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;
 			text.Text = wpt.Desc;
 		}
 
-		private void RenderCode (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderCode (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			Waypoint wpt = (Waypoint)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;
 			text.Text = wpt.Name;
 		}
 
-		private void RenderCoord (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderCoord (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			Waypoint wpt = (Waypoint)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;
 			text.Text = Utilities.getCoordString (wpt.Lat, wpt.Lon);
 		}
 		
-		private void RenderIcon (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderIcon (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			Waypoint pt = (Waypoint)model.GetValue (iter, 0);
 			CellRendererPixbuf icon = cell as CellRendererPixbuf;
@@ -223,7 +223,7 @@ namespace ocmgtk
 			try {
 				
 				Gtk.TreeIter itr;
-				Gtk.TreeModel model;
+				Gtk.ITreeModel model;
 				if (wptView.Selection.GetSelected (out model, out itr)) 
 				{
 					Waypoint wpt = (Waypoint)model.GetValue (itr, 0);
@@ -263,7 +263,7 @@ namespace ocmgtk
 		private Waypoint GetSelectedWaypoint ()
 		{
 			Gtk.TreeIter itr;
-			Gtk.TreeModel model;
+			Gtk.ITreeModel model;
 			if (wptView.Selection.GetSelected (out model, out itr)) {
 				return (Waypoint)model.GetValue (itr, 0);
 			}
@@ -281,7 +281,7 @@ namespace ocmgtk
 				}
 				
 				TreeIter itr;
-				TreeModel model = wptView.Model;
+				ITreeModel model = wptView.Model;
 				wptView.Model.GetIterFirst(out itr);
 				do
 				{

@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using Gtk;
 using System.Timers;
-using DBus;
+using NDesk.DBus;
 using ocmengine;
 using ocmengine.SQLLite;
 using org.freedesktop.DBus;

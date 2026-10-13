@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>ocmengine</AssemblyName>
+    <RootNamespace>ocmengine</RootNamespace>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CacheLog.cs" />
+    <Compile Include="Waypoint.cs" />
+    <Compile Include="GPXParser.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="DegreeMinutes.cs" />
+    <Compile Include="Geocache.cs" />
+    <Compile Include="GPXWriter.cs" />
+    <Compile Include="TravelBug.cs" />
+    <Compile Include="WaypointEnumerator.cs" />
+    <Compile Include="FilterList.cs" />
+    <Compile Include="GPSBabelWriter.cs" />
+    <Compile Include="CacheAttribute.cs" />
+    <Compile Include="FieldNotesHandler.cs" />
+    <Compile Include="CacheStore/ACacheStore.cs" />
+    <Compile Include="CacheStore/ReadCacheArgs.cs" />
+    <Compile Include="CacheStore/SQLLite/FileStore.cs" />
+    <Compile Include="CacheStore/SQLLite/FileStoreDefs.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mono.Data.Sqlite.Core" Version="1.0.61.1" />
+    <PackageReference Include="Mono.Posix.NETStandard" Version="1.0.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>ocm-gtk</AssemblyName>
+    <RootNamespace>ocmgtk</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>false</Deterministic>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="**/*.cs" Exclude="bind/**/*.cs;bin/**/*.cs;obj/**/*.cs;Application/SetupAssistant.cs" />
+    <Compile Include="$(GeneratedSourceDir)/Paths.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GtkSharp" Version="3.24.24.95" />
+    <PackageReference Include="WebkitGtkSharp" Version="3.24.24.95" />
+    <PackageReference Include="Mono.Posix.NETStandard" Version="1.0.0" />
+    <PackageReference Include="NDesk.DBus" Version="0.15.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="NDesk.DBus">
+      <HintPath>$(NuGetPackageRoot)ndesk.dbus/0.15.0/lib/NDesk.DBus.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ocmengine">
+      <HintPath>$(EngineOutputDir)/ocmengine.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

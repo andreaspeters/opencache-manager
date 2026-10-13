@@ -103,87 +103,90 @@ namespace ocmgtk
 			m_ChildWaypoints = new List<Waypoint>();
 			mapScroll.AddWithViewport(m_View);
 			m_PendingActions = new List<string>();
-			m_View.LoadCommitted += HandleM_ViewLoadCommitted;
-			m_View.LoadStarted += HandleViewLoadStarted;
-			m_View.LoadFinished += HandleViewLoadFinished;
-			m_View.LoadProgressChanged += HandleViewLoadProgressChanged;
-			m_View.NavigationRequested += HandleM_ViewNavigationRequested;
+			m_View.LoadChanged += HandleViewLoadChanged;
+			m_View.DecidePolicy += HandleM_ViewDecidePolicy;
 		}
 
-		void HandleM_ViewLoadCommitted (object o, LoadCommittedArgs args)
+		void HandleViewLoadChanged (object o, LoadChangedArgs args)
 		{
-			mapProgress.Fraction = 0.10;
-			mapProgress.Visible = true;
-			OCMApp.UpdateGUIThread();
-		}
-
-		void HandleM_ViewNavigationRequested (object o, NavigationRequestedArgs args)
-		{
-			if (args.Request.Uri.StartsWith("ocm://"))
+			switch (args.LoadEvent)
 			{
-				string[]  request = args.Request.Uri.Substring(6).Split('/');
-				if (request[0].Equals("select"))
-				{
-					HighlightPoint(m_Lat, m_Lon);
-					m_App.SelectCacheByName(request[1]);
-				}
-				else if (request[0].Equals("mapmoved"))
-				{
-					m_Lat = double.Parse(request[1], System.Globalization.CultureInfo.InvariantCulture);
-					m_Lon = double.Parse(request[2], System.Globalization.CultureInfo.InvariantCulture);
-					Refresh(m_Lat, m_Lon);
-				}
-				else if (request[0].Equals("setcentre"))
-				{
-					m_Win.SetLocation(Catalog.GetString("Map Point"), double.Parse(request[1], System.Globalization.CultureInfo.InvariantCulture), double.Parse(request[2], System.Globalization.CultureInfo.InvariantCulture));
-				}
-				else if (request[0].Equals("sethome"))
-				{
-					m_App.AppConfig.HomeLat = double.Parse(request[1], System.Globalization.CultureInfo.InvariantCulture);
-					m_App.AppConfig.HomeLon =  double.Parse(request[2], System.Globalization.CultureInfo.InvariantCulture);
-					m_Win.ResetToHome();
-				}
-				else if (request[0].Equals("addlocation"))
-				{
-					m_Win.AddLocation(double.Parse(request[1], System.Globalization.CultureInfo.InvariantCulture), double.Parse(request[2], System.Globalization.CultureInfo.InvariantCulture));
-				}
-				else if (request[0].Equals("addwaypoint"))
-				{
-					if (m_Win.CacheList.SelectedCache != null)
-						m_App.AddChildWaypoint(double.Parse(request[1], System.Globalization.CultureInfo.InvariantCulture), double.Parse(request[2], System.Globalization.CultureInfo.InvariantCulture));
-				}
-				else if (request[0].Equals("correctcoordinate"))
-				{
-					if (m_Win.CacheList.SelectedCache != null)
-						m_Win.CorrectCoordinates(double.Parse(request[1], System.Globalization.CultureInfo.InvariantCulture), double.Parse(request[2], System.Globalization.CultureInfo.InvariantCulture));
-				}
-				args.Frame.StopLoading();
+				case LoadEvent.Started:
+					m_Loaded = false;
+					mapProgress.Fraction = 0.0;
+					mapProgress.Visible = true;
+					OCMApp.UpdateGUIThread();
+					break;
+				case LoadEvent.Committed:
+					mapProgress.Fraction = 0.10;
+					mapProgress.Visible = true;
+					OCMApp.UpdateGUIThread();
+					break;
+				case LoadEvent.Finished:
+					m_Loaded = true;
+					mapProgress.Visible = false;
+					foreach (string script in m_PendingActions)
+						LoadScript(script);
+					m_PendingActions.Clear();
+					break;
+			}
+		}
+
+		void HandleM_ViewDecidePolicy (object o, DecidePolicyArgs args)
+		{
+			if (args.DecisionType != PolicyDecisionType.NavigationAction ||
+			    !(args.Decision is NavigationPolicyDecision decision))
+			{
+				args.RetVal = false;
+				return;
 			}
 
-		}
-
-		void HandleViewLoadProgressChanged (object o, LoadProgressChangedArgs args)
-		{
-			mapProgress.Fraction = ((double) args.Progress/ 100d);
-			OCMApp.UpdateGUIThread();
-		}
-
-		void HandleViewLoadFinished (object o, LoadFinishedArgs args)
-		{
-			m_Loaded = true;
-			mapProgress.Visible = false;
-			foreach(string script in m_PendingActions)
+			string uri = decision.Request.Uri;
+			if (uri == null || !uri.StartsWith("ocm://", StringComparison.Ordinal))
 			{
-				LoadScript(script);
+				args.RetVal = false;
+				return;
 			}
-			m_PendingActions.Clear();
-		}
 
-		void HandleViewLoadStarted (object o, LoadStartedArgs args)
-		{
-			mapProgress.Fraction = 0.15;
-			mapProgress.Visible = true;
-			OCMApp.UpdateGUIThread();
+			string[] request = uri.Substring(6).Split('/');
+			if (request[0].Equals("select"))
+			{
+				HighlightPoint(m_Lat, m_Lon);
+				m_App.SelectCacheByName(request[1]);
+			}
+			else if (request[0].Equals("mapmoved"))
+			{
+				m_Lat = double.Parse(request[1], System.Globalization.CultureInfo.InvariantCulture);
+				m_Lon = double.Parse(request[2], System.Globalization.CultureInfo.InvariantCulture);
+				Refresh(m_Lat, m_Lon);
+			}
+			else if (request[0].Equals("setcentre"))
+			{
+				m_Win.SetLocation(Catalog.GetString("Map Point"), double.Parse(request[1], System.Globalization.CultureInfo.InvariantCulture), double.Parse(request[2], System.Globalization.CultureInfo.InvariantCulture));
+			}
+			else if (request[0].Equals("sethome"))
+			{
+				m_App.AppConfig.HomeLat = double.Parse(request[1], System.Globalization.CultureInfo.InvariantCulture);
+				m_App.AppConfig.HomeLon = double.Parse(request[2], System.Globalization.CultureInfo.InvariantCulture);
+				m_Win.ResetToHome();
+			}
+			else if (request[0].Equals("addlocation"))
+			{
+				m_Win.AddLocation(double.Parse(request[1], System.Globalization.CultureInfo.InvariantCulture), double.Parse(request[2], System.Globalization.CultureInfo.InvariantCulture));
+			}
+			else if (request[0].Equals("addwaypoint"))
+			{
+				if (m_Win.CacheList.SelectedCache != null)
+					m_App.AddChildWaypoint(double.Parse(request[1], System.Globalization.CultureInfo.InvariantCulture), double.Parse(request[2], System.Globalization.CultureInfo.InvariantCulture));
+			}
+			else if (request[0].Equals("correctcoordinate"))
+			{
+				if (m_Win.CacheList.SelectedCache != null)
+					m_Win.CorrectCoordinates(double.Parse(request[1], System.Globalization.CultureInfo.InvariantCulture), double.Parse(request[2], System.Globalization.CultureInfo.InvariantCulture));
+			}
+
+			decision.Ignore();
+			args.RetVal = true;
 		}
 
 		public void Reload()
@@ -403,7 +406,7 @@ namespace ocmgtk
 				m_PendingActions.Add(script);
 
 			} else {
-				m_View.ExecuteScript(script);
+				m_View.RunJavascript(script, null, null);
 			}
 		}
 
