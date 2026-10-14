@@ -102,7 +102,7 @@ namespace ocmgtk
 				}
 			}
 			else
-				System.Diagnostics.Process.Start(uri);
+				OCMApp.TryStartExternalProcess(uri);
 
 			args.RetVal = true;
 		}

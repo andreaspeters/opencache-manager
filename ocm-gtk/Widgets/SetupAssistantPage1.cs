@@ -24,19 +24,11 @@ namespace ocmgtk
 	{
 		protected virtual void OnButton1Activated (object sender, System.EventArgs e)
 		{
-			try
+			OCMApp.TryStartExternalProcess(new System.Diagnostics.ProcessStartInfo
 			{
-				System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
-				{
-					FileName = "https://www.geocaching.com/membership/default.aspx",
-					UseShellExecute = true
-				});
-			}
-			catch (System.ComponentModel.Win32Exception ex)
-			{
-				// Do not let a missing browser or URI handler crash the GTK callback.
-				Console.Error.WriteLine("Could not open membership page: " + ex.Message);
-			}
+				FileName = "https://www.geocaching.com/membership/default.aspx",
+				UseShellExecute = true
+			});
 		}
 		
 		

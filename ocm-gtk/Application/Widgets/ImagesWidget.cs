@@ -198,7 +198,7 @@ namespace ocmgtk
 			string imagesFolder = GetImagesFolder();
 			if (!Directory.Exists(imagesFolder))
 				Directory.CreateDirectory(imagesFolder);
-			System.Diagnostics.Process.Start(imagesFolder);
+			OCMApp.TryStartExternalProcess(imagesFolder);
 		}
 		
 		protected virtual void OnGrabImagesClick (object sender, System.EventArgs e)

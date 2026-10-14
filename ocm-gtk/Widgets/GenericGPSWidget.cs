@@ -134,7 +134,7 @@ namespace ocmgtk
 		
 		protected virtual void OnInfoClick (object sender, System.EventArgs e)
 		{
-			System.Diagnostics.Process.Start("http://www.gpsbabel.org/readme.html");
+			OCMApp.TryStartExternalProcess("http://www.gpsbabel.org/readme.html");
 		}
 		
 		protected virtual void onLimitToggle (object sender, System.EventArgs e)

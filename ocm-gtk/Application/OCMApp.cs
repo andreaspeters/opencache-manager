@@ -604,12 +604,10 @@ namespace ocmgtk
 
 		public static bool TryStartExternalProcess(string target)
 		{
-			System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo
-			{
-				FileName = target,
-				UseShellExecute = true
-			};
-			return TryStartExternalProcess(startInfo);
+			return ExternalProcessLauncher.TryOpenExternalTarget(
+				target,
+				ShowException,
+				action => Gtk.Application.Invoke(delegate { action(); }));
 		}
 
 		public static bool TryStartExternalProcess(System.Diagnostics.ProcessStartInfo startInfo)

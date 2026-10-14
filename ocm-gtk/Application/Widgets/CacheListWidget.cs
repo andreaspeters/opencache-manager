@@ -880,7 +880,7 @@ namespace ocmgtk
 
 		void HandleShowOnlineActivated (object sender, EventArgs e)
 		{
-			Process.Start (m_Win.CacheList.SelectedCache.URL.ToString ());
+			OCMApp.TryStartExternalProcess (m_Win.CacheList.SelectedCache.URL.ToString ());
 		}
 
 		void HandleSetCenterItemActivated (object sender, EventArgs e)

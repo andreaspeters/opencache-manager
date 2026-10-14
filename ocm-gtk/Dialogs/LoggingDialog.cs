@@ -61,12 +61,7 @@ namespace ocmgtk
 		
 		public void LogCache(Geocache cache)
 		{
-			if (cache.URL.ToString().Contains("opencaching"))
-				cacheLog.LoadUri(cache.URL.ToString().Replace("viewcache.php", "log.php"));
-			else if (cache.URL.ToString().Contains("geocaching"))
-				cacheLog.LoadUri("http://www.geocaching.com/seek/log.aspx?ID=" + cache.CacheID);
-			else
-				cacheLog.LoadUri(cache.URL.ToString());
+			cacheLog.LoadUri(OnlineLogUrl.FromCache(cache.URL, cache.CacheID));
 			this.Maximize();
 		}
 	}

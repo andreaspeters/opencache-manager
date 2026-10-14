@@ -24,7 +24,7 @@ namespace ocmgtk
 	{
 		protected virtual void OnAccountInfoClicked (object sender, System.EventArgs e)
 		{
-			System.Diagnostics.Process.Start ("http://www.geocaching.com/account/default.aspx");
+			OCMApp.TryStartExternalProcess ("http://www.geocaching.com/account/default.aspx");
 		}
 		
 		public double HomeLat

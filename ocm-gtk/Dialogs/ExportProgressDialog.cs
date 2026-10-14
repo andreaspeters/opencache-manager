@@ -70,7 +70,7 @@ namespace ocmgtk
 				this.Hide();
 				if (m_command != null)
 				{
-					System.Diagnostics.Process.Start(Utilities.StringToStartInfo(m_command));
+					OCMApp.TryStartExternalProcess(Utilities.StringToStartInfo(m_command));
 				}
 				return;
 			}

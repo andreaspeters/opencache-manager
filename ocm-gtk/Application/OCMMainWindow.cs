@@ -207,6 +207,7 @@ namespace ocmgtk
 			MarkAsFound ();
 			if (CacheList.SelectedCache.URL == null)
 				return;
+
 			LoggingDialog dlg = new LoggingDialog ();
 			dlg.LogCache (CacheList.SelectedCache);
 			dlg.Run ();
@@ -1195,12 +1196,12 @@ namespace ocmgtk
 
 		protected virtual void OnWikiClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://sourceforge.net/apps/mediawiki/opencachemanage/");
+			OCMApp.TryStartExternalProcess ("http://sourceforge.net/apps/mediawiki/opencachemanage/");
 		}
 
 		protected virtual void OnForumsClick (object sender, System.EventArgs e)
 		{
-			Process.Start("http://ocm.dafb-o.de/index.php");
+			OCMApp.TryStartExternalProcess("http://ocm.dafb-o.de/index.php");
 		}
 
 		protected virtual void OnAboutClick (object sender, System.EventArgs e)
@@ -1241,7 +1242,7 @@ namespace ocmgtk
 				if ((int)ResponseType.Yes == dlg.Run ())
 				{
 					dlg.Hide ();
-					Process.Start ("http://sourceforge.net/projects/opencachemanage/files/");
+					OCMApp.TryStartExternalProcess ("http://sourceforge.net/projects/opencachemanage/files/");
 				}
 				else
 					dlg.Hide ();
@@ -1276,77 +1277,77 @@ namespace ocmgtk
 
 		protected virtual void OnOCMHomeClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://opencachemanage.sourceforge.net/");
+			OCMApp.TryStartExternalProcess ("http://opencachemanage.sourceforge.net/");
 		}
 
 		protected virtual void OnGCHomeClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.geocaching.com");
+			OCMApp.TryStartExternalProcess ("http://www.geocaching.com");
 		}
 
 		protected virtual void OnGCProfileClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.geocaching.com/my");
+			OCMApp.TryStartExternalProcess ("http://www.geocaching.com/my");
 		}
 
 		protected virtual void OnGCAccountClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.geocaching.com/account/default.aspx");
+			OCMApp.TryStartExternalProcess ("http://www.geocaching.com/account/default.aspx");
 		}
 
 		protected virtual void OnGCPocketQueryClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.geocaching.com/pocket/default.aspx");
+			OCMApp.TryStartExternalProcess ("http://www.geocaching.com/pocket/default.aspx");
 		}
 
 		protected virtual void OnGCStatsClick (object sender, System.EventArgs e)
 		{
-			Process.Start("http://www.geocaching.com/my/statistics.aspx");
+			OCMApp.TryStartExternalProcess("http://www.geocaching.com/my/statistics.aspx");
 		}
 
 		protected virtual void OnGCFindClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.geocaching.com/seek/default.aspx");
+			OCMApp.TryStartExternalProcess ("http://www.geocaching.com/seek/default.aspx");
 		}
 
 		protected virtual void OnTCHomePageClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.terracaching.com");
+			OCMApp.TryStartExternalProcess ("http://www.terracaching.com");
 		}
 
 		protected virtual void OnTCTraditionalClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.terracaching.com/tdl.cgi?NF=1");
+			OCMApp.TryStartExternalProcess ("http://www.terracaching.com/tdl.cgi?NF=1");
 		}
 
 		protected virtual void OnTCLocationlessClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.terracaching.com/tdl.cgi?NF=1&L=1");
+			OCMApp.TryStartExternalProcess ("http://www.terracaching.com/tdl.cgi?NF=1&L=1");
 		}
 
 		protected virtual void OnOCCountryList (object sender, System.EventArgs e)
 		{
-			Process.Start("http://opencaching.eu");
+			OCMApp.TryStartExternalProcess("http://opencaching.eu");
 		}
 
 		protected virtual void OnGPSBabelClick (object sender, System.EventArgs e)
 		{
-			Process.Start("http://www.gpsbabel.org");
+			OCMApp.TryStartExternalProcess("http://www.gpsbabel.org");
 		}
 
 		protected virtual void OnGPSDClick (object sender, System.EventArgs e)
 		{
-			Process.Start("http://gpsd.berlios.de");
+			OCMApp.TryStartExternalProcess("http://gpsd.berlios.de");
 		}
 
 		protected virtual void OnNaviHome (object sender, System.EventArgs e)
 		{
-			Process.Start("http://www.navicache.com");
+			OCMApp.TryStartExternalProcess("http://www.navicache.com");
 		}
 
 		protected virtual void OnMyNavi (object sender, System.EventArgs e)
 		{
-			Process.Start("http://www.navicache.com/cgi-bin/db/MyNaviCacheHome.pl");
+			OCMApp.TryStartExternalProcess("http://www.navicache.com/cgi-bin/db/MyNaviCacheHome.pl");
 		}
 
 		protected virtual void OnModifyCache (object sender, System.EventArgs e)
@@ -1367,7 +1368,7 @@ namespace ocmgtk
 
 		protected virtual void OnViewOnlineClick (object sender, System.EventArgs e)
 		{
-			Process.Start(CacheList.SelectedCache.URL.ToString());
+			OCMApp.TryStartExternalProcess(CacheList.SelectedCache.URL.ToString());
 		}
 
 		protected virtual void OnMarkFound (object sender, System.EventArgs e)
