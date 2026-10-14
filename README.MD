@@ -8,6 +8,58 @@ Feature-Requests und spendet auch etwas. Denn wie auch der Entwickler vor
 uns, so haben auch wir Familie! Wenn genug Geld zusammen kommt, kann für bestimmte
 Tätigkeiten einen externer Entwickler beauftragen. :-)
 
+### Linux-Build mit CMake (.NET 8)
+
+Der GTK-Client kann unter Linux mit CMake und dem .NET 8 SDK gebaut werden.
+Das Standardziel veröffentlicht die Anwendung selbstenthaltend für `linux-x64`
+und kopiert die benötigten Programmressourcen in das Build-Verzeichnis:
+
+```sh
+cmake -S . -B build-nix/csharp-cmake
+cmake --build build-nix/csharp-cmake --parallel 1
+```
+
+Der veröffentlichte Client liegt anschließend in
+`build-nix/csharp-cmake/out/app/`.
+
+#### AppImage erzeugen
+
+Das optionale CMake-Ziel `appimage` erzeugt ein x86_64-AppImage mit dem
+`quick-sharun`-Werkzeug aus
+[Anylinux-AppImages](https://github.com/pkgforge-dev/Anylinux-AppImages).
+Das Werkzeug wird beim ersten Aufruf aus einem festgelegten Upstream-Commit
+geladen und per SHA256 geprüft. Neben CMake und .NET 8 benötigt der Build die
+GTK3-/WebKitGTK-4.1-Laufzeitbibliotheken, `glib-networking`, `patchelf` und
+`Xvfb`; die Laufzeitbibliotheken müssen in der Build-Umgebung auffindbar sein.
+Bei nicht standardmäßigen Installationspfaden kann die Umgebung beispielsweise
+so gesetzt werden:
+
+```sh
+export LD_LIBRARY_PATH="/pfad/zu/gtk3/lib:/pfad/zu/webkitgtk/lib:/pfad/zu/glib-networking/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export GIO_EXTRA_MODULES="/pfad/zu/glib-networking/lib/gio/modules"
+```
+
+AppImage bauen und den erzeugten Pfad ausgeben lassen:
+
+```sh
+cmake --build build-nix/csharp-cmake --target appimage --parallel 1
+```
+
+Das Ergebnis wird unter `build-nix/csharp-cmake/appimage/` abgelegt. Der
+Dateiname enthält die in `ocm-gtk/version/Version.txt` angegebene Version.
+Der zusätzliche Smoke-Test lässt sich mit folgendem Ziel starten:
+
+```sh
+cmake --build build-nix/csharp-cmake --target appimage-test --parallel 1
+```
+
+**Statushinweis:** Das AppImage bündelt den von sharun benötigten ELF-Interpreter
+unter `AppDir/lib/ld-linux-x86-64.so.2`. `quick-sharun --test` lief mit
+bereinigtem `LD_LIBRARY_PATH`, `GIO_EXTRA_MODULES` und
+`GDK_PIXBUF_MODULE_FILE` erfolgreich; die Anwendung blieb während des
+Smoke-Tests aktiv. Dieser Starttest bestätigt nicht die visuelle Darstellung
+der OSM-Kacheln im AppImage.
+
 ### Kompilieren/Installieren
 
 #### Archlinux:

@@ -44,4 +44,25 @@
       <Private>true</Private>
     </Reference>
   </ItemGroup>
+  <PropertyGroup>
+    <OpenCacheManagerIntlPath Condition="'$(OpenCacheManagerIntlPath)' == ''">$(LIBINTL_PATH)</OpenCacheManagerIntlPath>
+  </PropertyGroup>
+  <Target Name="CopyIntlLibraryToBuildOutput"
+          AfterTargets="Build"
+          Condition="$([MSBuild]::IsOSPlatform('Linux'))">
+    <Error Condition="'$(OpenCacheManagerIntlPath)' == '' or !Exists('$(OpenCacheManagerIntlPath)')"
+           Text="Linux builds require LIBINTL_PATH to point to gettext's preloadable_libintl.so." />
+    <Copy SourceFiles="$(OpenCacheManagerIntlPath)"
+          DestinationFiles="$(TargetDir)libintl.so"
+          SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="CopyIntlLibraryToPublishOutput"
+          AfterTargets="Publish"
+          Condition="$([MSBuild]::IsOSPlatform('Linux'))">
+    <Error Condition="'$(OpenCacheManagerIntlPath)' == '' or !Exists('$(OpenCacheManagerIntlPath)')"
+           Text="Linux publishes require LIBINTL_PATH to point to gettext's preloadable_libintl.so." />
+    <Copy SourceFiles="$(OpenCacheManagerIntlPath)"
+          DestinationFiles="$(PublishDir)libintl.so"
+          SkipUnchangedFiles="true" />
+  </Target>
 </Project>

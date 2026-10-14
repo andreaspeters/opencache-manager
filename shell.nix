@@ -13,13 +13,27 @@ let
     glib
     gdk-pixbuf
     pango
-		gettext
-		libint
+    icu
+    gettext
+    libint
     dotnetPkg
+    webkitgtk_4_1
+    librsvg
+    glib-networking
+    sqlite
+    unzip
   ];
 
+  # WebkitGtkSharp 3.24 hardcodes WebKitGTK 4.0's soname. Current nixpkgs
+  # ships GTK3 WebKitGTK 4.1 instead; this local alias is smoke-tested for
+  # WebView creation and local HTML loading, not a general 4.0/4.1 ABI guarantee.
+  webkitGtkAbiCompat = runCommand "webkitgtk-4.0-abi-compat" {} ''
+    mkdir -p $out/lib
+    ln -s "${webkitgtk_4_1}/lib/libwebkit2gtk-4.1.so.0" "$out/lib/libwebkit2gtk-4.0.so.37"
+  '';
+
   runtimeLibs = lib.makeLibraryPath (
-    [ stdenv.cc.cc ] ++ deps
+    [ stdenv.cc.cc ] ++ deps ++ [ webkitGtkAbiCompat ]
   );
 in
 stdenv.mkDerivation {
@@ -37,7 +51,9 @@ stdenv.mkDerivation {
 
   shellHook = ''
     export DOTNET_ROOT="${dotnetPkg}/share/dotnet"
+    export GSETTINGS_SCHEMA_DIR="${gtk3}/share/gsettings-schemas/gtk+3-${gtk3.version}/glib-2.0/schemas"
     export LD_LIBRARY_PATH="${runtimeLibs}:''${LD_LIBRARY_PATH:-}"
+    export LIBINTL_PATH="${gettext}/lib/preloadable_libintl.so"
   '';
 }
 

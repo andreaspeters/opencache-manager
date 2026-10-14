@@ -14,6 +14,7 @@
 //    limitations under the License.
 
 using System;
+using System.IO;
 using Gtk;
 using Mono.Unix;
 
@@ -85,11 +86,31 @@ namespace ocmgtk
 
 
 
+		internal static string GetDefaultDataDirectory ()
+		{
+			string documentsDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+			if (!string.IsNullOrWhiteSpace(documentsDirectory))
+				return System.IO.Path.Combine(documentsDirectory, "ocm");
+
+			string localDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+			if (string.IsNullOrWhiteSpace(localDataDirectory))
+			{
+				string userProfile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+				if (string.IsNullOrWhiteSpace(userProfile))
+					userProfile = Environment.GetEnvironmentVariable("HOME");
+				if (string.IsNullOrWhiteSpace(userProfile))
+					throw new InvalidOperationException("Cannot determine a per-user directory for OpenCacheManager data.");
+				localDataDirectory = System.IO.Path.Combine(userProfile, ".local", "share");
+			}
+
+			return System.IO.Path.Combine(localDataDirectory, "opencachemanager", "ocm");
+		}
+
 		public SetupAssistantPage2 ()
 		{
 			this.Build ();
-			dbEntry.Text = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments) + "/ocm/default.ocm";
-			dataEntry.Text = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments) + "/ocm";
+			dataEntry.Text = GetDefaultDataDirectory();
+			dbEntry.Text = System.IO.Path.Combine(dataEntry.Text, "default.ocm");
 		}
 		protected virtual void OnDirectoryClick (object sender, System.EventArgs e)
 		{

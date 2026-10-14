@@ -62,27 +62,55 @@ namespace ocmgtk
 
 		void HandleHandleClose (object sender, EventArgs e)
 		{
-			this.Hide ();
-			this.Dispose ();
-			
-			if (!Directory.Exists (page2.DataDirectory))
-				Directory.CreateDirectory (page2.DataDirectory);
-			
-			if (!File.Exists (page2.DBFile))
+			// The setup field may be empty (for example, when the platform has no
+			// Documents folder). Use a per-user data directory rather than passing an
+			// empty path to Directory.CreateDirectory.
+			string dataDirectory = page2.DataDirectory;
+			bool useDefaultDataDirectory = string.IsNullOrWhiteSpace(dataDirectory);
+			if (useDefaultDataDirectory)
 			{
-				FileStore store = new FileStore (page2.DBFile);
-				store.Dispose ();
+				string localDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+				if (string.IsNullOrWhiteSpace(localDataDirectory))
+				{
+					string userProfile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+					if (string.IsNullOrWhiteSpace(userProfile))
+						userProfile = Environment.GetEnvironmentVariable("HOME");
+					if (string.IsNullOrWhiteSpace(userProfile))
+						throw new InvalidOperationException("Cannot determine a per-user directory for OpenCacheManager data.");
+					localDataDirectory = Path.Combine(userProfile, ".local", "share");
+				}
+				dataDirectory = Path.Combine(localDataDirectory, "opencachemanager");
 			}
-			
+			else if (!Path.IsPathRooted(dataDirectory))
+			{
+				dataDirectory = Path.GetFullPath(dataDirectory);
+			}
+
+			string dbFile = page2.DBFile;
+			if (string.IsNullOrWhiteSpace(dbFile) || dbFile == Path.Combine(Path.GetPathRoot(dataDirectory) ?? Path.DirectorySeparatorChar.ToString(), "default.ocm"))
+				dbFile = Path.Combine(dataDirectory, "default.ocm");
+
+			Directory.CreateDirectory(dataDirectory);
+			string dbDirectory = Path.GetDirectoryName(dbFile);
+			if (!string.IsNullOrEmpty(dbDirectory))
+				Directory.CreateDirectory(dbDirectory);
+			if (!File.Exists(dbFile))
+			{
+				FileStore store = new FileStore(dbFile);
+				store.Dispose();
+			}
+
 			Config config = new Config();
-			config.DataDirectory = page2.DataDirectory;
-			config.DBFile = page2.DBFile;
+			config.DataDirectory = dataDirectory;
+			config.DBFile = dbFile;
 			config.HomeLat = page3.HomeLat;
 			config.HomeLon = page3.HomeLon;
 			config.OwnerID = page3.MemberID;
 			config.ImperialUnits = page2.ImperialUnits;
 			config.MapType = page2.DefaultMap;
 			config.WizardDone = true;
+			this.Hide();
+			this.Dispose();
 			m_App.InitializeApp(null, false);
 		}
 
