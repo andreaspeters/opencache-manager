@@ -1,0 +1,56 @@
+#!/bin/sh
+# Minimal xvfb-run-compatible wrapper for quick-sharun's `xvfb-run -a -- CMD` use.
+set -u
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        -a) shift ;;
+        --) shift; break ;;
+        *) break ;;
+    esac
+done
+if [ "$#" -eq 0 ]; then
+    printf '%s\n' 'xvfb-run: missing command' >&2
+    exit 2
+fi
+_xvfb=$(command -v Xvfb) || {
+    printf '%s\n' 'xvfb-run: Xvfb was not found on PATH' >&2
+    exit 127
+}
+_display_number=90
+while [ "$_display_number" -lt 190 ]; do
+    if [ ! -e "/tmp/.X${_display_number}-lock" ] && [ ! -e "/tmp/.X11-unix/X${_display_number}" ]; then
+        break
+    fi
+    _display_number=$((_display_number + 1))
+done
+if [ "$_display_number" -ge 190 ]; then
+    printf '%s\n' 'xvfb-run: no free display number found' >&2
+    exit 1
+fi
+_display=":${_display_number}"
+"$_xvfb" "$_display" -screen 0 1280x1024x24 -nolisten tcp -ac >/dev/null 2>&1 &
+_xvfb_pid=$!
+_cleanup() {
+    kill "$_xvfb_pid" 2>/dev/null || true
+    wait "$_xvfb_pid" 2>/dev/null || true
+}
+trap _cleanup EXIT HUP INT TERM
+_attempt=0
+while [ "$_attempt" -lt 50 ] && [ ! -S "/tmp/.X11-unix/X${_display_number}" ]; do
+    if ! kill -0 "$_xvfb_pid" 2>/dev/null; then
+        wait "$_xvfb_pid" 2>/dev/null || true
+        printf '%s\n' 'xvfb-run: Xvfb exited before becoming ready' >&2
+        exit 1
+    fi
+    sleep 0.1
+    _attempt=$((_attempt + 1))
+done
+if [ ! -S "/tmp/.X11-unix/X${_display_number}" ]; then
+    printf '%s\n' 'xvfb-run: timed out waiting for Xvfb' >&2
+    exit 1
+fi
+DISPLAY="$_display"
+export DISPLAY
+"$@"
+_status=$?
+exit "$_status"
