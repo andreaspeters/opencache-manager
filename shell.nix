@@ -52,6 +52,7 @@ stdenv.mkDerivation {
   shellHook = ''
     export DOTNET_ROOT="${dotnetPkg}/share/dotnet"
     export GSETTINGS_SCHEMA_DIR="${gtk3}/share/gsettings-schemas/gtk+3-${gtk3.version}/glib-2.0/schemas"
+    export GIO_EXTRA_MODULES="${glib-networking}/lib/gio/modules''${GIO_EXTRA_MODULES:+:$GIO_EXTRA_MODULES}"
     export LD_LIBRARY_PATH="${runtimeLibs}:''${LD_LIBRARY_PATH:-}"
     export LIBINTL_PATH="${gettext}/lib/preloadable_libintl.so"
   '';

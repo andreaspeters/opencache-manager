@@ -134,3 +134,7 @@ Anschliessend kann man es mit dem Befehl "ocm-gtk" starten.
 
 * Die Fedora 27, CentOS 7.4 und RHEL 7.4 liefern webkitgtk ebenfalls bereits nicht mehr.
 * Unter SuSE Leap 42.3 ist die Erstellung bislang problemlos
+
+## Screenshots
+
+![clipboard_20261014105857.bmp](vx_images/clipboard_20261014105857.bmp)

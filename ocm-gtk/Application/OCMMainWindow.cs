@@ -357,17 +357,21 @@ namespace ocmgtk
 
 		public void ImportZip (string filename)
 		{
-			String tempPath = System.IO.Path.GetTempPath ();
-			ProcessStartInfo start = new ProcessStartInfo ();
-			start.FileName = "unzip";
-			start.Arguments = "-o \"" + filename + "\" -d " + tempPath + "ocm_unzip";
-			Process unzip = Process.Start (start);
-
-			while (!unzip.HasExited) {
-				// Do nothing until exit
+			string stagingDirectory = null;
+			try
+			{
+				stagingDirectory = ZipArchiveHelper.ExtractToTemporaryDirectory(filename);
+				ImportDirectory(stagingDirectory, false, Config.AutoCloseWindows);
 			}
-
-			ImportDirectory (tempPath + "ocm_unzip", true, Config.AutoCloseWindows);
+			catch (Exception ex)
+			{
+				OCMApp.ShowException(new InvalidOperationException(
+					"Unable to import ZIP file '" + filename + "'.", ex));
+			}
+			finally
+			{
+				ZipArchiveHelper.TryDeleteDirectory(stagingDirectory);
+			}
 		}
 
 		private void ImportDirectory (String path, bool delete, bool autoClose)

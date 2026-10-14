@@ -427,7 +427,7 @@ namespace ocmgtk
 				if ((int)ResponseType.Yes == dlg.Run ()) 
 				{
 					dlg.Hide ();
-					System.Diagnostics.Process.Start ("http://sourceforge.net/projects/opencachemanage/files/");
+					TryStartExternalProcess ("http://sourceforge.net/projects/opencachemanage/files/");
 				} 
 				else
 					dlg.Hide ();
@@ -600,6 +600,21 @@ namespace ocmgtk
 		{
 			ErrorDialog dlg = new ErrorDialog(e);
 			dlg.Run();
+		}
+
+		public static bool TryStartExternalProcess(string target)
+		{
+			System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo
+			{
+				FileName = target,
+				UseShellExecute = true
+			};
+			return TryStartExternalProcess(startInfo);
+		}
+
+		public static bool TryStartExternalProcess(System.Diagnostics.ProcessStartInfo startInfo)
+		{
+			return ExternalProcessLauncher.TryStart(startInfo, ShowException);
 		}
 		
 		public static void Main (string[] args)
