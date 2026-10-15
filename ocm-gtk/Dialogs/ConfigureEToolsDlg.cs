@@ -63,7 +63,7 @@ namespace ocmgtk
 		void HandleCommandViewSelectionChanged (object sender, EventArgs e)
 		{
 			TreeIter iter;
-			TreeModel model;
+			ITreeModel model;
 			
 			if (((TreeSelection)sender).GetSelected (out model, out iter)) {
 				editButton.Sensitive = true;
@@ -74,14 +74,14 @@ namespace ocmgtk
 			}
 		}
 		
-		private void RenderCommandName (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderCommandName (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			ExternalTool tool = (ExternalTool)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;
 			text.Markup = tool.Name;
 		}
 		
-		private void RenderCommandExec (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderCommandExec (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			ExternalTool tool = (ExternalTool)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;
@@ -102,7 +102,7 @@ namespace ocmgtk
 		private ExternalTool GetSelectedTool ()
 		{
 			Gtk.TreeIter itr;
-			Gtk.TreeModel model;
+			Gtk.ITreeModel model;
 			if (commandView.Selection.GetSelected (out model, out itr)) {
 				return (ExternalTool)model.GetValue (itr, 0);
 			}

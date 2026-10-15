@@ -63,27 +63,54 @@ namespace ocmgtk
 
 		void HandleHandleClose (object sender, EventArgs e)
 		{
-			this.Hide ();
-			this.Dispose ();
-			
-			if (!Directory.Exists (page2.DataDirectory))
-				Directory.CreateDirectory (page2.DataDirectory);
-			
-			if (!File.Exists (page2.DBFile))
+			// Snapshot widget values before disposing the assistant; disposal can
+			// invalidate child widgets and make their Text properties empty.
+			string dataDirectory = page2.DataDirectory;
+			bool useDefaultDataDirectory = string.IsNullOrWhiteSpace(dataDirectory);
+			if (useDefaultDataDirectory)
+				dataDirectory = SetupAssistantPage2.GetDefaultDataDirectory();
+			else if (!System.IO.Path.IsPathRooted(dataDirectory))
+				dataDirectory = System.IO.Path.GetFullPath(dataDirectory);
+
+			string dbFile = page2.DBFile;
+			bool generatedRootDbPath = useDefaultDataDirectory &&
+				!string.IsNullOrWhiteSpace(dbFile) &&
+				System.IO.Path.GetFileName(dbFile) == "default.ocm" &&
+				System.IO.Path.GetDirectoryName(dbFile) == System.IO.Path.GetPathRoot(dbFile);
+			if (string.IsNullOrWhiteSpace(dbFile) || generatedRootDbPath)
+				dbFile = System.IO.Path.Combine(dataDirectory, "default.ocm");
+			else if (!System.IO.Path.IsPathRooted(dbFile))
+				dbFile = System.IO.Path.GetFullPath(dbFile);
+
+			double homeLat = page3.HomeLat;
+			double homeLon = page3.HomeLon;
+			string ownerId = page3.MemberID;
+			bool imperialUnits = page2.ImperialUnits;
+			string mapType = page2.DefaultMap;
+
+			Directory.CreateDirectory(dataDirectory);
+			string dbDirectory = System.IO.Path.GetDirectoryName(dbFile);
+			if (!string.IsNullOrEmpty(dbDirectory))
+				Directory.CreateDirectory(dbDirectory);
+			if (!File.Exists(dbFile))
 			{
-				FileStore store = new FileStore (page2.DBFile);
-				store.Dispose ();
+				FileStore store = new FileStore(dbFile);
+				store.Dispose();
 			}
-			
-			Config config = new Config();
-			config.DataDirectory = page2.DataDirectory;
-			config.DBFile = page2.DBFile;
-			config.HomeLat = page3.HomeLat;
-			config.HomeLon = page3.HomeLon;
-			config.OwnerID = page3.MemberID;
-			config.ImperialUnits = page2.ImperialUnits;
-			config.MapType = page2.DefaultMap;
+
+			// Update the same settings instance that OCMApp.InitializeApp reads.
+			IConfig config = m_App.AppConfig;
+			config.DataDirectory = dataDirectory;
+			config.DBFile = dbFile;
+			config.HomeLat = homeLat;
+			config.HomeLon = homeLon;
+			config.OwnerID = ownerId;
+			config.ImperialUnits = imperialUnits;
+			config.MapType = mapType;
 			config.WizardDone = true;
+
+			this.Hide();
+			this.Dispose();
 			m_App.InitializeApp(null, false);
 		}
 

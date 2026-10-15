@@ -20,7 +20,6 @@ using Gtk;
 namespace ocmgtk
 {
 
-
 	[System.ComponentModel.ToolboxItem(true)]
 	public partial class HTMLWidget : Gtk.Bin
 	{
@@ -44,60 +43,74 @@ namespace ocmgtk
 			this.Build ();
 			m_view = new WebKit.WebView();
 			htmlScroll.Add(m_view);
-			m_view.LoadFinished += HandleM_viewLoadFinished;
-			m_view.NavigationRequested += HandleM_viewNavigationRequested;
+			m_view.LoadChanged += HandleM_viewLoadChanged;
+			m_view.DecidePolicy += HandleM_viewDecidePolicy;
 		}
 
-		void HandleM_viewLoadFinished (object o, WebKit.LoadFinishedArgs args)
+		void HandleM_viewLoadChanged (object o, LoadChangedArgs args)
 		{
-			contentLoaded = true;
+			if (args.LoadEvent == LoadEvent.Finished)
+				contentLoaded = true;
 		}
 
-		void HandleM_viewNavigationRequested (object o, WebKit.NavigationRequestedArgs args)
+		void HandleM_viewDecidePolicy (object o, DecidePolicyArgs args)
 		{
-			if (contentLoaded)
+			if (!contentLoaded || args.DecisionType != PolicyDecisionType.NavigationAction ||
+			    !(args.Decision is NavigationPolicyDecision decision))
 			{
-				m_view.StopLoading();
-				if (args.Request.Uri.StartsWith("ocm://"))
-				{
-					string[]  request = args.Request.Uri.Substring(6).Split('/');
-					if (request[0].Equals("deleteLog"))
-					{
-						MessageDialog dlg = new MessageDialog(null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo, Mono.Unix.Catalog.GetString("Are you sure you wish to delete this log?"));
-						if (((int) ResponseType.Yes) == dlg.Run())
-						{
-							dlg.Hide();
-							m_App.CacheStore.PurgeLogsByKey(new String[]{request[1]});
-							m_App.RefreshAll();
-						}
-						dlg.Hide();
-					}
-					else if (request[0].Equals("editLog"))
-					{
-						OfflineLogDialog dlg = new OfflineLogDialog();
-						dlg.MainWin = m_Win;
-						dlg.useFullLog = true;
-						ocmengine.CacheLog log = m_App.CacheStore.GetCacheLogByKey(request[1]);
-						dlg.Log = log;
-						if ((int)ResponseType.Ok == dlg.Run ()) 
-						{
-							log = dlg.Log;
-							m_App.CacheStore.AddLog(log.CacheCode, log);
-							dlg.Hide ();
-							m_App.RefreshAll();
-						}
-						dlg.Hide ();
-					}
-				}
-				else
-					System.Diagnostics.Process.Start(args.Request.Uri);
+				args.RetVal = false;
+				return;
 			}
+
+			string uri = decision.Request.Uri;
+			if (uri == null)
+			{
+				args.RetVal = false;
+				return;
+			}
+
+			decision.Ignore();
+			if (uri.StartsWith("ocm://", StringComparison.Ordinal))
+			{
+				string[] request = uri.Substring(6).Split('/');
+				if (request[0].Equals("deleteLog"))
+				{
+					MessageDialog dlg = new MessageDialog(null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo, Mono.Unix.Catalog.GetString("Are you sure you wish to delete this log?"));
+					if (((int)ResponseType.Yes) == dlg.Run())
+					{
+						dlg.Hide();
+						m_App.CacheStore.PurgeLogsByKey(new String[]{request[1]});
+						m_App.RefreshAll();
+					}
+					dlg.Hide();
+				}
+				else if (request[0].Equals("editLog"))
+				{
+					OfflineLogDialog dlg = new OfflineLogDialog();
+					dlg.MainWin = m_Win;
+					dlg.useFullLog = true;
+					ocmengine.CacheLog log = m_App.CacheStore.GetCacheLogByKey(request[1]);
+					dlg.Log = log;
+					if ((int)ResponseType.Ok == dlg.Run())
+					{
+						log = dlg.Log;
+						m_App.CacheStore.AddLog(log.CacheCode, log);
+						dlg.Hide();
+						m_App.RefreshAll();
+					}
+					dlg.Hide();
+				}
+			}
+			else
+				OCMApp.TryStartExternalProcess(uri);
+
+			args.RetVal = true;
 		}
 		
 		public void SetHTML(string html, string  baseURL)
 		{
 			contentLoaded = false;
-			m_view.LoadHtmlString(html, baseURL);
+			m_view.LoadHtml(html, baseURL);
 		}
 		
 		public string HTML
@@ -105,13 +118,13 @@ namespace ocmgtk
 			//set { int i=1;}
 			set {
 				contentLoaded = false;
-				m_view.LoadHtmlString(value, "http://www.geocaching.com");
+				m_view.LoadHtml(value, "http://www.geocaching.com");
 			}
 		}
 		
 		public void ExecuteFunction(string func)
 		{
-			m_view.ExecuteScript(func);
+			m_view.RunJavascript(func, null, null);
 		}
 	}
 }

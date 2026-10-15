@@ -267,7 +267,7 @@ namespace ocmgtk
 			}
 			
 			TreeIter itr;
-			TreeModel model = cacheListTree.Model;
+			ITreeModel model = cacheListTree.Model;
 			cacheListTree.Model.GetIterFirst(out itr);
 			do
 			{
@@ -299,7 +299,7 @@ namespace ocmgtk
 		}
 		
 #region Tree Model Rendering Functions
-		private void RenderCacheCode (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderCacheCode (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			Geocache cache = (Geocache)model.GetValue (iter, 0);
 			if (cache == null)
@@ -323,7 +323,7 @@ namespace ocmgtk
 				text.Markup = cache.Name;
 		}
 
-		private void RenderCacheTitle (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderCacheTitle (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			Geocache cache = (Geocache)model.GetValue (iter, 0);
 			if (cache == null)
@@ -367,7 +367,7 @@ namespace ocmgtk
 			text.Markup = builder.ToString();
 		}
 
-		private void RenderCacheIcon (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderCacheIcon (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			Geocache cache = (Geocache)model.GetValue (iter, 0);
 			if (cache == null)
@@ -408,7 +408,7 @@ namespace ocmgtk
 			}
 		}
 
-		private void RenderCacheDistance (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderCacheDistance (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			Geocache cache = (Geocache)model.GetValue (iter, 0);
 			if (cache == null)
@@ -436,7 +436,7 @@ namespace ocmgtk
 			}
 		}
 		
-		private int TitleCompare (TreeModel model, TreeIter tia, TreeIter tib)
+		private int TitleCompare (ITreeModel model, TreeIter tia, TreeIter tib)
 		{
 			Geocache cacheA = (Geocache)model.GetValue (tia, 0);
 			Geocache cacheB = (Geocache)model.GetValue (tib, 0);
@@ -445,7 +445,7 @@ namespace ocmgtk
 			return String.Compare (cacheA.CacheName, cacheB.CacheName);
 		}
 		
-		private int CodeCompare (TreeModel model, TreeIter tia, TreeIter tib)
+		private int CodeCompare (ITreeModel model, TreeIter tia, TreeIter tib)
 		{
 			Geocache cacheA = (Geocache)model.GetValue (tia, 0);
 			Geocache cacheB = (Geocache)model.GetValue (tib, 0);
@@ -455,7 +455,7 @@ namespace ocmgtk
 		}
 
 
-		private int DistanceCompare (TreeModel model, TreeIter tia, TreeIter tib)
+		private int DistanceCompare (ITreeModel model, TreeIter tia, TreeIter tib)
 		{
 			Geocache cacheA = (Geocache)model.GetValue (tia, 0);
 			Geocache cacheB = (Geocache)model.GetValue (tib, 0);
@@ -469,7 +469,7 @@ namespace ocmgtk
 				return -1;
 		}
 
-		private int SymbolCompare (TreeModel model, TreeIter tia, TreeIter tib)
+		private int SymbolCompare (ITreeModel model, TreeIter tia, TreeIter tib)
 		{
 			Geocache cacheA = (Geocache)model.GetValue (tia, 0);
 			Geocache cacheB = (Geocache)model.GetValue (tib, 0);
@@ -574,7 +574,7 @@ namespace ocmgtk
 			else
 			{
 				statusInfo.Sensitive = false;
-				statusInfo.HideAll();
+				statusInfo.Hide();
 			}
 		}
 		
@@ -618,7 +618,7 @@ namespace ocmgtk
 		private static Geocache GetSelectedCache (TreeSelection selection)
 		{
 			TreeIter iter;
-			TreeModel model;
+			ITreeModel model;
 			
 			if (selection.GetSelected (out model, out iter)) 
 				return (Geocache)model.GetValue (iter, 0);
@@ -880,7 +880,7 @@ namespace ocmgtk
 
 		void HandleShowOnlineActivated (object sender, EventArgs e)
 		{
-			Process.Start (m_Win.CacheList.SelectedCache.URL.ToString ());
+			OCMApp.TryStartExternalProcess (m_Win.CacheList.SelectedCache.URL.ToString ());
 		}
 
 		void HandleSetCenterItemActivated (object sender, EventArgs e)

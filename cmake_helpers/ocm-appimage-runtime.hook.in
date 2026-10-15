@@ -1,0 +1,9 @@
+# Loaded by the AnyLinux-AppImages AppRun before launching OCM.
+if [ -n "${SHARUN_DIR:-}" ]; then
+    if [ -d "${SHARUN_DIR}/@OCM_GIO_MODULE_RELATIVE_DIR@" ]; then
+        export GIO_EXTRA_MODULES="${SHARUN_DIR}/@OCM_GIO_MODULE_RELATIVE_DIR@"
+    fi
+    if [ -n "@OCM_GDK_PIXBUF_CACHE_RELATIVE_PATH@" ] && [ -f "${SHARUN_DIR}/@OCM_GDK_PIXBUF_CACHE_RELATIVE_PATH@" ]; then
+        export GDK_PIXBUF_MODULE_FILE="${SHARUN_DIR}/@OCM_GDK_PIXBUF_CACHE_RELATIVE_PATH@"
+    fi
+fi

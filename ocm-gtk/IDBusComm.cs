@@ -15,12 +15,12 @@
 
 using System;
 using org.freedesktop.DBus;
-using DBus;
+using NDesk.DBus;
 
 namespace ocmgtk
 {
 
-	[DBus.Interface ("org.ocm.dbus")]
+	[Interface ("org.ocm.dbus")]
 	public interface IDBusComm
 	{
 		void ImportGPX(String file);

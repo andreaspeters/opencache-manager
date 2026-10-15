@@ -35,37 +35,33 @@ namespace ocmgtk
 		{
 			this.Build ();
 			scrolledWindow.AddWithViewport(cacheLog);
-			cacheLog.LoadStarted += HandleCacheLogLoadStarted;
-			cacheLog.LoadProgressChanged += HandleCacheLogLoadProgressChanged;
-			cacheLog.LoadFinished += HandleCacheLogLoadFinished;
+			cacheLog.LoadChanged += HandleCacheLogLoadChanged;
 			this.ShowAll();
 		}
 
-		void HandleCacheLogLoadFinished (object o, LoadFinishedArgs args)
+		void HandleCacheLogLoadChanged (object o, LoadChangedArgs args)
 		{
-			loadProgressBar.Visible = false;
-		}
-
-		void HandleCacheLogLoadProgressChanged (object o, LoadProgressChangedArgs args)
-		{
-			loadProgressBar.Fraction = (double) args.Progress / (double) 100;
-			loadProgressBar.Text = String.Format(Catalog.GetString("{0}% complete"), args.Progress);
-		}
-
-		void HandleCacheLogLoadStarted (object o, LoadStartedArgs args)
-		{
-			loadProgressBar.Text = Catalog.GetString("Loading...");
-			loadProgressBar.Fraction = 0;
+			switch (args.LoadEvent)
+			{
+				case LoadEvent.Started:
+					loadProgressBar.Text = Catalog.GetString("Loading...");
+					loadProgressBar.Fraction = 0;
+					loadProgressBar.Visible = true;
+					break;
+				case LoadEvent.Committed:
+					loadProgressBar.Fraction = 0.5;
+					break;
+				case LoadEvent.Finished:
+					loadProgressBar.Fraction = 1;
+					loadProgressBar.Text = String.Format(Catalog.GetString("{0}% complete"), 100);
+					loadProgressBar.Visible = false;
+					break;
+			}
 		}
 		
 		public void LogCache(Geocache cache)
 		{
-			if (cache.URL.ToString().Contains("opencaching"))
-				cacheLog.LoadUri(cache.URL.ToString().Replace("viewcache.php", "log.php"));
-			else if (cache.URL.ToString().Contains("geocaching"))
-				cacheLog.LoadUri("http://www.geocaching.com/seek/log.aspx?ID=" + cache.CacheID);
-			else
-				cacheLog.LoadUri(cache.URL.ToString());
+			cacheLog.LoadUri(OnlineLogUrl.FromCache(cache.URL, cache.CacheID));
 			this.Maximize();
 		}
 	}

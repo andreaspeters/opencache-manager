@@ -24,7 +24,11 @@ namespace ocmgtk
 	{
 		protected virtual void OnButton1Activated (object sender, System.EventArgs e)
 		{
-			System.Diagnostics.Process.Start("https://www.geocaching.com/membership/default.aspx");
+			OCMApp.TryStartExternalProcess(new System.Diagnostics.ProcessStartInfo
+			{
+				FileName = "https://www.geocaching.com/membership/default.aspx",
+				UseShellExecute = true
+			});
 		}
 		
 		

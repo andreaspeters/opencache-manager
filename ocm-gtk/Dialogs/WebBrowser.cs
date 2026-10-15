@@ -30,34 +30,34 @@ namespace ocmgtk
 			this.Build ();
 			m_view = new WebView();
 			browserScroll.AddWithViewport(m_view);
-			m_view.LoadStarted += HandleViewLoadStarted;
-			m_view.LoadProgressChanged += HandleViewLoadProgressChanged;
-			m_view.LoadFinished += HandleM_viewLoadFinished;
+			m_view.LoadChanged += HandleViewLoadChanged;
 			browserScroll.ShowAll();
 			this.Maximize();
 		}
 
-		void HandleM_viewLoadFinished (object o, LoadFinishedArgs args)
+		void HandleViewLoadChanged (object o, LoadChangedArgs args)
 		{
-			browserStatus.Push(browserStatus.GetContextId("load"), String.Format("Complete"));
-			browserProgress.Hide();
+			switch (args.LoadEvent)
+			{
+				case LoadEvent.Started:
+					browserStatus.Push(browserStatus.GetContextId("load"), "Initializing...");
+					browserProgress.Fraction = 0;
+					browserProgress.Show();
+					break;
+				case LoadEvent.Committed:
+					browserStatus.Push(browserStatus.GetContextId("load"), Catalog.GetString("Loading..."));
+					browserProgress.Fraction = 0.5;
+					break;
+				case LoadEvent.Finished:
+					browserStatus.Push(browserStatus.GetContextId("load"), "Complete");
+					browserProgress.Hide();
+					break;
+			}
 		}
 		
 		public void LoadURL(String url)
 		{
 			m_view.LoadUri(url);
-		}
-
-		void HandleViewLoadProgressChanged (object o, LoadProgressChangedArgs args)
-		{
-			browserStatus.Push(browserStatus.GetContextId("load"), String.Format(Catalog.GetString("Loading ({0}%)"), args.Progress.ToString()));
-			browserProgress.Fraction = (double) args.Progress / 100d;
-		}
-
-		void HandleViewLoadStarted (object o, LoadStartedArgs args)
-		{
-			browserStatus.Push(browserStatus.GetContextId("load"),"Initializing...");
-			browserProgress.Fraction = 0;
 		}
 	}
 }

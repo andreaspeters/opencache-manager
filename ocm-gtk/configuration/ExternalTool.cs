@@ -113,7 +113,7 @@ namespace ocmgtk
 					}
 					names += cache.Name;
 				}
-				Process.Start(Utilities.StringToStartInfo(cmd.Replace("%names%", names)));
+				OCMApp.TryStartExternalProcess(Utilities.StringToStartInfo(cmd.Replace("%names%", names)));
 			}
 			else if (cmd.Contains("%selectedname%"))
 			{
@@ -127,7 +127,7 @@ namespace ocmgtk
 					edlg.Dispose();
 					return;
 				}
-				Process.Start(Utilities.StringToStartInfo(cmd.Replace("%selectedname%", win.CacheList.SelectedCache.Name)));
+				OCMApp.TryStartExternalProcess(Utilities.StringToStartInfo(cmd.Replace("%selectedname%", win.CacheList.SelectedCache.Name)));
 			}
 			else if (cmd.Contains("%finds%"))
 			{
@@ -145,7 +145,7 @@ namespace ocmgtk
 			}
 			else
 			{
-				Process.Start(Utilities.StringToStartInfo(m_command));
+				OCMApp.TryStartExternalProcess(Utilities.StringToStartInfo(m_command));
 			}
 		}
 	}

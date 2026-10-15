@@ -459,7 +459,7 @@ namespace ocmgtk
 		}
 		protected virtual void OnClickView (object sender, System.EventArgs e)
 		{
-			System.Diagnostics.Process.Start (m_cache.URL.ToString ());
+			OCMApp.TryStartExternalProcess (m_cache.URL.ToString ());
 		}
 
 		protected virtual void OnClickLog (object sender, System.EventArgs e)

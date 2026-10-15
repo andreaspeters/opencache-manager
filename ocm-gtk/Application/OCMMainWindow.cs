@@ -21,7 +21,7 @@ using System.Diagnostics;
 using Mono.Unix;
 using ocmgtk.printing;
 using ocmengine;
-using DBus;
+using NDesk.DBus;
 using Gtk;
 using Gdk;
 using System.Text;
@@ -207,6 +207,7 @@ namespace ocmgtk
 			MarkAsFound ();
 			if (CacheList.SelectedCache.URL == null)
 				return;
+
 			LoggingDialog dlg = new LoggingDialog ();
 			dlg.LogCache (CacheList.SelectedCache);
 			dlg.Run ();
@@ -225,13 +226,13 @@ namespace ocmgtk
 			if (dlg.Run () == (int)ResponseType.Accept) {
 				if (dlg.Filename == m_app.CacheStore.StoreName) {
 					dlg.Hide ();
-					MessageDialog mdlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Error, ButtonsType.Ok, Catalog.GetString ("You cannot overwrite the " + "currently open database."));
+					MessageDialog mdlg = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Error, ButtonsType.Ok, Catalog.GetString ("You cannot overwrite the " + "currently open database."));
 					mdlg.Run ();
 					mdlg.Hide ();
 					return false;
 				} else if (System.IO.File.Exists (dlg.Filename)) {
 					dlg.Hide ();
-					MessageDialog mdlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Warning, ButtonsType.YesNo, Catalog.GetString ("Are you sure you want to overwrite '{0}'"), dlg.Filename);
+					MessageDialog mdlg = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Warning, ButtonsType.YesNo, Catalog.GetString ("Are you sure you want to overwrite '{0}'"), dlg.Filename);
 					if ((int)ResponseType.No == mdlg.Run ()) {
 						mdlg.Hide ();
 						return false;
@@ -357,17 +358,21 @@ namespace ocmgtk
 
 		public void ImportZip (string filename)
 		{
-			String tempPath = System.IO.Path.GetTempPath ();
-			ProcessStartInfo start = new ProcessStartInfo ();
-			start.FileName = "unzip";
-			start.Arguments = "-o \"" + filename + "\" -d " + tempPath + "ocm_unzip";
-			Process unzip = Process.Start (start);
-
-			while (!unzip.HasExited) {
-				// Do nothing until exit
+			string stagingDirectory = null;
+			try
+			{
+				stagingDirectory = ZipArchiveHelper.ExtractToTemporaryDirectory(filename);
+				ImportDirectory(stagingDirectory, false, Config.AutoCloseWindows);
 			}
-
-			ImportDirectory (tempPath + "ocm_unzip", true, Config.AutoCloseWindows);
+			catch (Exception ex)
+			{
+				OCMApp.ShowException(new InvalidOperationException(
+					"Unable to import ZIP file '" + filename + "'.", ex));
+			}
+			finally
+			{
+				ZipArchiveHelper.TryDeleteDirectory(stagingDirectory);
+			}
 		}
 
 		private void ImportDirectory (String path, bool delete, bool autoClose)
@@ -586,7 +591,7 @@ namespace ocmgtk
 			}
 			if (files.Count <=0)
 			{
-				MessageDialog mdlg = new MessageDialog(null, DialogFlags.Modal, MessageType.Info, ButtonsType.Ok, Catalog.GetString("No Images Found."));
+				MessageDialog mdlg = new MessageDialog(null, DialogFlags.Modal, Gtk.MessageType.Info, ButtonsType.Ok, Catalog.GetString("No Images Found."));
 				mdlg.Run();
 				mdlg.Hide();
 				return;
@@ -705,7 +710,7 @@ namespace ocmgtk
 		public void ShowFieldNotes (bool forceRefresh)
 		{
 			if (!System.IO.File.Exists (Config.FieldNotesFile)) {
-				MessageDialog mdlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Info, ButtonsType.Ok, Catalog.GetString ("There are no field notes."));
+				MessageDialog mdlg = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Info, ButtonsType.Ok, Catalog.GetString ("There are no field notes."));
 				mdlg.Run ();
 				mdlg.Hide ();
 				return;
@@ -832,7 +837,7 @@ namespace ocmgtk
 			DeleteItem dlg = new DeleteItem (m_app.Profiles);
 			if ((int)ResponseType.Ok == dlg.Run ()) {
 				if ((m_app.Profiles.GetActiveProfile () != null) && (dlg.ItemToDelete == m_app.Profiles.GetActiveProfile ().Name)) {
-					MessageDialog confirm = new MessageDialog (this, DialogFlags.Modal, MessageType.Warning, ButtonsType.YesNo, Catalog.GetString ("\"{0}\" is the active" + " GPS profile. Are you sure you wish to delete it?"), dlg.ItemToDelete);
+					MessageDialog confirm = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Warning, ButtonsType.YesNo, Catalog.GetString ("\"{0}\" is the active" + " GPS profile. Are you sure you wish to delete it?"), dlg.ItemToDelete);
 					if ((int)ResponseType.No == confirm.Run ()) {
 						confirm.Hide ();
 						confirm.Dispose ();
@@ -852,7 +857,7 @@ namespace ocmgtk
 		public void SendToGPS ()
 		{
 			if (m_app.Profiles.GetActiveProfile () == null) {
-				MessageDialog err = new MessageDialog (this, DialogFlags.Modal, MessageType.Error, ButtonsType.Ok,
+				MessageDialog err = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Error, ButtonsType.Ok,
 				                                       Catalog.GetString ("There is no active GPS profile. Either select an"
 				                                                          + " existing one from the GPS Menu or add a new profile ."));
 				err.Run ();
@@ -870,7 +875,7 @@ namespace ocmgtk
 		public void DeleteSelectedCache ()
 		{
 			String name = CacheList.SelectedCache.Name;
-			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo,
+			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, Gtk.MessageType.Question, ButtonsType.YesNo,
 			                                       String.Format (Catalog.GetString ("Are you sure you want to delete {0}?"),
 			                                                      name));
 			if ((int)ResponseType.Yes == dlg.Run ()) {
@@ -1083,7 +1088,7 @@ namespace ocmgtk
 		void HandleCacheListSelectionChanged (object sender, CacheEventArgs args)
 		{
 			if (this.GdkWindow != null)
-				this.GdkWindow.Cursor = Cursor.NewFromName(this.Display, "left_ptr_watch");
+				this.GdkWindow.Cursor = new Cursor(this.Display, "left_ptr_watch");
 			OCMApp.UpdateGUIThread();
 			SetFilterFlags ();
 			Geocache cache = args.Cache;
@@ -1191,12 +1196,12 @@ namespace ocmgtk
 
 		protected virtual void OnWikiClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("https://github.com/andreaspeters/opencache-manager/wiki");
+			OCMApp.TryStartExternalProcess ("http://sourceforge.net/apps/mediawiki/opencachemanage/");
 		}
 
 		protected virtual void OnForumsClick (object sender, System.EventArgs e)
 		{
-			Process.Start("http://www.andreas-peters.net");
+			OCMApp.TryStartExternalProcess("http://ocm.dafb-o.de/index.php");
 		}
 
 		protected virtual void OnAboutClick (object sender, System.EventArgs e)
@@ -1207,7 +1212,7 @@ namespace ocmgtk
 			dialog.Version = OCMApp.GetOCMVersion();
 			dialog.Logo =  new Gdk.Pixbuf ("./icons/scalable/OCMLogo.svg", 96, 96);
 			dialog.Website = "http://www.andreas-peters.net/";
-			dialog.Copyright = "Copyright Kyle Campbell (c) 2010-2013\nCopyright Andreas Peters (c) 2015-2016";	
+			dialog.Copyright = "Copyright Kyle Campbell (c) 2010-2013\nCopyright Andreas Peters (c) 2015-2017";	
 			System.IO.StreamReader reader = new System.IO.StreamReader(new System.IO.FileStream("licence/Licence.txt",System.IO.FileMode.Open,System.IO.FileAccess.Read));
 			dialog.License = reader.ReadToEnd();
 			reader.Close();
@@ -1215,7 +1220,8 @@ namespace ocmgtk
 				"Harrie Klomp - Dutch Translation" , "Thor Dekov Buur - Danish Translation",
 				"Michael Massoth/Florian Plähn/Maik Bischoff - German Translation",
 				"Josef Kulhánek - Czech Translation","Vicen - Spanish Translation",
-				"Per Holmberg - Swedish Translation"};
+				"Per Holmberg - Swedish Translation",
+				"Jens Böttge - Programming"};
 			dialog.Run ();
 			dialog.Hide();
 
@@ -1232,18 +1238,18 @@ namespace ocmgtk
 			string ver;
 			if (m_app.UpdatesAvailable(out ver))
 			{
-				MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Info, ButtonsType.YesNo, Catalog.GetString ("A new version \"{0}\" of OCM is available" + "\nWould you like to go to the download page now?"), ver);
+				MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Info, ButtonsType.YesNo, Catalog.GetString ("A new version \"{0}\" of OCM is available" + "\nWould you like to go to the download page now?"), ver);
 				if ((int)ResponseType.Yes == dlg.Run ())
 				{
 					dlg.Hide ();
-					Process.Start ("http://sourceforge.net/projects/opencachemanage/files/");
+					OCMApp.TryStartExternalProcess ("http://sourceforge.net/projects/opencachemanage/files/");
 				}
 				else
 					dlg.Hide ();
 			}
 			else
 			{
-				MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Info, ButtonsType.Ok, Catalog.GetString ("OCM is at the latest version."));
+				MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Info, ButtonsType.Ok, Catalog.GetString ("OCM is at the latest version."));
 				dlg.Run ();
 				dlg.Hide ();
 
@@ -1271,77 +1277,77 @@ namespace ocmgtk
 
 		protected virtual void OnOCMHomeClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://opencachemanage.sourceforge.net/");
+			OCMApp.TryStartExternalProcess ("http://opencachemanage.sourceforge.net/");
 		}
 
 		protected virtual void OnGCHomeClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.geocaching.com");
+			OCMApp.TryStartExternalProcess ("http://www.geocaching.com");
 		}
 
 		protected virtual void OnGCProfileClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.geocaching.com/my");
+			OCMApp.TryStartExternalProcess ("http://www.geocaching.com/my");
 		}
 
 		protected virtual void OnGCAccountClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.geocaching.com/account/default.aspx");
+			OCMApp.TryStartExternalProcess ("http://www.geocaching.com/account/default.aspx");
 		}
 
 		protected virtual void OnGCPocketQueryClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.geocaching.com/pocket/default.aspx");
+			OCMApp.TryStartExternalProcess ("http://www.geocaching.com/pocket/default.aspx");
 		}
 
 		protected virtual void OnGCStatsClick (object sender, System.EventArgs e)
 		{
-			Process.Start("http://www.geocaching.com/my/statistics.aspx");
+			OCMApp.TryStartExternalProcess("http://www.geocaching.com/my/statistics.aspx");
 		}
 
 		protected virtual void OnGCFindClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.geocaching.com/seek/default.aspx");
+			OCMApp.TryStartExternalProcess ("http://www.geocaching.com/seek/default.aspx");
 		}
 
 		protected virtual void OnTCHomePageClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.terracaching.com");
+			OCMApp.TryStartExternalProcess ("http://www.terracaching.com");
 		}
 
 		protected virtual void OnTCTraditionalClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.terracaching.com/tdl.cgi?NF=1");
+			OCMApp.TryStartExternalProcess ("http://www.terracaching.com/tdl.cgi?NF=1");
 		}
 
 		protected virtual void OnTCLocationlessClick (object sender, System.EventArgs e)
 		{
-			Process.Start ("http://www.terracaching.com/tdl.cgi?NF=1&L=1");
+			OCMApp.TryStartExternalProcess ("http://www.terracaching.com/tdl.cgi?NF=1&L=1");
 		}
 
 		protected virtual void OnOCCountryList (object sender, System.EventArgs e)
 		{
-			Process.Start("http://opencaching.eu");
+			OCMApp.TryStartExternalProcess("http://opencaching.eu");
 		}
 
 		protected virtual void OnGPSBabelClick (object sender, System.EventArgs e)
 		{
-			Process.Start("http://www.gpsbabel.org");
+			OCMApp.TryStartExternalProcess("http://www.gpsbabel.org");
 		}
 
 		protected virtual void OnGPSDClick (object sender, System.EventArgs e)
 		{
-			Process.Start("http://gpsd.berlios.de");
+			OCMApp.TryStartExternalProcess("http://gpsd.berlios.de");
 		}
 
 		protected virtual void OnNaviHome (object sender, System.EventArgs e)
 		{
-			Process.Start("http://www.navicache.com");
+			OCMApp.TryStartExternalProcess("http://www.navicache.com");
 		}
 
 		protected virtual void OnMyNavi (object sender, System.EventArgs e)
 		{
-			Process.Start("http://www.navicache.com/cgi-bin/db/MyNaviCacheHome.pl");
+			OCMApp.TryStartExternalProcess("http://www.navicache.com/cgi-bin/db/MyNaviCacheHome.pl");
 		}
 
 		protected virtual void OnModifyCache (object sender, System.EventArgs e)
@@ -1362,7 +1368,7 @@ namespace ocmgtk
 
 		protected virtual void OnViewOnlineClick (object sender, System.EventArgs e)
 		{
-			Process.Start(CacheList.SelectedCache.URL.ToString());
+			OCMApp.TryStartExternalProcess(CacheList.SelectedCache.URL.ToString());
 		}
 
 		protected virtual void OnMarkFound (object sender, System.EventArgs e)
@@ -1500,7 +1506,7 @@ namespace ocmgtk
 
 			Geocache cache = CacheList.SelectedCache;
 			bool alreadyDisabled = (cache.Archived || !cache.Available)? true:false;
-			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as disabled?");
+			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, Gtk.MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as disabled?");
 			if ((int)ResponseType.Yes == dlg.Run ()) {
 				cache.Available = false;
 				cache.Archived = false;
@@ -1521,7 +1527,7 @@ namespace ocmgtk
 		{
 			Geocache cache = CacheList.SelectedCache;
 			bool alreadyDisabled = (cache.Archived || !cache.Available)? true:false;
-			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as archived?");
+			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, Gtk.MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as archived?");
 			if ((int)ResponseType.Yes == dlg.Run ()) {
 				cache.Available = false;
 				cache.Archived = true;
@@ -1542,7 +1548,7 @@ namespace ocmgtk
 		{
 			Geocache cache = CacheList.SelectedCache;
 			bool alreadyDisabled = (cache.Archived || !cache.Available)? true:false;
-			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as available?");
+			MessageDialog dlg = new MessageDialog (null, DialogFlags.Modal, Gtk.MessageType.Question, ButtonsType.YesNo, "Are you sure you want to mark " + cache.Name + " as available?");
 			if ((int)ResponseType.Yes == dlg.Run ()) {
 				cache.Available = true;
 				cache.Archived = false;
@@ -1621,7 +1627,7 @@ namespace ocmgtk
 			{
 				if (m_app.Locations.GetLocation(dlg.LocationName) != null)
 				{
-					MessageDialog warnDlg = new MessageDialog(this, DialogFlags.Modal, MessageType.Warning, ButtonsType.YesNo,
+					MessageDialog warnDlg = new MessageDialog(this, DialogFlags.Modal, Gtk.MessageType.Warning, ButtonsType.YesNo,
 					                                          Catalog.GetString("Are you sure you wish to overwrite \"{0}\"?"),
 					                                          dlg.LocationName);
 					if ((int)ResponseType.No == warnDlg.Run())
@@ -1843,7 +1849,7 @@ namespace ocmgtk
 
 		protected virtual void OnDeleteAll (object sender, System.EventArgs e)
 		{
-			MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, MessageType.Warning, ButtonsType.YesNo, String.Format (Catalog.GetString ("Are you sure you want to delete these {0} caches?\nThis operation cannot be undone."), CacheList.UnfilteredCaches.Count));
+			MessageDialog dlg = new MessageDialog (this, DialogFlags.Modal, Gtk.MessageType.Warning, ButtonsType.YesNo, String.Format (Catalog.GetString ("Are you sure you want to delete these {0} caches?\nThis operation cannot be undone."), CacheList.UnfilteredCaches.Count));
 			if ((int)ResponseType.Yes == dlg.Run ()) {
 				dlg.Hide ();
 				OCMApp.UpdateGUIThread();
@@ -1983,14 +1989,7 @@ namespace ocmgtk
 		protected virtual void OnNewCache (object sender, System.EventArgs e)
 		{
 			m_app.NewCache ();
-		} 
-
-		protected void OnImportOpencaching (object sender, EventArgs e)
-		{
-			ImportOpencachingDialog dlg = new ImportOpencachingDialog (this);
 		}
-
-	
 #endregion
 
 

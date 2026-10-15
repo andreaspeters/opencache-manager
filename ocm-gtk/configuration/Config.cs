@@ -16,7 +16,6 @@
 using System;
 using System.Collections.Generic;
 using ocmengine;
-using GConf;
 using Mono.Unix;
 
 namespace ocmgtk
@@ -25,7 +24,7 @@ namespace ocmgtk
 
 	public class Config:IConfig
 	{
-		private Client m_client;
+		private SettingsStore m_client;
 		public SolvedMode SolvedModeState
 		{
 			get 
@@ -635,27 +634,17 @@ namespace ocmgtk
 		
 		private void UnsetKey(String keyname)
 		{
-			System.Diagnostics.ProcessStartInfo info = new System.Diagnostics.ProcessStartInfo();
-			info.FileName = "/usr/bin/gconftool-2";
-			info.Arguments = "--unset " + keyname;
-			System.Diagnostics.Process.Start(info);
+			m_client.Unset(keyname);
 		}
 
 		public Config ()
 		{
-			m_client = new Client();
+			m_client = new SettingsStore();
 		}
 		
 		private object Get(String key, Object def)
 		{
-			try
-			{
-				return m_client.Get(key);
-			}
-			catch
-			{
-				return def;
-			}
+			return m_client.Get(key, def);
 		}
 		
 		private void Set(String key, Object val)

@@ -1,6 +1,6 @@
 
 using org.freedesktop.DBus;
-using DBus;
+using NDesk.DBus;
 
 namespace ocmgtk
 {

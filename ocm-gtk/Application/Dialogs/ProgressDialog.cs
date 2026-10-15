@@ -99,13 +99,19 @@ namespace ocmgtk
 					this.waypointName.Markup = "<i>" + Catalog.GetString("Unzipping") + ":" + files[i] + "</i>";
 					while (Gtk.Application.EventsPending ())
 						Gtk.Application.RunIteration (false);
-					ProcessStartInfo start = new ProcessStartInfo();
-					start.FileName = "unzip";
-					start.Arguments = "-o \"" + files[i] + "\" -d \"" + info.FullName + "\"";
-					Process unzip =  Process.Start(start);
-					while (!unzip.HasExited)
+					try
 					{
-						// Do nothing until exit	
+						ZipArchiveHelper.ExtractToDirectory(files[i], info.FullName);
+					}
+					catch (Exception ex)
+					{
+						ZipArchiveHelper.TryDeleteDirectory(info.FullName);
+						try { store.CancelUpdate(); } catch { }
+						this.Hide();
+						this.Dispose();
+						OCMApp.ShowException(new InvalidOperationException(
+							"Unable to extract ZIP file '" + files[i] + "'.", ex));
+						return;
 					}
 					if (deleteOnCompletion)
 					{

@@ -26,7 +26,7 @@ namespace ocmgtk
 {
 
 
-	public class CacheStoreModel : GLib.Object, TreeModelImplementor, TreeSortable
+	public class CacheStoreModel : GLib.Object, ITreeModelImplementor, ITreeSortable
 	{
 		List<Geocache> caches;
 		
@@ -187,6 +187,21 @@ namespace ocmgtk
 			val = new GLib.Value(node as Geocache);
 		}
 
+		public bool IterPrevious (ref TreeIter iter)
+		{
+			object node = NodeFromIter (iter);
+			if (node == null)
+				return false;
+
+			int index = caches.IndexOf(node as Geocache) - 1;
+			if (index >= 0)
+			{
+				iter = IterFromNode(caches[index]);
+				return true;
+			}
+			return false;
+		}
+
 		public bool IterNext (ref TreeIter iter)
 		{
 			object node = NodeFromIter (iter);
@@ -288,13 +303,13 @@ namespace ocmgtk
 			return true;
 		}
 		
-		public void SetDefaultSortFunc (TreeIterCompareFunc sort_func, IntPtr user_data, Gtk.DestroyNotify destroy)
+		public void SetDefaultSortFunc (TreeIterCompareFunc sort_func, IntPtr user_data, GLib.DestroyNotify destroy)
 		{
 			defaultSort = sort_func;
 		}
 		
 		
-		public void SetSortFunc (int sort_column_id, TreeIterCompareFunc sort_func, IntPtr user_data, Gtk.DestroyNotify destroy)
+		public void SetSortFunc (int sort_column_id, TreeIterCompareFunc sort_func, IntPtr user_data, GLib.DestroyNotify destroy)
 		{
 			sortFuncs[sort_column_id] = sort_func;
 		}

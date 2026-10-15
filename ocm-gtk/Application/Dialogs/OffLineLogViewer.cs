@@ -278,7 +278,7 @@ namespace ocmgtk
 		}
 		
 #region Log List Rendering Code
-		private void RenderType (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderType (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			CacheLog log = (CacheLog)model.GetValue (iter, 0);
 			CellRendererPixbuf icon = cell as CellRendererPixbuf;
@@ -292,14 +292,14 @@ namespace ocmgtk
 				icon.Pixbuf = IconManager.WRITENOTE_S;
 		}
 		
-		private void RenderCode (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderCode (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			CacheLog log = (CacheLog)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;
 			text.Text = log.CacheCode;
 		}
 		
-		private void RenderName (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderName (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			CacheLog log = (CacheLog)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;
@@ -311,14 +311,14 @@ namespace ocmgtk
 		}
 		
 		
-		private void RenderDate (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.TreeModel model, Gtk.TreeIter iter)
+		private void RenderDate (Gtk.TreeViewColumn column, Gtk.CellRenderer cell, Gtk.ITreeModel model, Gtk.TreeIter iter)
 		{
 			CacheLog log = (CacheLog)model.GetValue (iter, 0);
 			CellRendererText text = cell as CellRendererText;
 			text.Text = log.LogDate.ToShortDateString() + " " + log.LogDate.ToShortTimeString();
 		}
 		
-		private int DateCompare (TreeModel model, TreeIter tia, TreeIter tib)
+		private int DateCompare (ITreeModel model, TreeIter tia, TreeIter tib)
 		{
 			CacheLog logA = (CacheLog)model.GetValue (tia, 0);
 			CacheLog logB = (CacheLog)model.GetValue (tib, 0);
@@ -332,7 +332,7 @@ namespace ocmgtk
 				return -1;
 		}
 		
-		private int TypeCompare (TreeModel model, TreeIter tia, TreeIter tib)
+		private int TypeCompare (ITreeModel model, TreeIter tia, TreeIter tib)
 		{
 			CacheLog logA = (CacheLog)model.GetValue (tia, 0);
 			CacheLog logB = (CacheLog)model.GetValue (tib, 0);
@@ -352,7 +352,7 @@ namespace ocmgtk
 		void HandleLogViewSelectionChanged (object sender, EventArgs e)
 		{
 			TreeIter iter;
-			TreeModel model;			
+			ITreeModel model;			
 			if (((TreeSelection)sender).GetSelected (out model, out iter)) {
 				CacheLog val = (CacheLog)model.GetValue (iter, 0);
 				if (hasUnsaved)
@@ -415,7 +415,7 @@ namespace ocmgtk
 		protected virtual void OnDeleteClick (object sender, System.EventArgs e)
 		{
 			Gtk.TreeIter itr;
-			Gtk.TreeModel model;
+			Gtk.ITreeModel model;
 			if (logView.Selection.GetSelected (out model, out itr)) 
 			{
 				CacheLog log = (CacheLog)model.GetValue (itr, 0);
@@ -458,7 +458,7 @@ namespace ocmgtk
 		protected virtual void OnViewCache (object sender, System.EventArgs e)
 		{
 			Gtk.TreeIter itr;
-			Gtk.TreeModel model;
+			Gtk.ITreeModel model;
 			if (logView.Selection.GetSelected (out model, out itr)) 
 			{
 				CacheLog log = (CacheLog)model.GetValue (itr, 0);

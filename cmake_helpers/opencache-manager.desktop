@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=OCM Geocache Manager
+GenericName=Geocache Manager
+Comment=An easy to use Geocache Manager
+Exec=ocm-gtk
+Icon=OCMLogo
+Terminal=false
+StartupNotify=true
+StartupWMClass=ocm-gtk
+MimeType=application/x-gpx;application/x-ocm;application/zip;
+Categories=GTK;Geography;Utility;

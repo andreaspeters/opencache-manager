@@ -15,13 +15,13 @@
 
 using System;
 using org.freedesktop.DBus;
-using DBus;
+using NDesk.DBus;
 
 
 namespace ocmgtk
 {
 
-	[DBus.Interface ("QLandkarteGT")]
+	[Interface ("QLandkarteGT")]
 	public interface IQLandkarteGT
 	{
 		void loadGeoData(string filename);

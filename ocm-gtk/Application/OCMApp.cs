@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using Gtk;
 using System.Timers;
-using DBus;
+using NDesk.DBus;
 using ocmengine;
 using ocmengine.SQLLite;
 using org.freedesktop.DBus;
@@ -423,11 +423,11 @@ namespace ocmgtk
 			string ver;
 			if (UpdatesAvailable(out ver))
 			{
-				MessageDialog dlg = new MessageDialog (m_Window, DialogFlags.Modal, MessageType.Info, ButtonsType.YesNo, Catalog.GetString ("A new version \"{0}\" of OCM is available" + "\nWould you like to go to the download page now?"), ver);
+				MessageDialog dlg = new MessageDialog (m_Window, DialogFlags.Modal, Gtk.MessageType.Info, ButtonsType.YesNo, Catalog.GetString ("A new version \"{0}\" of OCM is available" + "\nWould you like to go to the download page now?"), ver);
 				if ((int)ResponseType.Yes == dlg.Run ()) 
 				{
 					dlg.Hide ();
-					System.Diagnostics.Process.Start ("http://sourceforge.net/projects/opencachemanage/files/");
+					TryStartExternalProcess ("http://sourceforge.net/projects/opencachemanage/files/");
 				} 
 				else
 					dlg.Hide ();
@@ -451,7 +451,7 @@ namespace ocmgtk
 			}
 			catch (Exception) 
 			{
-				MessageDialog dlg = new MessageDialog (m_Window, DialogFlags.Modal, MessageType.Error, ButtonsType.Ok, Catalog.GetString ("Unable to check for updates, check your " + "network connection."));
+				MessageDialog dlg = new MessageDialog (m_Window, DialogFlags.Modal, Gtk.MessageType.Error, ButtonsType.Ok, Catalog.GetString ("Unable to check for updates, check your " + "network connection."));
 				dlg.Run ();
 				dlg.Hide ();
 				latestVer = "-1";
@@ -538,7 +538,7 @@ namespace ocmgtk
 			if (dlg.Run () == (int)ResponseType.Accept) {
 			 if (System.IO.File.Exists (dlg.Filename)) {
 					dlg.Hide ();
-					MessageDialog mdlg = new MessageDialog (null, DialogFlags.Modal, MessageType.Warning, ButtonsType.YesNo, Catalog.GetString ("Are you sure you want to overwrite '{0}'"), dlg.Filename);
+					MessageDialog mdlg = new MessageDialog (null, DialogFlags.Modal, Gtk.MessageType.Warning, ButtonsType.YesNo, Catalog.GetString ("Are you sure you want to overwrite '{0}'"), dlg.Filename);
 					if ((int)ResponseType.No == mdlg.Run ()) {
 						mdlg.Hide ();
 						return;
@@ -601,10 +601,23 @@ namespace ocmgtk
 			ErrorDialog dlg = new ErrorDialog(e);
 			dlg.Run();
 		}
+
+		public static bool TryStartExternalProcess(string target)
+		{
+			return ExternalProcessLauncher.TryOpenExternalTarget(
+				target,
+				ShowException,
+				action => Gtk.Application.Invoke(delegate { action(); }));
+		}
+
+		public static bool TryStartExternalProcess(System.Diagnostics.ProcessStartInfo startInfo)
+		{
+			return ExternalProcessLauncher.TryStart(startInfo, ShowException);
+		}
 		
 		public static void Main (string[] args)
 		{
-			
+			Directory.SetCurrentDirectory(AppContext.BaseDirectory);
 			Application.Init ();
 			// Set the localeDirectory right both for developement or for installed versions
 			String localeDirectory = Paths.LOCALE_DIR;

@@ -45,8 +45,8 @@ namespace ocmgtk
 		string[] christmasBG = new string[]{"./icons/splash/christmas/AXmas.png", "./icons/splash/christmas/BXmas.png", "./icons/splash/christmas/CXmas.png",
 			"./icons/splash/christmas/DXmas.png", "./icons/splash/christmas/EXmas.png", "./icons/splash/christmas/FXmas.png",
 			"./icons/splash/christmas/GXmas.png",  "./icons/splash/christmas/HXmas.png", "./icons/splash/christmas/IXmas.png"};
-		Pixmap[] backgrounds = new Pixmap[9];
-		Pixmap[] masks = new Pixmap[9];
+		Pixbuf[] backgrounds = new Pixbuf[9];
+		Pixbuf currentBackground;
 		int animPos = 0;
 
 
@@ -82,24 +82,16 @@ namespace ocmgtk
 			Random rand = new Random();
 			int idx = rand.Next(files.Length);
 			Pixbuf test = new Pixbuf(files[idx], 744, 600);
-			Pixmap image,mask;
-			this.DoubleBuffered = false;
-			test.RenderPixmapAndMask(out image, out mask, 175);
-			this.DoubleBuffered = true;
+			currentBackground = test;
 			this.AppPaintable = true;
-			this.GdkWindow.SetBackPixmap(image, false);
-			this.ShapeCombineMask(mask, 0, 0);
-			this.GdkWindow.InvalidateRect(new Rectangle(0,0, 744,600), true);
+			this.QueueDraw();
 
 			if (showChristmasSplash)
 			{
 				for(int idx2 = 0; idx2 < christmasBG.Length; idx2++)
 				{
 					Pixbuf test2 = new Pixbuf(christmasBG[idx2], 744, 600);
-					Pixmap image2,mask2;
-					test2.RenderPixmapAndMask(out image2, out mask2, 175);
-					backgrounds[idx2] = image2;
-					masks[idx2] = mask2;
+					backgrounds[idx2] = test2;
 				}
 			}
 		}
@@ -107,12 +99,22 @@ namespace ocmgtk
 		void UpdateBG ()
 		{
 			int idx = animPos;
-			this.GdkWindow.SetBackPixmap(backgrounds[idx], false);
-			this.GdkWindow.InvalidateRect(new Rectangle(0,0, 744,600), true);
+			currentBackground = backgrounds[idx];
+			this.QueueDraw();
 			OCMApp.UpdateGUIThread();
 			animPos++;
 			if (animPos >= backgrounds.Length)
 				animPos = 0;
+		}
+
+		protected override bool OnDrawn (Cairo.Context context)
+		{
+			if (currentBackground != null)
+			{
+				Gdk.CairoHelper.SetSourcePixbuf(context, currentBackground, 0, 0);
+				context.Paint();
+			}
+			return base.OnDrawn(context);
 		}
 
 		void HandleAnimTimerElapsed (object sender, ElapsedEventArgs e)
