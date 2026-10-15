@@ -6,16 +6,24 @@
     <RootNamespace>ocmgtk</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Deterministic>false</Deterministic>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="**/*.cs" Exclude="bind/**/*.cs;bin/**/*.cs;obj/**/*.cs;Application/SetupAssistant.cs" />
-    <Compile Include="$(GeneratedSourceDir)/Paths.cs" />
+    <Compile Include="Application/OCMApp.Gtk4.cs" />
+    <Compile Include="Application/ExternalProcessLauncher.cs" />
+    <Compile Include="Application/Widgets/DescriptionWidget.Gtk4.cs" />
+    <Compile Include="Application/Widgets/LogViewerWidget.Gtk4.cs" />
+    <Compile Include="Application/Widgets/CacheInfoWidget.Gtk4.cs" />
+    <Compile Include="Application/Widgets/ReviewWaypointPreviewWidget.Gtk4.cs" />
+    <Compile Include="Application/Dialogs/ReviewWaypointDialog.Gtk4.cs" />
+    <Compile Include="Widgets/HTMLWidget.Gtk4.cs" />
+    <Compile Include="configuration/SettingsStore.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GtkSharp" Version="3.24.24.95" />
-    <PackageReference Include="WebkitGtkSharp" Version="3.24.24.95" />
+    <PackageReference Include="GirCore.Gtk-4.0" Version="0.8.1" />
+    <PackageReference Include="GirCore.WebKit-6.0" Version="0.8.1" />
     <PackageReference Include="Mono.Data.Sqlite.Core" Version="1.0.61.1" />
     <PackageReference Include="Mono.Posix.NETStandard" Version="1.0.0" />
     <PackageReference Include="NDesk.DBus" Version="0.15.0" />
@@ -35,10 +43,6 @@
     <EmbeddedResource Include="icons/scalable/restore.svg" LogicalName="ocmgtk.icons.scalable.restore.svg" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="NDesk.DBus">
-      <HintPath>$(NuGetPackageRoot)ndesk.dbus/0.15.0/lib/NDesk.DBus.dll</HintPath>
-      <Private>true</Private>
-    </Reference>
     <Reference Include="ocmengine">
       <HintPath>$(EngineOutputDir)/ocmengine.dll</HintPath>
       <Private>true</Private>

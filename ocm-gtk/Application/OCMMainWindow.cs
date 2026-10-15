@@ -973,25 +973,9 @@ namespace ocmgtk
 			}
 		}
 
-		private static void DeregisterBus ()
-        {
-          try
-          {
-             //##AP BusG.Init ();
-             Bus bus = Bus.Session;
-             bus.Unregister(new ObjectPath ("/org/ocm/dbus"));
-               bus.ReleaseName("org.ocm.dbus");
-          }
-           catch
-           {
-             System.Console.WriteLine("WARNING: Could not deregister from DBUS");
-           }
-        }
-
 #region Event Handlers
 		protected virtual void OnDeleteWindow (object o, Gtk.DeleteEventArgs args)
 		{
-			DeregisterBus();
 			args.RetVal = true;
 			m_app.End();
 		}
@@ -1080,7 +1064,6 @@ namespace ocmgtk
 
 		protected virtual void OnQuit (object sender, System.EventArgs e)
 		{
-			DeregisterBus();
 			m_app.End();
 		}
 

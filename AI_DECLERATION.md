@@ -22,8 +22,8 @@ The specific use of AI varies by project and is limited to the areas listed for
 each project:
 
 - Migration from GNUAutoMake to CMake
-- Migration from GTK2 to GTK3
-- Migration from WebkitGtkSharp-1 to WebkitGtkSharp-3
+- Migration from GTK2 to GTK4
+- Migration from WebkitGtk-1 to WebkitGtk-6
 
 ## Workflow and Quality Assurance
 

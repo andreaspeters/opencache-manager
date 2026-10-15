@@ -629,37 +629,13 @@ namespace ocmgtk
 		
 			Mono.Unix.Catalog.Init ("opencachemanager", localeDirectory);
 			OCMApp app = new OCMApp();
-			
-			
-			try
-			{
-				//##AP BusG.Init ();
-				Bus bus = Bus.Session;
-				string busName = "org.ocm.dbus";
-				if (bus.RequestName (busName) != RequestNameReply.PrimaryOwner) 
-				{
-					IDBusComm comm = bus.GetObject<IDBusComm> (busName, new ObjectPath ("/org/ocm/dbus"));
-					if (args != null)
-					{
-						if (args.Length > 0) 
-							comm.ImportGPX (args[0]);
-					}
-					comm.ShowOCM();
-					return;
-				}
-				else 
-				{
-					DBusComm comm = new DBusComm (app);
-					bus.Register (new ObjectPath ("/org/ocm/dbus"), comm);
-				}
-			}
-			catch
-			{
-				System.Console.Error.WriteLine("NO SESSION DBUS RUNNING");
-			}
-			if (args != null)
-				if (args.Length > 0)
-					app.Start(args[0]);
+
+			// NDesk.DBus 0.15.0 can stall indefinitely during session-bus
+			// authentication on current Linux distributions. Do not let that
+			// optional single-instance forwarding prevent the GTK UI from opening.
+			// File arguments are still imported by this process.
+			if (args != null && args.Length > 0)
+				app.Start(args[0]);
 			else
 				app.Start();
 		}
